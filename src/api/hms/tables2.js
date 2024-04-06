@@ -28,6 +28,7 @@ const db = {
         { id: 1, nama: "Dr. Joko", spesialisasi: "Dokter Umum", jenis_kelamin: "Laki-laki", alamat: "Jl. Mangga No. 10", telepon: "08567890123", email: "joko@example.com" },
         { id: 2, nama: "Dr. Siti", spesialisasi: "Dokter Spesialis Penyakit Dalam", jenis_kelamin: "Perempuan", alamat: "Jl. Anggrek No. 25", telepon: "08789012345", email: "siti@example.com" },
     ],
+
     organisasi: [
         { id: 1, nama: "RS Sehat Sentosa", jenis: "Rumah Sakit", alamat: "Jl. Pahlawan No. 100", telepon: "02112345678", email: "info@rssehat.com" },
     ],
@@ -35,10 +36,13 @@ const db = {
         { id: 1, nama: "Poliklinik Umum", jenis: "Poliklinik", alamat: "Lantai 1", id_organisasi: 1 },
         { id: 2, nama: "Unit Gawat Darurat", jenis: "IGD", alamat: "Lantai 2", id_organisasi: 1 },
     ],
+
     janji_temu: [
         { id: 1, id_pasien: 1, id_praktisi: 1, id_lokasi: 1, waktu_mulai: "2024-04-01 08:00:00", waktu_selesai: "2024-04-01 09:00:00" },
         { id: 2, id_pasien: 2, id_praktisi: 2, id_lokasi: 2, waktu_mulai: "2024-04-02 10:00:00", waktu_selesai: "2024-04-02 11:00:00" },
     ],
+
+    // rekam medis - start
     kunjungan: [
         { id: 1, id_pasien: 1, id_praktisi: 1, id_lokasi: 1, waktu_mulai: "2024-04-01 08:00:00", waktu_selesai: "2024-04-01 09:00:00" },
         { id: 2, id_pasien: 2, id_praktisi: 2, id_lokasi: 2, waktu_mulai: "2024-04-02 10:00:00", waktu_selesai: "2024-04-02 11:00:00" },
@@ -83,6 +87,8 @@ const db = {
         { id: 1, id_pasien: 1, jenis_layanan: "Fisioterapi", waktu: "2024-04-01 09:45:00", id_kunjungan: 1 },
         { id: 2, id_pasien: 2, jenis_layanan: "Konsultasi Gizi", waktu: "2024-04-02 12:30:00", id_kunjungan: 2 },
     ],
+    // rekam medis - end
+
     klaim: [
         { id: 1, id_kunjungan: 1, total_biaya: 500000, status: "Diajukan" },
         { id: 2, id_kunjungan: 2, total_biaya: 750000, status: "Diajukan" },
