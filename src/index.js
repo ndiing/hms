@@ -1,0 +1,1 @@
+require('./api/hms/index')
