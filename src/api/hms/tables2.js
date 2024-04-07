@@ -33,6 +33,7 @@ const db = {
         { id: 1, nama: 'Dr. Ahmad', spesialisasi: 'Dokter Umum', alamat: 'Jl. Aman No. 10', nomor_telepon: '08123456789' },
         { id: 2, nama: 'Dr. Budi', spesialisasi: 'Bedah Umum', alamat: 'Jl. Bahagia No. 15', nomor_telepon: '08234567890' }
     ],
+
     organisasi: [
         { id: 1, nama: 'Rumah Sakit Sentosa', alamat: 'Jl. Sentosa No. 20', jenis: 'Rumah Sakit', nomor_telepon: '0211234567' },
         { id: 2, nama: 'Klinik Sehat', alamat: 'Jl. Sejahtera No. 25', jenis: 'Klinik', nomor_telepon: '0212345678' }
@@ -41,10 +42,12 @@ const db = {
         { id: 1, nama: 'Ruangan A', jenis: 'Ruang Rawat', alamat: 'Jl. Rawat No. 30', kota: 'Jakarta', kode_pos: '12345' },
         { id: 2, nama: 'Ruang Operasi 1', jenis: 'Ruang Operasi', alamat: 'Jl. Operasi No. 35', kota: 'Jakarta', kode_pos: '12345' }
     ],
+
     janji: [
         { id: 1, pasien_id: 1, praktisi_id: 1, waktu_mulai: '2024-03-10 08:00:00', waktu_selesai: '2024-03-10 09:00:00', status: 'Aktif' },
         { id: 2, pasien_id: 2, praktisi_id: 2, waktu_mulai: '2024-03-12 09:00:00', waktu_selesai: '2024-03-12 11:00:00', status: 'Aktif' }
     ],
+
     jadwal: [
         { id: 1, praktisi_id: 1, hari: 'Senin', jam_mulai: '08:00:00', jam_selesai: '17:00:00' },
         { id: 2, praktisi_id: 2, hari: 'Selasa', jam_mulai: '09:00:00', jam_selesai: '18:00:00' }
@@ -53,6 +56,7 @@ const db = {
         { id: 1, jadwal_id: 1, waktu_mulai: '2024-03-10 08:00:00', waktu_selesai: '2024-03-10 09:00:00', status: 'Tersedia' },
         { id: 2, jadwal_id: 2, waktu_mulai: '2024-03-11 09:00:00', waktu_selesai: '2024-03-11 10:00:00', status: 'Tersedia' }
     ],
+
     pertemuan: [
         { id: 1, pasien_id: 1, praktisi_id: 1, waktu_mulai: '2024-03-10 08:00:00', waktu_selesai: '2024-03-10 09:00:00', keterangan: 'Konsultasi Umum' },
         { id: 2, pasien_id: 2, praktisi_id: 2, waktu_mulai: '2024-03-12 09:00:00', waktu_selesai: '2024-03-12 11:00:00', keterangan: 'Operasi Apendisitis' }
@@ -85,6 +89,7 @@ const db = {
         { id: 1, pertemuan_id: 1, jenis_laporan: 'Tes Darah', hasil: 'Normal', keterangan: 'Tingkat kolesterol dalam batas normal' },
         { id: 2, pertemuan_id: 2, jenis_laporan: 'Laporan Operasi', hasil: 'Berhasil, apendiks berhasil diangkat', keterangan: '-' }
     ],
+
     resep_obat: [
         { id: 1, pertemuan_id: 1, obat_id: 1, dosis: '150 mg/hari', keterangan: 'Minum setiap pagi sebelum makan' },
         { id: 2, pertemuan_id: 2, obat_id: 2, dosis: '500 mg/6 jam', keterangan: 'Minum sesuai dosis setelah makan' }
@@ -97,10 +102,12 @@ const db = {
         { id: 1, nama_obat: 'Aspirin', jenis_obat: 'Analgesik', produsen: 'PT. A', keterangan: 'Obat pereda nyeri' },
         { id: 2, nama_obat: 'Amoxicillin', jenis_obat: 'Antibiotik', produsen: 'PT. B', keterangan: 'Obat antibiotik untuk infeksi bakteri' }
     ],
+
     permintaan_layanan: [
         { id: 1, pertemuan_id: 1, jenis_layanan: 'Tes Darah', keterangan: 'Pasien memerlukan tes darah rutin' },
         { id: 2, pertemuan_id: 2, jenis_layanan: 'Konsultasi Pasca Operasi', keterangan: 'Pasien memerlukan konsultasi pasca operasi' }
     ],
+
     klaim: [
         { id: 1, pertemuan_id: 1, tanggal_klaim: '2024-03-15', jumlah_klaim: 150.00, status: 'Disetujui' },
         { id: 2, pertemuan_id: 2, tanggal_klaim: '2024-03-18', jumlah_klaim: 2500.00, status: 'Menunggu' }
@@ -109,6 +116,7 @@ const db = {
         { id: 1, pasien_id: 1, pertemuan_id: 1, tanggal_faktur: '2024-03-15', jumlah_total: 150.00, status: 'Lunas' },
         { id: 2, pasien_id: 2, pertemuan_id: 2, tanggal_faktur: '2024-03-18', jumlah_total: 2500.00, status: 'Belum Lunas' }
     ],
+    
     pemberitahuan_pembayaran: [
         { id: 1, faktur_id: 1, tanggal_pemberitahuan: '2024-03-15', keterangan: 'Pembayaran telah diterima' },
         { id: 2, faktur_id: 2, tanggal_pemberitahuan: '2024-03-20', keterangan: 'Silakan segera lakukan pembayaran' }
