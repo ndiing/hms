@@ -4,27 +4,6 @@ Practitioner
 Organization
 Location
 Appointment
-Encounter
-AllergyIntolerance
-Condition
-Procedure
-ClinicalImpression
-Observation
-DiagnosticReport
-MedicationRequest
-MedicationDispense
-Medication
-ServiceRequest
-Claim
-Invoice
-*/
-
-/* 
-Patient
-Practitioner
-Organization
-Location
-Appointment
 Schedule
 Slot
 Encounter
@@ -41,6 +20,8 @@ Medication
 ServiceRequest
 Claim
 Invoice
+PaymentNotice
+PaymentReconciliation
 */
 
 const db = {
