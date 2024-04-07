@@ -19,72 +19,80 @@ Claim
 Invoice
 */
 
-const data = {
+const db = {
     pasien: [
-        { id: 1, nama: "Budi Santoso", jenis_kelamin: "Laki-laki", tanggal_lahir: "1990-05-15", alamat: "Jl. Cendana No. 10", telepon: "081234567890", email: "budi@example.com" },
-        { id: 2, nama: "Ani Cahaya", jenis_kelamin: "Perempuan", tanggal_lahir: "1985-10-20", alamat: "Jl. Anggrek No. 5", telepon: "085678901234", email: "ani@example.com" },
+      { id: 1, identifier: 'P001', nama_depan: 'John', nama_belakang: 'Doe', jenis_kelamin: 'Laki-laki', tanggal_lahir: '1990-05-15', telepon: '123456789', email: 'john.doe@example.com', alamat: '123 Main St' },
+      { id: 2, identifier: 'P002', nama_depan: 'Jane', nama_belakang: 'Smith', jenis_kelamin: 'Perempuan', tanggal_lahir: '1985-08-25', telepon: '987654321', email: 'jane.smith@example.com', alamat: '456 Elm St' }
     ],
     praktisi: [
-        { id: 1, nama: "Dr. Andi Wijaya", spesialisasi: "Dokter Umum", jenis_kelamin: "Laki-laki", alamat: "Jl. Mawar No. 15", telepon: "081234567891", email: "andi@example.com" },
-        { id: 2, nama: "Dr. Dewi Susanti", spesialisasi: "Dokter Gigi", jenis_kelamin: "Perempuan", alamat: "Jl. Kenanga No. 8", telepon: "085678901235", email: "dewi@example.com" },
+      { id: 1, identifier: 'D001', nama_depan: 'Dr.', nama_belakang: 'Smith', jenis_kelamin: 'Laki-laki', tanggal_lahir: '1975-03-10', telepon: '5551234567', email: 'dr.smith@example.com', spesialisasi: 'Pediatrics' },
+      { id: 2, identifier: 'D002', nama_depan: 'Dr.', nama_belakang: 'Johnson', jenis_kelamin: 'Perempuan', tanggal_lahir: '1980-07-20', telepon: '5559876543', email: 'dr.johnson@example.com', spesialisasi: 'Internal Medicine' }
     ],
     organisasi: [
-        { id: 1, nama: "Rumah Sakit XYZ", alamat: "Jl. Teratai No. 25", telepon: "0211234567", email: "info@rsxyz.com" },
+      { id: 1, nama: 'Rumah Sakit Umum', jenis: 'Rumah Sakit', telepon: '5551112233', email: 'info@hospital.com', alamat: '789 Oak St' },
+      { id: 2, nama: 'Klinik', jenis: 'Klinik', telepon: '5554445566', email: 'info@clinic.com', alamat: '123 Maple St' }
     ],
     lokasi: [
-        { id: 1, nama: "Ruang Pemeriksaan", jenis: "Pemeriksaan", alamat: "Lantai 1", id_organisasi: 1 },
-        { id: 2, nama: "Ruang Operasi", jenis: "Operasi", alamat: "Lantai 2", id_organisasi: 1 },
+      { id: 1, nama: 'Gedung Utama RS', deskripsi: 'Gedung Utama', jenis: 'Rumah Sakit', telepon: '5551112233', email: 'info@hospital.com', alamat: '789 Oak St', organisasi_id: 1 },
+      { id: 2, nama: 'Klinik Gawat Darurat', deskripsi: 'Gawat Darurat', jenis: 'Klinik', telepon: '5554445566', email: 'info@clinic.com', alamat: '123 Maple St', organisasi_id: 2 }
     ],
-    pertemuan: [
-        { id: 1, id_pasien: 1, id_praktisi: 1, id_lokasi: 1, jenis_kunjungan: "Konsultasi Umum", waktu_mulai: "2024-04-10 09:00:00", waktu_selesai: "2024-04-10 10:00:00" },
-        { id: 2, id_pasien: 2, id_praktisi: 2, id_lokasi: 1, jenis_kunjungan: "Pemeriksaan Gigi", waktu_mulai: "2024-04-12 11:00:00", waktu_selesai: "2024-04-12 12:00:00" },
+    janji_temu: [
+      { id: 1, pasien_id: 1, praktisi_id: 1, lokasi_id: 1, waktu_mulai: '2023-01-01 08:00:00', waktu_selesai: '2023-01-01 15:00:00', status: 'selesai', deskripsi: 'Kunjungan Ruang Darurat' },
+      { id: 2, pasien_id: 2, praktisi_id: 2, lokasi_id: 2, waktu_mulai: '2023-02-01 10:00:00', waktu_selesai: '2023-02-01 11:00:00', status: 'selesai', deskripsi: 'Pemeriksaan Rutin' }
     ],
-    alergi_intoleransi: [
-        { id: 1, id_pasien: 1, alergi: "Alergi terhadap Amoxicillin" },
-        { id: 2, id_pasien: 2, alergi: "Intoleransi terhadap Udang" },
+    kunjungan: [
+      { id: 1, pasien_id: 1, kelas_kunjungan: 'rawat inap', jenis_kunjungan: 'Darurat', waktu_mulai: '2023-01-01 08:00:00', waktu_selesai: '2023-01-01 15:00:00', status: 'selesai', deskripsi: 'Kunjungan Ruang Darurat', lokasi_id: 1 },
+      { id: 2, pasien_id: 2, kelas_kunjungan: 'rawat jalan', jenis_kunjungan: 'Terjadwal', waktu_mulai: '2023-02-01 10:00:00', waktu_selesai: '2023-02-01 11:00:00', status: 'selesai', deskripsi: 'Pemeriksaan Rutin', lokasi_id: 2 }
+    ],
+    alergi: [
+      { id: 1, pasien_id: 1, zat: 'Pollen', status: 'aktif', tingkat_keparahan: 'Rendah' },
+      { id: 2, pasien_id: 2, zat: 'Penicillin', status: 'aktif', tingkat_keparahan: 'Tinggi' }
     ],
     kondisi: [
-        { id: 1, id_pasien: 1, nama: "Hipertensi", kode: "I10", status: "Aktif", tanggal_waktu: "2024-04-10 09:30:00", id_pertemuan: 1 },
-        { id: 2, id_pasien: 2, nama: "Karies Gigi", kode: "K02", status: "Aktif", tanggal_waktu: "2024-04-12 11:30:00", id_pertemuan: 2 },
+      { id: 1, pasien_id: 1, kode: 'I10', status: 'aktif', tanggal_mulai: '2022-12-01', tanggal_berakhir: null, kunjungan_id: 1 },
+      { id: 2, pasien_id: 2, kode: 'E11', status: 'aktif', tanggal_mulai: '2022-11-01', tanggal_berakhir: null, kunjungan_id: 2 }
     ],
     prosedur: [
-        { id: 1, id_pertemuan: 1, nama: "Pengukuran Tekanan Darah", kode: "94512007", tanggal_waktu: "2024-04-10 09:30:00" },
-        { id: 2, id_pertemuan: 2, nama: "Pencabutan Gigi", kode: "301471007", tanggal_waktu: "2024-04-12 11:45:00" },
+      { id: 1, pasien_id: 1, praktisi_id: 1, kode: '3051F', tanggal_dilakukan: '2023-01-01', status: 'selesai', deskripsi: 'Pemeriksaan fisik rutin', kunjungan_id: 1 },
+      { id: 2, pasien_id: 2, praktisi_id: 2, kode: '99213', tanggal_dilakukan: '2023-02-01', status: 'selesai', deskripsi: 'Manajemen Diabetes', kunjungan_id: 2 }
     ],
-    impresi_klinis: [
-        { id: 1, id_pasien: 1, kesimpulan: "Pasien membutuhkan pengawasan tekanan darah secara rutin", tanggal_waktu: "2024-04-10 10:00:00", id_pertemuan: 1 },
-        { id: 2, id_pasien: 2, kesimpulan: "Pasien membutuhkan perawatan gigi lanjutan", tanggal_waktu: "2024-04-12 12:00:00", id_pertemuan: 2 },
+    kesimpulan_klinis: [
+      { id: 1, pasien_id: 1, praktisi_id: 1, status: 'selesai', tanggal: '2023-01-01 16:00:00', deskripsi: 'Pasien dinyatakan sehat', kunjungan_id: 1 },
+      { id: 2, pasien_id: 2, praktisi_id: 2, status: 'selesai', tanggal: '2023-02-01 12:00:00', deskripsi: 'Pasien membutuhkan pengaturan dosis insulin', kunjungan_id: 2 }
     ],
     observasi: [
-        { id: 1, id_pertemuan: 1, jenis: "Tekanan Darah", nilai: "120/80 mmHg", tanggal_waktu: "2024-04-10 09:30:00" },
-        { id: 2, id_pertemuan: 2, jenis: "Karies Gigi", nilai: "Gigi 24 dan 25 terkena karies", tanggal_waktu: "2024-04-12 11:30:00" },
+      { id: 1, pasien_id: 1, praktisi_id: 1, kode: '3141-9', nilai: '120', waktu_efektif: '2023-01-01 09:00:00', interpretasi: 'Normal', kunjungan_id: 1 },
+      { id: 2, pasien_id: 2, praktisi_id: 2, kode: '8302-2', nilai: '7.2', waktu_efektif: '2023-02-01 10:30:00', interpretasi: 'Normal', kunjungan_id: 2 }
     ],
     laporan_diagnostik: [
-        { id: 1, id_pasien: 1, hasil: "Tekanan darah dalam batas normal", tanggal_waktu: "2024-04-10 10:00:00", id_pertemuan: 1 },
-        { id: 2, id_pasien: 2, hasil: "Gigi 24 dan 25 membutuhkan pencabutan", tanggal_waktu: "2024-04-12 12:00:00", id_pertemuan: 2 },
+      { id: 1, pasien_id: 1, praktisi_id: 1, kode: '4548-4', hasil: 'Normal', tanggal_dikeluarkan: '2023-01-01 16:30:00', status: 'selesai', kunjungan_id: 1 },
+      { id: 2, pasien_id: 2, praktisi_id: 2, kode: '789-8', hasil: 'Tinggi', tanggal_dikeluarkan: '2023-02-01 12:30:00', status: 'selesai', kunjungan_id: 2 }
     ],
     permintaan_obat: [
-        { id: 1, id_pasien: 1, nama_obat: "Amoxicillin", kode_obat: "123456", tanggal_waktu: "2024-04-10 09:30:00", id_pertemuan: 1 },
-        { id: 2, id_pasien: 2, nama_obat: "Obat Karies", kode_obat: "654321", tanggal_waktu: "2024-04-12 11:30:00", id_pertemuan: 2 },
+      { id: 1, pasien_id: 1, praktisi_id: 1, obat_id: 1, jumlah: 30, status: 'aktif', tanggal: '2023-01-01', kunjungan_id: 1 },
+      { id: 2, pasien_id: 2, praktisi_id: 2, obat_id: 2, jumlah: 60, status: 'aktif', tanggal: '2023-02-01', kunjungan_id: 2 }
     ],
-    distribusi_obat: [
-        { id: 1, id_permintaan_obat: 1, id_praktisi: 1, jumlah: 1, tanggal_waktu: "2024-04-10 09:45:00" },
-        { id: 2, id_permintaan_obat: 2, id_praktisi: 2, jumlah: 1, tanggal_waktu: "2024-04-12 11:45:00" },
+    penyaluran_obat: [
+      { id: 1, permintaan_obat_id: 1, tanggal_penyaluran: '2023-01-01 10:00:00', jumlah_diproses: 30, status: 'selesai', kunjungan_id: 1 },
+      { id: 2, permintaan_obat_id: 2, tanggal_penyaluran: '2023-02-01 13:00:00', jumlah_diproses: 60, status: 'selesai', kunjungan_id: 2 }
     ],
     obat: [
-        { id: 1, nama_obat: "Amoxicillin", kode_obat: "123456", bentuk_obat: "Tablet", deskripsi: "Obat antibiotik untuk infeksi bakteri" },
-        { id: 2, nama_obat: "Obat Karies", kode_obat: "654321", bentuk_obat: "Obat Kapsul", deskripsi: "Obat untuk mengobati karies gigi" },
+      { id: 1, nama: 'Aspirin', produsen: 'Bayer', kode: '1048301', harga: 5.99 },
+      { id: 2, nama: 'Insulin', produsen: 'Novo Nordisk', kode: '100012', harga: 25.50 }
     ],
     permintaan_layanan: [
-        { id: 1, id_pasien: 1, jenis_layanan: "Pelayanan Darurat", tanggal_waktu: "2024-04-10 09:15:00", id_pertemuan: 1 },
-        { id: 2, id_pasien: 2, jenis_layanan: "Pemeriksaan Kehamilan", tanggal_waktu: "2024-04-12 11:15:00", id_pertemuan: 2 },
+      { id: 1, pasien_id: 1, praktisi_id: 1, kode: 'L3121', tanggal: '2023-01-01 11:00:00', status: 'aktif', deskripsi: 'Pemeriksaan darah', kunjungan_id: 1 },
+      { id: 2, pasien_id: 2, praktisi_id: 2, kode: 'L1001', tanggal: '2023-02-01 14:00:00', status: 'aktif', deskripsi: 'Pengujian gula darah', kunjungan_id: 2 }
     ],
     klaim: [
-        { id: 1, id_pertemuan: 1, total_biaya: 500000, status: "Diproses", tanggal_waktu: "2024-04-10 10:30:00" },
-        { id: 2, id_pertemuan: 2, total_biaya: 1000000, status: "Menunggu Pembayaran", tanggal_waktu: "2024-04-12 12:30:00" },
+      { id: 1, kunjungan_id: 1, pasien_id: 1, jumlah_total: 1500.00, terbayar: 1 },
+      { id: 2, kunjungan_id: 2, pasien_id: 2, jumlah_total: 800.00, terbayar: 0 }
     ],
-    faktur: [
-        { id: 1, id_klaim: 1, tanggal_waktu: "2024-04-10 10:30:00", total_biaya: 500000 },
-        { id: 2, id_klaim: 2, tanggal_waktu: "2024-04-12 12:30:00", total_biaya: 1000000 },
-    ],
-};
+    tagihan: [
+      { id: 1, kunjungan_id: 1, pasien_id: 1, jumlah_total: 2000.00, terbayar: 1 },
+      { id: 2, kunjungan_id: 2, pasien_id: 2, jumlah_total: 1000.00, terbayar: 0 }
+    ]
+  };
+  
+  console.log(db); 
+  
