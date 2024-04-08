@@ -145,4 +145,8 @@ const db = {
         { id: 1, id_pasien: 1, jenis_layanan: "Tes Darah", tanggal_permintaan: "2024-04-10 08:00:00" },
         { id: 2, id_pasien: 2, jenis_layanan: "Rontgen Gigi", tanggal_permintaan: "2024-04-11 09:00:00" },
     ],
+    komposisi: [
+        { id: 1, id_pasien: 1, judul: "Ringkasan Konsultasi", teks: "Pasien mengeluh sakit kepala dan demam. Dokter meresepkan obat paracetamol." },
+        { id: 2, id_pasien: 2, judul: "Hasil Pemeriksaan Gigi", teks: "Dokter gigi menemukan karies pada gigi pasien dan merencanakan tindakan penambalan." },
+    ],
 };

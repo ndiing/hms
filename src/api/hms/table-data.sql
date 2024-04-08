@@ -393,3 +393,17 @@ CREATE TABLE permintaan_layanan (
 INSERT INTO permintaan_layanan (id, id_pasien, jenis_layanan, tanggal_permintaan)
 VALUES (1, 1, 'Tes Darah', '2024-04-10 08:00:00'),
        (2, 2, 'Rontgen Gigi', '2024-04-11 09:00:00');
+
+-- Tabel Komposisi
+CREATE TABLE komposisi (
+    id INT PRIMARY KEY,
+    id_pasien INT,
+    judul VARCHAR(255),
+    teks TEXT,
+    CONSTRAINT FK_Komposisi_Pasien FOREIGN KEY (id_pasien) REFERENCES pasien(id)
+);
+
+-- Contoh data untuk Tabel Komposisi
+INSERT INTO komposisi (id, id_pasien, judul, teks)
+VALUES (1, 1, 'Ringkasan Konsultasi', 'Pasien mengeluh sakit kepala dan demam. Dokter meresepkan obat paracetamol.'),
+       (2, 2, 'Hasil Pemeriksaan Gigi', 'Dokter gigi menemukan karies pada gigi pasien dan merencanakan tindakan penambalan.');
