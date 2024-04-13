@@ -32,12 +32,12 @@ ServiceRequest
 
 const db = {
     pasien: [
-        { id: 1, nama: "Ani", jenis_kelamin: "Perempuan", tanggal_lahir: "1990-05-15", alamat: "Jl. Merdeka No. 10" },
-        { id: 2, nama: "Budi", jenis_kelamin: "Laki-laki", tanggal_lahir: "1985-10-20", alamat: "Jl. Pahlawan No. 25" },
+        { id: 1, nama: "Ani" },
+        { id: 2, nama: "Budi" },
     ],
     praktisi: [
-        { id: 1, nama: "Dr. Indra", spesialisasi: "Dokter Umum" },
-        { id: 2, nama: "Dr. Siti", spesialisasi: "Dokter Gigi" },
+        { id: 1, nama: "Dr. Indra" },
+        { id: 2, nama: "Dr. Siti" },
     ],
     peran_praktisi: [
         { id: 1, id_praktisi: 1, peran: "Dokter Umum" },
@@ -150,3 +150,5 @@ const db = {
         { id: 2, id_pasien: 2, judul: "Hasil Pemeriksaan Gigi", teks: "Dokter gigi menemukan karies pada gigi pasien dan merencanakan tindakan penambalan." },
     ],
 };
+
+console.log(Object.keys(db))
