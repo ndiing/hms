@@ -33,41 +33,41 @@
 /* 
 
 Patient
-id: Identifier: [URL yang tidak valid dihapus] unik untuk pasien di dalam sistem Anda.
-active: boolean: [URL yang tidak valid dihapus] yang menunjukkan apakah pasien masih aktif terdaftar (true) atau tidak (false).
+id: Identifier: unik untuk pasien di dalam sistem Anda.
+active: boolean: yang menunjukkan apakah pasien masih aktif terdaftar (true) atau tidak (false).
 
 Practitioner
-id: Identifier: [URL yang tidak valid dihapus] unik untuk tenaga medis di dalam sistem Anda.
-name: HumanName: [URL yang tidak valid dihapus] lengkap tenaga medis.
+id: Identifier: unik untuk tenaga medis di dalam sistem Anda.
+name: HumanName: lengkap tenaga medis.
 
 Organization
-id: Identifier: [URL yang tidak valid dihapus] unik untuk organisasi di dalam sistem Anda.
-name: String: [URL yang tidak valid dihapus] nama organisasi.
+id: Identifier: unik untuk organisasi di dalam sistem Anda.
+name: String: nama organisasi.
 
 Location
-id: Identifier: [URL yang tidak valid dihapus] unik untuk lokasi di dalam sistem Anda.
-name: String: [URL yang tidak valid dihapus] nama lokasi (misalnya, ruang rawat inap, ruang periksa).
+id: Identifier: unik untuk lokasi di dalam sistem Anda.
+name: String: nama lokasi (misalnya, ruang rawat inap, ruang periksa).
 
 Encounter
-id: Identifier: [URL yang tidak valid dihapus] unik untuk encounter pasien di dalam sistem Anda.
-subject: Reference: [URL yang tidak valid dihapus] yang merujuk ke resource Patient.
-period: Period: [URL yang tidak valid dihapus] waktu encounter berlangsung.
+id: Identifier: unik untuk encounter pasien di dalam sistem Anda.
+subject: Reference: yang merujuk ke resource Patient.
+period: Period: waktu encounter berlangsung.
 
 Condition
-id: Identifier: [URL yang tidak valid dihapus] unik untuk kondisi pasien di dalam sistem Anda.
-subject: Reference: [URL yang tidak valid dihapus] yang merujuk ke resource Patient.
-code: CodeableConcept: [URL yang tidak valid dihapus] yang menunjukkan diagnosis atau masalah kesehatan pasien.
+id: Identifier: unik untuk kondisi pasien di dalam sistem Anda.
+subject: Reference: yang merujuk ke resource Patient.
+code: CodeableConcept: yang menunjukkan diagnosis atau masalah kesehatan pasien.
 
 Procedure
-id: Identifier: [URL yang tidak valid dihapus] unik untuk prosedur yang dilakukan pada pasien di dalam sistem Anda.
-subject: Reference: [URL yang tidak valid dihapus] yang merujuk ke resource Patient.
-code: CodeableConcept: [URL yang tidak valid dihapus] yang menunjukkan jenis prosedur yang dilakukan.
+id: Identifier: unik untuk prosedur yang dilakukan pada pasien di dalam sistem Anda.
+subject: Reference: yang merujuk ke resource Patient.
+code: CodeableConcept: yang menunjukkan jenis prosedur yang dilakukan.
 
 Observation
-id: Identifier: [URL yang tidak valid dihapus] unik untuk observasi pasien di dalam sistem Anda.
-subject: Reference: [URL yang tidak valid dihapus] yang merujuk ke resource Patient.
-code: CodeableConcept: [URL yang tidak valid dihapus] yang menunjukkan jenis observasi yang dilakukan (misalnya, tekanan darah, suhu).
-value: Quantity: [URL yang tidak valid dihapus] atau CodeableConcept: [URL yang tidak valid dihapus] tergantung pada hasil observasi.
+id: Identifier: unik untuk observasi pasien di dalam sistem Anda.
+subject: Reference: yang merujuk ke resource Patient.
+code: CodeableConcept: yang menunjukkan jenis observasi yang dilakukan (misalnya, tekanan darah, suhu).
+value: Quantity: atau CodeableConcept: tergantung pada hasil observasi.
 
 AllergyIntolerance
 id: Identifier: https://www.hl7.org/fhir/ unik untuk alergi atau intoleransi pasien di dalam sistem Anda.
