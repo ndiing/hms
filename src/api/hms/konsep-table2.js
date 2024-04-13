@@ -31,6 +31,38 @@
 */
 
 /* 
+Patient
+Practitioner
+PractitionerRole
+RelatedPerson
+Organization
+HealthcareService
+Location
+Encounter
+EpisodeOfCare
+AllergyIntolerance
+Condition
+Procedure
+FamilyMemberHistory
+ClinicalImpression
+Observation
+DiagnosticReport
+Specimen
+ImagingStudy
+Appointment
+AppointmentResponse
+Slot
+QuestionnaireResponse
+MedicationRequest
+MedicationAdministration
+Medication
+Immunization
+CarePlan
+ServiceRequest
+Composition
+*/
+
+/* 
 
 Patient
 id: Identifier: unik untuk pasien di dalam sistem Anda.
@@ -234,146 +266,141 @@ const db = {
     Patient: [
         { id: 1, active: true, name: "John Doe" },
         { id: 2, active: true, name: "Jane Smith" },
-        { id: 3, active: false, name: "Alice Johnson" },
+        { id: 3, active: true, name: "Michael Johnson" },
     ],
     Practitioner: [
-        { id: 1, name: "Dr. Michael Brown" },
-        { id: 2, name: "Dr. Emily Wilson" },
-        { id: 3, name: "Dr. Daniel Lee" },
-    ],
-    Organization: [
-        { id: 1, name: "General Hospital" },
-        { id: 2, name: "City Clinic" },
-        { id: 3, name: "Healthcare Center" },
-    ],
-    Location: [
-        { id: 1, name: "Main Building" },
-        { id: 2, name: "Clinic Wing" },
-        { id: 3, name: "Emergency Department" },
-    ],
-    Encounter: [
-        { id: 1, practitioner_id: 1, patient_id: 1, period: "2024-04-10 08:00:00" },
-        { id: 2, practitioner_id: 2, patient_id: 1, period: "2024-04-11 10:30:00" },
-        { id: 3, practitioner_id: 1, patient_id: 2, period: "2024-04-12 14:15:00" },
-    ],
-    Condition: [
-        { id: 1, encounter_id: 1, code: "Fever" },
-        { id: 2, encounter_id: 2, code: "Diabetes" },
-        { id: 3, encounter_id: 3, code: "Hypertension" },
-    ],
-    Procedure: [
-        { id: 1, encounter_id: 1, code: "Appendectomy" },
-        { id: 2, encounter_id: 2, code: "Insulin Injection" },
-        { id: 3, encounter_id: 3, code: "Cardiac Catheterization" },
-    ],
-    Observation: [
-        { id: 1, encounter_id: 1, code: "Blood Pressure", value: 120 },
-        { id: 2, encounter_id: 2, code: "Blood Sugar", value: 180 },
-        { id: 3, encounter_id: 3, code: "Temperature", value: 38.5 },
-    ],
-    AllergyIntolerance: [
-        { id: 1, patient_id: 1, code: "Penicillin" },
-        { id: 2, patient_id: 2, code: "Peanuts" },
-        { id: 3, patient_id: 3, code: "Latex" },
-    ],
-    DiagnosticReport: [
-        { id: 1, encounter_id: 1, issued: "2024-04-10 10:00:00", code: "X-Ray Result" },
-        { id: 2, encounter_id: 2, issued: "2024-04-11 12:30:00", code: "Blood Test Result" },
-        { id: 3, encounter_id: 3, issued: "2024-04-12 16:45:00", code: "MRI Report" },
-    ],
-    MedicationRequest: [
-        { id: 1, encounter_id: 1, patient_id: 1, medication: "Aspirin", dosageInstruction: "Take one tablet every 6 hours" },
-        { id: 2, encounter_id: 2, patient_id: 2, medication: "Metformin", dosageInstruction: "Take two tablets daily" },
-        { id: 3, encounter_id: 3, patient_id: 3, medication: "Lisinopril", dosageInstruction: "Take one tablet daily" },
-    ],
-    MedicationAdministration: [
-        { id: 1, encounter_id: 1, patient_id: 1, medication: "Aspirin", wasNotGiven: false, effectiveTime: "2024-04-10 08:15:00" },
-        { id: 2, encounter_id: 2, patient_id: 2, medication: "Metformin", wasNotGiven: false, effectiveTime: "2024-04-11 10:45:00" },
-        { id: 3, encounter_id: 3, patient_id: 3, medication: "Lisinopril", wasNotGiven: false, effectiveTime: "2024-04-12 14:30:00" },
-    ],
-    Medication: [
-        { id: 1, code: "ABC123", product: "Aspirin 100mg" },
-        { id: 2, code: "XYZ456", product: "Metformin 500mg" },
-        { id: 3, code: "DEF789", product: "Lisinopril 10mg" },
-    ],
-    Appointment: [
-        { id: 1, encounter_id: 1, status: "Scheduled", appointedTime: "2024-04-10 07:30:00" },
-        { id: 2, encounter_id: 2, status: "Completed", appointedTime: "2024-04-11 10:15:00" },
-        { id: 3, encounter_id: 3, status: "Scheduled", appointedTime: "2024-04-12 14:00:00" },
-    ],
-    AppointmentResponse: [
-        { id: 1, appointment_id: 1, response: "Accepted" },
-        { id: 2, appointment_id: 2, response: "Accepted" },
-        { id: 3, appointment_id: 3, response: "Accepted" },
-    ],
-    Slot: [
-        { id: 1, status: "Free", schedule_id: 1, start: "2024-04-10 07:00:00", end: "2024-04-10 08:00:00" },
-        { id: 2, status: "Booked", schedule_id: 2, start: "2024-04-11 09:00:00", end: "2024-04-11 10:00:00" },
-        { id: 3, status: "Free", schedule_id: 3, start: "2024-04-12 13:00:00", end: "2024-04-12 14:00:00" },
-    ],
-    Composition: [
-        { id: 1, encounter_id: 1, status: "Final", type: "Discharge Summary", patient_id: 1, date: "2024-04-10" },
-        { id: 2, encounter_id: 2, status: "Preliminary", type: "Consult Note", patient_id: 2, date: "2024-04-11" },
-        { id: 3, encounter_id: 3, status: "Final", type: "Discharge Summary", patient_id: 3, date: "2024-04-12" },
+        { id: 1, name: "Dr. Alex Johnson" },
+        { id: 2, name: "Dr. Emily Brown" },
     ],
     PractitionerRole: [
         { id: 1, practitioner_id: 1, organization_id: 1, code: "Primary Care Physician" },
-        { id: 2, practitioner_id: 2, organization_id: 2, code: "Endocrinologist" },
-        { id: 3, practitioner_id: 3, organization_id: 3, code: "Cardiologist" },
+        { id: 2, practitioner_id: 2, organization_id: 2, code: "Pediatrician" },
     ],
     RelatedPerson: [
-        { id: 1, patient_id: 1, name: "Jane Doe", relationship: "Spouse" },
-        { id: 2, patient_id: 2, name: "John Smith", relationship: "Sibling" },
-        { id: 3, patient_id: 3, name: "Bob Johnson", relationship: "Parent" },
+        { id: 1, patient_id: 1, name: "Mary Doe", relationship: "Spouse" },
+        { id: 2, patient_id: 2, name: "John Smith", relationship: "Parent" },
+        { id: 3, patient_id: 3, name: "Emily Johnson", relationship: "Sibling" },
+    ],
+    Organization: [
+        { id: 1, name: "General Hospital" },
+        { id: 2, name: "Community Health Clinic" },
     ],
     HealthcareService: [
-        { id: 1, name: "Primary Care Clinic", type: "Outpatient", organization_id: 1 },
-        { id: 2, name: "Diabetes Center", type: "Specialist", organization_id: 2 },
-        { id: 3, name: "Cardiology Department", type: "Specialist", organization_id: 3 },
+        { id: 1, name: "Emergency Department", type: "Emergency", organization_id: 1 },
+        { id: 2, name: "Pediatrics Clinic", type: "Outpatient", organization_id: 2 },
+    ],
+    Location: [
+        { id: 1, name: "Room 101" },
+        { id: 2, name: "Room 202" },
+    ],
+    Encounter: [
+        { id: 1, practitioner_id: 1, patient_id: 1, period: "2024-04-01 08:00:00" },
+        { id: 2, practitioner_id: 2, patient_id: 2, period: "2024-04-02 09:30:00" },
+        { id: 3, practitioner_id: 1, patient_id: 3, period: "2024-04-03 10:15:00" },
     ],
     EpisodeOfCare: [
-        { id: 1, patient_id: 1, status: "Active", type: "Follow-up" },
-        { id: 2, patient_id: 2, status: "Closed", type: "Initial" },
-        { id: 3, patient_id: 3, status: "Active", type: "Ongoing" },
+        { id: 1, patient_id: 1, status: "Active", type: "Emergency" },
+        { id: 2, patient_id: 2, status: "Finished", type: "Outpatient" },
+        { id: 3, patient_id: 3, status: "Cancelled", type: "Inpatient" },
+    ],
+    AllergyIntolerance: [
+        { id: 1, patient_id: 1, code: "Pollen" },
+        { id: 2, patient_id: 2, code: "Penicillin" },
+        { id: 3, patient_id: 3, code: "Peanuts" },
+    ],
+    Condition: [
+        { id: 1, encounter_id: 1, code: "Fever" },
+        { id: 2, encounter_id: 2, code: "Influenza" },
+        { id: 3, encounter_id: 3, code: "Asthma" },
+    ],
+    Procedure: [
+        { id: 1, encounter_id: 1, code: "Appendectomy" },
+        { id: 2, encounter_id: 2, code: "Fracture repair" },
+        { id: 3, encounter_id: 3, code: "Angioplasty" },
     ],
     FamilyMemberHistory: [
         { id: 1, patient_id: 1, code: "Heart Disease", relationship: "Father" },
         { id: 2, patient_id: 2, code: "Diabetes", relationship: "Mother" },
-        { id: 3, patient_id: 3, code: "Cancer", relationship: "Grandmother" },
+        { id: 3, patient_id: 3, code: "Cancer", relationship: "Grandparent" },
     ],
     ClinicalImpression: [
-        { id: 1, encounter_id: 1, status: "Completed", date: "2024-04-10 10:30:00", finding: "Appendicitis" },
-        { id: 2, encounter_id: 2, status: "Preliminary", date: "2024-04-11 12:45:00", finding: "Hyperglycemia" },
-        { id: 3, encounter_id: 3, status: "Completed", date: "2024-04-12 15:00:00", finding: "Hypertension" },
+        { id: 1, encounter_id: 1, status: "Completed", date: "2024-04-01", finding: "Appendicitis" },
+        { id: 2, encounter_id: 2, status: "In Progress", date: "2024-04-02", finding: "Fracture" },
+        { id: 3, encounter_id: 3, status: "Draft", date: "2024-04-03", finding: "Asthma exacerbation" },
+    ],
+    Observation: [
+        { id: 1, encounter_id: 1, code: "Temperature", value: 38.5 },
+        { id: 2, encounter_id: 2, code: "Blood Pressure", value: 120 },
+        { id: 3, encounter_id: 3, code: "Oxygen Saturation", value: 95 },
+    ],
+    DiagnosticReport: [
+        { id: 1, encounter_id: 1, issued: "2024-04-01 10:00:00", code: "DR001" },
+        { id: 2, encounter_id: 2, issued: "2024-04-02 11:00:00", code: "DR002" },
+        { id: 3, encounter_id: 3, issued: "2024-04-03 12:00:00", code: "DR003" },
     ],
     Specimen: [
-        { id: 1, encounter_id: 1, accession: "SPC123", collection: "2024-04-10 09:00:00" },
-        { id: 2, encounter_id: 2, accession: "SPC456", collection: "2024-04-11 11:00:00" },
-        { id: 3, encounter_id: 3, accession: "SPC789", collection: "2024-04-12 15:30:00" },
+        { id: 1, encounter_id: 1, accession: "S001", collection: "2024-04-01 08:15:00" },
+        { id: 2, encounter_id: 2, accession: "S002", collection: "2024-04-02 09:45:00" },
+        { id: 3, encounter_id: 3, accession: "S003", collection: "2024-04-03 10:30:00" },
     ],
     ImagingStudy: [
-        { id: 1, encounter_id: 1, modality: "X-Ray", started: "2024-04-10 08:30:00" },
-        { id: 2, encounter_id: 2, modality: "MRI", started: "2024-04-11 12:00:00" },
-        { id: 3, encounter_id: 3, modality: "CT Scan", started: "2024-04-12 16:00:00" },
+        { id: 1, encounter_id: 1, modality: "X-ray", started: "2024-04-01 08:30:00" },
+        { id: 2, encounter_id: 2, modality: "MRI", started: "2024-04-02 10:00:00" },
+        { id: 3, encounter_id: 3, modality: "CT Scan", started: "2024-04-03 11:00:00" },
+    ],
+    Appointment: [
+        { id: 1, encounter_id: 1, status: "Scheduled", appointedTime: "2024-04-01 10:00:00" },
+        { id: 2, encounter_id: 2, status: "Completed", appointedTime: "2024-04-02 11:00:00" },
+        { id: 3, encounter_id: 3, status: "Cancelled", appointedTime: "2024-04-03 12:00:00" },
+    ],
+    AppointmentResponse: [
+        { id: 1, appointment_id: 1, response: "Accepted" },
+        { id: 2, appointment_id: 2, response: "Accepted" },
+        { id: 3, appointment_id: 3, response: "Declined" },
+    ],
+    Slot: [
+        { id: 1, status: "Free", schedule_id: 1, start: "2024-04-01 08:00:00", end: "2024-04-01 09:00:00" },
+        { id: 2, status: "Booked", schedule_id: 2, start: "2024-04-02 09:30:00", end: "2024-04-02 10:30:00" },
+        { id: 3, status: "Busy", schedule_id: 3, start: "2024-04-03 10:15:00", end: "2024-04-03 11:15:00" },
     ],
     QuestionnaireResponse: [
-        { id: 1, encounter_id: 1, questionnaire: "Health Assessment", status: "Completed" },
-        { id: 2, encounter_id: 2, questionnaire: "Diabetes Survey", status: "InProgress" },
-        { id: 3, encounter_id: 3, questionnaire: "Cardiac Risk Assessment", status: "Completed" },
+        { id: 1, encounter_id: 1, questionnaire: "Q001", status: "Completed" },
+        { id: 2, encounter_id: 2, questionnaire: "Q002", status: "In Progress" },
+        { id: 3, encounter_id: 3, questionnaire: "Q003", status: "Draft" },
+    ],
+    Medication: [
+        { id: 1, code: "M001", product: "Paracetamol" },
+        { id: 2, code: "M002", product: "Amoxicillin" },
+        { id: 3, code: "M003", product: "Ibuprofen" },
+    ],
+    MedicationRequest: [
+        { id: 1, encounter_id: 1, patient_id: 1, medication: "M001", dosageInstruction: "Take 1 tablet every 4 hours" },
+        { id: 2, encounter_id: 2, patient_id: 2, medication: "M002", dosageInstruction: "Take 1 capsule twice a day" },
+        { id: 3, encounter_id: 3, patient_id: 3, medication: "M003", dosageInstruction: "Take 2 tablets as needed for pain" },
+    ],
+    MedicationAdministration: [
+        { id: 1, encounter_id: 1, patient_id: 1, medication: "M001", wasNotGiven: false, effectiveTime: "2024-04-01 08:15:00" },
+        { id: 2, encounter_id: 2, patient_id: 2, medication: "M002", wasNotGiven: false, effectiveTime: "2024-04-02 09:45:00" },
+        { id: 3, encounter_id: 3, patient_id: 3, medication: "M003", wasNotGiven: false, effectiveTime: "2024-04-03 10:30:00" },
     ],
     Immunization: [
-        { id: 1, encounter_id: 1, patient_id: 1, vaccineCode: "FLU123", administered: true },
-        { id: 2, encounter_id: 2, patient_id: 2, vaccineCode: "TDAP456", administered: true },
-        { id: 3, encounter_id: 3, patient_id: 3, vaccineCode: "MMR789", administered: true },
+        { id: 1, encounter_id: 1, patient_id: 1, vaccineCode: "V001", administered: true },
+        { id: 2, encounter_id: 2, patient_id: 2, vaccineCode: "V002", administered: true },
+        { id: 3, encounter_id: 3, patient_id: 3, vaccineCode: "V003", administered: false },
     ],
     CarePlan: [
-        { id: 1, encounter_id: 1, patient_id: 1, category: "Chronic Disease Management" },
-        { id: 2, encounter_id: 2, patient_id: 2, category: "Weight Management" },
-        { id: 3, encounter_id: 3, patient_id: 3, category: "Cardiac Rehabilitation" },
+        { id: 1, encounter_id: 1, patient_id: 1, category: "Management" },
+        { id: 2, encounter_id: 2, patient_id: 2, category: "Treatment" },
+        { id: 3, encounter_id: 3, patient_id: 3, category: "Prevention" },
     ],
     ServiceRequest: [
-        { id: 1, encounter_id: 1, patient_id: 1, code: "LAB123" },
-        { id: 2, encounter_id: 2, patient_id: 2, code: "EKG456" },
-        { id: 3, encounter_id: 3, patient_id: 3, code: "ECHO789" },
+        { id: 1, encounter_id: 1, patient_id: 1, code: "SR001" },
+        { id: 2, encounter_id: 2, patient_id: 2, code: "SR002" },
+        { id: 3, encounter_id: 3, patient_id: 3, code: "SR003" },
+    ],
+    Composition: [
+        { id: 1, encounter_id: 1, status: "Final", type: "Summary", patient_id: 1, date: "2024-04-01" },
+        { id: 2, encounter_id: 2, status: "Preliminary", type: "Discharge", patient_id: 2, date: "2024-04-02" },
+        { id: 3, encounter_id: 3, status: "Final", type: "Referral", patient_id: 3, date: "2024-04-03" },
     ],
 };
