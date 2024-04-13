@@ -1,14 +1,32 @@
+-- Tabel Patient
 CREATE TABLE Patient (
     id INT PRIMARY KEY,
     active BOOLEAN,
     name VARCHAR(255)
 );
 
+-- Tabel RelatedPerson
+CREATE TABLE RelatedPerson (
+    id INT PRIMARY KEY,
+    patient_id INT,
+    name VARCHAR(255),
+    relationship VARCHAR(255),
+    FOREIGN KEY (patient_id) REFERENCES Patient(id)
+);
+
+-- Tabel Practitioner
 CREATE TABLE Practitioner (
     id INT PRIMARY KEY,
     name VARCHAR(255)
 );
 
+-- Tabel Organization
+CREATE TABLE Organization (
+    id INT PRIMARY KEY,
+    name VARCHAR(255)
+);
+
+-- Tabel PractitionerRole
 CREATE TABLE PractitionerRole (
     id INT PRIMARY KEY,
     practitioner_id INT,
@@ -18,19 +36,13 @@ CREATE TABLE PractitionerRole (
     FOREIGN KEY (organization_id) REFERENCES Organization(id)
 );
 
-CREATE TABLE RelatedPerson (
-    id INT PRIMARY KEY,
-    patient_id INT,
-    name VARCHAR(255),
-    relationship VARCHAR(255),
-    FOREIGN KEY (patient_id) REFERENCES Patient(id)
-);
-
-CREATE TABLE Organization (
+-- Tabel Location
+CREATE TABLE Location (
     id INT PRIMARY KEY,
     name VARCHAR(255)
 );
 
+-- Tabel HealthcareService
 CREATE TABLE HealthcareService (
     id INT PRIMARY KEY,
     name VARCHAR(255),
@@ -39,98 +51,7 @@ CREATE TABLE HealthcareService (
     FOREIGN KEY (organization_id) REFERENCES Organization(id)
 );
 
-CREATE TABLE Location (
-    id INT PRIMARY KEY,
-    name VARCHAR(255)
-);
-
-CREATE TABLE Encounter (
-    id INT PRIMARY KEY,
-    practitioner_id INT,
-    patient_id INT,
-    period TIMESTAMP,
-    FOREIGN KEY (practitioner_id) REFERENCES Practitioner(id),
-    FOREIGN KEY (patient_id) REFERENCES Patient(id)
-);
-
-CREATE TABLE EpisodeOfCare (
-    id INT PRIMARY KEY,
-    patient_id INT,
-    status VARCHAR(255),
-    type VARCHAR(255),
-    FOREIGN KEY (patient_id) REFERENCES Patient(id)
-);
-
-CREATE TABLE AllergyIntolerance (
-    id INT PRIMARY KEY,
-    patient_id INT,
-    code VARCHAR(255),
-    FOREIGN KEY (patient_id) REFERENCES Patient(id)
-);
-
-CREATE TABLE Condition (
-    id INT PRIMARY KEY,
-    encounter_id INT,
-    code VARCHAR(255),
-    FOREIGN KEY (encounter_id) REFERENCES Encounter(id)
-);
-
-CREATE TABLE Procedure (
-    id INT PRIMARY KEY,
-    encounter_id INT,
-    code VARCHAR(255),
-    FOREIGN KEY (encounter_id) REFERENCES Encounter(id)
-);
-
-CREATE TABLE FamilyMemberHistory (
-    id INT PRIMARY KEY,
-    patient_id INT,
-    code VARCHAR(255),
-    relationship VARCHAR(255),
-    FOREIGN KEY (patient_id) REFERENCES Patient(id)
-);
-
-CREATE TABLE ClinicalImpression (
-    id INT PRIMARY KEY,
-    encounter_id INT,
-    status VARCHAR(255),
-    date TIMESTAMP,
-    finding VARCHAR(255),
-    FOREIGN KEY (encounter_id) REFERENCES Encounter(id)
-);
-
-CREATE TABLE Observation (
-    id INT PRIMARY KEY,
-    encounter_id INT,
-    code VARCHAR(255),
-    value FLOAT,
-    FOREIGN KEY (encounter_id) REFERENCES Encounter(id)
-);
-
-CREATE TABLE DiagnosticReport (
-    id INT PRIMARY KEY,
-    encounter_id INT,
-    issued TIMESTAMP,
-    code VARCHAR(255),
-    FOREIGN KEY (encounter_id) REFERENCES Encounter(id)
-);
-
-CREATE TABLE Specimen (
-    id INT PRIMARY KEY,
-    encounter_id INT,
-    accession VARCHAR(255),
-    collection TIMESTAMP,
-    FOREIGN KEY (encounter_id) REFERENCES Encounter(id)
-);
-
-CREATE TABLE ImagingStudy (
-    id INT PRIMARY KEY,
-    encounter_id INT,
-    modality VARCHAR(255),
-    started TIMESTAMP,
-    FOREIGN KEY (encounter_id) REFERENCES Encounter(id)
-);
-
+-- Tabel Appointment
 CREATE TABLE Appointment (
     id INT PRIMARY KEY,
     encounter_id INT,
@@ -139,6 +60,7 @@ CREATE TABLE Appointment (
     FOREIGN KEY (encounter_id) REFERENCES Encounter(id)
 );
 
+-- Tabel AppointmentResponse
 CREATE TABLE AppointmentResponse (
     id INT PRIMARY KEY,
     appointment_id INT,
@@ -146,6 +68,7 @@ CREATE TABLE AppointmentResponse (
     FOREIGN KEY (appointment_id) REFERENCES Appointment(id)
 );
 
+-- Tabel Slot
 CREATE TABLE Slot (
     id INT PRIMARY KEY,
     status VARCHAR(255),
@@ -155,6 +78,105 @@ CREATE TABLE Slot (
     FOREIGN KEY (schedule_id) REFERENCES HealthcareService(id)
 );
 
+-- Tabel Encounter
+CREATE TABLE Encounter (
+    id INT PRIMARY KEY,
+    practitioner_id INT,
+    patient_id INT,
+    period TIMESTAMP,
+    FOREIGN KEY (practitioner_id) REFERENCES Practitioner(id),
+    FOREIGN KEY (patient_id) REFERENCES Patient(id)
+);
+
+-- Tabel EpisodeOfCare
+CREATE TABLE EpisodeOfCare (
+    id INT PRIMARY KEY,
+    patient_id INT,
+    status VARCHAR(255),
+    type VARCHAR(255),
+    FOREIGN KEY (patient_id) REFERENCES Patient(id)
+);
+
+-- Tabel Condition
+CREATE TABLE Condition (
+    id INT PRIMARY KEY,
+    encounter_id INT,
+    code VARCHAR(255),
+    FOREIGN KEY (encounter_id) REFERENCES Encounter(id)
+);
+
+-- Tabel AllergyIntolerance
+CREATE TABLE AllergyIntolerance (
+    id INT PRIMARY KEY,
+    patient_id INT,
+    code VARCHAR(255),
+    FOREIGN KEY (patient_id) REFERENCES Patient(id)
+);
+
+-- Tabel Procedure
+CREATE TABLE Procedure (
+    id INT PRIMARY KEY,
+    encounter_id INT,
+    code VARCHAR(255),
+    FOREIGN KEY (encounter_id) REFERENCES Encounter(id)
+);
+
+-- Tabel FamilyMemberHistory
+CREATE TABLE FamilyMemberHistory (
+    id INT PRIMARY KEY,
+    patient_id INT,
+    code VARCHAR(255),
+    relationship VARCHAR(255),
+    FOREIGN KEY (patient_id) REFERENCES Patient(id)
+);
+
+-- Tabel ClinicalImpression
+CREATE TABLE ClinicalImpression (
+    id INT PRIMARY KEY,
+    encounter_id INT,
+    status VARCHAR(255),
+    date TIMESTAMP,
+    finding VARCHAR(255),
+    FOREIGN KEY (encounter_id) REFERENCES Encounter(id)
+);
+
+-- Tabel Observation
+CREATE TABLE Observation (
+    id INT PRIMARY KEY,
+    encounter_id INT,
+    code VARCHAR(255),
+    value FLOAT,
+    FOREIGN KEY (encounter_id) REFERENCES Encounter(id)
+);
+
+-- Tabel DiagnosticReport
+CREATE TABLE DiagnosticReport (
+    id INT PRIMARY KEY,
+    encounter_id INT,
+    issued TIMESTAMP,
+    code VARCHAR(255),
+    FOREIGN KEY (encounter_id) REFERENCES Encounter(id)
+);
+
+-- Tabel Specimen
+CREATE TABLE Specimen (
+    id INT PRIMARY KEY,
+    encounter_id INT,
+    accession VARCHAR(255),
+    collection TIMESTAMP,
+    FOREIGN KEY (encounter_id) REFERENCES Encounter(id)
+);
+
+-- Tabel ImagingStudy
+CREATE TABLE ImagingStudy (
+    id INT PRIMARY KEY,
+    encounter_id INT,
+    modality VARCHAR(255),
+    started TIMESTAMP,
+    FOREIGN KEY (encounter_id) REFERENCES Encounter(id)
+);
+
+-- Tabel QuestionnaireResponse
 CREATE TABLE QuestionnaireResponse (
     id INT PRIMARY KEY,
     encounter_id INT,
@@ -163,6 +185,7 @@ CREATE TABLE QuestionnaireResponse (
     FOREIGN KEY (encounter_id) REFERENCES Encounter(id)
 );
 
+-- Tabel MedicationRequest
 CREATE TABLE MedicationRequest (
     id INT PRIMARY KEY,
     encounter_id INT,
@@ -173,6 +196,7 @@ CREATE TABLE MedicationRequest (
     FOREIGN KEY (patient_id) REFERENCES Patient(id)
 );
 
+-- Tabel MedicationAdministration
 CREATE TABLE MedicationAdministration (
     id INT PRIMARY KEY,
     encounter_id INT,
@@ -184,12 +208,14 @@ CREATE TABLE MedicationAdministration (
     FOREIGN KEY (patient_id) REFERENCES Patient(id)
 );
 
+-- Tabel Medication
 CREATE TABLE Medication (
     id INT PRIMARY KEY,
     code VARCHAR(255),
     product VARCHAR(255)
 );
 
+-- Tabel Immunization
 CREATE TABLE Immunization (
     id INT PRIMARY KEY,
     encounter_id INT,
@@ -200,6 +226,7 @@ CREATE TABLE Immunization (
     FOREIGN KEY (patient_id) REFERENCES Patient(id)
 );
 
+-- Tabel CarePlan
 CREATE TABLE CarePlan (
     id INT PRIMARY KEY,
     encounter_id INT,
@@ -209,6 +236,7 @@ CREATE TABLE CarePlan (
     FOREIGN KEY (patient_id) REFERENCES Patient(id)
 );
 
+-- Tabel ServiceRequest
 CREATE TABLE ServiceRequest (
     id INT PRIMARY KEY,
     encounter_id INT,
@@ -218,6 +246,7 @@ CREATE TABLE ServiceRequest (
     FOREIGN KEY (patient_id) REFERENCES Patient(id)
 );
 
+-- Tabel Composition
 CREATE TABLE Composition (
     id INT PRIMARY KEY,
     encounter_id INT,

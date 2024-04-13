@@ -31,35 +31,35 @@
 */
 
 /* 
-Patient
-Practitioner
-PractitionerRole
-RelatedPerson
-Organization
-HealthcareService
-Location
-Encounter
-EpisodeOfCare
-AllergyIntolerance
-Condition
-Procedure
-FamilyMemberHistory
-ClinicalImpression
-Observation
-DiagnosticReport
-Specimen
-ImagingStudy
-Appointment
-AppointmentResponse
-Slot
-QuestionnaireResponse
-MedicationRequest
-MedicationAdministration
-Medication
-Immunization
-CarePlan
-ServiceRequest
-Composition
+Patient: Core entity representing individuals receiving care.
+RelatedPerson: Individuals with a relationship to a Patient (optional after Patient).
+Practitioner: Individuals providing healthcare services.
+Organization: Institutions where Practitioners work (optional after Practitioner).
+PractitionerRole: Defines a Practitioner's role and affiliation within an Organization (optional after Organization and Practitioner).
+Location: Physical locations where healthcare services are delivered.
+HealthcareService: Services offered by an Organization or Practitioner (optional after Location, Organization).
+Appointment: Scheduled meetings between Patient and Practitioner (optional after Location, Patient, Practitioner).
+AppointmentResponse: Patient's response to an Appointment (optional after Appointment).
+Slot: Blocks of time available for Appointments (optional after Location, HealthcareService).
+Encounter: Instances of healthcare interactions between Patient and Practitioner (after Location, Patient, Practitioner).
+EpisodeOfCare: Planned or ongoing periods of healthcare for a condition (optional after Encounter, Patient).
+Condition: Health problems identified in a Patient (optional after Encounter, Patient).
+AllergyIntolerance: Allergies or intolerances a Patient has (optional after Encounter, Patient).
+Procedure: Healthcare interventions performed on a Patient (optional after Encounter, Patient).
+FamilyMemberHistory: History of health conditions in a Patient's family (optional after Patient).
+ClinicalImpression: Clinician's assessment of a Patient's condition (optional after Encounter, Patient).
+Observation: Measurements and other assessments of a Patient's health (optional after Encounter, Patient).
+DiagnosticReport: Analyses of Patient data to identify a condition (optional after Observation).
+Specimen: Biological samples for analysis (optional after Encounter, Procedure).
+ImagingStudy: Images used for diagnostic purposes (optional after Encounter, Procedure).
+QuestionnaireResponse: Patient's answers to questionnaires (optional after Encounter, Patient).
+MedicationRequest: Orders for medications to be administered to a Patient (optional after Encounter, Patient).
+MedicationAdministration: Recording of medication administration to a Patient (optional after Encounter, MedicationRequest, Patient).
+Medication: Description of a medication (optional after MedicationRequest).
+Immunization: Administration of vaccines to a Patient (optional after Encounter, Patient).
+CarePlan: Plans for providing healthcare to a Patient (optional after Encounter, Patient).
+ServiceRequest: Requests for specific services to be performed on a Patient (optional after Encounter, Patient).
+Composition: Documents that summarize healthcare information (optional after various resource types like Encounter, Observation).
 */
 
 /* 
@@ -264,94 +264,43 @@ encounter: Reference: Referensi ke resource Encounter yang terkait dengan permin
 
 const db = {
     Patient: [
-        { id: 1, active: true, name: "John Doe" },
-        { id: 2, active: true, name: "Jane Smith" },
-        { id: 3, active: true, name: "Michael Johnson" },
-    ],
-    Practitioner: [
-        { id: 1, name: "Dr. Alex Johnson" },
-        { id: 2, name: "Dr. Emily Brown" },
-    ],
-    PractitionerRole: [
-        { id: 1, practitioner_id: 1, organization_id: 1, code: "Primary Care Physician" },
-        { id: 2, practitioner_id: 2, organization_id: 2, code: "Pediatrician" },
+        { id: 1, active: true, name: "Budi" },
+        { id: 2, active: true, name: "Ani" },
+        { id: 3, active: false, name: "Citra" },
     ],
     RelatedPerson: [
-        { id: 1, patient_id: 1, name: "Mary Doe", relationship: "Spouse" },
-        { id: 2, patient_id: 2, name: "John Smith", relationship: "Parent" },
-        { id: 3, patient_id: 3, name: "Emily Johnson", relationship: "Sibling" },
+        { id: 1, patient_id: 1, name: "Adi", relationship: "Saudara Kandung" },
+        { id: 2, patient_id: 2, name: "Dina", relationship: "Orang Tua" },
+        { id: 3, patient_id: 3, name: "Eka", relationship: "Saudari Kandung" },
+    ],
+    Practitioner: [
+        { id: 1, name: "Dr. Andi" },
+        { id: 2, name: "Dr. Lina" },
+        { id: 3, name: "Dr. Candra" },
     ],
     Organization: [
-        { id: 1, name: "General Hospital" },
-        { id: 2, name: "Community Health Clinic" },
+        { id: 1, name: "Rumah Sakit ABC" },
+        { id: 2, name: "Klinik XYZ" },
     ],
-    HealthcareService: [
-        { id: 1, name: "Emergency Department", type: "Emergency", organization_id: 1 },
-        { id: 2, name: "Pediatrics Clinic", type: "Outpatient", organization_id: 2 },
+    PractitionerRole: [
+        { id: 1, practitioner_id: 1, organization_id: 1, code: "Dokter Umum" },
+        { id: 2, practitioner_id: 2, organization_id: 2, code: "Dokter Gigi" },
+        { id: 3, practitioner_id: 3, organization_id: 1, code: "Dokter Bedah" },
     ],
     Location: [
-        { id: 1, name: "Room 101" },
-        { id: 2, name: "Room 202" },
+        { id: 1, name: "Poli Umum" },
+        { id: 2, name: "Poli Gigi" },
+        { id: 3, name: "Poli Bedah" },
     ],
-    Encounter: [
-        { id: 1, practitioner_id: 1, patient_id: 1, period: "2024-04-01 08:00:00" },
-        { id: 2, practitioner_id: 2, patient_id: 2, period: "2024-04-02 09:30:00" },
-        { id: 3, practitioner_id: 1, patient_id: 3, period: "2024-04-03 10:15:00" },
-    ],
-    EpisodeOfCare: [
-        { id: 1, patient_id: 1, status: "Active", type: "Emergency" },
-        { id: 2, patient_id: 2, status: "Finished", type: "Outpatient" },
-        { id: 3, patient_id: 3, status: "Cancelled", type: "Inpatient" },
-    ],
-    AllergyIntolerance: [
-        { id: 1, patient_id: 1, code: "Pollen" },
-        { id: 2, patient_id: 2, code: "Penicillin" },
-        { id: 3, patient_id: 3, code: "Peanuts" },
-    ],
-    Condition: [
-        { id: 1, encounter_id: 1, code: "Fever" },
-        { id: 2, encounter_id: 2, code: "Influenza" },
-        { id: 3, encounter_id: 3, code: "Asthma" },
-    ],
-    Procedure: [
-        { id: 1, encounter_id: 1, code: "Appendectomy" },
-        { id: 2, encounter_id: 2, code: "Fracture repair" },
-        { id: 3, encounter_id: 3, code: "Angioplasty" },
-    ],
-    FamilyMemberHistory: [
-        { id: 1, patient_id: 1, code: "Heart Disease", relationship: "Father" },
-        { id: 2, patient_id: 2, code: "Diabetes", relationship: "Mother" },
-        { id: 3, patient_id: 3, code: "Cancer", relationship: "Grandparent" },
-    ],
-    ClinicalImpression: [
-        { id: 1, encounter_id: 1, status: "Completed", date: "2024-04-01", finding: "Appendicitis" },
-        { id: 2, encounter_id: 2, status: "In Progress", date: "2024-04-02", finding: "Fracture" },
-        { id: 3, encounter_id: 3, status: "Draft", date: "2024-04-03", finding: "Asthma exacerbation" },
-    ],
-    Observation: [
-        { id: 1, encounter_id: 1, code: "Temperature", value: 38.5 },
-        { id: 2, encounter_id: 2, code: "Blood Pressure", value: 120 },
-        { id: 3, encounter_id: 3, code: "Oxygen Saturation", value: 95 },
-    ],
-    DiagnosticReport: [
-        { id: 1, encounter_id: 1, issued: "2024-04-01 10:00:00", code: "DR001" },
-        { id: 2, encounter_id: 2, issued: "2024-04-02 11:00:00", code: "DR002" },
-        { id: 3, encounter_id: 3, issued: "2024-04-03 12:00:00", code: "DR003" },
-    ],
-    Specimen: [
-        { id: 1, encounter_id: 1, accession: "S001", collection: "2024-04-01 08:15:00" },
-        { id: 2, encounter_id: 2, accession: "S002", collection: "2024-04-02 09:45:00" },
-        { id: 3, encounter_id: 3, accession: "S003", collection: "2024-04-03 10:30:00" },
-    ],
-    ImagingStudy: [
-        { id: 1, encounter_id: 1, modality: "X-ray", started: "2024-04-01 08:30:00" },
-        { id: 2, encounter_id: 2, modality: "MRI", started: "2024-04-02 10:00:00" },
-        { id: 3, encounter_id: 3, modality: "CT Scan", started: "2024-04-03 11:00:00" },
+    HealthcareService: [
+        { id: 1, name: "Poli Umum", type: "Ambulatori", organization_id: 1 },
+        { id: 2, name: "Poli Gigi", type: "Ambulatori", organization_id: 2 },
+        { id: 3, name: "Poli Bedah", type: "Ambulatori", organization_id: 1 },
     ],
     Appointment: [
-        { id: 1, encounter_id: 1, status: "Scheduled", appointedTime: "2024-04-01 10:00:00" },
-        { id: 2, encounter_id: 2, status: "Completed", appointedTime: "2024-04-02 11:00:00" },
-        { id: 3, encounter_id: 3, status: "Cancelled", appointedTime: "2024-04-03 12:00:00" },
+        { id: 1, encounter_id: 1, status: "Scheduled", appointedTime: "2024-04-15 08:00:00" },
+        { id: 2, encounter_id: 2, status: "Completed", appointedTime: "2024-04-16 09:30:00" },
+        { id: 3, encounter_id: 3, status: "Cancelled", appointedTime: "2024-04-17 10:45:00" },
     ],
     AppointmentResponse: [
         { id: 1, appointment_id: 1, response: "Accepted" },
@@ -359,48 +308,103 @@ const db = {
         { id: 3, appointment_id: 3, response: "Declined" },
     ],
     Slot: [
-        { id: 1, status: "Free", schedule_id: 1, start: "2024-04-01 08:00:00", end: "2024-04-01 09:00:00" },
-        { id: 2, status: "Booked", schedule_id: 2, start: "2024-04-02 09:30:00", end: "2024-04-02 10:30:00" },
-        { id: 3, status: "Busy", schedule_id: 3, start: "2024-04-03 10:15:00", end: "2024-04-03 11:15:00" },
+        { id: 1, status: "Free", schedule_id: 1, start: "2024-04-15 08:00:00", end: "2024-04-15 09:00:00" },
+        { id: 2, status: "Booked", schedule_id: 2, start: "2024-04-16 09:30:00", end: "2024-04-16 10:30:00" },
+        { id: 3, status: "Free", schedule_id: 3, start: "2024-04-17 10:45:00", end: "2024-04-17 11:45:00" },
+    ],
+    Encounter: [
+        { id: 1, practitioner_id: 1, patient_id: 1, period: "2024-04-15 08:00:00" },
+        { id: 2, practitioner_id: 2, patient_id: 2, period: "2024-04-16 09:30:00" },
+        { id: 3, practitioner_id: 3, patient_id: 3, period: "2024-04-17 10:45:00" },
+    ],
+    EpisodeOfCare: [
+        { id: 1, patient_id: 1, status: "Active", type: "Outpatient" },
+        { id: 2, patient_id: 2, status: "Closed", type: "Outpatient" },
+        { id: 3, patient_id: 3, status: "Active", type: "Outpatient" },
+    ],
+    Condition: [
+        { id: 1, encounter_id: 1, code: "Demam" },
+        { id: 2, encounter_id: 2, code: "Sakit Gigi" },
+        { id: 3, encounter_id: 3, code: "Patah Tulang" },
+    ],
+    AllergyIntolerance: [
+        { id: 1, patient_id: 1, code: "Polusi Udara" },
+        { id: 2, patient_id: 2, code: "Obat Penicillin" },
+        { id: 3, patient_id: 3, code: "Kacang" },
+    ],
+    Procedure: [
+        { id: 1, encounter_id: 1, code: "Operasi Amandel" },
+        { id: 2, encounter_id: 2, code: "Cabut Gigi" },
+        { id: 3, encounter_id: 3, code: "Pemasangan Balutan" },
+    ],
+    FamilyMemberHistory: [
+        { id: 1, patient_id: 1, code: "Hipertensi", relationship: "Ibu" },
+        { id: 2, patient_id: 2, code: "Diabetes", relationship: "Ayah" },
+        { id: 3, patient_id: 3, code: "Asma", relationship: "Saudara Laki-laki" },
+    ],
+    ClinicalImpression: [
+        { id: 1, encounter_id: 1, status: "Final", date: "2024-04-15", finding: "Amandel Bengkak" },
+        { id: 2, encounter_id: 2, status: "Draft", date: "2024-04-16", finding: "Karies" },
+        { id: 3, encounter_id: 3, status: "Final", date: "2024-04-17", finding: "Patah Tulang" },
+    ],
+    Observation: [
+        { id: 1, encounter_id: 1, code: "Suhu Tubuh", value: 38.5 },
+        { id: 2, encounter_id: 2, code: "Tingkat Kerusakan Gigi", value: 3 },
+        { id: 3, encounter_id: 3, code: "Tingkat Nyeri", value: 7.5 },
+    ],
+    DiagnosticReport: [
+        { id: 1, encounter_id: 1, issued: "2024-04-15", code: "Tes Darah" },
+        { id: 2, encounter_id: 2, issued: "2024-04-16", code: "Rontgen Gigi" },
+        { id: 3, encounter_id: 3, issued: "2024-04-17", code: "Rontgen" },
+    ],
+    Specimen: [
+        { id: 1, encounter_id: 1, accession: "BS001", collection: "2024-04-15 09:00:00" },
+        { id: 2, encounter_id: 2, accession: "DX001", collection: "2024-04-16 10:30:00" },
+        { id: 3, encounter_id: 3, accession: "XR001", collection: "2024-04-17 11:45:00" },
+    ],
+    ImagingStudy: [
+        { id: 1, encounter_id: 1, modality: "Rontgen", started: "2024-04-15 09:00:00" },
+        { id: 2, encounter_id: 2, modality: "CT Scan", started: "2024-04-16 10:30:00" },
+        { id: 3, encounter_id: 3, modality: "MRI", started: "2024-04-17 11:45:00" },
     ],
     QuestionnaireResponse: [
-        { id: 1, encounter_id: 1, questionnaire: "Q001", status: "Completed" },
-        { id: 2, encounter_id: 2, questionnaire: "Q002", status: "In Progress" },
-        { id: 3, encounter_id: 3, questionnaire: "Q003", status: "Draft" },
-    ],
-    Medication: [
-        { id: 1, code: "M001", product: "Paracetamol" },
-        { id: 2, code: "M002", product: "Amoxicillin" },
-        { id: 3, code: "M003", product: "Ibuprofen" },
+        { id: 1, encounter_id: 1, questionnaire: "Kuesioner Kepuasan Pasien", status: "Completed" },
+        { id: 2, encounter_id: 2, questionnaire: "Kuesioner Kesehatan Gigi", status: "In Progress" },
+        { id: 3, encounter_id: 3, questionnaire: "Kuesioner Cedera", status: "Completed" },
     ],
     MedicationRequest: [
-        { id: 1, encounter_id: 1, patient_id: 1, medication: "M001", dosageInstruction: "Take 1 tablet every 4 hours" },
-        { id: 2, encounter_id: 2, patient_id: 2, medication: "M002", dosageInstruction: "Take 1 capsule twice a day" },
-        { id: 3, encounter_id: 3, patient_id: 3, medication: "M003", dosageInstruction: "Take 2 tablets as needed for pain" },
+        { id: 1, encounter_id: 1, patient_id: 1, medication: "Paracetamol", dosageInstruction: "Minum 1 tablet setiap 6 jam" },
+        { id: 2, encounter_id: 2, patient_id: 2, medication: "Amoxicillin", dosageInstruction: "Minum 1 kapsul tiga kali sehari selama 7 hari" },
+        { id: 3, encounter_id: 3, patient_id: 3, medication: "Ibuprofen", dosageInstruction: "Minum 1 tablet setiap 8 jam untuk mengurangi nyeri" },
     ],
     MedicationAdministration: [
-        { id: 1, encounter_id: 1, patient_id: 1, medication: "M001", wasNotGiven: false, effectiveTime: "2024-04-01 08:15:00" },
-        { id: 2, encounter_id: 2, patient_id: 2, medication: "M002", wasNotGiven: false, effectiveTime: "2024-04-02 09:45:00" },
-        { id: 3, encounter_id: 3, patient_id: 3, medication: "M003", wasNotGiven: false, effectiveTime: "2024-04-03 10:30:00" },
+        { id: 1, encounter_id: 1, patient_id: 1, medication: "Paracetamol", wasNotGiven: false, effectiveTime: "2024-04-15 09:00:00" },
+        { id: 2, encounter_id: 2, patient_id: 2, medication: "Amoxicillin", wasNotGiven: false, effectiveTime: "2024-04-16 10:30:00" },
+        { id: 3, encounter_id: 3, patient_id: 3, medication: "Ibuprofen", wasNotGiven: false, effectiveTime: "2024-04-17 11:45:00" },
+    ],
+    Medication: [
+        { id: 1, code: "PAR001", product: "Paracetamol" },
+        { id: 2, code: "AMX001", product: "Amoxicillin" },
+        { id: 3, code: "IBU001", product: "Ibuprofen" },
     ],
     Immunization: [
-        { id: 1, encounter_id: 1, patient_id: 1, vaccineCode: "V001", administered: true },
-        { id: 2, encounter_id: 2, patient_id: 2, vaccineCode: "V002", administered: true },
-        { id: 3, encounter_id: 3, patient_id: 3, vaccineCode: "V003", administered: false },
+        { id: 1, encounter_id: 1, patient_id: 1, vaccineCode: "Vaksin Influenza", administered: true },
+        { id: 2, encounter_id: 2, patient_id: 2, vaccineCode: "Vaksin Hepatitis B", administered: true },
+        { id: 3, encounter_id: 3, patient_id: 3, vaccineCode: "Vaksin Campak, Gondongan, dan Rubella", administered: true },
     ],
     CarePlan: [
-        { id: 1, encounter_id: 1, patient_id: 1, category: "Management" },
-        { id: 2, encounter_id: 2, patient_id: 2, category: "Treatment" },
-        { id: 3, encounter_id: 3, patient_id: 3, category: "Prevention" },
+        { id: 1, encounter_id: 1, patient_id: 1, category: "Manajemen Nyeri" },
+        { id: 2, encounter_id: 2, patient_id: 2, category: "Perawatan Gigi" },
+        { id: 3, encounter_id: 3, patient_id: 3, category: "Perawatan Patah Tulang" },
     ],
     ServiceRequest: [
-        { id: 1, encounter_id: 1, patient_id: 1, code: "SR001" },
-        { id: 2, encounter_id: 2, patient_id: 2, code: "SR002" },
-        { id: 3, encounter_id: 3, patient_id: 3, code: "SR003" },
+        { id: 1, encounter_id: 1, patient_id: 1, code: "Terapi Fisik" },
+        { id: 2, encounter_id: 2, patient_id: 2, code: "Cabut Gigi" },
+        { id: 3, encounter_id: 3, patient_id: 3, code: "Konsultasi Ortopedi" },
     ],
     Composition: [
-        { id: 1, encounter_id: 1, status: "Final", type: "Summary", patient_id: 1, date: "2024-04-01" },
-        { id: 2, encounter_id: 2, status: "Preliminary", type: "Discharge", patient_id: 2, date: "2024-04-02" },
-        { id: 3, encounter_id: 3, status: "Final", type: "Referral", patient_id: 3, date: "2024-04-03" },
+        { id: 1, encounter_id: 1, status: "Final", type: "Ringkasan Pulang", patient_id: 1, date: "2024-04-15" },
+        { id: 2, encounter_id: 2, status: "Draft", type: "Catatan Gigi", patient_id: 2, date: "2024-04-16" },
+        { id: 3, encounter_id: 3, status: "Final", type: "Laporan Cedera", patient_id: 3, date: "2024-04-17" },
     ],
 };
