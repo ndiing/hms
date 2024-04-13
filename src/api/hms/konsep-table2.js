@@ -231,37 +231,6 @@ encounter: Reference: Referensi ke resource Encounter yang terkait dengan permin
 
 */
 
-// const db={}
-// db.Patient = [{id, active}]
-// db.Practitioner = [{id, name}]
-// db.Organization = [{id, name}]
-// db.Location = [{id, name}]
-// db.Encounter = [{id, subject, period}]
-// db.Condition = [{id, subject, code}]
-// db.Procedure = [{id, subject, code}]
-// db.Observation = [{id, subject, code, value}]
-// db.AllergyIntolerance = [{id, patient, code}]
-// db.DiagnosticReport = [{id, subject, issued, code}]
-// db.MedicationRequest = [{id, subject, medication, dosageInstruction}]
-// db.MedicationAdministration = [{id, subject, medication, wasNotGiven, effectiveTime}]
-// db.Medication = [{id, code, product}]
-// db.Appointment = [{id, status, patient, appointedTime}]
-// db.AppointmentResponse = [{id, appointment, response}]
-// db.Slot = [{id, status, schedule, start, end}]
-// db.Composition = [{id, status, type, subject, date}]
-// db.PractitionerRole = [{id, practitioner, organization, code}]
-// db.RelatedPerson = [{id, patient, name, relationship}]
-// db.HealthcareService = [{id, name, type, providedBy}]
-// db.EpisodeOfCare = [{id, patient, status, type}]
-// db.FamilyMemberHistory = [{id, patient, code, relationship}]
-// db.ClinicalImpression = [{id, subject, status, date, finding}]
-// db.Specimen = [{id, subject, accession, collection}]
-// db.ImagingStudy = [{id, subject, modality, started}]
-// db.QuestionnaireResponse = [{id, subject, questionnaire, status}]
-// db.Immunization = [{id, patient, vaccineCode, encounter, administered}]
-// db.CarePlan = [{id, subject, encounter, category}]
-// db.ServiceRequest = [{id, subject, code, encounter}]
-
 const db = {
     Patient: [
         { id: 1, active: true, name: "Budi" },
