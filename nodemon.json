@@ -1,0 +1,13 @@
+{
+    "ignore": [
+      ".git",
+      "node_modules/**/node_modules",
+      "src/api/otomax/models/**",
+      "data/**"
+    ],
+    "env": {
+      "NODE_ENV": "development",
+      "NODE_TLS_REJECT_UNAUTHORIZED": "0"
+    },
+    "ext": "js"
+  }
