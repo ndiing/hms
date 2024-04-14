@@ -19,6 +19,9 @@ CREATE TABLE Encounter(
     LocationId int,
     status char(1),
     plannedStartDate datetime,
-    plannedEndDate datetime
+    plannedEndDate datetime,
+    FOREIGN KEY (FKPatientId) REFERENCES Patient(id),
+    FOREIGN KEY (FKPractitionerId) REFERENCES Practitioner(id),
+    FOREIGN KEY (FKLocationId) REFERENCES Location(id)
 )
 ```
