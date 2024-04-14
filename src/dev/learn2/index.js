@@ -1,6 +1,7 @@
 const fetch = require("../../lib/fetch.js");
 const { write } = require("../../lib/file.js");
 const { JSDOM } = require("jsdom");
+const { flattenObject, unflattenObject } = require("../../lib/helper.js");
 
 // demo();
 async function demo() {
@@ -115,7 +116,7 @@ async function demo2() {
     for (const name in resourcelist) {
         const value = resourcelist[name];
         const json = JSON_eval(value);
-        data2[name] = json;
+        data2[name] = { id: "<int>", ...json };
     }
     // console.log(data2);
     write(__dirname + "/resourcelist2.json", data2);
@@ -213,4 +214,25 @@ function JSON_eval(value) {
     res = res.replace(/ (\w+)\(([^\(]+)\)/g, ($, $1, $2) => `${$1}:"${$2.replace(/[ \n]/g, "")}"`);
     eval(res);
     return json;
+}
+
+demo3();
+async function demo3() {
+    const datatypes = require("./datatypes2.json");
+    const resourcelist = require("./resourcelist2.json");
+
+    const data2 = [
+        //
+        resourcelist.Patient,
+        resourcelist.Practitioner,
+        resourcelist.Location,
+        resourcelist.Condition,
+        resourcelist.Observation,
+        resourcelist.Procedure,
+        resourcelist.Encounter,
+    ];
+    // console.log(flattenObject(resourcelist.Encounter))
+    // console.log(unflattenObject(flattenObject(resourcelist.Encounter)))
+
+    write(__dirname + "/resourcelist3.json", data2);
 }

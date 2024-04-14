@@ -1,5 +1,6 @@
 {
     "CapabilityStatement": {
+        "id": "<int>",
         "resourceType": "CapabilityStatement",
         "url": "<uri>",
         "identifier": [
@@ -176,6 +177,7 @@
         ]
     },
     "StructureDefinition": {
+        "id": "<int>",
         "resourceType": "StructureDefinition",
         "url": "<uri>",
         "identifier": [
@@ -257,6 +259,7 @@
         }
     },
     "ImplementationGuide": {
+        "id": "<int>",
         "resourceType": "ImplementationGuide",
         "url": "<uri>",
         "identifier": [
@@ -396,6 +399,7 @@
         }
     },
     "SearchParameter": {
+        "id": "<int>",
         "resourceType": "SearchParameter",
         "url": "<uri>",
         "identifier": [
@@ -464,6 +468,7 @@
         ]
     },
     "MessageDefinition": {
+        "id": "<int>",
         "resourceType": "MessageDefinition",
         "url": "<uri>",
         "identifier": [
@@ -531,6 +536,7 @@
         "graph": "<canonical(GraphDefinition)>"
     },
     "OperationDefinition": {
+        "id": "<int>",
         "resourceType": "OperationDefinition",
         "url": "<uri>",
         "identifier": [
@@ -624,6 +630,7 @@
         ]
     },
     "CompartmentDefinition": {
+        "id": "<int>",
         "resourceType": "CompartmentDefinition",
         "url": "<uri>",
         "version": "<string>",
@@ -664,6 +671,7 @@
         ]
     },
     "StructureMap": {
+        "id": "<int>",
         "resourceType": "StructureMap",
         "url": "<uri>",
         "identifier": [
@@ -792,6 +800,7 @@
         ]
     },
     "GraphDefinition": {
+        "id": "<int>",
         "resourceType": "GraphDefinition",
         "url": "<uri>",
         "identifier": [
@@ -861,6 +870,7 @@
         ]
     },
     "CodeSystem": {
+        "id": "<int>",
         "resourceType": "CodeSystem",
         "url": "<uri>",
         "identifier": [
@@ -999,6 +1009,7 @@
         ]
     },
     "ValueSet": {
+        "id": "<int>",
         "resourceType": "ValueSet",
         "url": "<uri>",
         "identifier": [
@@ -1194,6 +1205,7 @@
         }
     },
     "ConceptMap": {
+        "id": "<int>",
         "resourceType": "ConceptMap",
         "url": "<uri>",
         "identifier": [
@@ -1352,6 +1364,7 @@
         ]
     },
     "NamingSystem": {
+        "id": "<int>",
         "resourceType": "NamingSystem",
         "url": "<uri>",
         "identifier": [
@@ -1444,6 +1457,7 @@
         ]
     },
     "TerminologyCapabilities": {
+        "id": "<int>",
         "resourceType": "TerminologyCapabilities",
         "url": "<uri>",
         "identifier": [
@@ -1543,6 +1557,7 @@
         }
     },
     "Provenance": {
+        "id": "<int>",
         "resourceType": "Provenance",
         "target": [
             {
@@ -1615,6 +1630,7 @@
         ]
     },
     "AuditEvent": {
+        "id": "<int>",
         "resourceType": "AuditEvent",
         "category": [
             {
@@ -1751,6 +1767,7 @@
         ]
     },
     "Permission": {
+        "id": "<int>",
         "resourceType": "Permission",
         "status": "<code>",
         "asserter": {
@@ -1831,6 +1848,7 @@
         ]
     },
     "Consent": {
+        "id": "<int>",
         "resourceType": "Consent",
         "identifier": [
             {
@@ -1980,6 +1998,7 @@
         ]
     },
     "Composition": {
+        "id": "<int>",
         "resourceType": "Composition",
         "url": "<uri>",
         "identifier": [
@@ -2089,6 +2108,7 @@
         ]
     },
     "DocumentReference": {
+        "id": "<int>",
         "resourceType": "DocumentReference",
         "identifier": [
             {
@@ -2197,6 +2217,7 @@
         ]
     },
     "Basic": {
+        "id": "<int>",
         "resourceType": "Basic",
         "identifier": [
             {
@@ -2215,6 +2236,7 @@
         }
     },
     "Binary": {
+        "id": "<int>",
         "resourceType": "Binary",
         "contentType": "<code>",
         "securityContext": {
@@ -2223,6 +2245,7 @@
         "data": "<base64Binary>"
     },
     "Bundle": {
+        "id": "<int>",
         "resourceType": "Bundle",
         "identifier": {
             "Identifier": null
@@ -2276,6 +2299,7 @@
         }
     },
     "Linkage": {
+        "id": "<int>",
         "resourceType": "Linkage",
         "active": "<boolean>",
         "author": {
@@ -2291,6 +2315,7 @@
         ]
     },
     "MessageHeader": {
+        "id": "<int>",
         "resourceType": "MessageHeader",
         "eventCoding": {
             "Coding": null
@@ -2352,6 +2377,7 @@
         "definition": "<canonical(MessageDefinition)>"
     },
     "OperationOutcome": {
+        "id": "<int>",
         "resourceType": "OperationOutcome",
         "issue": [
             {
@@ -2371,6 +2397,7 @@
         ]
     },
     "Parameters": {
+        "id": "<int>",
         "resourceType": "Parameters",
         "parameter": [
             {
@@ -2507,6 +2534,7 @@
         ]
     },
     "Subscription": {
+        "id": "<int>",
         "resourceType": "Subscription",
         "identifier": [
             {
@@ -2552,6 +2580,7 @@
         "maxCount": "<positiveInt>"
     },
     "SubscriptionStatus": {
+        "id": "<int>",
         "resourceType": "SubscriptionStatus",
         "status": "<code>",
         "type": "<code>",
@@ -2581,6 +2610,7 @@
         ]
     },
     "SubscriptionTopic": {
+        "id": "<int>",
         "resourceType": "SubscriptionTopic",
         "url": "<uri>",
         "identifier": [
@@ -2679,6 +2709,7 @@
         ]
     },
     "Patient": {
+        "id": "<int>",
         "resourceType": "Patient",
         "identifier": [
             {
@@ -2768,6 +2799,7 @@
         ]
     },
     "Practitioner": {
+        "id": "<int>",
         "resourceType": "Practitioner",
         "identifier": [
             {
@@ -2827,6 +2859,7 @@
         ]
     },
     "PractitionerRole": {
+        "id": "<int>",
         "resourceType": "PractitionerRole",
         "identifier": [
             {
@@ -2890,6 +2923,7 @@
         ]
     },
     "RelatedPerson": {
+        "id": "<int>",
         "resourceType": "RelatedPerson",
         "identifier": [
             {
@@ -2940,6 +2974,7 @@
         ]
     },
     "Person": {
+        "id": "<int>",
         "resourceType": "Person",
         "identifier": [
             {
@@ -2995,6 +3030,7 @@
         ]
     },
     "Group": {
+        "id": "<int>",
         "resourceType": "Group",
         "identifier": [
             {
@@ -3050,6 +3086,7 @@
         ]
     },
     "Organization": {
+        "id": "<int>",
         "resourceType": "Organization",
         "identifier": [
             {
@@ -3100,6 +3137,7 @@
         ]
     },
     "OrganizationAffiliation": {
+        "id": "<int>",
         "resourceType": "OrganizationAffiliation",
         "identifier": [
             {
@@ -3153,6 +3191,7 @@
         ]
     },
     "HealthcareService": {
+        "id": "<int>",
         "resourceType": "HealthcareService",
         "identifier": [
             {
@@ -3250,6 +3289,7 @@
         ]
     },
     "Endpoint": {
+        "id": "<int>",
         "resourceType": "Endpoint",
         "identifier": [
             {
@@ -3298,6 +3338,7 @@
         ]
     },
     "Location": {
+        "id": "<int>",
         "resourceType": "Location",
         "identifier": [
             {
@@ -3363,6 +3404,7 @@
         ]
     },
     "Substance": {
+        "id": "<int>",
         "resourceType": "Substance",
         "identifier": [
             {
@@ -3399,6 +3441,7 @@
         ]
     },
     "BiologicallyDerivedProduct": {
+        "id": "<int>",
         "resourceType": "BiologicallyDerivedProduct",
         "productCategory": {
             "Coding": null
@@ -3479,6 +3522,7 @@
         ]
     },
     "Device": {
+        "id": "<int>",
         "resourceType": "Device",
         "identifier": [
             {
@@ -3621,6 +3665,7 @@
         }
     },
     "DeviceMetric": {
+        "id": "<int>",
         "resourceType": "DeviceMetric",
         "identifier": [
             {
@@ -3651,6 +3696,7 @@
         ]
     },
     "NutritionProduct": {
+        "id": "<int>",
         "resourceType": "NutritionProduct",
         "code": {
             "CodeableConcept": null
@@ -3740,6 +3786,7 @@
         ]
     },
     "Task": {
+        "id": "<int>",
         "resourceType": "Task",
         "identifier": [
             {
@@ -4107,6 +4154,7 @@
         ]
     },
     "Transport": {
+        "id": "<int>",
         "resourceType": "Transport",
         "identifier": [
             {
@@ -4462,6 +4510,7 @@
         }
     },
     "Appointment": {
+        "id": "<int>",
         "resourceType": "Appointment",
         "identifier": [
             {
@@ -4628,6 +4677,7 @@
         ]
     },
     "AppointmentResponse": {
+        "id": "<int>",
         "resourceType": "AppointmentResponse",
         "identifier": [
             {
@@ -4655,6 +4705,7 @@
         "recurrenceId": "<positiveInt>"
     },
     "Schedule": {
+        "id": "<int>",
         "resourceType": "Schedule",
         "identifier": [
             {
@@ -4689,6 +4740,7 @@
         "comment": "<markdown>"
     },
     "Slot": {
+        "id": "<int>",
         "resourceType": "Slot",
         "identifier": [
             {
@@ -4725,6 +4777,7 @@
         "comment": "<string>"
     },
     "VerificationResult": {
+        "id": "<int>",
         "resourceType": "VerificationResult",
         "target": [
             {
@@ -4817,6 +4870,7 @@
         ]
     },
     "Encounter": {
+        "id": "<int>",
         "resourceType": "Encounter",
         "identifier": [
             {
@@ -4986,6 +5040,7 @@
         ]
     },
     "EncounterHistory": {
+        "id": "<int>",
         "resourceType": "EncounterHistory",
         "encounter": {
             "Reference": "Encounter"
@@ -5035,6 +5090,7 @@
         ]
     },
     "EpisodeOfCare": {
+        "id": "<int>",
         "resourceType": "EpisodeOfCare",
         "identifier": [
             {
@@ -5108,6 +5164,7 @@
         ]
     },
     "Flag": {
+        "id": "<int>",
         "resourceType": "Flag",
         "identifier": [
             {
@@ -5137,6 +5194,7 @@
         }
     },
     "List": {
+        "id": "<int>",
         "resourceType": "List",
         "identifier": [
             {
@@ -5186,6 +5244,7 @@
         }
     },
     "Library": {
+        "id": "<int>",
         "resourceType": "Library",
         "url": "<uri>",
         "identifier": [
@@ -5286,6 +5345,7 @@
         ]
     },
     "AllergyIntolerance": {
+        "id": "<int>",
         "resourceType": "AllergyIntolerance",
         "identifier": [
             {
@@ -5367,6 +5427,7 @@
         ]
     },
     "AdverseEvent": {
+        "id": "<int>",
         "resourceType": "AdverseEvent",
         "identifier": [
             {
@@ -5501,6 +5562,7 @@
         ]
     },
     "Condition": {
+        "id": "<int>",
         "resourceType": "Condition",
         "identifier": [
             {
@@ -5595,6 +5657,7 @@
         ]
     },
     "Procedure": {
+        "id": "<int>",
         "resourceType": "Procedure",
         "identifier": [
             {
@@ -5734,6 +5797,7 @@
         ]
     },
     "FamilyMemberHistory": {
+        "id": "<int>",
         "resourceType": "FamilyMemberHistory",
         "identifier": [
             {
@@ -5858,6 +5922,7 @@
         ]
     },
     "ClinicalImpression": {
+        "id": "<int>",
         "resourceType": "ClinicalImpression",
         "identifier": [
             {
@@ -5928,6 +5993,7 @@
         ]
     },
     "DetectedIssue": {
+        "id": "<int>",
         "resourceType": "DetectedIssue",
         "identifier": [
             {
@@ -5996,6 +6062,7 @@
         ]
     },
     "Observation": {
+        "id": "<int>",
         "resourceType": "Observation",
         "identifier": [
             {
@@ -6200,6 +6267,7 @@
         ]
     },
     "DiagnosticReport": {
+        "id": "<int>",
         "resourceType": "DiagnosticReport",
         "identifier": [
             {
@@ -6295,6 +6363,7 @@
         ]
     },
     "Specimen": {
+        "id": "<int>",
         "resourceType": "Specimen",
         "identifier": [
             {
@@ -6411,6 +6480,7 @@
         ]
     },
     "BodyStructure": {
+        "id": "<int>",
         "resourceType": "BodyStructure",
         "identifier": [
             {
@@ -6488,6 +6558,7 @@
         }
     },
     "ImagingSelection": {
+        "id": "<int>",
         "resourceType": "ImagingSelection",
         "identifier": [
             {
@@ -6574,6 +6645,7 @@
         ]
     },
     "ImagingStudy": {
+        "id": "<int>",
         "resourceType": "ImagingStudy",
         "identifier": [
             {
@@ -6682,6 +6754,7 @@
         ]
     },
     "QuestionnaireResponse": {
+        "id": "<int>",
         "resourceType": "QuestionnaireResponse",
         "identifier": [
             {
@@ -6752,6 +6825,7 @@
         ]
     },
     "MolecularSequence": {
+        "id": "<int>",
         "resourceType": "MolecularSequence",
         "identifier": [
             {
@@ -6822,6 +6896,7 @@
         ]
     },
     "GenomicStudy": {
+        "id": "<int>",
         "resourceType": "GenomicStudy",
         "identifier": [
             {
@@ -6969,6 +7044,7 @@
         ]
     },
     "MedicationRequest": {
+        "id": "<int>",
         "resourceType": "MedicationRequest",
         "identifier": [
             {
@@ -7116,6 +7192,7 @@
         ]
     },
     "MedicationAdministration": {
+        "id": "<int>",
         "resourceType": "MedicationAdministration",
         "identifier": [
             {
@@ -7227,6 +7304,7 @@
         ]
     },
     "MedicationDispense": {
+        "id": "<int>",
         "resourceType": "MedicationDispense",
         "identifier": [
             {
@@ -7337,6 +7415,7 @@
         ]
     },
     "MedicationStatement": {
+        "id": "<int>",
         "resourceType": "MedicationStatement",
         "identifier": [
             {
@@ -7412,6 +7491,7 @@
         }
     },
     "Medication": {
+        "id": "<int>",
         "resourceType": "Medication",
         "identifier": [
             {
@@ -7457,6 +7537,7 @@
         }
     },
     "MedicationKnowledge": {
+        "id": "<int>",
         "resourceType": "MedicationKnowledge",
         "identifier": [
             {
@@ -7725,6 +7806,7 @@
         }
     },
     "Immunization": {
+        "id": "<int>",
         "resourceType": "Immunization",
         "identifier": [
             {
@@ -7845,6 +7927,7 @@
         ]
     },
     "ImmunizationEvaluation": {
+        "id": "<int>",
         "resourceType": "ImmunizationEvaluation",
         "identifier": [
             {
@@ -7879,6 +7962,7 @@
         "seriesDoses": "<string>"
     },
     "ImmunizationRecommendation": {
+        "id": "<int>",
         "resourceType": "ImmunizationRecommendation",
         "identifier": [
             {
@@ -7943,6 +8027,7 @@
         ]
     },
     "FormularyItem": {
+        "id": "<int>",
         "resourceType": "FormularyItem",
         "identifier": [
             {
@@ -7955,6 +8040,7 @@
         "status": "<code>"
     },
     "CarePlan": {
+        "id": "<int>",
         "resourceType": "CarePlan",
         "identifier": [
             {
@@ -8053,6 +8139,7 @@
         ]
     },
     "CareTeam": {
+        "id": "<int>",
         "resourceType": "CareTeam",
         "identifier": [
             {
@@ -8113,6 +8200,7 @@
         ]
     },
     "Goal": {
+        "id": "<int>",
         "resourceType": "Goal",
         "identifier": [
             {
@@ -8190,6 +8278,7 @@
         ]
     },
     "ServiceRequest": {
+        "id": "<int>",
         "resourceType": "ServiceRequest",
         "identifier": [
             {
@@ -8354,6 +8443,7 @@
         ]
     },
     "NutritionOrder": {
+        "id": "<int>",
         "resourceType": "NutritionOrder",
         "identifier": [
             {
@@ -8546,6 +8636,7 @@
         ]
     },
     "NutritionIntake": {
+        "id": "<int>",
         "resourceType": "NutritionIntake",
         "identifier": [
             {
@@ -8655,6 +8746,7 @@
         ]
     },
     "VisionPrescription": {
+        "id": "<int>",
         "resourceType": "VisionPrescription",
         "identifier": [
             {
@@ -8706,6 +8798,7 @@
         ]
     },
     "RiskAssessment": {
+        "id": "<int>",
         "resourceType": "RiskAssessment",
         "identifier": [
             {
@@ -8781,6 +8874,7 @@
         ]
     },
     "RequestOrchestration": {
+        "id": "<int>",
         "resourceType": "RequestOrchestration",
         "identifier": [
             {
@@ -8966,6 +9060,7 @@
         ]
     },
     "Communication": {
+        "id": "<int>",
         "resourceType": "Communication",
         "identifier": [
             {
@@ -9057,6 +9152,7 @@
         ]
     },
     "CommunicationRequest": {
+        "id": "<int>",
         "resourceType": "CommunicationRequest",
         "identifier": [
             {
@@ -9147,6 +9243,7 @@
         ]
     },
     "DeviceRequest": {
+        "id": "<int>",
         "resourceType": "DeviceRequest",
         "identifier": [
             {
@@ -9248,6 +9345,7 @@
         ]
     },
     "DeviceDispense": {
+        "id": "<int>",
         "resourceType": "DeviceDispense",
         "identifier": [
             {
@@ -9327,6 +9425,7 @@
         ]
     },
     "DeviceAssociation": {
+        "id": "<int>",
         "resourceType": "DeviceAssociation",
         "identifier": [
             {
@@ -9375,6 +9474,7 @@
         ]
     },
     "DeviceUsage": {
+        "id": "<int>",
         "resourceType": "DeviceUsage",
         "identifier": [
             {
@@ -9450,6 +9550,7 @@
         ]
     },
     "BiologicallyDerivedProductDispense": {
+        "id": "<int>",
         "resourceType": "BiologicallyDerivedProductDispense",
         "identifier": [
             {
@@ -9508,6 +9609,7 @@
         "usageInstruction": "<string>"
     },
     "GuidanceResponse": {
+        "id": "<int>",
         "resourceType": "GuidanceResponse",
         "requestIdentifier": {
             "Identifier": null
@@ -9561,6 +9663,7 @@
         ]
     },
     "SupplyRequest": {
+        "id": "<int>",
         "resourceType": "SupplyRequest",
         "identifier": [
             {
@@ -9632,6 +9735,7 @@
         }
     },
     "SupplyDelivery": {
+        "id": "<int>",
         "resourceType": "SupplyDelivery",
         "identifier": [
             {
@@ -9688,6 +9792,7 @@
         ]
     },
     "InventoryItem": {
+        "id": "<int>",
         "resourceType": "InventoryItem",
         "identifier": [
             {
@@ -9806,6 +9911,7 @@
         }
     },
     "InventoryReport": {
+        "id": "<int>",
         "resourceType": "InventoryReport",
         "identifier": [
             {
@@ -9858,6 +9964,7 @@
         ]
     },
     "Coverage": {
+        "id": "<int>",
         "resourceType": "Coverage",
         "identifier": [
             {
@@ -9960,6 +10067,7 @@
         }
     },
     "CoverageEligibilityRequest": {
+        "id": "<int>",
         "resourceType": "CoverageEligibilityRequest",
         "identifier": [
             {
@@ -10069,6 +10177,7 @@
         ]
     },
     "CoverageEligibilityResponse": {
+        "id": "<int>",
         "resourceType": "CoverageEligibilityResponse",
         "identifier": [
             {
@@ -10190,6 +10299,7 @@
         ]
     },
     "EnrollmentRequest": {
+        "id": "<int>",
         "resourceType": "EnrollmentRequest",
         "identifier": [
             {
@@ -10212,6 +10322,7 @@
         }
     },
     "EnrollmentResponse": {
+        "id": "<int>",
         "resourceType": "EnrollmentResponse",
         "identifier": [
             {
@@ -10233,6 +10344,7 @@
         }
     },
     "Claim": {
+        "id": "<int>",
         "resourceType": "Claim",
         "identifier": [
             {
@@ -10661,6 +10773,7 @@
         }
     },
     "ClaimResponse": {
+        "id": "<int>",
         "resourceType": "ClaimResponse",
         "identifier": [
             {
@@ -11066,6 +11179,7 @@
         ]
     },
     "Invoice": {
+        "id": "<int>",
         "resourceType": "Invoice",
         "identifier": [
             {
@@ -11144,6 +11258,7 @@
         ]
     },
     "PaymentNotice": {
+        "id": "<int>",
         "resourceType": "PaymentNotice",
         "identifier": [
             {
@@ -11179,6 +11294,7 @@
         }
     },
     "PaymentReconciliation": {
+        "id": "<int>",
         "resourceType": "PaymentReconciliation",
         "identifier": [
             {
@@ -11292,6 +11408,7 @@
         ]
     },
     "Account": {
+        "id": "<int>",
         "resourceType": "Account",
         "identifier": [
             {
@@ -11411,6 +11528,7 @@
         "calculatedAt": "<instant>"
     },
     "ChargeItem": {
+        "id": "<int>",
         "resourceType": "ChargeItem",
         "identifier": [
             {
@@ -11517,6 +11635,7 @@
         ]
     },
     "ChargeItemDefinition": {
+        "id": "<int>",
         "resourceType": "ChargeItemDefinition",
         "url": "<uri>",
         "identifier": [
@@ -11600,6 +11719,7 @@
         ]
     },
     "Contract": {
+        "id": "<int>",
         "resourceType": "Contract",
         "identifier": [
             {
@@ -12043,6 +12163,7 @@
         }
     },
     "ExplanationOfBenefit": {
+        "id": "<int>",
         "resourceType": "ExplanationOfBenefit",
         "identifier": [
             {
@@ -12806,6 +12927,7 @@
         ]
     },
     "InsurancePlan": {
+        "id": "<int>",
         "resourceType": "InsurancePlan",
         "identifier": [
             {
@@ -12949,6 +13071,7 @@
         ]
     },
     "ResearchStudy": {
+        "id": "<int>",
         "resourceType": "ResearchStudy",
         "url": "<uri>",
         "identifier": [
@@ -13128,6 +13251,7 @@
         ]
     },
     "ResearchSubject": {
+        "id": "<int>",
         "resourceType": "ResearchSubject",
         "identifier": [
             {
@@ -13171,6 +13295,7 @@
         ]
     },
     "ActivityDefinition": {
+        "id": "<int>",
         "resourceType": "ActivityDefinition",
         "url": "<uri>",
         "identifier": [
@@ -13336,6 +13461,7 @@
         ]
     },
     "ConditionDefinition": {
+        "id": "<int>",
         "resourceType": "ConditionDefinition",
         "url": "<uri>",
         "identifier": [
@@ -13448,6 +13574,7 @@
         ]
     },
     "DeviceDefinition": {
+        "id": "<int>",
         "resourceType": "DeviceDefinition",
         "description": "<markdown>",
         "identifier": [
@@ -13693,6 +13820,7 @@
         ]
     },
     "EventDefinition": {
+        "id": "<int>",
         "resourceType": "EventDefinition",
         "url": "<uri>",
         "identifier": [
@@ -13780,6 +13908,7 @@
         ]
     },
     "ObservationDefinition": {
+        "id": "<int>",
         "resourceType": "ObservationDefinition",
         "url": "<uri>",
         "identifier": {
@@ -13921,6 +14050,7 @@
         ]
     },
     "PlanDefinition": {
+        "id": "<int>",
         "resourceType": "PlanDefinition",
         "url": "<uri>",
         "identifier": [
@@ -14213,6 +14343,7 @@
         }
     },
     "Questionnaire": {
+        "id": "<int>",
         "resourceType": "Questionnaire",
         "url": "<uri>",
         "identifier": [
@@ -14354,6 +14485,7 @@
         ]
     },
     "SpecimenDefinition": {
+        "id": "<int>",
         "resourceType": "SpecimenDefinition",
         "url": "<uri>",
         "identifier": {
@@ -14490,6 +14622,7 @@
         ]
     },
     "ExampleScenario": {
+        "id": "<int>",
         "resourceType": "ExampleScenario",
         "url": "<uri>",
         "identifier": [
@@ -14607,6 +14740,7 @@
         ]
     },
     "ActorDefinition": {
+        "id": "<int>",
         "resourceType": "ActorDefinition",
         "url": "<uri>",
         "identifier": [
@@ -14655,6 +14789,7 @@
         ]
     },
     "Requirements": {
+        "id": "<int>",
         "resourceType": "Requirements",
         "url": "<uri>",
         "identifier": [
@@ -14727,6 +14862,7 @@
         ]
     },
     "ArtifactAssessment": {
+        "id": "<int>",
         "resourceType": "ArtifactAssessment",
         "identifier": [
             {
@@ -14783,6 +14919,7 @@
         "disposition": "<code>"
     },
     "Citation": {
+        "id": "<int>",
         "resourceType": "Citation",
         "url": "<uri>",
         "identifier": [
@@ -15101,6 +15238,7 @@
         }
     },
     "Evidence": {
+        "id": "<int>",
         "resourceType": "Evidence",
         "url": "<uri>",
         "identifier": [
@@ -15313,6 +15451,7 @@
         ]
     },
     "EvidenceReport": {
+        "id": "<int>",
         "resourceType": "EvidenceReport",
         "url": "<uri>",
         "status": "<code>",
@@ -15466,6 +15605,7 @@
         ]
     },
     "EvidenceVariable": {
+        "id": "<int>",
         "resourceType": "EvidenceVariable",
         "url": "<uri>",
         "identifier": [
@@ -15648,6 +15788,7 @@
         ]
     },
     "Measure": {
+        "id": "<int>",
         "resourceType": "Measure",
         "url": "<uri>",
         "identifier": [
@@ -15865,6 +16006,7 @@
         ]
     },
     "MeasureReport": {
+        "id": "<int>",
         "resourceType": "MeasureReport",
         "identifier": [
             {
@@ -16041,6 +16183,7 @@
         ]
     },
     "TestPlan": {
+        "id": "<int>",
         "resourceType": "TestPlan",
         "url": "<uri>",
         "identifier": [
@@ -16165,6 +16308,7 @@
         ]
     },
     "TestScript": {
+        "id": "<int>",
         "resourceType": "TestScript",
         "url": "<uri>",
         "identifier": [
@@ -16363,6 +16507,7 @@
         }
     },
     "TestReport": {
+        "id": "<int>",
         "resourceType": "TestReport",
         "identifier": {
             "Identifier": null
@@ -16424,6 +16569,7 @@
         }
     },
     "MedicinalProductDefinition": {
+        "id": "<int>",
         "resourceType": "MedicinalProductDefinition",
         "identifier": [
             {
@@ -16604,6 +16750,7 @@
         ]
     },
     "PackagedProductDefinition": {
+        "id": "<int>",
         "resourceType": "PackagedProductDefinition",
         "identifier": [
             {
@@ -16723,6 +16870,7 @@
         ]
     },
     "AdministrableProductDefinition": {
+        "id": "<int>",
         "resourceType": "AdministrableProductDefinition",
         "identifier": [
             {
@@ -16822,6 +16970,7 @@
         ]
     },
     "ManufacturedItemDefinition": {
+        "id": "<int>",
         "resourceType": "ManufacturedItemDefinition",
         "identifier": [
             {
@@ -16922,6 +17071,7 @@
         ]
     },
     "Ingredient": {
+        "id": "<int>",
         "resourceType": "Ingredient",
         "identifier": {
             "Identifier": null
@@ -17021,6 +17171,7 @@
         }
     },
     "ClinicalUseDefinition": {
+        "id": "<int>",
         "resourceType": "ClinicalUseDefinition",
         "identifier": [
             {
@@ -17156,6 +17307,7 @@
         }
     },
     "RegulatedAuthorization": {
+        "id": "<int>",
         "resourceType": "RegulatedAuthorization",
         "identifier": [
             {
@@ -17227,6 +17379,7 @@
         }
     },
     "SubstanceDefinition": {
+        "id": "<int>",
         "resourceType": "SubstanceDefinition",
         "identifier": [
             {
@@ -17513,6 +17666,7 @@
         }
     },
     "SubstanceNucleicAcid": {
+        "id": "<int>",
         "resourceType": "SubstanceNucleicAcid",
         "sequenceType": {
             "CodeableConcept": null
@@ -17559,6 +17713,7 @@
         ]
     },
     "SubstancePolymer": {
+        "id": "<int>",
         "resourceType": "SubstancePolymer",
         "identifier": {
             "Identifier": null
@@ -17639,6 +17794,7 @@
         ]
     },
     "SubstanceProtein": {
+        "id": "<int>",
         "resourceType": "SubstanceProtein",
         "sequenceType": {
             "CodeableConcept": null
@@ -17667,6 +17823,7 @@
         ]
     },
     "SubstanceReferenceInformation": {
+        "id": "<int>",
         "resourceType": "SubstanceReferenceInformation",
         "comment": "<string>",
         "gene": [
@@ -17735,6 +17892,7 @@
         ]
     },
     "SubstanceSourceMaterial": {
+        "id": "<int>",
         "resourceType": "SubstanceSourceMaterial",
         "sourceMaterialClass": {
             "CodeableConcept": null
