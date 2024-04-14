@@ -229,7 +229,7 @@ async function demo3() {
     const datatypes = require("./datatypes2.json");
     const resourcelist = require("./resourcelist2.json");
     const data2 = [];
-    console.log(flattenObject(resourcelist.Encounter))
+    console.log(flattenObject(resourcelist.DiagnosticReport))
     // console.log(unflattenObject(flattenObject(resourcelist.Encounter)))
 
     // write(__dirname + "/resourcelist3.json", data2);
