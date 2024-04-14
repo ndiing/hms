@@ -91,6 +91,49 @@ function unflattenObject(obj) {
 // console.log('\nUnflattened Object:');
 // console.log(unflattenedData);
 
+function findMissingItems(arr1, arr2) {
+    const missingItems = [];
+
+    // Iterate through the first array
+    for (const item of arr1) {
+        // Check if the item is present in the second array
+        if (!arr2.includes(item)) {
+            // If not present, add it to the missingItems array
+            missingItems.push(item);
+        }
+    }
+
+    return missingItems;
+}
+
+// // Example usage:
+// const array1 = [1, 2, 3, 4, 5];
+// const array2 = [2, 3, 5, 6];
+
+// const missingItems = findMissingItems(array1, array2);
+// console.log("Missing items from array1:", missingItems); // Output: [1, 4]
+function findDuplicates(arr) {
+    let duplicates = [];
+    let seen = {};
+
+    for (let i = 0; i < arr.length; i++) {
+        if (seen[arr[i]]) {
+            if (!duplicates.includes(arr[i])) {
+                duplicates.push(arr[i]);
+            }
+        } else {
+            seen[arr[i]] = true;
+        }
+    }
+
+    return duplicates;
+}
+
+// let myArray = [1, 2, 3, 4, 5, 2, 7, 8, 3, 4];
+// let duplicates = findDuplicates(myArray);
+// console.log(duplicates); // Output: [2, 3, 4]
+
+
 module.exports = {
     replacePhone,
     isEmpty,
@@ -98,4 +141,6 @@ module.exports = {
     chromePath,
     flattenObject,
     unflattenObject,
+    findMissingItems,
+    findDuplicates,
 };

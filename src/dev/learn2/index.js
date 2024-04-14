@@ -1,7 +1,7 @@
 const fetch = require("../../lib/fetch.js");
 const { write } = require("../../lib/file.js");
 const { JSDOM } = require("jsdom");
-const { flattenObject, unflattenObject } = require("../../lib/helper.js");
+const { flattenObject, unflattenObject, findMissingItems, findDuplicates } = require("../../lib/helper.js");
 
 // demo();
 async function demo() {
@@ -227,9 +227,18 @@ function JSON_eval(value) {
 // demo3();
 async function demo3() {
     const datatypes = require("./datatypes2.json");
+    // const resourcelist0 = ["Resources", "CapabilityStatement", "StructureDefinition", "ImplementationGuide", "SearchParameter", "MessageDefinition", "OperationDefinition", "CompartmentDefinition", "StructureMap", "GraphDefinition", "CodeSystem", "ValueSet", "ConceptMap", "NamingSystem", "TerminologyCapabilities", "Provenance", "AuditEvent", "Permission", "Consent", "Composition", "DocumentReference", "Basic", "Binary", "Bundle", "Linkage", "MessageHeader", "OperationOutcome", "Parameters", "Subscription", "SubscriptionStatus", "SubscriptionTopic", "Patient", "Practitioner", "PractitionerRole", "RelatedPerson", "Person", "Group", "Organization", "OrganizationAffiliation", "HealthcareService", "Endpoint", "Location", "Substance", "BiologicallyDerivedProduct", "Device", "DeviceMetric", "NutritionProduct", "Task", "Transport", "Appointment", "AppointmentResponse", "Schedule", "Slot", "VerificationResult", "Encounter", "EncounterHistory", "EpisodeOfCare", "Flag", "List", "Library", "AllergyIntolerance", "AdverseEvent", "Condition", "Procedure", "FamilyMemberHistory", "ClinicalImpression", "DetectedIssue", "Observation", "DocumentReference", "DiagnosticReport", "Specimen", "BodyStructure", "ImagingSelection", "ImagingStudy", "QuestionnaireResponse", "MolecularSequence", "GenomicStudy", "MedicationRequest", "MedicationAdministration", "MedicationDispense", "MedicationStatement", "Medication", "MedicationKnowledge", "Immunization", "ImmunizationEvaluation", "ImmunizationRecommendation", "FormularyItem", "CarePlan", "CareTeam", "Goal", "ServiceRequest", "NutritionOrder", "NutritionIntake", "VisionPrescription", "RiskAssessment", "RequestOrchestration", "Communication", "CommunicationRequest", "DeviceRequest", "DeviceDispense", "DeviceAssociation", "DeviceUsage", "BiologicallyDerivedProductDispense", "GuidanceResponse", "SupplyRequest", "SupplyDelivery", "InventoryItem", "InventoryReport", "Coverage", "CoverageEligibilityRequest", "CoverageEligibilityResponse", "EnrollmentRequest", "EnrollmentResponse", "Claim", "ClaimResponse", "Invoice", "PaymentNotice", "PaymentReconciliation", "Account", "ChargeItem", "ChargeItemDefinition", "Contract", "ExplanationOfBenefit", "InsurancePlan", "ResearchStudy", "ResearchSubject", "ActivityDefinition", "ConditionDefinition", "DeviceDefinition", "EventDefinition", "ObservationDefinition", "PlanDefinition", "Questionnaire", "SpecimenDefinition", "ExampleScenario", "ActorDefinition", "Requirements", "ArtifactAssessment", "Citation", "Evidence", "EvidenceReport", "EvidenceVariable", "Measure", "MeasureReport", "TestPlan", "TestScript", "TestReport", "MedicinalProductDefinition", "PackagedProductDefinition", "AdministrableProductDefinition", "ManufacturedItemDefinition", "Ingredient", "ClinicalUseDefinition", "RegulatedAuthorization", "SubstanceDefinition", "SubstanceNucleicAcid", "SubstancePolymer", "SubstanceProtein", "SubstanceReferenceInformation", "SubstanceSourceMaterial"];
     const resourcelist = require("./resourcelist2.json");
 
-    console.log(Object.keys(resourcelist).length)
+    // console.log(
+    //     findMissingItems(
+    //         resourcelist0,
+    //         Object.keys(resourcelist),
+    //     ),
+    //     findDuplicates(resourcelist0),
+    //     resourcelist0.length,
+    //     Object.keys(resourcelist).length,
+    // )
     const data2 = [];
     // console.log(flattenObject(resourcelist.Encounter))
     // console.log(unflattenObject(flattenObject(resourcelist.Encounter)))
