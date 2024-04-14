@@ -5,7 +5,7 @@ function handleLog(error) {
     // errorLog += `${JSON.stringify(error,Object.getOwnPropertyNames(error))}\r\n`;
     // errorLog += `\r\n`;
     // write("./error-log.txt", errorLog);
-    console.log(error)
+    console.log(error);
 }
 process.on("uncaughtException", (error, origin) => handleLog(error));
 process.on("unhandledRejection", (reason, promise) => handleLog(reason));
@@ -19,7 +19,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 const express = require("express");
 const { init, message, compression, cookie, auth, missing, error } = require("./lib/middleware");
-const { store } = require("./api/auth/controller");
+// const { store } = require("./api/auth/controller");
 
 try {
     require("./lib");
@@ -31,7 +31,26 @@ try {
 const app = express();
 // app.use(cors())
 // app.use(helmet())
-app.use(init(), message(), compression(), cookie(), auth(store.securities));
+app.use(
+    init(),
+    message(),
+    compression(),
+    cookie(),
+    auth([
+        {
+            url: /.*/.source,
+            permissions: [
+                //
+                {
+                    //
+                    ip: /^(localhost|127(?:\.[0-9]+){0,2}\.[0-9]+|::1)$/.source,
+                    method: { POST: "any", GET: "any", PATCH: "any", DELETE: "any" },
+                    rateLimit: { window: null, limit: null },
+                },
+            ],
+        },
+    ]),
+);
 app.use("/api", require("./api"));
 app.use(missing(), error());
 

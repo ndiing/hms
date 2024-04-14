@@ -125,3 +125,10 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+data
+config.json
+host.crt
+host.key
+root.crt
+root.key
