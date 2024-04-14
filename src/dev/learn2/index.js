@@ -108,7 +108,7 @@ async function demo() {
     write(__dirname + "/resourcelist.json", data2);
 }
 
-// demo2();
+demo2();
 async function demo2() {
     const datatypes = require("./datatypes.json");
     const resourcelist = require("./resourcelist.json");
@@ -224,7 +224,7 @@ function JSON_eval(value) {
     return json;
 }
 
-demo3();
+// demo3();
 async function demo3() {
     const datatypes = require("./datatypes2.json");
     const resourcelist = require("./resourcelist2.json");
