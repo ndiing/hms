@@ -1,0 +1,1088 @@
+[
+    {
+        "label": "Primitive Types",
+        "children": [
+            {
+                "label": "PrimitiveType",
+                "href": "types.html#PrimitiveType"
+            },
+            {
+                "label": "instant",
+                "href": "datatypes.html#instant"
+            },
+            {
+                "label": "time",
+                "href": "datatypes.html#time"
+            },
+            {
+                "label": "date",
+                "href": "datatypes.html#date"
+            },
+            {
+                "label": "dateTime",
+                "href": "datatypes.html#dateTime"
+            },
+            {
+                "label": "decimal",
+                "href": "datatypes.html#decimal"
+            },
+            {
+                "label": "boolean",
+                "href": "datatypes.html#boolean"
+            },
+            {
+                "label": "integer",
+                "href": "datatypes.html#integer"
+            },
+            {
+                "label": "string",
+                "href": "datatypes.html#string"
+            },
+            {
+                "label": "uri",
+                "href": "datatypes.html#uri"
+            },
+            {
+                "label": "base64Binary",
+                "href": "datatypes.html#base64Binary"
+            },
+            {
+                "label": "code",
+                "href": "datatypes.html#code"
+            },
+            {
+                "label": "id",
+                "href": "datatypes.html#id"
+            },
+            {
+                "label": "oid",
+                "href": "datatypes.html#oid"
+            },
+            {
+                "label": "unsignedInt",
+                "href": "datatypes.html#unsignedInt"
+            },
+            {
+                "label": "positiveInt",
+                "href": "datatypes.html#positiveInt"
+            },
+            {
+                "label": "markdown",
+                "href": "datatypes.html#markdown"
+            },
+            {
+                "label": "url",
+                "href": "datatypes.html#url"
+            },
+            {
+                "label": "canonical",
+                "href": "datatypes.html#canonical"
+            },
+            {
+                "label": "uuid",
+                "href": "datatypes.html#uuid"
+            },
+            {
+                "label": "integer64",
+                "href": "datatypes.html#integer64"
+            }
+        ]
+    },
+    {
+        "label": "General-Purpose Datatypes",
+        "children": [
+            {
+                "label": "DataType",
+                "href": "types.html#DataType"
+            },
+            {
+                "label": "BackboneType",
+                "href": "types.html#BackboneType"
+            },
+            {
+                "label": "Identifier",
+                "href": "datatypes.html#Identifier",
+                "textContent": "{\n  // from Element: extension\n  \"use\" : \"<code>\", // usual | official | temp | secondary | old (If known)\n  \"type\" : { CodeableConcept }, // Description of identifier\n  \"system\" : \"<uri>\", // The namespace for the identifier value\n  \"value\" : \"<string>\", // I The value that is unique\n  \"period\" : { Period }, // Time period when id is/was valid for use\n  \"assigner\" : { Reference(Organization) } // Organization that issued id (may be just text)\n}\n",
+                "schema": {
+                    "use": "<code>",
+                    "type": "CodeableConcept",
+                    "system": "<uri>",
+                    "value": "<string>",
+                    "period": "Period",
+                    "assigner": "Reference(Organization)"
+                }
+            },
+            {
+                "label": "HumanName",
+                "href": "datatypes.html#HumanName",
+                "textContent": "{\n  // from Element: extension\n  \"use\" : \"<code>\", // usual | official | temp | nickname | anonymous | old | maiden\n  \"text\" : \"<string>\", // Text representation of the full name\n  \"family\" : \"<string>\", // Family name (often called 'Surname')\n  \"given\" : [\"<string>\"], // Given names (not always 'first'). Includes middle names\n  \"prefix\" : [\"<string>\"], // Parts that come before the name\n  \"suffix\" : [\"<string>\"], // Parts that come after the name\n  \"period\" : { Period } // Time period when name was/is in use\n}\n",
+                "schema": {
+                    "use": "<code>",
+                    "text": "<string>",
+                    "family": "<string>",
+                    "given": [
+                        "<string>"
+                    ],
+                    "prefix": [
+                        "<string>"
+                    ],
+                    "suffix": [
+                        "<string>"
+                    ],
+                    "period": "Period"
+                }
+            },
+            {
+                "label": "Address",
+                "href": "datatypes.html#Address",
+                "textContent": "{\n  // from Element: extension\n  \"use\" : \"<code>\", // home | work | temp | old | billing - purpose of this address\n  \"type\" : \"<code>\", // postal | physical | both\n  \"text\" : \"<string>\", // Text representation of the address\n  \"line\" : [\"<string>\"], // Street name, number, direction & P.O. Box etc.\n  \"city\" : \"<string>\", // Name of city, town etc.\n  \"district\" : \"<string>\", // District name (aka county)\n  \"state\" : \"<string>\", // Sub-unit of country (abbreviations ok)\n  \"postalCode\" : \"<string>\", // Postal code for area\n  \"country\" : \"<string>\", // Country (e.g. may be ISO 3166 2 or 3 letter code)\n  \"period\" : { Period } // Time period when address was/is in use\n}\n",
+                "schema": {
+                    "use": "<code>",
+                    "type": "<code>",
+                    "text": "<string>",
+                    "line": [
+                        "<string>"
+                    ],
+                    "city": "<string>",
+                    "district": "<string>",
+                    "state": "<string>",
+                    "postalCode": "<string>",
+                    "country": "<string>",
+                    "period": "Period"
+                }
+            },
+            {
+                "label": "ContactPoint",
+                "href": "datatypes.html#ContactPoint",
+                "textContent": "{\n  // from Element: extension\n  \"system\" : \"<code>\", // I phone | fax | email | pager | url | sms | other\n  \"value\" : \"<string>\", // I The actual contact point details\n  \"use\" : \"<code>\", // home | work | temp | old | mobile - purpose of this contact point\n  \"rank\" : \"<positiveInt>\", // Specify preferred order of use (1 = highest)\n  \"period\" : { Period } // Time period when the contact point was/is in use\n}\n",
+                "schema": {
+                    "system": "<code>",
+                    "value": "<string>",
+                    "use": "<code>",
+                    "rank": "<positiveInt>",
+                    "period": "Period"
+                }
+            },
+            {
+                "label": "Timing",
+                "href": "datatypes.html#Timing",
+                "textContent": "{\n  // from Element: extension\n  \"event\" : [\"<dateTime>\"], // When the event occurs\n  \"repeat\" : { // When the event is to occur\n    // bounds[x]: Length/Range of lengths, or (Start and/or end) limits. One of these 3:\n    \"boundsDuration\" : { Duration },\n    \"boundsRange\" : { Range },\n    \"boundsPeriod\" : { Period },\n    \"count\" : \"<positiveInt>\", // I Number of times to repeat\n    \"countMax\" : \"<positiveInt>\", // I Maximum number of times to repeat\n    \"duration\" : <decimal>, // I How long when it happens\n    \"durationMax\" : <decimal>, // I How long when it happens (Max)\n    \"durationUnit\" : \"<code>\", // I s | min | h | d | wk | mo | a - unit of time (UCUM)\n    \"frequency\" : \"<positiveInt>\", // Indicates the number of repetitions that should occur within a period. I.e. Event occurs frequency times per period\n    \"frequencyMax\" : \"<positiveInt>\", // Event occurs up to frequencyMax times per period\n    \"period\" : <decimal>, // I The duration to which the frequency applies. I.e. Event occurs frequency times per period\n    \"periodMax\" : <decimal>, // I Upper limit of period (3-4 hours)\n    \"periodUnit\" : \"<code>\", // I s | min | h | d | wk | mo | a - unit of time (UCUM)\n    \"dayOfWeek\" : [\"<code>\"], // mon | tue | wed | thu | fri | sat | sun\n    \"timeOfDay\" : [\"<time>\"], // I Time of day for action\n    \"when\" : [\"<code>\"], // I Code for time period of occurrence\n    \"offset\" : \"<unsignedInt>\" // I Minutes from event (before or after)\n  },\n  \"code\" : { CodeableConcept } // C | BID | TID | QID | AM | PM | QD | QOD | +\n}\n",
+                "schema": {
+                    "event": [
+                        "<dateTime>"
+                    ],
+                    "repeat": {
+                        "boundsRange": "Range",
+                        "boundsPeriod": "Period",
+                        "count": "<positiveInt>",
+                        "countMax": "<positiveInt>",
+                        "duration": "<decimal>",
+                        "durationMax": "<decimal>",
+                        "durationUnit": "<code>",
+                        "frequency": "<positiveInt>",
+                        "frequencyMax": "<positiveInt>",
+                        "period": "<decimal>",
+                        "periodMax": "<decimal>",
+                        "periodUnit": "<code>",
+                        "dayOfWeek": [
+                            "<code>"
+                        ],
+                        "timeOfDay": [
+                            "<time>"
+                        ],
+                        "when": [
+                            "<code>"
+                        ],
+                        "offset": "<unsignedInt>"
+                    },
+                    "code": "CodeableConcept"
+                }
+            },
+            {
+                "label": "Quantity",
+                "href": "datatypes.html#Quantity",
+                "textContent": "{\n  // from Element: extension\n  \"value\" : <decimal>, // Numerical value (with implicit precision)\n  \"comparator\" : \"<code>\", // < | <= | >= | > | ad - how to understand the value\n  \"unit\" : \"<string>\", // Unit representation\n  \"system\" : \"<uri>\", // I System that defines coded unit form\n  \"code\" : \"<code>\" // I Coded form of the unit\n}\n",
+                "schema": {
+                    "value": "<decimal>",
+                    "comparator": "<code>",
+                    "unit": "<string>",
+                    "system": "<uri>",
+                    "code": "<code>"
+                }
+            },
+            {
+                "label": "SimpleQuantity",
+                "href": "datatypes.html#SimpleQuantity"
+            },
+            {
+                "label": "Attachment",
+                "href": "datatypes.html#Attachment",
+                "textContent": "{\n  // from Element: extension\n  \"contentType\" : \"<code>\", // I Mime type of the content, with charset etc.\n  \"language\" : \"<code>\", // Human language of the content (BCP-47)\n  \"data\" : \"<base64Binary>\", // I Data inline, base64ed\n  \"url\" : \"<url>\", // Uri where the data can be found\n  \"size\" : \"<integer64>\", // Number of bytes of content (if url provided)\n  \"hash\" : \"<base64Binary>\", // Hash of the data (sha-1, base64ed)\n  \"title\" : \"<string>\", // Label to display in place of the data\n  \"creation\" : \"<dateTime>\", // Date attachment was first created\n  \"height\" : \"<positiveInt>\", // Height of the image in pixels (photo/video)\n  \"width\" : \"<positiveInt>\", // Width of the image in pixels (photo/video)\n  \"frames\" : \"<positiveInt>\", // Number of frames if > 1 (photo)\n  \"duration\" : <decimal>, // Length in seconds (audio / video)\n  \"pages\" : \"<positiveInt>\" // Number of printed pages\n}\n",
+                "schema": {
+                    "contentType": "<code>",
+                    "language": "<code>",
+                    "data": "<base64Binary>",
+                    "url": "<url>",
+                    "size": "<integer64>",
+                    "hash": "<base64Binary>",
+                    "title": "<string>",
+                    "creation": "<dateTime>",
+                    "height": "<positiveInt>",
+                    "width": "<positiveInt>",
+                    "frames": "<positiveInt>",
+                    "duration": "<decimal>",
+                    "pages": "<positiveInt>"
+                }
+            },
+            {
+                "label": "Range",
+                "href": "datatypes.html#Range",
+                "textContent": "{\n  // from Element: extension\n  \"low\" : { Quantity(SimpleQuantity) }, // I Low limit\n  \"high\" : { Quantity(SimpleQuantity) } // I High limit\n}\n",
+                "schema": {
+                    "low": "Quantity(SimpleQuantity)",
+                    "high": "Quantity(SimpleQuantity)"
+                }
+            },
+            {
+                "label": "Period",
+                "href": "datatypes.html#Period",
+                "textContent": "{\n  // from Element: extension\n  \"start\" : \"<dateTime>\", // I Starting time with inclusive boundary\n  \"end\" : \"<dateTime>\" // I End time with inclusive boundary, if not ongoing\n}\n",
+                "schema": {
+                    "start": "<dateTime>",
+                    "end": "<dateTime>"
+                }
+            },
+            {
+                "label": "Ratio",
+                "href": "datatypes.html#Ratio",
+                "textContent": "{\n  // from Element: extension\n  \"numerator\" : { Quantity }, // I Numerator value\n  \"denominator\" : { Quantity(SimpleQuantity) } // I Denominator value\n}\n",
+                "schema": {
+                    "numerator": "Quantity",
+                    "denominator": "Quantity(SimpleQuantity)"
+                }
+            },
+            {
+                "label": "RatioRange",
+                "href": "datatypes.html#RatioRange",
+                "textContent": "{\n  // from Element: extension\n  \"lowNumerator\" : { Quantity(SimpleQuantity) }, // I Low Numerator limit\n  \"highNumerator\" : { Quantity(SimpleQuantity) }, // I High Numerator limit\n  \"denominator\" : { Quantity(SimpleQuantity) } // I Denominator value\n}\n",
+                "schema": {
+                    "lowNumerator": "Quantity(SimpleQuantity)",
+                    "highNumerator": "Quantity(SimpleQuantity)",
+                    "denominator": "Quantity(SimpleQuantity)"
+                }
+            },
+            {
+                "label": "CodeableConcept",
+                "href": "datatypes.html#CodeableConcept",
+                "textContent": "{\n  // from Element: extension\n  \"coding\" : [{ Coding }], // Code defined by a terminology system\n  \"text\" : \"<string>\" // Plain text representation of the concept\n}\n",
+                "schema": {
+                    "coding": [
+                        "Coding"
+                    ],
+                    "text": "<string>"
+                }
+            },
+            {
+                "label": "Coding",
+                "href": "datatypes.html#Coding",
+                "textContent": "{\n  // from Element: extension\n  \"system\" : \"<uri>\", // Identity of the terminology system\n  \"version\" : \"<string>\", // Version of the system - if relevant\n  \"code\" : \"<code>\", // I Symbol in syntax defined by the system\n  \"display\" : \"<string>\", // I Representation defined by the system\n  \"userSelected\" : <boolean> // If this coding was chosen directly by the user\n}\n",
+                "schema": {
+                    "system": "<uri>",
+                    "version": "<string>",
+                    "code": "<code>",
+                    "display": "<string>",
+                    "userSelected": "<boolean>"
+                }
+            },
+            {
+                "label": "SampledData",
+                "href": "datatypes.html#SampledData",
+                "textContent": "{\n  // from Element: extension\n  \"origin\" : { Quantity(SimpleQuantity) }, // R!  Zero value and units\n  \"interval\" : <decimal>, // I Number of intervalUnits between samples\n  \"intervalUnit\" : \"<code>\", // R!  The measurement unit of the interval between samples\n  \"factor\" : <decimal>, // Multiply data by this before adding to origin\n  \"lowerLimit\" : <decimal>, // Lower limit of detection\n  \"upperLimit\" : <decimal>, // Upper limit of detection\n  \"dimensions\" : \"<positiveInt>\", // R!  Number of sample points at each time point\n  \"codeMap\" : \"<canonical(ConceptMap)>\", // Defines the codes used in the data\n  \"offsets\" : \"<string>\", // I Offsets, typically in time, at which data values were taken\n  \"data\" : \"<string>\" // Decimal values with spaces, or \"E\" | \"U\" | \"L\", or another code\n}\n",
+                "schema": {
+                    "origin": "Quantity(SimpleQuantity)",
+                    "interval": "<decimal>",
+                    "intervalUnit": "<code>",
+                    "factor": "<decimal>",
+                    "lowerLimit": "<decimal>",
+                    "upperLimit": "<decimal>",
+                    "dimensions": "<positiveInt>",
+                    "codeMap": "<canonical(ConceptMap)>",
+                    "offsets": "<string>",
+                    "data": "<string>"
+                }
+            },
+            {
+                "label": "Age",
+                "href": "datatypes.html#Age"
+            },
+            {
+                "label": "Distance",
+                "href": "datatypes.html#Distance"
+            },
+            {
+                "label": "Duration",
+                "href": "datatypes.html#Duration"
+            },
+            {
+                "label": "Count",
+                "href": "datatypes.html#Count"
+            },
+            {
+                "label": "Money",
+                "href": "datatypes.html#Money",
+                "textContent": "{\n  // from Element: extension\n  \"value\" : <decimal>, // Numerical value (with implicit precision)\n  \"currency\" : \"<code>\" // ISO 4217 Currency Code\n}\n",
+                "schema": {
+                    "value": "<decimal>",
+                    "currency": "<code>"
+                }
+            },
+            {
+                "label": "MoneyQuantity",
+                "href": "datatypes.html#MoneyQuantity"
+            },
+            {
+                "label": "Annotation",
+                "href": "datatypes.html#Annotation",
+                "textContent": "{\n  // from Element: extension\n  // author[x]: Individual responsible for the annotation. One of these 2:\n  \"authorReference\" : { Reference(Organization|Patient|Practitioner|\n   PractitionerRole|RelatedPerson) },\n  \"authorString\" : \"<string>\",\n  \"time\" : \"<dateTime>\", // When the annotation was made\n  \"text\" : \"<markdown>\" // R!  The annotation  - text content (as markdown)\n}\n",
+                "schema": {
+                    "authorString": "<string>",
+                    "time": "<dateTime>",
+                    "text": "<markdown>"
+                }
+            },
+            {
+                "label": "Signature",
+                "href": "datatypes.html#Signature",
+                "textContent": "{\n  // from Element: extension\n  \"type\" : [{ Coding }], // Indication of the reason the entity signed the object(s)\n  \"when\" : \"<instant>\", // When the signature was created\n  \"who\" : { Reference(Device|Organization|Patient|Practitioner|\n   PractitionerRole|RelatedPerson) }, // Who signed\n  \"onBehalfOf\" : { Reference(Device|Organization|Patient|Practitioner|\n   PractitionerRole|RelatedPerson) }, // The party represented\n  \"targetFormat\" : \"<code>\", // The technical format of the signed resources\n  \"sigFormat\" : \"<code>\", // The technical format of the signature\n  \"data\" : \"<base64Binary>\" // The actual signature content (XML DigSig. JWS, picture, etc.)\n}\n",
+                "schema": {
+                    "type": [
+                        "Coding"
+                    ],
+                    "when": "<instant>",
+                    "who": "Reference(Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+                    "onBehalfOf": "Reference(Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+                    "targetFormat": "<code>",
+                    "sigFormat": "<code>",
+                    "data": "<base64Binary>"
+                }
+            }
+        ]
+    },
+    {
+        "label": "Metadata Types",
+        "children": [
+            {
+                "label": "DataType",
+                "href": "types.html#DataType"
+            },
+            {
+                "label": "ContactDetail",
+                "href": "metadatatypes.html#ContactDetail",
+                "textContent": "{\n  // from Element: extension\n  \"name\" : \"<string>\", // Name of an individual to contact\n  \"telecom\" : [{ ContactPoint }] // Contact details for individual or organization\n}\n",
+                "schema": {
+                    "name": "<string>",
+                    "telecom": [
+                        "ContactPoint"
+                    ]
+                }
+            },
+            {
+                "label": "Contributor",
+                "href": "metadatatypes.html#Contributor"
+            },
+            {
+                "label": "DataRequirement",
+                "href": "metadatatypes.html#DataRequirement",
+                "textContent": "{\n  // from Element: extension\n  \"type\" : \"<code>\", // R!  The type of the required data\n  \"profile\" : [\"<canonical(StructureDefinition)>\"], // The profile of the required data\n  // subject[x]: E.g. Patient, Practitioner, RelatedPerson, Organization, Location, Device. One of these 2:\n  \"subjectCodeableConcept\" : { CodeableConcept },\n  \"subjectReference\" : { Reference(Group) },\n  \"mustSupport\" : [\"<string>\"], // Indicates specific structure elements that are referenced by the knowledge module\n  \"codeFilter\" : [{ // What codes are expected\n    \"path\" : \"<string>\", // I A code-valued attribute to filter on\n    \"searchParam\" : \"<string>\", // I A coded (token) parameter to search on\n    \"valueSet\" : \"<canonical(ValueSet)>\", // ValueSet for the filter\n    \"code\" : [{ Coding }] // What code is expected\n  }],\n  \"dateFilter\" : [{ // What dates/date ranges are expected\n    \"path\" : \"<string>\", // I A date-valued attribute to filter on\n    \"searchParam\" : \"<string>\", // I A date valued parameter to search on\n    // value[x]: The value of the filter, as a Period, DateTime, or Duration value. One of these 3:\n    \"valueDateTime\" : \"<dateTime>\",\n    \"valuePeriod\" : { Period },\n    \"valueDuration\" : { Duration }\n  }],\n  \"valueFilter\" : [{ // What values are expected\n    \"path\" : \"<string>\", // An attribute to filter on\n    \"searchParam\" : \"<string>\", // A parameter to search on\n    \"comparator\" : \"<code>\", // eq | gt | lt | ge | le | sa | eb\n    // value[x]: The value of the filter, as a Period, DateTime, or Duration value. One of these 3:\n    \"valueDateTime\" : \"<dateTime>\",\n    \"valuePeriod\" : { Period },\n    \"valueDuration\" : { Duration }\n  }],\n  \"limit\" : \"<positiveInt>\", // Number of results\n  \"sort\" : [{ // Order of the results\n    \"path\" : \"<string>\", // R!  The name of the attribute to perform the sort\n    \"direction\" : \"<code>\" // R!  ascending | descending\n  }]\n}\n",
+                "schema": {
+                    "type": "<code>",
+                    "profile": [
+                        "<canonical(StructureDefinition)>"
+                    ],
+                    "subjectReference": "Reference(Group)",
+                    "mustSupport": [
+                        "<string>"
+                    ],
+                    "codeFilter": [
+                        {
+                            "path": "<string>",
+                            "searchParam": "<string>",
+                            "valueSet": "<canonical(ValueSet)>",
+                            "code": [
+                                "Coding"
+                            ]
+                        }
+                    ],
+                    "dateFilter": [
+                        {
+                            "path": "<string>",
+                            "searchParam": "<string>",
+                            "valuePeriod": "Period",
+                            "valueDuration": "Duration"
+                        }
+                    ],
+                    "valueFilter": [
+                        {
+                            "path": "<string>",
+                            "searchParam": "<string>",
+                            "comparator": "<code>",
+                            "valuePeriod": "Period",
+                            "valueDuration": "Duration"
+                        }
+                    ],
+                    "limit": "<positiveInt>",
+                    "sort": [
+                        {
+                            "path": "<string>",
+                            "direction": "<code>"
+                        }
+                    ]
+                }
+            },
+            {
+                "label": "ParameterDefinition",
+                "href": "metadatatypes.html#ParameterDefinition",
+                "textContent": "{\n  // from Element: extension\n  \"name\" : \"<code>\", // Name used to access the parameter value\n  \"use\" : \"<code>\", // R!  in | out\n  \"min\" : <integer>, // Minimum cardinality\n  \"max\" : \"<string>\", // Maximum cardinality (a number of *)\n  \"documentation\" : \"<string>\", // A brief description of the parameter\n  \"type\" : \"<code>\", // R!  What type of value\n  \"profile\" : \"<canonical(StructureDefinition)>\" // What profile the value is expected to be\n}\n",
+                "schema": {
+                    "name": "<code>",
+                    "use": "<code>",
+                    "min": "<integer>",
+                    "max": "<string>",
+                    "documentation": "<string>",
+                    "type": "<code>",
+                    "profile": "<canonical(StructureDefinition)>"
+                }
+            },
+            {
+                "label": "RelatedArtifact",
+                "href": "metadatatypes.html#RelatedArtifact",
+                "textContent": "{\n  // from Element: extension\n  \"type\" : \"<code>\", // R!  documentation | justification | citation | predecessor | successor | derived-from | depends-on | composed-of | part-of | amends | amended-with | appends | appended-with | cites | cited-by | comments-on | comment-in | contains | contained-in | corrects | correction-in | replaces | replaced-with | retracts | retracted-by | signs | similar-to | supports | supported-with | transforms | transformed-into | transformed-with | documents | specification-of | created-with | cite-as\n  \"classifier\" : [{ CodeableConcept }], // Additional classifiers\n  \"label\" : \"<string>\", // Short label\n  \"display\" : \"<string>\", // Brief description of the related artifact\n  \"citation\" : \"<markdown>\", // Bibliographic citation for the artifact\n  \"document\" : { Attachment }, // What document is being referenced\n  \"resource\" : \"<canonical(Any)>\", // What artifact is being referenced\n  \"resourceReference\" : { Reference(Any) }, // What artifact, if not a conformance resource\n  \"publicationStatus\" : \"<code>\", // draft | active | retired | unknown\n  \"publicationDate\" : \"<date>\" // Date of publication of the artifact being referred to\n}\n",
+                "schema": {
+                    "type": "<code>",
+                    "classifier": [
+                        "CodeableConcept"
+                    ],
+                    "label": "<string>",
+                    "display": "<string>",
+                    "citation": "<markdown>",
+                    "document": "Attachment",
+                    "resource": "<canonical(Any)>",
+                    "resourceReference": "Reference(Any)",
+                    "publicationStatus": "<code>",
+                    "publicationDate": "<date>"
+                }
+            },
+            {
+                "label": "TriggerDefinition",
+                "href": "metadatatypes.html#TriggerDefinition",
+                "textContent": "{\n  // from Element: extension\n  \"type\" : \"<code>\", // I R!  named-event | periodic | data-changed | data-added | data-modified | data-removed | data-accessed | data-access-ended\n  \"name\" : \"<string>\", // I Name or URI that identifies the event\n  \"code\" : { CodeableConcept }, // Coded definition of the event\n  \"subscriptionTopic\" : \"<canonical(SubscriptionTopic)>\", // What event\n  // timing[x]: Timing of the event. One of these 4:\n  \"timingTiming\" : { Timing },\n  \"timingReference\" : { Reference(Schedule) },\n  \"timingDate\" : \"<date>\",\n  \"timingDateTime\" : \"<dateTime>\",\n  \"data\" : [{ DataRequirement }], // I Triggering data of the event (multiple = 'and')\n  \"condition\" : { Expression } // I Whether the event triggers (boolean expression)\n}\n",
+                "schema": {
+                    "type": "<code>",
+                    "name": "<string>",
+                    "code": "CodeableConcept",
+                    "subscriptionTopic": "<canonical(SubscriptionTopic)>",
+                    "timingReference": "Reference(Schedule)",
+                    "timingDate": "<date>",
+                    "timingDateTime": "<dateTime>",
+                    "data": [
+                        "DataRequirement"
+                    ],
+                    "condition": "Expression"
+                }
+            },
+            {
+                "label": "UsageContext",
+                "href": "metadatatypes.html#UsageContext",
+                "textContent": "{\n  // from Element: extension\n  \"code\" : { Coding }, // R!  Type of context being specified \n  // value[x]: Value that defines the context. One of these 4:\n  \"valueCodeableConcept\" : { CodeableConcept },\n  \"valueQuantity\" : { Quantity },\n  \"valueRange\" : { Range },\n  \"valueReference\" : { Reference(Group|HealthcareService|InsurancePlan|Location|\n   Organization|PlanDefinition|ResearchStudy) }\n}\n",
+                "schema": {
+                    "code": "Coding",
+                    "valueQuantity": "Quantity",
+                    "valueRange": "Range",
+                    "valueReference": "Reference(Group|HealthcareService|InsurancePlan|Location|Organization|PlanDefinition|ResearchStudy)"
+                }
+            },
+            {
+                "label": "Expression",
+                "href": "metadatatypes.html#Expression",
+                "textContent": "{\n  // from Element: extension\n  \"description\" : \"<string>\", // Natural language description of the condition\n  \"name\" : \"<code>\", // I Short name assigned to expression for reuse\n  \"language\" : \"<code>\", // text/cql | text/fhirpath | application/x-fhir-query | etc.\n  \"expression\" : \"<string>\", // I Expression in specified language\n  \"reference\" : \"<uri>\" // I Where the expression is found\n}\n",
+                "schema": {
+                    "description": "<string>",
+                    "name": "<code>",
+                    "language": "<code>",
+                    "expression": "<string>",
+                    "reference": "<uri>"
+                }
+            },
+            {
+                "label": "ExtendedContactDetail",
+                "href": "metadatatypes.html#ExtendedContactDetail",
+                "textContent": "{\n  // from Element: extension\n  \"purpose\" : { CodeableConcept }, // The type of contact \n  \"name\" : [{ HumanName }], // Name of an individual to contact\n  \"telecom\" : [{ ContactPoint }], // Contact details (e.g.phone/fax/url)\n  \"address\" : { Address }, // Address for the contact\n  \"organization\" : { Reference(Organization) }, // This contact detail is handled/monitored by a specific organization\n  \"period\" : { Period } // Period that this contact was valid for usage\n}\n",
+                "schema": {
+                    "purpose": "CodeableConcept",
+                    "name": [
+                        "HumanName"
+                    ],
+                    "telecom": [
+                        "ContactPoint"
+                    ],
+                    "address": "Address",
+                    "organization": "Reference(Organization)",
+                    "period": "Period"
+                }
+            },
+            {
+                "label": "VirtualServiceDetail",
+                "href": "metadatatypes.html#VirtualServiceDetail",
+                "textContent": "{\n  // from Element: extension\n  \"channelType\" : { Coding }, // Channel Type\n  // address[x]: Contact address/number. One of these 4:\n  \"addressUrl\" : \"<url>\",\n  \"addressString\" : \"<string>\",\n  \"addressContactPoint\" : { ContactPoint },\n  \"addressExtendedContactDetail\" : { ExtendedContactDetail },\n  \"additionalInfo\" : [\"<url>\"], // Address to see alternative connection details\n  \"maxParticipants\" : \"<positiveInt>\", // Maximum number of participants supported by the virtual service\n  \"sessionKey\" : \"<string>\" // Session Key required by the virtual service\n}\n",
+                "schema": {
+                    "channelType": "Coding",
+                    "addressString": "<string>",
+                    "addressContactPoint": "ContactPoint",
+                    "addressExtendedContactDetail": "ExtendedContactDetail",
+                    "additionalInfo": [
+                        "<url>"
+                    ],
+                    "maxParticipants": "<positiveInt>",
+                    "sessionKey": "<string>"
+                }
+            },
+            {
+                "label": "Availability",
+                "href": "metadatatypes.html#Availability",
+                "textContent": "{\n  // from Element: extension\n  \"availableTime\" : [{ // Times the {item} is available\n    \"daysOfWeek\" : [\"<code>\"], // mon | tue | wed | thu | fri | sat | sun\n    \"allDay\" : <boolean>, // I Always available? i.e. 24 hour service\n    \"availableStartTime\" : \"<time>\", // I Opening time of day (ignored if allDay = true)\n    \"availableEndTime\" : \"<time>\" // I Closing time of day (ignored if allDay = true)\n  }],\n  \"notAvailableTime\" : [{ // Not available during this time due to provided reason\n    \"description\" : \"<string>\", // Reason presented to the user explaining why time not available\n    \"during\" : { Period } // Service not available during this period\n  }]\n}\n",
+                "schema": {
+                    "availableTime": [
+                        {
+                            "daysOfWeek": [
+                                "<code>"
+                            ],
+                            "allDay": "<boolean>",
+                            "availableStartTime": "<time>",
+                            "availableEndTime": "<time>"
+                        }
+                    ],
+                    "notAvailableTime": [
+                        {
+                            "description": "<string>",
+                            "during": "Period"
+                        }
+                    ]
+                }
+            },
+            {
+                "label": "MonetaryComponent",
+                "href": "metadatatypes.html#MonetaryComponent",
+                "textContent": "{\n  // from Element: extension\n  \"type\" : \"<code>\", // R!  base | surcharge | deduction | discount | tax | informational\n  \"code\" : { CodeableConcept }, // Codes may be used to differentiate between kinds of taxes, surcharges, discounts etc.\n  \"factor\" : <decimal>, // Factor used for calculating this component\n  \"amount\" : { Money } // Explicit value amount to be used\n}\n",
+                "schema": {
+                    "type": "<code>",
+                    "code": "CodeableConcept",
+                    "factor": "<decimal>",
+                    "amount": "Money"
+                }
+            }
+        ]
+    },
+    {
+        "label": "Special Purpose Datatypes",
+        "children": [
+            {
+                "label": "DataType",
+                "href": "types.html#DataType"
+            },
+            {
+                "label": "BackboneType",
+                "href": "types.html#BackboneType"
+            },
+            {
+                "label": "Reference",
+                "href": "references.html#Reference",
+                "textContent": "{\n  // from Element: extension\n  \"reference\" : \"<string>\", // I Literal reference, Relative, internal or absolute URL\n  \"type\" : \"<uri>\", // Type the reference refers to (e.g. \"Patient\") - must be a resource in resources\n  \"identifier\" : { Identifier }, // I Logical reference, when literal reference is not known\n  \"display\" : \"<string>\" // I Text alternative for the resource\n}\n",
+                "schema": {
+                    "reference": "<string>",
+                    "type": "<uri>",
+                    "identifier": "Identifier",
+                    "display": "<string>"
+                }
+            },
+            {
+                "label": "Narrative",
+                "href": "narrative.html#Narrative",
+                "textContent": "{\n  // from Element: extension\n  \"status\" : \"<code>\", // R!  generated | extensions | additional | empty\n  \"div\" : \"(Escaped XHTML)\" // R!  Limited xhtml content\n}\n",
+                "schema": {
+                    "status": "<code>",
+                    "div": "(Escaped XHTML)"
+                }
+            },
+            {
+                "label": "Extension",
+                "href": "extensibility.html#Extension",
+                "textContent": "{\n  // from Element: extension\n  \"url\" : \"<uri>\", // R!  identifies the meaning of the extension\n  // value[x]: Value of extension. One of these 54:\n  \"valueBase64Binary\" : \"<base64Binary>\"\n  \"valueBoolean\" : <boolean>,\n  \"valueCanonical\" : \"<canonical>\",\n  \"valueCode\" : \"<code>\",\n  \"valueDate\" : \"<date>\",\n  \"valueDateTime\" : \"<dateTime>\",\n  \"valueDecimal\" : <decimal>,\n  \"valueId\" : \"<id>\",\n  \"valueInstant\" : \"<instant>\",\n  \"valueInteger\" : <integer>,\n  \"valueInteger64\" : \"<integer64>\",\n  \"valueMarkdown\" : \"<markdown>\",\n  \"valueOid\" : \"<oid>\",\n  \"valuePositiveInt\" : \"<positiveInt>\",\n  \"valueString\" : \"<string>\",\n  \"valueTime\" : \"<time>\",\n  \"valueUnsignedInt\" : \"<unsignedInt>\",\n  \"valueUri\" : \"<uri>\",\n  \"valueUrl\" : \"<url>\",\n  \"valueUuid\" : \"<uuid>\",\n  \"valueAddress\" : { Address },\n  \"valueAge\" : { Age },\n  \"valueAnnotation\" : { Annotation },\n  \"valueAttachment\" : { Attachment },\n  \"valueCodeableConcept\" : { CodeableConcept },\n  \"valueCodeableReference\" : { CodeableReference },\n  \"valueCoding\" : { Coding },\n  \"valueContactPoint\" : { ContactPoint },\n  \"valueCount\" : { Count },\n  \"valueDistance\" : { Distance },\n  \"valueDuration\" : { Duration },\n  \"valueHumanName\" : { HumanName },\n  \"valueIdentifier\" : { Identifier },\n  \"valueMoney\" : { Money },\n  \"valuePeriod\" : { Period },\n  \"valueQuantity\" : { Quantity },\n  \"valueRange\" : { Range },\n  \"valueRatio\" : { Ratio },\n  \"valueRatioRange\" : { RatioRange },\n  \"valueReference\" : { Reference },\n  \"valueSampledData\" : { SampledData },\n  \"valueSignature\" : { Signature },\n  \"valueTiming\" : { Timing },\n  \"valueContactDetail\" : { ContactDetail },\n  \"valueDataRequirement\" : { DataRequirement },\n  \"valueExpression\" : { Expression },\n  \"valueParameterDefinition\" : { ParameterDefinition },\n  \"valueRelatedArtifact\" : { RelatedArtifact },\n  \"valueTriggerDefinition\" : { TriggerDefinition },\n  \"valueUsageContext\" : { UsageContext },\n  \"valueAvailability\" : { Availability },\n  \"valueExtendedContactDetail\" : { ExtendedContactDetail },\n  \"valueDosage\" : { Dosage },\n  \"valueMeta\" : { Meta },\n}\n",
+                "schema": {
+                    "url": "<uri>",
+                    "valueBoolean": "<boolean>",
+                    "valueCanonical": "<canonical>",
+                    "valueCode": "<code>",
+                    "valueDate": "<date>",
+                    "valueDateTime": "<dateTime>",
+                    "valueDecimal": "<decimal>",
+                    "valueId": "<id>",
+                    "valueInstant": "<instant>",
+                    "valueInteger": "<integer>",
+                    "valueInteger64": "<integer64>",
+                    "valueMarkdown": "<markdown>",
+                    "valueOid": "<oid>",
+                    "valuePositiveInt": "<positiveInt>",
+                    "valueString": "<string>",
+                    "valueTime": "<time>",
+                    "valueUnsignedInt": "<unsignedInt>",
+                    "valueUri": "<uri>",
+                    "valueUrl": "<url>",
+                    "valueUuid": "<uuid>",
+                    "valueAddress": "Address",
+                    "valueAge": "Age",
+                    "valueAnnotation": "Annotation",
+                    "valueAttachment": "Attachment",
+                    "valueCodeableConcept": "CodeableConcept",
+                    "valueCodeableReference": "CodeableReference",
+                    "valueCoding": "Coding",
+                    "valueContactPoint": "ContactPoint",
+                    "valueCount": "Count",
+                    "valueDistance": "Distance",
+                    "valueDuration": "Duration",
+                    "valueHumanName": "HumanName",
+                    "valueIdentifier": "Identifier",
+                    "valueMoney": "Money",
+                    "valuePeriod": "Period",
+                    "valueQuantity": "Quantity",
+                    "valueRange": "Range",
+                    "valueRatio": "Ratio",
+                    "valueRatioRange": "RatioRange",
+                    "valueReference": "Reference",
+                    "valueSampledData": "SampledData",
+                    "valueSignature": "Signature",
+                    "valueTiming": "Timing",
+                    "valueContactDetail": "ContactDetail",
+                    "valueDataRequirement": "DataRequirement",
+                    "valueExpression": "Expression",
+                    "valueParameterDefinition": "ParameterDefinition",
+                    "valueRelatedArtifact": "RelatedArtifact",
+                    "valueTriggerDefinition": "TriggerDefinition",
+                    "valueUsageContext": "UsageContext",
+                    "valueAvailability": "Availability",
+                    "valueExtendedContactDetail": "ExtendedContactDetail",
+                    "valueDosage": "Dosage",
+                    "valueMeta": "Meta"
+                }
+            },
+            {
+                "label": "Meta",
+                "href": "resource.html#Meta",
+                "textContent": "{\n  // from Element: extension\n  \"versionId\" : \"<id>\", // Version specific identifier\n  \"lastUpdated\" : \"<instant>\", // When the resource version last changed\n  \"source\" : \"<uri>\", // Identifies where the resource comes from\n  \"profile\" : [\"<canonical(StructureDefinition)>\"], // Profiles this resource claims to conform to\n  \"security\" : [{ Coding }], // Security Labels applied to this resource\n  \"tag\" : [{ Coding }] // Tags applied to this resource\n}\n",
+                "schema": {
+                    "versionId": "<id>",
+                    "lastUpdated": "<instant>",
+                    "source": "<uri>",
+                    "profile": [
+                        "<canonical(StructureDefinition)>"
+                    ],
+                    "security": [
+                        "Coding"
+                    ],
+                    "tag": [
+                        "Coding"
+                    ]
+                }
+            },
+            {
+                "label": "ElementDefinition",
+                "href": "elementdefinition.html#ElementDefinition",
+                "textContent": "{\n  // from Element: extension\n  \"path\" : \"<string>\", // I R!  Path of the element in the hierarchy of elements\n  \"representation\" : [\"<code>\"], // xmlAttr | xmlText | typeAttr | cdaText | xhtml\n  \"sliceName\" : \"<string>\", // I Name for this particular element (in a set of slices)\n  \"sliceIsConstraining\" : <boolean>, // I If this slice definition constrains an inherited slice definition (or not)\n  \"label\" : \"<string>\", // Name for element to display with or prompt for element\n  \"code\" : [{ Coding }], // Corresponding codes in terminologies \n  \"slicing\" : { // I This element is sliced - slices follow\n    \"discriminator\" : [{ // Element values that are used to distinguish the slices\n      \"type\" : \"<code>\", // R!  value | exists | type | profile | position\n      \"path\" : \"<string>\" // R!  Path to element value\n    }],\n    \"description\" : \"<string>\", // Text description of how slicing works (or not)\n    \"ordered\" : <boolean>, // I If elements must be in same order as slices\n    \"rules\" : \"<code>\" // I R!  closed | open | openAtEnd\n  },\n  \"short\" : \"<string>\", // Concise definition for space-constrained presentation\n  \"definition\" : \"<markdown>\", // Full formal definition as narrative text\n  \"comment\" : \"<markdown>\", // Comments about the use of this element\n  \"requirements\" : \"<markdown>\", // Why this resource has been created\n  \"alias\" : [\"<string>\"], // Other names\n  \"min\" : \"<unsignedInt>\", // I Minimum Cardinality\n  \"max\" : \"<string>\", // I Maximum Cardinality (a number or *)\n  \"base\" : { // Base definition information for tools\n    \"path\" : \"<string>\", // R!  Path that identifies the base element\n    \"min\" : \"<unsignedInt>\", // R!  Min cardinality of the base element\n    \"max\" : \"<string>\" // R!  Max cardinality of the base element\n  },\n  \"contentReference\" : \"<uri>\", // I Reference to definition of content for the element\n  \"type\" : [{ // I Data type and Profile for this element\n    \"code\" : \"<uri>\", // I R!  Data type or Resource (reference to definition)\n    \"profile\" : [\"<canonical(StructureDefinition|ImplementationGuide)>\"], // Profiles (StructureDefinition or IG) - one must apply\n    \"targetProfile\" : [\"<canonical(StructureDefinition|ImplementationGuide)>\"], // I Profile (StructureDefinition or IG) on the Reference/canonical target - one must apply\n    \"aggregation\" : [\"<code>\"], // I contained | referenced | bundled - how aggregated\n    \"versioning\" : \"<code>\" // either | independent | specific\n  }],\n  // defaultValue[x]: Specified value if missing from instance. One of these 54:\n  \"defaultValueBase64Binary\" : \"<base64Binary>\",\n  \"defaultValueBoolean\" : <boolean>,\n  \"defaultValueCanonical\" : \"<canonical>\",\n  \"defaultValueCode\" : \"<code>\",\n  \"defaultValueDate\" : \"<date>\",\n  \"defaultValueDateTime\" : \"<dateTime>\",\n  \"defaultValueDecimal\" : <decimal>,\n  \"defaultValueId\" : \"<id>\",\n  \"defaultValueInstant\" : \"<instant>\",\n  \"defaultValueInteger\" : <integer>,\n  \"defaultValueInteger64\" : \"<integer64>\",\n  \"defaultValueMarkdown\" : \"<markdown>\",\n  \"defaultValueOid\" : \"<oid>\",\n  \"defaultValuePositiveInt\" : \"<positiveInt>\",\n  \"defaultValueString\" : \"<string>\",\n  \"defaultValueTime\" : \"<time>\",\n  \"defaultValueUnsignedInt\" : \"<unsignedInt>\",\n  \"defaultValueUri\" : \"<uri>\",\n  \"defaultValueUrl\" : \"<url>\",\n  \"defaultValueUuid\" : \"<uuid>\",\n  \"defaultValueAddress\" : { Address },\n  \"defaultValueAge\" : { Age },\n  \"defaultValueAnnotation\" : { Annotation },\n  \"defaultValueAttachment\" : { Attachment },\n  \"defaultValueCodeableConcept\" : { CodeableConcept },\n  \"defaultValueCodeableReference\" : { CodeableReference },\n  \"defaultValueCoding\" : { Coding },\n  \"defaultValueContactPoint\" : { ContactPoint },\n  \"defaultValueCount\" : { Count },\n  \"defaultValueDistance\" : { Distance },\n  \"defaultValueDuration\" : { Duration },\n  \"defaultValueHumanName\" : { HumanName },\n  \"defaultValueIdentifier\" : { Identifier },\n  \"defaultValueMoney\" : { Money },\n  \"defaultValuePeriod\" : { Period },\n  \"defaultValueQuantity\" : { Quantity },\n  \"defaultValueRange\" : { Range },\n  \"defaultValueRatio\" : { Ratio },\n  \"defaultValueRatioRange\" : { RatioRange },\n  \"defaultValueReference\" : { Reference },\n  \"defaultValueSampledData\" : { SampledData },\n  \"defaultValueSignature\" : { Signature },\n  \"defaultValueTiming\" : { Timing },\n  \"defaultValueContactDetail\" : { ContactDetail },\n  \"defaultValueDataRequirement\" : { DataRequirement },\n  \"defaultValueExpression\" : { Expression },\n  \"defaultValueParameterDefinition\" : { ParameterDefinition },\n  \"defaultValueRelatedArtifact\" : { RelatedArtifact },\n  \"defaultValueTriggerDefinition\" : { TriggerDefinition },\n  \"defaultValueUsageContext\" : { UsageContext },\n  \"defaultValueAvailability\" : { Availability },\n  \"defaultValueExtendedContactDetail\" : { ExtendedContactDetail },\n  \"defaultValueDosage\" : { Dosage },\n  \"defaultValueMeta\" : { Meta },\n  \"meaningWhenMissing\" : \"<markdown>\", // I Implicit meaning when this element is missing\n  \"orderMeaning\" : \"<string>\", // I What the order of the elements means\n  // fixed[x]: Value must be exactly this. One of these 54:\n  \"fixedBase64Binary\" : \"<base64Binary>\",\n  \"fixedBoolean\" : <boolean>,\n  \"fixedCanonical\" : \"<canonical>\",\n  \"fixedCode\" : \"<code>\",\n  \"fixedDate\" : \"<date>\",\n  \"fixedDateTime\" : \"<dateTime>\",\n  \"fixedDecimal\" : <decimal>,\n  \"fixedId\" : \"<id>\",\n  \"fixedInstant\" : \"<instant>\",\n  \"fixedInteger\" : <integer>,\n  \"fixedInteger64\" : \"<integer64>\",\n  \"fixedMarkdown\" : \"<markdown>\",\n  \"fixedOid\" : \"<oid>\",\n  \"fixedPositiveInt\" : \"<positiveInt>\",\n  \"fixedString\" : \"<string>\",\n  \"fixedTime\" : \"<time>\",\n  \"fixedUnsignedInt\" : \"<unsignedInt>\",\n  \"fixedUri\" : \"<uri>\",\n  \"fixedUrl\" : \"<url>\",\n  \"fixedUuid\" : \"<uuid>\",\n  \"fixedAddress\" : { Address },\n  \"fixedAge\" : { Age },\n  \"fixedAnnotation\" : { Annotation },\n  \"fixedAttachment\" : { Attachment },\n  \"fixedCodeableConcept\" : { CodeableConcept },\n  \"fixedCodeableReference\" : { CodeableReference },\n  \"fixedCoding\" : { Coding },\n  \"fixedContactPoint\" : { ContactPoint },\n  \"fixedCount\" : { Count },\n  \"fixedDistance\" : { Distance },\n  \"fixedDuration\" : { Duration },\n  \"fixedHumanName\" : { HumanName },\n  \"fixedIdentifier\" : { Identifier },\n  \"fixedMoney\" : { Money },\n  \"fixedPeriod\" : { Period },\n  \"fixedQuantity\" : { Quantity },\n  \"fixedRange\" : { Range },\n  \"fixedRatio\" : { Ratio },\n  \"fixedRatioRange\" : { RatioRange },\n  \"fixedReference\" : { Reference },\n  \"fixedSampledData\" : { SampledData },\n  \"fixedSignature\" : { Signature },\n  \"fixedTiming\" : { Timing },\n  \"fixedContactDetail\" : { ContactDetail },\n  \"fixedDataRequirement\" : { DataRequirement },\n  \"fixedExpression\" : { Expression },\n  \"fixedParameterDefinition\" : { ParameterDefinition },\n  \"fixedRelatedArtifact\" : { RelatedArtifact },\n  \"fixedTriggerDefinition\" : { TriggerDefinition },\n  \"fixedUsageContext\" : { UsageContext },\n  \"fixedAvailability\" : { Availability },\n  \"fixedExtendedContactDetail\" : { ExtendedContactDetail },\n  \"fixedDosage\" : { Dosage },\n  \"fixedMeta\" : { Meta },\n  // pattern[x]: Value must have at least these property values. One of these 54:\n  \"patternBase64Binary\" : \"<base64Binary>\",\n  \"patternBoolean\" : <boolean>,\n  \"patternCanonical\" : \"<canonical>\",\n  \"patternCode\" : \"<code>\",\n  \"patternDate\" : \"<date>\",\n  \"patternDateTime\" : \"<dateTime>\",\n  \"patternDecimal\" : <decimal>,\n  \"patternId\" : \"<id>\",\n  \"patternInstant\" : \"<instant>\",\n  \"patternInteger\" : <integer>,\n  \"patternInteger64\" : \"<integer64>\",\n  \"patternMarkdown\" : \"<markdown>\",\n  \"patternOid\" : \"<oid>\",\n  \"patternPositiveInt\" : \"<positiveInt>\",\n  \"patternString\" : \"<string>\",\n  \"patternTime\" : \"<time>\",\n  \"patternUnsignedInt\" : \"<unsignedInt>\",\n  \"patternUri\" : \"<uri>\",\n  \"patternUrl\" : \"<url>\",\n  \"patternUuid\" : \"<uuid>\",\n  \"patternAddress\" : { Address },\n  \"patternAge\" : { Age },\n  \"patternAnnotation\" : { Annotation },\n  \"patternAttachment\" : { Attachment },\n  \"patternCodeableConcept\" : { CodeableConcept },\n  \"patternCodeableReference\" : { CodeableReference },\n  \"patternCoding\" : { Coding },\n  \"patternContactPoint\" : { ContactPoint },\n  \"patternCount\" : { Count },\n  \"patternDistance\" : { Distance },\n  \"patternDuration\" : { Duration },\n  \"patternHumanName\" : { HumanName },\n  \"patternIdentifier\" : { Identifier },\n  \"patternMoney\" : { Money },\n  \"patternPeriod\" : { Period },\n  \"patternQuantity\" : { Quantity },\n  \"patternRange\" : { Range },\n  \"patternRatio\" : { Ratio },\n  \"patternRatioRange\" : { RatioRange },\n  \"patternReference\" : { Reference },\n  \"patternSampledData\" : { SampledData },\n  \"patternSignature\" : { Signature },\n  \"patternTiming\" : { Timing },\n  \"patternContactDetail\" : { ContactDetail },\n  \"patternDataRequirement\" : { DataRequirement },\n  \"patternExpression\" : { Expression },\n  \"patternParameterDefinition\" : { ParameterDefinition },\n  \"patternRelatedArtifact\" : { RelatedArtifact },\n  \"patternTriggerDefinition\" : { TriggerDefinition },\n  \"patternUsageContext\" : { UsageContext },\n  \"patternAvailability\" : { Availability },\n  \"patternExtendedContactDetail\" : { ExtendedContactDetail },\n  \"patternDosage\" : { Dosage },\n  \"patternMeta\" : { Meta },\n  \"example\" : [{ // I Example value (as defined for type)\n    \"label\" : \"<string>\", // R!  Describes the purpose of this example\n    // value[x]: Value of Example (one of allowed types). One of these 54:\n    \"valueBase64Binary\" : \"<base64Binary>\"\n    \"valueBoolean\" : <boolean>,\n    \"valueCanonical\" : \"<canonical>\",\n    \"valueCode\" : \"<code>\",\n    \"valueDate\" : \"<date>\",\n    \"valueDateTime\" : \"<dateTime>\",\n    \"valueDecimal\" : <decimal>,\n    \"valueId\" : \"<id>\",\n    \"valueInstant\" : \"<instant>\",\n    \"valueInteger\" : <integer>,\n    \"valueInteger64\" : \"<integer64>\",\n    \"valueMarkdown\" : \"<markdown>\",\n    \"valueOid\" : \"<oid>\",\n    \"valuePositiveInt\" : \"<positiveInt>\",\n    \"valueString\" : \"<string>\",\n    \"valueTime\" : \"<time>\",\n    \"valueUnsignedInt\" : \"<unsignedInt>\",\n    \"valueUri\" : \"<uri>\",\n    \"valueUrl\" : \"<url>\",\n    \"valueUuid\" : \"<uuid>\",\n    \"valueAddress\" : { Address },\n    \"valueAge\" : { Age },\n    \"valueAnnotation\" : { Annotation },\n    \"valueAttachment\" : { Attachment },\n    \"valueCodeableConcept\" : { CodeableConcept },\n    \"valueCodeableReference\" : { CodeableReference },\n    \"valueCoding\" : { Coding },\n    \"valueContactPoint\" : { ContactPoint },\n    \"valueCount\" : { Count },\n    \"valueDistance\" : { Distance },\n    \"valueDuration\" : { Duration },\n    \"valueHumanName\" : { HumanName },\n    \"valueIdentifier\" : { Identifier },\n    \"valueMoney\" : { Money },\n    \"valuePeriod\" : { Period },\n    \"valueQuantity\" : { Quantity },\n    \"valueRange\" : { Range },\n    \"valueRatio\" : { Ratio },\n    \"valueRatioRange\" : { RatioRange },\n    \"valueReference\" : { Reference },\n    \"valueSampledData\" : { SampledData },\n    \"valueSignature\" : { Signature },\n    \"valueTiming\" : { Timing },\n    \"valueContactDetail\" : { ContactDetail },\n    \"valueDataRequirement\" : { DataRequirement },\n    \"valueExpression\" : { Expression },\n    \"valueParameterDefinition\" : { ParameterDefinition },\n    \"valueRelatedArtifact\" : { RelatedArtifact },\n    \"valueTriggerDefinition\" : { TriggerDefinition },\n    \"valueUsageContext\" : { UsageContext },\n    \"valueAvailability\" : { Availability },\n    \"valueExtendedContactDetail\" : { ExtendedContactDetail },\n    \"valueDosage\" : { Dosage },\n    \"valueMeta\" : { Meta },\n  }],\n  // minValue[x]: Minimum Allowed Value (for some types). One of these 10:\n  \"minValueDate\" : \"<date>\",\n  \"minValueDateTime\" : \"<dateTime>\",\n  \"minValueInstant\" : \"<instant>\",\n  \"minValueTime\" : \"<time>\",\n  \"minValueDecimal\" : <decimal>,\n  \"minValueInteger\" : <integer>,\n  \"minValueInteger64\" : \"<integer64>\",\n  \"minValuePositiveInt\" : \"<positiveInt>\",\n  \"minValueUnsignedInt\" : \"<unsignedInt>\",\n  \"minValueQuantity\" : { Quantity },\n  // maxValue[x]: Maximum Allowed Value (for some types). One of these 10:\n  \"maxValueDate\" : \"<date>\",\n  \"maxValueDateTime\" : \"<dateTime>\",\n  \"maxValueInstant\" : \"<instant>\",\n  \"maxValueTime\" : \"<time>\",\n  \"maxValueDecimal\" : <decimal>,\n  \"maxValueInteger\" : <integer>,\n  \"maxValueInteger64\" : \"<integer64>\",\n  \"maxValuePositiveInt\" : \"<positiveInt>\",\n  \"maxValueUnsignedInt\" : \"<unsignedInt>\",\n  \"maxValueQuantity\" : { Quantity },\n  \"maxLength\" : <integer>, // I Max length for string type data\n  \"condition\" : [\"<id>\"], // Reference to invariant about presence\n  \"constraint\" : [{ // I Condition that must evaluate to true\n    \"key\" : \"<id>\", // I R!  Target of 'condition' reference above\n    \"requirements\" : \"<markdown>\", // Why this constraint is necessary or appropriate\n    \"severity\" : \"<code>\", // I R!  error | warning\n    \"suppress\" : <boolean>, // I Suppress warning or hint in profile\n    \"human\" : \"<string>\", // R!  Human description of constraint\n    \"expression\" : \"<string>\", // I FHIRPath expression of constraint\n    \"source\" : \"<canonical(StructureDefinition)>\" // Reference to original source of constraint\n  }],\n  \"mustHaveValue\" : <boolean>, // I For primitives, that a value must be present - not replaced by an extension\n  \"valueAlternatives\" : [\"<canonical(StructureDefinition)>\"], // I Extensions that are allowed to replace a primitive value\n  \"mustSupport\" : <boolean>, // If the element must be supported (discouraged - see obligations)\n  \"isModifier\" : <boolean>, // I If this modifies the meaning of other elements\n  \"isModifierReason\" : \"<string>\", // I Reason that this element is marked as a modifier\n  \"isSummary\" : <boolean>, // Include when _summary = true?\n  \"binding\" : { // I ValueSet details if this is coded\n    \"strength\" : \"<code>\", // R!  required | extensible | preferred | example\n    \"description\" : \"<markdown>\", // I Intended use of codes in the bound value set\n    \"valueSet\" : \"<canonical(ValueSet)>\", // I Source of value set\n    \"additional\" : [{ // Additional Bindings - more rules about the binding\n      \"purpose\" : \"<code>\", // R!  maximum | minimum | required | extensible | candidate | current | preferred | ui | starter | component\n      \"valueSet\" : \"<canonical(ValueSet)>\", // R!  The value set for the additional binding\n      \"documentation\" : \"<markdown>\", // Documentation of the purpose of use of the binding\n      \"shortDoco\" : \"<string>\", // Concise documentation - for summary tables\n      \"usage\" : [{ UsageContext }], // Qualifies the usage - jurisdiction, gender, workflow status etc.\n      \"any\" : <boolean> // Whether binding can applies to all repeats, or just one\n    }]\n  },\n  \"mapping\" : [{ // I Map element to another set of definitions\n    \"identity\" : \"<id>\", // I R!  Reference to mapping declaration\n    \"language\" : \"<code>\", // Computable language of mapping\n    \"map\" : \"<string>\", // R!  Details of the mapping\n    \"comment\" : \"<markdown>\" // Comments about the mapping or its use\n  }]\n}\n",
+                "schema": {
+                    "path": "<string>",
+                    "representation": [
+                        "<code>"
+                    ],
+                    "sliceName": "<string>",
+                    "sliceIsConstraining": "<boolean>",
+                    "label": "<string>",
+                    "code": [
+                        "Coding"
+                    ],
+                    "slicing": {
+                        "discriminator": [
+                            {
+                                "type": "<code>",
+                                "path": "<string>"
+                            }
+                        ],
+                        "description": "<string>",
+                        "ordered": "<boolean>",
+                        "rules": "<code>"
+                    },
+                    "short": "<string>",
+                    "definition": "<markdown>",
+                    "comment": "<markdown>",
+                    "requirements": "<markdown>",
+                    "alias": [
+                        "<string>"
+                    ],
+                    "min": "<unsignedInt>",
+                    "max": "<string>",
+                    "base": {
+                        "path": "<string>",
+                        "min": "<unsignedInt>",
+                        "max": "<string>"
+                    },
+                    "contentReference": "<uri>",
+                    "type": [
+                        {
+                            "code": "<uri>",
+                            "profile": [
+                                "<canonical(StructureDefinition|ImplementationGuide)>"
+                            ],
+                            "targetProfile": [
+                                "<canonical(StructureDefinition|ImplementationGuide)>"
+                            ],
+                            "aggregation": [
+                                "<code>"
+                            ],
+                            "versioning": "<code>"
+                        }
+                    ],
+                    "defaultValueBoolean": "<boolean>",
+                    "defaultValueCanonical": "<canonical>",
+                    "defaultValueCode": "<code>",
+                    "defaultValueDate": "<date>",
+                    "defaultValueDateTime": "<dateTime>",
+                    "defaultValueDecimal": "<decimal>",
+                    "defaultValueId": "<id>",
+                    "defaultValueInstant": "<instant>",
+                    "defaultValueInteger": "<integer>",
+                    "defaultValueInteger64": "<integer64>",
+                    "defaultValueMarkdown": "<markdown>",
+                    "defaultValueOid": "<oid>",
+                    "defaultValuePositiveInt": "<positiveInt>",
+                    "defaultValueString": "<string>",
+                    "defaultValueTime": "<time>",
+                    "defaultValueUnsignedInt": "<unsignedInt>",
+                    "defaultValueUri": "<uri>",
+                    "defaultValueUrl": "<url>",
+                    "defaultValueUuid": "<uuid>",
+                    "defaultValueAddress": "Address",
+                    "defaultValueAge": "Age",
+                    "defaultValueAnnotation": "Annotation",
+                    "defaultValueAttachment": "Attachment",
+                    "defaultValueCodeableConcept": "CodeableConcept",
+                    "defaultValueCodeableReference": "CodeableReference",
+                    "defaultValueCoding": "Coding",
+                    "defaultValueContactPoint": "ContactPoint",
+                    "defaultValueCount": "Count",
+                    "defaultValueDistance": "Distance",
+                    "defaultValueDuration": "Duration",
+                    "defaultValueHumanName": "HumanName",
+                    "defaultValueIdentifier": "Identifier",
+                    "defaultValueMoney": "Money",
+                    "defaultValuePeriod": "Period",
+                    "defaultValueQuantity": "Quantity",
+                    "defaultValueRange": "Range",
+                    "defaultValueRatio": "Ratio",
+                    "defaultValueRatioRange": "RatioRange",
+                    "defaultValueReference": "Reference",
+                    "defaultValueSampledData": "SampledData",
+                    "defaultValueSignature": "Signature",
+                    "defaultValueTiming": "Timing",
+                    "defaultValueContactDetail": "ContactDetail",
+                    "defaultValueDataRequirement": "DataRequirement",
+                    "defaultValueExpression": "Expression",
+                    "defaultValueParameterDefinition": "ParameterDefinition",
+                    "defaultValueRelatedArtifact": "RelatedArtifact",
+                    "defaultValueTriggerDefinition": "TriggerDefinition",
+                    "defaultValueUsageContext": "UsageContext",
+                    "defaultValueAvailability": "Availability",
+                    "defaultValueExtendedContactDetail": "ExtendedContactDetail",
+                    "defaultValueDosage": "Dosage",
+                    "defaultValueMeta": "Meta",
+                    "meaningWhenMissing": "<markdown>",
+                    "orderMeaning": "<string>",
+                    "fixedBoolean": "<boolean>",
+                    "fixedCanonical": "<canonical>",
+                    "fixedCode": "<code>",
+                    "fixedDate": "<date>",
+                    "fixedDateTime": "<dateTime>",
+                    "fixedDecimal": "<decimal>",
+                    "fixedId": "<id>",
+                    "fixedInstant": "<instant>",
+                    "fixedInteger": "<integer>",
+                    "fixedInteger64": "<integer64>",
+                    "fixedMarkdown": "<markdown>",
+                    "fixedOid": "<oid>",
+                    "fixedPositiveInt": "<positiveInt>",
+                    "fixedString": "<string>",
+                    "fixedTime": "<time>",
+                    "fixedUnsignedInt": "<unsignedInt>",
+                    "fixedUri": "<uri>",
+                    "fixedUrl": "<url>",
+                    "fixedUuid": "<uuid>",
+                    "fixedAddress": "Address",
+                    "fixedAge": "Age",
+                    "fixedAnnotation": "Annotation",
+                    "fixedAttachment": "Attachment",
+                    "fixedCodeableConcept": "CodeableConcept",
+                    "fixedCodeableReference": "CodeableReference",
+                    "fixedCoding": "Coding",
+                    "fixedContactPoint": "ContactPoint",
+                    "fixedCount": "Count",
+                    "fixedDistance": "Distance",
+                    "fixedDuration": "Duration",
+                    "fixedHumanName": "HumanName",
+                    "fixedIdentifier": "Identifier",
+                    "fixedMoney": "Money",
+                    "fixedPeriod": "Period",
+                    "fixedQuantity": "Quantity",
+                    "fixedRange": "Range",
+                    "fixedRatio": "Ratio",
+                    "fixedRatioRange": "RatioRange",
+                    "fixedReference": "Reference",
+                    "fixedSampledData": "SampledData",
+                    "fixedSignature": "Signature",
+                    "fixedTiming": "Timing",
+                    "fixedContactDetail": "ContactDetail",
+                    "fixedDataRequirement": "DataRequirement",
+                    "fixedExpression": "Expression",
+                    "fixedParameterDefinition": "ParameterDefinition",
+                    "fixedRelatedArtifact": "RelatedArtifact",
+                    "fixedTriggerDefinition": "TriggerDefinition",
+                    "fixedUsageContext": "UsageContext",
+                    "fixedAvailability": "Availability",
+                    "fixedExtendedContactDetail": "ExtendedContactDetail",
+                    "fixedDosage": "Dosage",
+                    "fixedMeta": "Meta",
+                    "patternBoolean": "<boolean>",
+                    "patternCanonical": "<canonical>",
+                    "patternCode": "<code>",
+                    "patternDate": "<date>",
+                    "patternDateTime": "<dateTime>",
+                    "patternDecimal": "<decimal>",
+                    "patternId": "<id>",
+                    "patternInstant": "<instant>",
+                    "patternInteger": "<integer>",
+                    "patternInteger64": "<integer64>",
+                    "patternMarkdown": "<markdown>",
+                    "patternOid": "<oid>",
+                    "patternPositiveInt": "<positiveInt>",
+                    "patternString": "<string>",
+                    "patternTime": "<time>",
+                    "patternUnsignedInt": "<unsignedInt>",
+                    "patternUri": "<uri>",
+                    "patternUrl": "<url>",
+                    "patternUuid": "<uuid>",
+                    "patternAddress": "Address",
+                    "patternAge": "Age",
+                    "patternAnnotation": "Annotation",
+                    "patternAttachment": "Attachment",
+                    "patternCodeableConcept": "CodeableConcept",
+                    "patternCodeableReference": "CodeableReference",
+                    "patternCoding": "Coding",
+                    "patternContactPoint": "ContactPoint",
+                    "patternCount": "Count",
+                    "patternDistance": "Distance",
+                    "patternDuration": "Duration",
+                    "patternHumanName": "HumanName",
+                    "patternIdentifier": "Identifier",
+                    "patternMoney": "Money",
+                    "patternPeriod": "Period",
+                    "patternQuantity": "Quantity",
+                    "patternRange": "Range",
+                    "patternRatio": "Ratio",
+                    "patternRatioRange": "RatioRange",
+                    "patternReference": "Reference",
+                    "patternSampledData": "SampledData",
+                    "patternSignature": "Signature",
+                    "patternTiming": "Timing",
+                    "patternContactDetail": "ContactDetail",
+                    "patternDataRequirement": "DataRequirement",
+                    "patternExpression": "Expression",
+                    "patternParameterDefinition": "ParameterDefinition",
+                    "patternRelatedArtifact": "RelatedArtifact",
+                    "patternTriggerDefinition": "TriggerDefinition",
+                    "patternUsageContext": "UsageContext",
+                    "patternAvailability": "Availability",
+                    "patternExtendedContactDetail": "ExtendedContactDetail",
+                    "patternDosage": "Dosage",
+                    "patternMeta": "Meta",
+                    "example": [
+                        {
+                            "label": "<string>",
+                            "valueBoolean": "<boolean>",
+                            "valueCanonical": "<canonical>",
+                            "valueCode": "<code>",
+                            "valueDate": "<date>",
+                            "valueDateTime": "<dateTime>",
+                            "valueDecimal": "<decimal>",
+                            "valueId": "<id>",
+                            "valueInstant": "<instant>",
+                            "valueInteger": "<integer>",
+                            "valueInteger64": "<integer64>",
+                            "valueMarkdown": "<markdown>",
+                            "valueOid": "<oid>",
+                            "valuePositiveInt": "<positiveInt>",
+                            "valueString": "<string>",
+                            "valueTime": "<time>",
+                            "valueUnsignedInt": "<unsignedInt>",
+                            "valueUri": "<uri>",
+                            "valueUrl": "<url>",
+                            "valueUuid": "<uuid>",
+                            "valueAddress": "Address",
+                            "valueAge": "Age",
+                            "valueAnnotation": "Annotation",
+                            "valueAttachment": "Attachment",
+                            "valueCodeableConcept": "CodeableConcept",
+                            "valueCodeableReference": "CodeableReference",
+                            "valueCoding": "Coding",
+                            "valueContactPoint": "ContactPoint",
+                            "valueCount": "Count",
+                            "valueDistance": "Distance",
+                            "valueDuration": "Duration",
+                            "valueHumanName": "HumanName",
+                            "valueIdentifier": "Identifier",
+                            "valueMoney": "Money",
+                            "valuePeriod": "Period",
+                            "valueQuantity": "Quantity",
+                            "valueRange": "Range",
+                            "valueRatio": "Ratio",
+                            "valueRatioRange": "RatioRange",
+                            "valueReference": "Reference",
+                            "valueSampledData": "SampledData",
+                            "valueSignature": "Signature",
+                            "valueTiming": "Timing",
+                            "valueContactDetail": "ContactDetail",
+                            "valueDataRequirement": "DataRequirement",
+                            "valueExpression": "Expression",
+                            "valueParameterDefinition": "ParameterDefinition",
+                            "valueRelatedArtifact": "RelatedArtifact",
+                            "valueTriggerDefinition": "TriggerDefinition",
+                            "valueUsageContext": "UsageContext",
+                            "valueAvailability": "Availability",
+                            "valueExtendedContactDetail": "ExtendedContactDetail",
+                            "valueDosage": "Dosage",
+                            "valueMeta": "Meta"
+                        }
+                    ],
+                    "minValueDateTime": "<dateTime>",
+                    "minValueInstant": "<instant>",
+                    "minValueTime": "<time>",
+                    "minValueDecimal": "<decimal>",
+                    "minValueInteger": "<integer>",
+                    "minValueInteger64": "<integer64>",
+                    "minValuePositiveInt": "<positiveInt>",
+                    "minValueUnsignedInt": "<unsignedInt>",
+                    "minValueQuantity": "Quantity",
+                    "maxValueDateTime": "<dateTime>",
+                    "maxValueInstant": "<instant>",
+                    "maxValueTime": "<time>",
+                    "maxValueDecimal": "<decimal>",
+                    "maxValueInteger": "<integer>",
+                    "maxValueInteger64": "<integer64>",
+                    "maxValuePositiveInt": "<positiveInt>",
+                    "maxValueUnsignedInt": "<unsignedInt>",
+                    "maxValueQuantity": "Quantity",
+                    "maxLength": "<integer>",
+                    "condition": [
+                        "<id>"
+                    ],
+                    "constraint": [
+                        {
+                            "key": "<id>",
+                            "requirements": "<markdown>",
+                            "severity": "<code>",
+                            "suppress": "<boolean>",
+                            "human": "<string>",
+                            "expression": "<string>",
+                            "source": "<canonical(StructureDefinition)>"
+                        }
+                    ],
+                    "mustHaveValue": "<boolean>",
+                    "valueAlternatives": [
+                        "<canonical(StructureDefinition)>"
+                    ],
+                    "mustSupport": "<boolean>",
+                    "isModifier": "<boolean>",
+                    "isModifierReason": "<string>",
+                    "isSummary": "<boolean>",
+                    "binding": {
+                        "strength": "<code>",
+                        "description": "<markdown>",
+                        "valueSet": "<canonical(ValueSet)>",
+                        "additional": [
+                            {
+                                "purpose": "<code>",
+                                "valueSet": "<canonical(ValueSet)>",
+                                "documentation": "<markdown>",
+                                "shortDoco": "<string>",
+                                "usage": [
+                                    "UsageContext"
+                                ],
+                                "any": "<boolean>"
+                            }
+                        ]
+                    },
+                    "mapping": [
+                        {
+                            "identity": "<id>",
+                            "language": "<code>",
+                            "map": "<string>",
+                            "comment": "<markdown>"
+                        }
+                    ]
+                }
+            },
+            {
+                "label": "Dosage",
+                "href": "dosage.html#Dosage",
+                "textContent": "{\n  // from Element: extension\n  \"sequence\" : <integer>, // The order of the dosage instructions\n  \"text\" : \"<string>\", // Free text dosage instructions e.g. SIG\n  \"additionalInstruction\" : [{ CodeableConcept }], // Supplemental instruction or warnings to the patient - e.g. \"with meals\", \"may cause drowsiness\"\n  \"patientInstruction\" : \"<string>\", // Patient or consumer oriented instructions\n  \"timing\" : { Timing }, // When medication should be administered\n  \"asNeeded\" : <boolean>, // I Take \"as needed\"\n  \"asNeededFor\" : [{ CodeableConcept }], // I Take \"as needed\" (for x)\n  \"site\" : { CodeableConcept }, // Body site to administer to\n  \"route\" : { CodeableConcept }, // How drug should enter body\n  \"method\" : { CodeableConcept }, // Technique for administering medication\n  \"doseAndRate\" : [{ // Amount of medication administered, to be administered or typical amount to be administered\n    \"type\" : { CodeableConcept }, // The kind of dose or rate specified \n    // dose[x]: Amount of medication per dose. One of these 2:\n    \"doseRange\" : { Range },\n    \"doseQuantity\" : { Quantity(SimpleQuantity) },\n    // rate[x]: Amount of medication per unit of time. One of these 3:\n    \"rateRatio\" : { Ratio },\n    \"rateRange\" : { Range },\n    \"rateQuantity\" : { Quantity(SimpleQuantity) }\n  }],\n  \"maxDosePerPeriod\" : [{ Ratio }], // Upper limit on medication per unit of time\n  \"maxDosePerAdministration\" : { Quantity(SimpleQuantity) }, // Upper limit on medication per administration\n  \"maxDosePerLifetime\" : { Quantity(SimpleQuantity) } // Upper limit on medication per lifetime of the patient\n}\n",
+                "schema": {
+                    "sequence": "<integer>",
+                    "text": "<string>",
+                    "additionalInstruction": [
+                        "CodeableConcept"
+                    ],
+                    "patientInstruction": "<string>",
+                    "timing": "Timing",
+                    "asNeeded": "<boolean>",
+                    "asNeededFor": [
+                        "CodeableConcept"
+                    ],
+                    "site": "CodeableConcept",
+                    "route": "CodeableConcept",
+                    "method": "CodeableConcept",
+                    "doseAndRate": [
+                        {
+                            "type": "CodeableConcept",
+                            "doseQuantity": "Quantity(SimpleQuantity)",
+                            "rateRange": "Range",
+                            "rateQuantity": "Quantity(SimpleQuantity)"
+                        }
+                    ],
+                    "maxDosePerPeriod": [
+                        "Ratio"
+                    ],
+                    "maxDosePerAdministration": "Quantity(SimpleQuantity)",
+                    "maxDosePerLifetime": "Quantity(SimpleQuantity)"
+                }
+            },
+            {
+                "label": "xhtml",
+                "href": "narrative.html#xhtml"
+            },
+            {
+                "label": "CodeableReference",
+                "href": "references.html#CodeableReference",
+                "textContent": "{\n  // from Element: extension\n  \"concept\" : { CodeableConcept }, // Reference to a concept (by class)\n  \"reference\" : { Reference } // Reference to a resource (by instance)\n}\n",
+                "schema": {
+                    "concept": "CodeableConcept",
+                    "reference": "Reference"
+                }
+            }
+        ]
+    }
+]

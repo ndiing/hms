@@ -1,146 +1,367 @@
-const fs = require("fs");
+const fs = require('fs')
+const path = require('path')
 
-function replacePhone(number, start = "", end = "") {
-    number = number.match(/^\+?0?([\d\(\)]+)/)[1];
-    return start + number.replace(/[^\d]/g, "") + end;
-}
+function flatten(obj, parentKey = "", result = {}) {
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            let newKey = parentKey ? `${parentKey}.${key}` : key;
 
-function isEmpty(value) {
-    return value === null || value === undefined || value === "";
-}
-
-function queue() {
-    let pending = Promise.resolve();
-    let execute = async (callback) => {
-        try {
-            await pending;
-        } finally {
-            return callback();
-        }
-    };
-    return (callback) => (pending = execute(callback));
-}
-
-function chromePath() {
-    const dirs = [process.env["LOCALAPPDATA"], process.env["ProgramFiles"], process.env["ProgramFiles(x86)"]];
-    const files = ["/Google/Chrome/Application/chrome.exe", "/Google/Chrome Beta/Application/chrome.exe", "/Google/Chrome SxS/Application/chrome.exe", "/Chromium/Application/chrome.exe"];
-
-    let executablePath = null;
-    for (const dir of dirs) {
-        for (const file of files) {
-            try {
-                fs.accessSync(dir + file);
-                executablePath = dir + file;
-                break;
-            } catch (error) {}
-        }
-        if (executablePath) {
-            break;
-        }
-    }
-    return executablePath;
-}
-
-// Flatten nested object or array
-function flattenObject(obj, prefix = "") {
-    return Object.keys(obj).reduce((acc, key) => {
-        const pre = prefix.length ? prefix + "." : "";
-        if (typeof obj[key] === "object" && obj[key] !== null) {
-            acc = { ...acc, ...flattenObject(obj[key], pre + key) };
-        } else {
-            acc[pre + key] = obj[key];
-        }
-        return acc;
-    }, {});
-}
-// Unflatten flattened object
-function unflattenObject(obj) {
-    const result = {};
-    for (const key in obj) {
-        const keys = key.split(".");
-        keys.reduce((acc, cur, index) => {
-            if (index === keys.length - 1) {
-                acc[cur] = obj[key];
+            if (typeof obj[key] === "object" && obj[key] !== null && !Array.isArray(obj[key])) {
+                flatten(obj[key], newKey, result);
+            } else if (Array.isArray(obj[key])) {
+                obj[key].forEach((item, index) => {
+                    let arrayKey = `${newKey}.${index}`;
+                    if (typeof item === "object" && item !== null) {
+                        flatten(item, arrayKey, result);
+                    } else {
+                        result[arrayKey] = item;
+                    }
+                });
             } else {
-                acc[cur] = acc[cur] || (isNaN(keys[index + 1]) ? {} : []);
+                result[newKey] = obj[key];
             }
-            return acc[cur];
-        }, result);
+        }
     }
     return result;
 }
 
-// // Test data
-// const data = {
-//     a: 'b',
-//     c: { d: 'e', f: 'h' },
-//     h: [
-//         { i: 'j' },
-//         { i: 'k' },
-//         { i: 'l' },
-//     ]
+function unflatten(data) {
+    const result = {};
+
+    for (let key in data) {
+        if (data.hasOwnProperty(key)) {
+            const keys = key.split(".");
+            keys.reduce((acc, part, index) => {
+                if (index === keys.length - 1) {
+                    acc[part] = data[key];
+                } else {
+                    if (!acc[part]) {
+                        // Check if the next key part is a number to determine if this should be an array
+                        acc[part] = isNaN(keys[index + 1]) ? {} : [];
+                    }
+                }
+                return acc[part];
+            }, result);
+        }
+    }
+
+    // Determine if the result itself should be an array
+    const topKeys = Object.keys(result);
+    if (topKeys.length === 1 && !isNaN(topKeys[0])) {
+        const arrayResult = [];
+        for (let i = 0; i < topKeys.length; i++) {
+            arrayResult[i] = result[i];
+        }
+        return arrayResult;
+    }
+
+    return result;
+}
+
+// // Example usage
+
+// // Define a nested object
+// const nestedObject = {
+//     a: {
+//         b: {
+//             c: 1
+//         },
+//         d: [1, 2, { e: 3 }]
+//     },
+//     f: {
+//         g: {
+//             h: 2
+//         }
+//     }
 // };
 
-// // Test flattening
-// const flattenedData = flattenObject(data);
-// console.log('Flattened Object:');
-// console.log(flattenedData);
+// // Flatten the nested object
+// const flattenedObject = flatten(nestedObject);
+// console.log(flattenedObject);
+// // Output:
+// // {
+// //     'a.b.c': 1,
+// //     'a.d.0': 1,
+// //     'a.d.1': 2,
+// //     'a.d.2.e': 3,
+// //     'f.g.h': 2
+// // }
 
-// // Test unflattening
-// const unflattenedData = unflattenObject(flattenedData);
-// console.log('\nUnflattened Object:');
-// console.log(unflattenedData);
+// // Unflatten the flattened object
+// const unflattenedObject = unflatten(flattenedObject);
+// console.log(unflattenedObject);
+// // Output:
+// // {
+// //     a: {
+// //         b: { c: 1 },
+// //         d: [1, 2, { e: 3 }]
+// //     },
+// //     f: {
+// //         g: { h: 2 }
+// //     }
+// // }
 
-function findMissingItems(arr1, arr2) {
-    const missingItems = [];
+// // Define a nested array object
+// const nestedArrayObject = [
+//     {
+//         a: {
+//             b: {
+//                 c: 1
+//             },
+//             d: [1, 2, { e: 3 }]
+//         },
+//         f: {
+//             g: {
+//                 h: 2
+//             }
+//         }
+//     }
+// ];
 
-    // Iterate through the first array
-    for (const item of arr1) {
-        // Check if the item is present in the second array
-        if (!arr2.includes(item)) {
-            // If not present, add it to the missingItems array
-            missingItems.push(item);
-        }
-    }
+// // Flatten the nested array object
+// const flattenedArrayObject = flatten(nestedArrayObject);
+// console.log(flattenedArrayObject);
+// // Output:
+// // {
+// //     '0.a.b.c': 1,
+// //     '0.a.d.0': 1,
+// //     '0.a.d.1': 2,
+// //     '0.a.d.2.e': 3,
+// //     '0.f.g.h': 2
+// // }
 
-    return missingItems;
-}
+// // Unflatten the flattened array object
+// const unflattenedArrayObject = unflatten(flattenedArrayObject);
+// console.log(unflattenedArrayObject);
+// // Output:
+// // [
+// //     {
+// //         a: {
+// //             b: { c: 1 },
+// //             d: [1, 2, { e: 3 }]
+// //         },
+// //         f: {
+// //             g: { h: 2 }
+// //         }
+// //     }
+// // ]
 
-// // Example usage:
-// const array1 = [1, 2, 3, 4, 5];
-// const array2 = [2, 3, 5, 6];
-
-// const missingItems = findMissingItems(array1, array2);
-// console.log("Missing items from array1:", missingItems); // Output: [1, 4]
-function findDuplicates(arr) {
-    let duplicates = [];
-    let seen = {};
-
-    for (let i = 0; i < arr.length; i++) {
-        if (seen[arr[i]]) {
-            if (!duplicates.includes(arr[i])) {
-                duplicates.push(arr[i]);
+// Your merge function
+function merge(...objects) {
+    function mergeTwoObjects(target, source) {
+        for (const key in source) {
+            if (source.hasOwnProperty(key)) {
+                if (Array.isArray(source[key]) && Array.isArray(target[key])) {
+                    // Handle merging arrays
+                    target[key] = source[key].map((item, index) => {
+                        if (typeof item === 'object' && typeof target[key][index] === 'object') {
+                            return mergeTwoObjects(target[key][index], item);
+                        }
+                        return item;
+                    });
+                } else if (typeof source[key] === 'object' && source[key] !== null) {
+                    // If the property is an object, recursively merge
+                    if (!target[key]) {
+                        target[key] = Array.isArray(source[key]) ? [] : {};
+                    }
+                    target[key] = mergeTwoObjects(target[key], source[key]);
+                } else {
+                    // For primitives or if the key doesn't exist in the target, directly assign the value
+                    target[key] = source[key];
+                }
             }
-        } else {
-            seen[arr[i]] = true;
         }
+        return target;
     }
 
-    return duplicates;
+    // Start with an empty object as the initial target
+    return objects.reduce((acc, obj) => mergeTwoObjects(acc, obj), {});
 }
 
-// let myArray = [1, 2, 3, 4, 5, 2, 7, 8, 3, 4];
-// let duplicates = findDuplicates(myArray);
-// console.log(duplicates); // Output: [2, 3, 4]
+// // Example objects
+// const a = [{
+//     "resourceType": "Location",
+//     "identifier": [
+//         {
+//             "system": "http://sys-ids.kemkes.go.id/location/{{Org_id}}",
+//             "value": "G-2-R-1A"
+//         }
+//     ],
+//     "status": "active",
+//     "name": "Ruang 1A IRJT",
+//     "description": "Ruang 1A, Poliklinik Bedah Rawat Jalan Terpadu, Lantai 2, Gedung G",
+//     "mode": "instance",
+//     "physicalType": {
+//         "coding": [
+//             {
+//                 "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+//                 "code": "ro",
+//                 "display": "Room"
+//             }
+//         ]
+//     },
+//     "position": {
+//         "longitude": -6.23115426275766,
+//         "latitude": 106.83239885393944,
+//         "altitude": 0
+//     },
+//     "managingOrganization": {
+//         "reference": "Organization/{{Org_id}}"
+//     }
+// }];
 
+// const b = [{
+//     "identifier": [
+//         {
+//             "value": "G-2-R-1A"
+//         }
+//     ],
+//     "status": "active",
+//     "name": "Ruang 1A IRJT",
+//     "description": "Ruang 1A, Poliklinik Bedah Rawat Jalan Terpadu, Lantai 2, Gedung G",
+//     "mode": "instance",
+//     "physicalType": {
+//         "coding": [
+//             {
+//                 "code": "ro"
+//             }
+//         ]
+//     },
+//     "position": {
+//         "longitude": -6.23115426275766,
+//         "latitude": 106.83239885393944,
+//         "altitude": 0
+//     },
+//     "managingOrganization": {
+//         "reference": "Organization/{{Org_id}}"       
+//     }
+// }];
 
-module.exports = {
-    replacePhone,
-    isEmpty,
-    queue,
-    chromePath,
-    flattenObject,
-    unflattenObject,
-    findMissingItems,
-    findDuplicates,
-};
+// // Example of more objects
+// const c = [{
+//     "status": "inactive",
+//     "newField": "Example"
+// }];
+
+// const e =[ {
+//     "identifier": [
+//         {
+//             // "system": "http://example.com",
+//             "value": "EX-123"
+//         }
+//     ]
+// }];
+
+// const f = [{
+//     "position": {
+//         "altitude": 100
+//     }
+// }];
+
+// const g = [{
+//     "managingOrganization": {
+//         "reference": "Organization/NewOrg"
+//     }
+// }];
+
+// // Merge objects a, b, c, e, f, g
+// const merged = merge(a, b, c, e, f, g);
+
+// console.log(JSON.stringify(merged, null, 2));
+
+function toPascalCase(string) {
+    return string
+        .replace(/(^|[^a-zA-Z0-9]+)([a-zA-Z])/g, ($, $1, $2) => {
+            return $2.toUpperCase();
+        })
+        .replace(/[^a-zA-Z0-9]+$/, '');
+}
+function toCamelCase(string) {
+    return string
+        .replace(/(^|[^a-zA-Z0-9]+)([a-zA-Z])/g, ($, $1, $2, $0) => {
+            return $0 == 0 ?
+                $2.toLowerCase() :
+                $2.toUpperCase();
+        })
+        .replace(/[^a-zA-Z0-9]+$/, '');
+}
+function toKebabCase(string) {
+    return string
+        .replace(/([a-z])([A-Z])/g, ($, $1, $2) => {
+            return $1 + '-' + $2;
+        })
+        .replace(/[^a-zA-Z0-9]+/g, '-')
+        .toLowerCase()
+        .replace(/^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$/g, '');
+}
+function toSnakeCase(string) {
+    return string
+        .replace(/([a-z])([A-Z])/g, ($, $1, $2) => {
+            return $1 + '_' + $2;
+        })
+        .replace(/[^a-zA-Z0-9]+/g, '_')
+        .toLowerCase()
+        .replace(/^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$/g, '');
+}
+function toTitleCase(string) {
+    return string
+        .replace(/([a-z])([A-Z])/g, ($, $1, $2) => {
+            return $1 + ' ' + $2;
+        })
+        .replace(/[^a-zA-Z0-9]+/g, ' ')
+        .replace(/^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$/g, '')
+        .replace(/(^|[^a-zA-Z0-9]+)([a-zA-Z])/g, ($, $1, $2) => {
+            return $1 + $2.toUpperCase();
+        });
+}
+
+// console.log(JSON.stringify([
+//     'lorem ipsum dolot sit amet',
+//     'lorem_ipsum_dolot_sit_amet',
+//     'lorem-ipsum-dolot-sit-amet',
+//     'loremIpsumDolotSitAmet',
+//     'LoremIpsumDolotSitAmet',
+//     ' lorem ipsum dolot sit amet ',
+//     '-lorem_ipsum_dolot_sit_amet-',
+//     '_lorem-ipsum-dolot-sit-amet_',
+//     ' _loremIpsumDolotSitAmet_ ',
+//     ' -LoremIpsumDolotSitAmet- ',
+// ].map(toTitleCase),null,4))
+
+function read(file,content){
+    try {
+        content=fs.readFileSync(file,{
+            encoding:'utf8'
+        })
+    } catch (error) {
+        
+    }
+    return content
+}
+function write(file,content){
+    let dir=path.dirname(file)
+    try {
+        fs.readdirSync(dir)
+    } catch (error) {
+        fs.mkdirSync(dir,{
+            recursive:true
+        })
+    }
+    fs.writeFileSync(file,content)
+}
+
+module.exports={
+    flatten,
+    unflatten,
+    merge,
+
+    toPascalCase,
+    toCamelCase,
+    toKebabCase,
+    toSnakeCase,
+    toTitleCase,
+
+    read,
+    write,
+}
+
