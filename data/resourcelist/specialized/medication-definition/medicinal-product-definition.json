@@ -1,0 +1,105 @@
+{
+    "resourceType": "MedicinalProductDefinition",
+    "identifier": [
+        "Identifier"
+    ],
+    "type": "CodeableConcept",
+    "domain": "CodeableConcept",
+    "version": "<string>",
+    "status": "CodeableConcept",
+    "statusDate": "<dateTime>",
+    "description": "<markdown>",
+    "combinedPharmaceuticalDoseForm": "CodeableConcept",
+    "route": [
+        "CodeableConcept"
+    ],
+    "indication": "<markdown>",
+    "legalStatusOfSupply": "CodeableConcept",
+    "additionalMonitoringIndicator": "CodeableConcept",
+    "specialMeasures": [
+        "CodeableConcept"
+    ],
+    "pediatricUseIndicator": "CodeableConcept",
+    "classification": [
+        "CodeableConcept"
+    ],
+    "marketingStatus": [
+        "MarketingStatus"
+    ],
+    "packagedMedicinalProduct": [
+        "CodeableConcept"
+    ],
+    "comprisedOf": [
+        "Reference(DeviceDefinition|ManufacturedItemDefinition)"
+    ],
+    "ingredient": [
+        "CodeableConcept"
+    ],
+    "impurity": [
+        "CodeableReference(SubstanceDefinition)"
+    ],
+    "attachedDocument": [
+        "Reference(DocumentReference)"
+    ],
+    "masterFile": [
+        "Reference(DocumentReference)"
+    ],
+    "contact": [
+        {
+            "type": "CodeableConcept",
+            "contact": "Reference(Organization|PractitionerRole)"
+        }
+    ],
+    "clinicalTrial": [
+        "Reference(ResearchStudy)"
+    ],
+    "code": [
+        "Coding"
+    ],
+    "name": [
+        {
+            "productName": "<string>",
+            "type": "CodeableConcept",
+            "part": [
+                {
+                    "part": "<string>",
+                    "type": "CodeableConcept"
+                }
+            ],
+            "usage": [
+                {
+                    "country": "CodeableConcept",
+                    "jurisdiction": "CodeableConcept",
+                    "language": "CodeableConcept"
+                }
+            ]
+        }
+    ],
+    "crossReference": [
+        {
+            "product": "CodeableReference(MedicinalProductDefinition)",
+            "type": "CodeableConcept"
+        }
+    ],
+    "operation": [
+        {
+            "type": "CodeableReference(ActivityDefinition|PlanDefinition)",
+            "effectiveDate": "Period",
+            "organization": [
+                "Reference(Organization)"
+            ],
+            "confidentialityIndicator": "CodeableConcept"
+        }
+    ],
+    "characteristic": [
+        {
+            "type": "CodeableConcept",
+            "valueMarkdown": "<markdown>",
+            "valueQuantity": "Quantity",
+            "valueInteger": "<integer>",
+            "valueDate": "<date>",
+            "valueBoolean": "<boolean>",
+            "valueAttachment": "Attachment"
+        }
+    ]
+}

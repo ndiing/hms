@@ -1,0 +1,53 @@
+{
+    "resourceType": "MessageDefinition",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "replaces": [
+        "<canonical(MessageDefinition)>"
+    ],
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "base": "<canonical(MessageDefinition)>",
+    "parent": [
+        "<canonical(ActivityDefinition|PlanDefinition)>"
+    ],
+    "eventUri": "<uri>",
+    "category": "<code>",
+    "focus": [
+        {
+            "code": "<code>",
+            "profile": "<canonical(StructureDefinition)>",
+            "min": "<unsignedInt>",
+            "max": "<string>"
+        }
+    ],
+    "responseRequired": "<code>",
+    "allowedResponse": [
+        {
+            "message": "<canonical(MessageDefinition)>",
+            "situation": "<markdown>"
+        }
+    ],
+    "graph": "<canonical(GraphDefinition)>"
+}

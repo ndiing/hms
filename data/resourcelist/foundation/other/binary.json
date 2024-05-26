@@ -1,0 +1,6 @@
+{
+    "resourceType": "Binary",
+    "contentType": "<code>",
+    "securityContext": "Reference(Any)",
+    "data": "<base64Binary>"
+}

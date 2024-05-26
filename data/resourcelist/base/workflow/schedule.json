@@ -1,0 +1,22 @@
+{
+    "resourceType": "Schedule",
+    "identifier": [
+        "Identifier"
+    ],
+    "active": "<boolean>",
+    "serviceCategory": [
+        "CodeableConcept"
+    ],
+    "serviceType": [
+        "CodeableReference(HealthcareService)"
+    ],
+    "specialty": [
+        "CodeableConcept"
+    ],
+    "name": "<string>",
+    "actor": [
+        "Reference(CareTeam|Device|HealthcareService|Location|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+    ],
+    "planningHorizon": "Period",
+    "comment": "<markdown>"
+}

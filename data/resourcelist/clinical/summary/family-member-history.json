@@ -1,0 +1,67 @@
+{
+    "resourceType": "FamilyMemberHistory",
+    "identifier": [
+        "Identifier"
+    ],
+    "instantiatesCanonical": [
+        "<canonical(PlanDefinition|Questionnaire|ActivityDefinition|Measure|OperationDefinition)>"
+    ],
+    "instantiatesUri": [
+        "<uri>"
+    ],
+    "status": "<code>",
+    "dataAbsentReason": "CodeableConcept",
+    "patient": "Reference(Patient)",
+    "date": "<dateTime>",
+    "participant": [
+        {
+            "function": "CodeableConcept",
+            "actor": "Reference(CareTeam|Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+        }
+    ],
+    "name": "<string>",
+    "relationship": "CodeableConcept",
+    "sex": "CodeableConcept",
+    "bornDate": "<date>",
+    "bornString": "<string>",
+    "ageRange": "Range",
+    "ageString": "<string>",
+    "estimatedAge": "<boolean>",
+    "deceasedAge": "Age",
+    "deceasedRange": "Range",
+    "deceasedDate": "<date>",
+    "deceasedString": "<string>",
+    "reason": [
+        "CodeableReference(AllergyIntolerance|Condition|DiagnosticReport|DocumentReference|Observation|QuestionnaireResponse)"
+    ],
+    "note": [
+        "Annotation"
+    ],
+    "condition": [
+        {
+            "code": "CodeableConcept",
+            "outcome": "CodeableConcept",
+            "contributedToDeath": "<boolean>",
+            "onsetRange": "Range",
+            "onsetPeriod": "Period",
+            "onsetString": "<string>",
+            "note": [
+                "Annotation"
+            ]
+        }
+    ],
+    "procedure": [
+        {
+            "code": "CodeableConcept",
+            "outcome": "CodeableConcept",
+            "contributedToDeath": "<boolean>",
+            "performedRange": "Range",
+            "performedPeriod": "Period",
+            "performedString": "<string>",
+            "performedDateTime": "<dateTime>",
+            "note": [
+                "Annotation"
+            ]
+        }
+    ]
+}

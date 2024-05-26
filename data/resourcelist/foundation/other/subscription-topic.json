@@ -1,0 +1,83 @@
+{
+    "resourceType": "SubscriptionTopic",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "derivedFrom": [
+        "<canonical(SubscriptionTopic)>"
+    ],
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "approvalDate": "<date>",
+    "lastReviewDate": "<date>",
+    "effectivePeriod": "Period",
+    "resourceTrigger": [
+        {
+            "description": "<markdown>",
+            "resource": "<uri>",
+            "supportedInteraction": [
+                "<code>"
+            ],
+            "queryCriteria": {
+                "previous": "<string>",
+                "resultForCreate": "<code>",
+                "current": "<string>",
+                "resultForDelete": "<code>",
+                "requireBoth": "<boolean>"
+            },
+            "fhirPathCriteria": "<string>"
+        }
+    ],
+    "eventTrigger": [
+        {
+            "description": "<markdown>",
+            "event": "CodeableConcept",
+            "resource": "<uri>"
+        }
+    ],
+    "canFilterBy": [
+        {
+            "description": "<markdown>",
+            "resource": "<uri>",
+            "filterParameter": "<string>",
+            "filterDefinition": "<uri>",
+            "comparator": [
+                "<code>"
+            ],
+            "modifier": [
+                "<code>"
+            ]
+        }
+    ],
+    "notificationShape": [
+        {
+            "resource": "<uri>",
+            "include": [
+                "<string>"
+            ],
+            "revInclude": [
+                "<string>"
+            ]
+        }
+    ]
+}

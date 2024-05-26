@@ -1,0 +1,100 @@
+{
+    "resourceType": "ActivityDefinition",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "subtitle": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "subjectReference": "Reference(AdministrableProductDefinition|Group|ManufacturedItemDefinition|MedicinalProductDefinition|PackagedProductDefinition|SubstanceDefinition)",
+    "subjectCanonical": "<canonical(EvidenceVariable)>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "usage": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "approvalDate": "<date>",
+    "lastReviewDate": "<date>",
+    "effectivePeriod": "Period",
+    "topic": [
+        "CodeableConcept"
+    ],
+    "author": [
+        "ContactDetail"
+    ],
+    "editor": [
+        "ContactDetail"
+    ],
+    "reviewer": [
+        "ContactDetail"
+    ],
+    "endorser": [
+        "ContactDetail"
+    ],
+    "relatedArtifact": [
+        "RelatedArtifact"
+    ],
+    "library": [
+        "<canonical(Library)>"
+    ],
+    "kind": "<code>",
+    "profile": "<canonical(StructureDefinition)>",
+    "code": "CodeableConcept",
+    "intent": "<code>",
+    "priority": "<code>",
+    "doNotPerform": "<boolean>",
+    "timingAge": "Age",
+    "timingRange": "Range",
+    "timingDuration": "Duration",
+    "asNeededCodeableConcept": "CodeableConcept",
+    "location": "CodeableReference(Location)",
+    "participant": [
+        {
+            "type": "<code>",
+            "typeCanonical": "<canonical(CapabilityStatement)>",
+            "typeReference": "Reference(CareTeam|Device|DeviceDefinition|Endpoint|Group|HealthcareService|Location|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+            "role": "CodeableConcept",
+            "function": "CodeableConcept"
+        }
+    ],
+    "productCodeableConcept": "CodeableConcept",
+    "quantity": "Quantity(SimpleQuantity)",
+    "dosage": [
+        "Dosage"
+    ],
+    "bodySite": [
+        "CodeableConcept"
+    ],
+    "specimenRequirement": [
+        "<canonical(SpecimenDefinition)>"
+    ],
+    "observationRequirement": [
+        "<canonical(ObservationDefinition)>"
+    ],
+    "observationResultRequirement": [
+        "<canonical(ObservationDefinition)>"
+    ],
+    "transform": "<canonical(StructureMap)>",
+    "dynamicValue": [
+        {
+            "path": "<string>",
+            "expression": "Expression"
+        }
+    ]
+}

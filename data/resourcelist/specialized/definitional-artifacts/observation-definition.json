@@ -1,0 +1,94 @@
+{
+    "resourceType": "ObservationDefinition",
+    "url": "<uri>",
+    "identifier": "Identifier",
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "approvalDate": "<date>",
+    "lastReviewDate": "<date>",
+    "effectivePeriod": "Period",
+    "derivedFromCanonical": [
+        "<canonical(ObservationDefinition)>"
+    ],
+    "derivedFromUri": [
+        "<uri>"
+    ],
+    "subject": [
+        "CodeableConcept"
+    ],
+    "performerType": "CodeableConcept",
+    "category": [
+        "CodeableConcept"
+    ],
+    "code": "CodeableConcept",
+    "permittedDataType": [
+        "<code>"
+    ],
+    "multipleResultsAllowed": "<boolean>",
+    "bodySite": "CodeableConcept",
+    "method": "CodeableConcept",
+    "specimen": [
+        "Reference(SpecimenDefinition)"
+    ],
+    "device": [
+        "Reference(Device|DeviceDefinition)"
+    ],
+    "preferredReportName": "<string>",
+    "permittedUnit": [
+        "Coding"
+    ],
+    "qualifiedValue": [
+        {
+            "context": "CodeableConcept",
+            "appliesTo": [
+                "CodeableConcept"
+            ],
+            "gender": "<code>",
+            "age": "Range",
+            "gestationalAge": "Range",
+            "condition": "<string>",
+            "rangeCategory": "<code>",
+            "range": "Range",
+            "validCodedValueSet": "<canonical(ValueSet)>",
+            "normalCodedValueSet": "<canonical(ValueSet)>",
+            "abnormalCodedValueSet": "<canonical(ValueSet)>",
+            "criticalCodedValueSet": "<canonical(ValueSet)>"
+        }
+    ],
+    "hasMember": [
+        "Reference(ObservationDefinition|Questionnaire)"
+    ],
+    "component": [
+        {
+            "code": "CodeableConcept",
+            "permittedDataType": [
+                "<code>"
+            ],
+            "permittedUnit": [
+                "Coding"
+            ],
+            "qualifiedValue": [
+                "ContentasforObservationDefinition.qualifiedValue"
+            ]
+        }
+    ]
+}

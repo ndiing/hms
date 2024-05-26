@@ -1,0 +1,57 @@
+{
+    "resourceType": "ChargeItem",
+    "identifier": [
+        "Identifier"
+    ],
+    "definitionUri": [
+        "<uri>"
+    ],
+    "definitionCanonical": [
+        "<canonical(ChargeItemDefinition)>"
+    ],
+    "status": "<code>",
+    "partOf": [
+        "Reference(ChargeItem)"
+    ],
+    "code": "CodeableConcept",
+    "subject": "Reference(Group|Patient)",
+    "encounter": "Reference(Encounter)",
+    "occurrencePeriod": "Period",
+    "occurrenceTiming": "Timing",
+    "performer": [
+        {
+            "function": "CodeableConcept",
+            "actor": "Reference(CareTeam|Device|HealthcareService|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+        }
+    ],
+    "performingOrganization": "Reference(Organization)",
+    "requestingOrganization": "Reference(Organization)",
+    "costCenter": "Reference(Organization)",
+    "quantity": "Quantity",
+    "bodysite": [
+        "CodeableConcept"
+    ],
+    "unitPriceComponent": "MonetaryComponent",
+    "totalPriceComponent": "MonetaryComponent",
+    "overrideReason": "CodeableConcept",
+    "enterer": "Reference(Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "enteredDate": "<dateTime>",
+    "reason": [
+        "CodeableConcept"
+    ],
+    "service": [
+        "CodeableReference(DiagnosticReport|ImagingStudy|Immunization|MedicationAdministration|MedicationDispense|MedicationRequest|Observation|Procedure|ServiceRequest|SupplyDelivery)"
+    ],
+    "product": [
+        "CodeableReference(Device|Medication|Substance)"
+    ],
+    "account": [
+        "Reference(Account)"
+    ],
+    "note": [
+        "Annotation"
+    ],
+    "supportingInformation": [
+        "Reference(Any)"
+    ]
+}

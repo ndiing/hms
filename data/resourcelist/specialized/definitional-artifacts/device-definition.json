@@ -1,0 +1,168 @@
+{
+    "resourceType": "DeviceDefinition",
+    "description": "<markdown>",
+    "identifier": [
+        "Identifier"
+    ],
+    "udiDeviceIdentifier": [
+        {
+            "deviceIdentifier": "<string>",
+            "issuer": "<uri>",
+            "jurisdiction": "<uri>",
+            "marketDistribution": [
+                {
+                    "marketPeriod": "Period",
+                    "subJurisdiction": "<uri>"
+                }
+            ]
+        }
+    ],
+    "regulatoryIdentifier": [
+        {
+            "type": "<code>",
+            "deviceIdentifier": "<string>",
+            "issuer": "<uri>",
+            "jurisdiction": "<uri>"
+        }
+    ],
+    "partNumber": "<string>",
+    "manufacturer": "Reference(Organization)",
+    "deviceName": [
+        {
+            "name": "<string>",
+            "type": "<code>"
+        }
+    ],
+    "modelNumber": "<string>",
+    "classification": [
+        {
+            "type": "CodeableConcept",
+            "justification": [
+                "RelatedArtifact"
+            ]
+        }
+    ],
+    "conformsTo": [
+        {
+            "category": "CodeableConcept",
+            "specification": "CodeableConcept",
+            "version": [
+                "<string>"
+            ],
+            "source": [
+                "RelatedArtifact"
+            ]
+        }
+    ],
+    "hasPart": [
+        {
+            "reference": "Reference(DeviceDefinition)",
+            "count": "<integer>"
+        }
+    ],
+    "packaging": [
+        {
+            "identifier": "Identifier",
+            "type": "CodeableConcept",
+            "count": "<integer>",
+            "distributor": [
+                {
+                    "name": "<string>",
+                    "organizationReference": [
+                        "Reference(Organization)"
+                    ]
+                }
+            ],
+            "udiDeviceIdentifier": [
+                "ContentasforDeviceDefinition.udiDeviceIdentifier"
+            ],
+            "packaging": [
+                "ContentasforDeviceDefinition.packaging"
+            ]
+        }
+    ],
+    "version": [
+        {
+            "type": "CodeableConcept",
+            "component": "Identifier",
+            "value": "<string>"
+        }
+    ],
+    "safety": [
+        "CodeableConcept"
+    ],
+    "shelfLifeStorage": [
+        "ProductShelfLife"
+    ],
+    "languageCode": [
+        "CodeableConcept"
+    ],
+    "property": [
+        {
+            "type": "CodeableConcept",
+            "valueCodeableConcept": "CodeableConcept",
+            "valueString": "<string>",
+            "valueBoolean": "<boolean>",
+            "valueInteger": "<integer>",
+            "valueRange": "Range",
+            "valueAttachment": "Attachment"
+        }
+    ],
+    "owner": "Reference(Organization)",
+    "contact": [
+        "ContactPoint"
+    ],
+    "link": [
+        {
+            "relation": "Coding",
+            "relatedDevice": "CodeableReference(DeviceDefinition)"
+        }
+    ],
+    "note": [
+        "Annotation"
+    ],
+    "material": [
+        {
+            "substance": "CodeableConcept",
+            "alternate": "<boolean>",
+            "allergenicIndicator": "<boolean>"
+        }
+    ],
+    "productionIdentifierInUDI": [
+        "<code>"
+    ],
+    "guideline": {
+        "useContext": [
+            "UsageContext"
+        ],
+        "usageInstruction": "<markdown>",
+        "relatedArtifact": [
+            "RelatedArtifact"
+        ],
+        "indication": [
+            "CodeableConcept"
+        ],
+        "contraindication": [
+            "CodeableConcept"
+        ],
+        "warning": [
+            "CodeableConcept"
+        ],
+        "intendedUse": "<string>"
+    },
+    "correctiveAction": {
+        "recall": "<boolean>",
+        "scope": "<code>",
+        "period": "Period"
+    },
+    "chargeItem": [
+        {
+            "chargeItemCode": "CodeableReference(ChargeItemDefinition)",
+            "count": "Quantity",
+            "effectivePeriod": "Period",
+            "useContext": [
+                "UsageContext"
+            ]
+        }
+    ]
+}

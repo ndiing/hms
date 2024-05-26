@@ -1,0 +1,62 @@
+{
+    "resourceType": "ImagingSelection",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "subject": "Reference(Device|Group|Location|Medication|Organization|Patient|Practitioner|Procedure|Specimen|Substance)",
+    "issued": "<instant>",
+    "performer": [
+        {
+            "function": "CodeableConcept",
+            "actor": "Reference(CareTeam|Device|HealthcareService|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+        }
+    ],
+    "basedOn": [
+        "Reference(Appointment|AppointmentResponse|CarePlan|ServiceRequest|Task)"
+    ],
+    "category": [
+        "CodeableConcept"
+    ],
+    "code": "CodeableConcept",
+    "studyUid": "<id>",
+    "derivedFrom": [
+        "Reference(DocumentReference|ImagingStudy)"
+    ],
+    "endpoint": [
+        "Reference(Endpoint)"
+    ],
+    "seriesUid": "<id>",
+    "seriesNumber": "<unsignedInt>",
+    "frameOfReferenceUid": "<id>",
+    "bodySite": "CodeableReference(BodyStructure)",
+    "focus": [
+        "Reference(ImagingSelection)"
+    ],
+    "instance": [
+        {
+            "uid": "<id>",
+            "number": "<unsignedInt>",
+            "sopClass": "Coding",
+            "subset": [
+                "<string>"
+            ],
+            "imageRegion2D": [
+                {
+                    "regionType": "<code>",
+                    "coordinate": [
+                        "<decimal>"
+                    ]
+                }
+            ],
+            "imageRegion3D": [
+                {
+                    "regionType": "<code>",
+                    "coordinate": [
+                        "<decimal>"
+                    ]
+                }
+            ]
+        }
+    ]
+}

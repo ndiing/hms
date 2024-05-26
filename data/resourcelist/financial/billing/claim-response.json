@@ -1,0 +1,248 @@
+{
+    "resourceType": "ClaimResponse",
+    "identifier": [
+        "Identifier"
+    ],
+    "traceNumber": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "type": "CodeableConcept",
+    "subType": "CodeableConcept",
+    "use": "<code>",
+    "patient": "Reference(Patient)",
+    "created": "<dateTime>",
+    "insurer": "Reference(Organization)",
+    "requestor": "Reference(Organization|Practitioner|PractitionerRole)",
+    "request": "Reference(Claim)",
+    "outcome": "<code>",
+    "decision": "CodeableConcept",
+    "disposition": "<string>",
+    "preAuthRef": "<string>",
+    "preAuthPeriod": "Period",
+    "event": [
+        {
+            "type": "CodeableConcept",
+            "whenPeriod": "Period"
+        }
+    ],
+    "payeeType": "CodeableConcept",
+    "encounter": [
+        "Reference(Encounter)"
+    ],
+    "diagnosisRelatedGroup": "CodeableConcept",
+    "item": [
+        {
+            "itemSequence": "<positiveInt>",
+            "traceNumber": [
+                "Identifier"
+            ],
+            "noteNumber": [
+                "<positiveInt>"
+            ],
+            "reviewOutcome": {
+                "decision": "CodeableConcept",
+                "reason": [
+                    "CodeableConcept"
+                ],
+                "preAuthRef": "<string>",
+                "preAuthPeriod": "Period"
+            },
+            "adjudication": [
+                {
+                    "category": "CodeableConcept",
+                    "reason": "CodeableConcept",
+                    "amount": "Money",
+                    "quantity": "Quantity"
+                }
+            ],
+            "detail": [
+                {
+                    "detailSequence": "<positiveInt>",
+                    "traceNumber": [
+                        "Identifier"
+                    ],
+                    "noteNumber": [
+                        "<positiveInt>"
+                    ],
+                    "reviewOutcome": "ContentasforClaimResponse.item.reviewOutcome",
+                    "adjudication": [
+                        "ContentasforClaimResponse.item.adjudication"
+                    ],
+                    "subDetail": [
+                        {
+                            "subDetailSequence": "<positiveInt>",
+                            "traceNumber": [
+                                "Identifier"
+                            ],
+                            "noteNumber": [
+                                "<positiveInt>"
+                            ],
+                            "reviewOutcome": "ContentasforClaimResponse.item.reviewOutcome",
+                            "adjudication": [
+                                "ContentasforClaimResponse.item.adjudication"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "addItem": [
+        {
+            "itemSequence": [
+                "<positiveInt>"
+            ],
+            "detailSequence": [
+                "<positiveInt>"
+            ],
+            "subdetailSequence": [
+                "<positiveInt>"
+            ],
+            "traceNumber": [
+                "Identifier"
+            ],
+            "provider": [
+                "Reference(Organization|Practitioner|PractitionerRole)"
+            ],
+            "revenue": "CodeableConcept",
+            "productOrService": "CodeableConcept",
+            "productOrServiceEnd": "CodeableConcept",
+            "request": [
+                "Reference(DeviceRequest|MedicationRequest|NutritionOrder|ServiceRequest|SupplyRequest|VisionPrescription)"
+            ],
+            "modifier": [
+                "CodeableConcept"
+            ],
+            "programCode": [
+                "CodeableConcept"
+            ],
+            "servicedPeriod": "Period",
+            "locationAddress": "Address",
+            "locationReference": "Reference(Location)",
+            "quantity": "Quantity(SimpleQuantity)",
+            "unitPrice": "Money",
+            "factor": "<decimal>",
+            "tax": "Money",
+            "net": "Money",
+            "bodySite": [
+                {
+                    "site": [
+                        "CodeableReference(BodyStructure)"
+                    ],
+                    "subSite": [
+                        "CodeableConcept"
+                    ]
+                }
+            ],
+            "noteNumber": [
+                "<positiveInt>"
+            ],
+            "reviewOutcome": "ContentasforClaimResponse.item.reviewOutcome",
+            "adjudication": [
+                "ContentasforClaimResponse.item.adjudication"
+            ],
+            "detail": [
+                {
+                    "traceNumber": [
+                        "Identifier"
+                    ],
+                    "revenue": "CodeableConcept",
+                    "productOrService": "CodeableConcept",
+                    "productOrServiceEnd": "CodeableConcept",
+                    "modifier": [
+                        "CodeableConcept"
+                    ],
+                    "quantity": "Quantity(SimpleQuantity)",
+                    "unitPrice": "Money",
+                    "factor": "<decimal>",
+                    "tax": "Money",
+                    "net": "Money",
+                    "noteNumber": [
+                        "<positiveInt>"
+                    ],
+                    "reviewOutcome": "ContentasforClaimResponse.item.reviewOutcome",
+                    "adjudication": [
+                        "ContentasforClaimResponse.item.adjudication"
+                    ],
+                    "subDetail": [
+                        {
+                            "traceNumber": [
+                                "Identifier"
+                            ],
+                            "revenue": "CodeableConcept",
+                            "productOrService": "CodeableConcept",
+                            "productOrServiceEnd": "CodeableConcept",
+                            "modifier": [
+                                "CodeableConcept"
+                            ],
+                            "quantity": "Quantity(SimpleQuantity)",
+                            "unitPrice": "Money",
+                            "factor": "<decimal>",
+                            "tax": "Money",
+                            "net": "Money",
+                            "noteNumber": [
+                                "<positiveInt>"
+                            ],
+                            "reviewOutcome": "ContentasforClaimResponse.item.reviewOutcome",
+                            "adjudication": [
+                                "ContentasforClaimResponse.item.adjudication"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "adjudication": [
+        "ContentasforClaimResponse.item.adjudication"
+    ],
+    "total": [
+        {
+            "category": "CodeableConcept",
+            "amount": "Money"
+        }
+    ],
+    "payment": {
+        "type": "CodeableConcept",
+        "adjustment": "Money",
+        "adjustmentReason": "CodeableConcept",
+        "date": "<date>",
+        "amount": "Money",
+        "identifier": "Identifier"
+    },
+    "fundsReserve": "CodeableConcept",
+    "formCode": "CodeableConcept",
+    "form": "Attachment",
+    "processNote": [
+        {
+            "number": "<positiveInt>",
+            "type": "CodeableConcept",
+            "text": "<string>",
+            "language": "CodeableConcept"
+        }
+    ],
+    "communicationRequest": [
+        "Reference(CommunicationRequest)"
+    ],
+    "insurance": [
+        {
+            "sequence": "<positiveInt>",
+            "focal": "<boolean>",
+            "coverage": "Reference(Coverage)",
+            "businessArrangement": "<string>",
+            "claimResponse": "Reference(ClaimResponse)"
+        }
+    ],
+    "error": [
+        {
+            "itemSequence": "<positiveInt>",
+            "detailSequence": "<positiveInt>",
+            "subDetailSequence": "<positiveInt>",
+            "code": "CodeableConcept",
+            "expression": [
+                "<string>"
+            ]
+        }
+    ]
+}

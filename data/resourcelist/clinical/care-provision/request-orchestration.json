@@ -1,0 +1,117 @@
+{
+    "resourceType": "RequestOrchestration",
+    "identifier": [
+        "Identifier"
+    ],
+    "instantiatesCanonical": [
+        "<canonical>"
+    ],
+    "instantiatesUri": [
+        "<uri>"
+    ],
+    "basedOn": [
+        "Reference(Any)"
+    ],
+    "replaces": [
+        "Reference(Any)"
+    ],
+    "groupIdentifier": "Identifier",
+    "status": "<code>",
+    "intent": "<code>",
+    "priority": "<code>",
+    "code": "CodeableConcept",
+    "subject": "Reference(CareTeam|Device|Group|HealthcareService|Location|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "encounter": "Reference(Encounter)",
+    "authoredOn": "<dateTime>",
+    "author": "Reference(Device|Practitioner|PractitionerRole)",
+    "reason": [
+        "CodeableReference(Condition|DiagnosticReport|DocumentReference|Observation)"
+    ],
+    "goal": [
+        "Reference(Goal)"
+    ],
+    "note": [
+        "Annotation"
+    ],
+    "action": [
+        {
+            "linkId": "<string>",
+            "prefix": "<string>",
+            "title": "<string>",
+            "description": "<markdown>",
+            "textEquivalent": "<markdown>",
+            "priority": "<code>",
+            "code": [
+                "CodeableConcept"
+            ],
+            "documentation": [
+                "RelatedArtifact"
+            ],
+            "goal": [
+                "Reference(Goal)"
+            ],
+            "condition": [
+                {
+                    "kind": "<code>",
+                    "expression": "Expression"
+                }
+            ],
+            "input": [
+                {
+                    "title": "<string>",
+                    "requirement": "DataRequirement",
+                    "relatedData": "<id>"
+                }
+            ],
+            "output": [
+                {
+                    "title": "<string>",
+                    "requirement": "DataRequirement",
+                    "relatedData": "<string>"
+                }
+            ],
+            "relatedAction": [
+                {
+                    "targetId": "<id>",
+                    "relationship": "<code>",
+                    "endRelationship": "<code>",
+                    "offsetRange": "Range"
+                }
+            ],
+            "timingAge": "Age",
+            "timingPeriod": "Period",
+            "timingDuration": "Duration",
+            "timingRange": "Range",
+            "timingTiming": "Timing",
+            "location": "CodeableReference(Location)",
+            "participant": [
+                {
+                    "type": "<code>",
+                    "typeCanonical": "<canonical(CapabilityStatement)>",
+                    "typeReference": "Reference(CareTeam|Device|DeviceDefinition|Endpoint|Group|HealthcareService|Location|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+                    "role": "CodeableConcept",
+                    "function": "CodeableConcept",
+                    "actorReference": "Reference(CareTeam|Device|DeviceDefinition|Endpoint|Group|HealthcareService|Location|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+                }
+            ],
+            "type": "CodeableConcept",
+            "groupingBehavior": "<code>",
+            "selectionBehavior": "<code>",
+            "requiredBehavior": "<code>",
+            "precheckBehavior": "<code>",
+            "cardinalityBehavior": "<code>",
+            "resource": "Reference(Any)",
+            "definitionUri": "<uri>",
+            "transform": "<canonical(StructureMap)>",
+            "dynamicValue": [
+                {
+                    "path": "<string>",
+                    "expression": "Expression"
+                }
+            ],
+            "action": [
+                "ContentasforRequestOrchestration.action"
+            ]
+        }
+    ]
+}

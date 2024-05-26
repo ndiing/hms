@@ -1,0 +1,42 @@
+{
+    "resourceType": "Invoice",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "cancelledReason": "<string>",
+    "type": "CodeableConcept",
+    "subject": "Reference(Group|Patient)",
+    "recipient": "Reference(Organization|Patient|RelatedPerson)",
+    "date": "<dateTime>",
+    "creation": "<dateTime>",
+    "periodPeriod": "Period",
+    "participant": [
+        {
+            "role": "CodeableConcept",
+            "actor": "Reference(Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+        }
+    ],
+    "issuer": "Reference(Organization)",
+    "account": "Reference(Account)",
+    "lineItem": [
+        {
+            "sequence": "<positiveInt>",
+            "servicedPeriod": "Period",
+            "chargeItemReference": "Reference(ChargeItem)",
+            "chargeItemCodeableConcept": "CodeableConcept",
+            "priceComponent": [
+                "MonetaryComponent"
+            ]
+        }
+    ],
+    "totalPriceComponent": [
+        "MonetaryComponent"
+    ],
+    "totalNet": "Money",
+    "totalGross": "Money",
+    "paymentTerms": "<markdown>",
+    "note": [
+        "Annotation"
+    ]
+}

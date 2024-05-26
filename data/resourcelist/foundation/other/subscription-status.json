@@ -1,0 +1,21 @@
+{
+    "resourceType": "SubscriptionStatus",
+    "status": "<code>",
+    "type": "<code>",
+    "eventsSinceSubscriptionStart": "<integer64>",
+    "notificationEvent": [
+        {
+            "eventNumber": "<integer64>",
+            "timestamp": "<instant>",
+            "focus": "Reference(Any)",
+            "additionalContext": [
+                "Reference(Any)"
+            ]
+        }
+    ],
+    "subscription": "Reference(Subscription)",
+    "topic": "<canonical(SubscriptionTopic)>",
+    "error": [
+        "CodeableConcept"
+    ]
+}

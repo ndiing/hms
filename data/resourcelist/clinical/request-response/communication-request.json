@@ -1,0 +1,50 @@
+{
+    "resourceType": "CommunicationRequest",
+    "identifier": [
+        "Identifier"
+    ],
+    "basedOn": [
+        "Reference(Any)"
+    ],
+    "replaces": [
+        "Reference(CommunicationRequest)"
+    ],
+    "groupIdentifier": "Identifier",
+    "status": "<code>",
+    "statusReason": "CodeableConcept",
+    "intent": "<code>",
+    "category": [
+        "CodeableConcept"
+    ],
+    "priority": "<code>",
+    "doNotPerform": "<boolean>",
+    "medium": [
+        "CodeableConcept"
+    ],
+    "subject": "Reference(Group|Patient)",
+    "about": [
+        "Reference(Any)"
+    ],
+    "encounter": "Reference(Encounter)",
+    "payload": [
+        {
+            "contentReference": "Reference(Any)",
+            "contentCodeableConcept": "CodeableConcept"
+        }
+    ],
+    "occurrencePeriod": "Period",
+    "authoredOn": "<dateTime>",
+    "requester": "Reference(Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "recipient": [
+        "Reference(CareTeam|Device|Endpoint|Group|HealthcareService|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+    ],
+    "informationProvider": [
+        "Reference(Device|Endpoint|HealthcareService|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+    ],
+    "reason": [
+        "CodeableReference(Any)"
+    ],
+    "note": [
+        "Annotation"
+    ]
+}

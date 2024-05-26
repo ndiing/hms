@@ -1,0 +1,57 @@
+{
+    "resourceType": "SearchParameter",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "derivedFrom": "<canonical(SearchParameter)>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "code": "<code>",
+    "base": [
+        "<code>"
+    ],
+    "type": "<code>",
+    "expression": "<string>",
+    "processingMode": "<code>",
+    "constraint": "<string>",
+    "target": [
+        "<code>"
+    ],
+    "multipleOr": "<boolean>",
+    "multipleAnd": "<boolean>",
+    "comparator": [
+        "<code>"
+    ],
+    "modifier": [
+        "<code>"
+    ],
+    "chain": [
+        "<string>"
+    ],
+    "component": [
+        {
+            "definition": "<canonical(SearchParameter)>",
+            "expression": "<string>"
+        }
+    ]
+}

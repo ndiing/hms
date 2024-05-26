@@ -1,0 +1,37 @@
+{
+    "resourceType": "ActorDefinition",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "type": "<code>",
+    "documentation": "<markdown>",
+    "reference": [
+        "<url>"
+    ],
+    "capabilities": "<canonical(CapabilityStatement)>",
+    "derivedFrom": [
+        "<canonical(ActorDefinition)>"
+    ]
+}

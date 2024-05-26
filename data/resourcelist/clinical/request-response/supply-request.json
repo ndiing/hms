@@ -1,0 +1,35 @@
+{
+    "resourceType": "SupplyRequest",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "basedOn": [
+        "Reference(Any)"
+    ],
+    "category": "CodeableConcept",
+    "priority": "<code>",
+    "deliverFor": "Reference(Patient)",
+    "item": "CodeableReference(BiologicallyDerivedProduct|Device|DeviceDefinition|InventoryItem|Medication|NutritionProduct|Substance)",
+    "quantity": "Quantity",
+    "parameter": [
+        {
+            "code": "CodeableConcept",
+            "valueQuantity": "Quantity",
+            "valueRange": "Range",
+            "valueBoolean": "<boolean>"
+        }
+    ],
+    "occurrencePeriod": "Period",
+    "occurrenceTiming": "Timing",
+    "authoredOn": "<dateTime>",
+    "requester": "Reference(CareTeam|Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "supplier": [
+        "Reference(HealthcareService|Organization)"
+    ],
+    "reason": [
+        "CodeableReference(Condition|DiagnosticReport|DocumentReference|Observation)"
+    ],
+    "deliverFrom": "Reference(Location|Organization)",
+    "deliverTo": "Reference(Location|Organization|Patient|RelatedPerson)"
+}

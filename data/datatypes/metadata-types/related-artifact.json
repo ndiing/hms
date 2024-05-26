@@ -1,0 +1,14 @@
+{
+    "type": "<code>",
+    "classifier": [
+        "CodeableConcept"
+    ],
+    "label": "<string>",
+    "display": "<string>",
+    "citation": "<markdown>",
+    "document": "Attachment",
+    "resource": "<canonical(Any)>",
+    "resourceReference": "Reference(Any)",
+    "publicationStatus": "<code>",
+    "publicationDate": "<date>"
+}

@@ -1,0 +1,110 @@
+{
+    "resourceType": "Appointment",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "cancellationReason": "CodeableConcept",
+    "class": [
+        "CodeableConcept"
+    ],
+    "serviceCategory": [
+        "CodeableConcept"
+    ],
+    "serviceType": [
+        "CodeableReference(HealthcareService)"
+    ],
+    "specialty": [
+        "CodeableConcept"
+    ],
+    "appointmentType": "CodeableConcept",
+    "reason": [
+        "CodeableReference(Condition|ImmunizationRecommendation|Observation|Procedure)"
+    ],
+    "priority": "CodeableConcept",
+    "description": "<string>",
+    "replaces": [
+        "Reference(Appointment)"
+    ],
+    "virtualService": [
+        "VirtualServiceDetail"
+    ],
+    "supportingInformation": [
+        "Reference(Any)"
+    ],
+    "previousAppointment": "Reference(Appointment)",
+    "originatingAppointment": "Reference(Appointment)",
+    "start": "<instant>",
+    "end": "<instant>",
+    "minutesDuration": "<positiveInt>",
+    "requestedPeriod": [
+        "Period"
+    ],
+    "slot": [
+        "Reference(Slot)"
+    ],
+    "account": [
+        "Reference(Account)"
+    ],
+    "created": "<dateTime>",
+    "cancellationDate": "<dateTime>",
+    "note": [
+        "Annotation"
+    ],
+    "patientInstruction": [
+        "CodeableReference(Binary|Communication|DocumentReference)"
+    ],
+    "basedOn": [
+        "Reference(CarePlan|DeviceRequest|MedicationRequest|ServiceRequest)"
+    ],
+    "subject": "Reference(Group|Patient)",
+    "participant": [
+        {
+            "type": [
+                "CodeableConcept"
+            ],
+            "period": "Period",
+            "actor": "Reference(CareTeam|Device|Group|HealthcareService|Location|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+            "required": "<boolean>",
+            "status": "<code>"
+        }
+    ],
+    "recurrenceId": "<positiveInt>",
+    "occurrenceChanged": "<boolean>",
+    "recurrenceTemplate": [
+        {
+            "timezone": "CodeableConcept",
+            "recurrenceType": "CodeableConcept",
+            "lastOccurrenceDate": "<date>",
+            "occurrenceCount": "<positiveInt>",
+            "occurrenceDate": [
+                "<date>"
+            ],
+            "weeklyTemplate": {
+                "monday": "<boolean>",
+                "tuesday": "<boolean>",
+                "wednesday": "<boolean>",
+                "thursday": "<boolean>",
+                "friday": "<boolean>",
+                "saturday": "<boolean>",
+                "sunday": "<boolean>",
+                "weekInterval": "<positiveInt>"
+            },
+            "monthlyTemplate": {
+                "dayOfMonth": "<positiveInt>",
+                "nthWeekOfMonth": "Coding",
+                "dayOfWeek": "Coding",
+                "monthInterval": "<positiveInt>"
+            },
+            "yearlyTemplate": {
+                "yearInterval": "<positiveInt>"
+            },
+            "excludingDate": [
+                "<date>"
+            ],
+            "excludingRecurrenceId": [
+                "<positiveInt>"
+            ]
+        }
+    ]
+}

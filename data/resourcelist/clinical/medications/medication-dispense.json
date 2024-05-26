@@ -1,0 +1,62 @@
+{
+    "resourceType": "MedicationDispense",
+    "identifier": [
+        "Identifier"
+    ],
+    "basedOn": [
+        "Reference(CarePlan)"
+    ],
+    "partOf": [
+        "Reference(MedicationAdministration|Procedure)"
+    ],
+    "status": "<code>",
+    "notPerformedReason": "CodeableReference(DetectedIssue)",
+    "statusChanged": "<dateTime>",
+    "category": [
+        "CodeableConcept"
+    ],
+    "medication": "CodeableReference(Medication)",
+    "subject": "Reference(Group|Patient)",
+    "encounter": "Reference(Encounter)",
+    "supportingInformation": [
+        "Reference(Any)"
+    ],
+    "performer": [
+        {
+            "function": "CodeableConcept",
+            "actor": "Reference(CareTeam|Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+        }
+    ],
+    "location": "Reference(Location)",
+    "authorizingPrescription": [
+        "Reference(MedicationRequest)"
+    ],
+    "type": "CodeableConcept",
+    "quantity": "Quantity(SimpleQuantity)",
+    "daysSupply": "Quantity(SimpleQuantity)",
+    "recorded": "<dateTime>",
+    "whenPrepared": "<dateTime>",
+    "whenHandedOver": "<dateTime>",
+    "destination": "Reference(Location)",
+    "receiver": [
+        "Reference(Location|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+    ],
+    "note": [
+        "Annotation"
+    ],
+    "renderedDosageInstruction": "<markdown>",
+    "dosageInstruction": [
+        "Dosage"
+    ],
+    "substitution": {
+        "wasSubstituted": "<boolean>",
+        "type": "CodeableConcept",
+        "reason": [
+            "CodeableConcept"
+        ],
+        "responsibleParty": "Reference(Organization|Practitioner|PractitionerRole)"
+    },
+    "eventHistory": [
+        "Reference(Provenance)"
+    ]
+}

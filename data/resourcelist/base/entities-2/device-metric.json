@@ -1,0 +1,20 @@
+{
+    "resourceType": "DeviceMetric",
+    "identifier": [
+        "Identifier"
+    ],
+    "type": "CodeableConcept",
+    "unit": "CodeableConcept",
+    "device": "Reference(Device)",
+    "operationalStatus": "<code>",
+    "color": "<code>",
+    "category": "<code>",
+    "measurementFrequency": "Quantity",
+    "calibration": [
+        {
+            "type": "<code>",
+            "state": "<code>",
+            "time": "<instant>"
+        }
+    ]
+}

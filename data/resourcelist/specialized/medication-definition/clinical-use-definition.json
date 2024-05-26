@@ -1,0 +1,75 @@
+{
+    "resourceType": "ClinicalUseDefinition",
+    "identifier": [
+        "Identifier"
+    ],
+    "type": "<code>",
+    "category": [
+        "CodeableConcept"
+    ],
+    "subject": [
+        "Reference(ActivityDefinition|BiologicallyDerivedProduct|Device|DeviceDefinition|Medication|MedicinalProductDefinition|NutritionProduct|PlanDefinition|Substance)"
+    ],
+    "status": "CodeableConcept",
+    "contraindication": {
+        "diseaseSymptomProcedure": "CodeableReference(ObservationDefinition)",
+        "diseaseStatus": "CodeableReference(ObservationDefinition)",
+        "comorbidity": [
+            "CodeableReference(ObservationDefinition)"
+        ],
+        "indication": [
+            "Reference(ClinicalUseDefinition)"
+        ],
+        "applicability": "Expression",
+        "otherTherapy": [
+            {
+                "relationshipType": "CodeableConcept",
+                "treatment": "CodeableReference(ActivityDefinition|BiologicallyDerivedProduct|Medication|MedicinalProductDefinition|NutritionProduct|Substance|SubstanceDefinition)"
+            }
+        ]
+    },
+    "indication": {
+        "diseaseSymptomProcedure": "CodeableReference(ObservationDefinition)",
+        "diseaseStatus": "CodeableReference(ObservationDefinition)",
+        "comorbidity": [
+            "CodeableReference(ObservationDefinition)"
+        ],
+        "intendedEffect": "CodeableReference(ObservationDefinition)",
+        "durationString": "<string>",
+        "undesirableEffect": [
+            "Reference(ClinicalUseDefinition)"
+        ],
+        "applicability": "Expression",
+        "otherTherapy": [
+            "ContentasforClinicalUseDefinition.contraindication.otherTherapy"
+        ]
+    },
+    "interaction": {
+        "interactant": [
+            {
+                "itemCodeableConcept": "CodeableConcept"
+            }
+        ],
+        "type": "CodeableConcept",
+        "effect": "CodeableReference(ObservationDefinition)",
+        "incidence": "CodeableConcept",
+        "management": [
+            "CodeableConcept"
+        ]
+    },
+    "population": [
+        "Reference(Group)"
+    ],
+    "library": [
+        "<canonical(Library)>"
+    ],
+    "undesirableEffect": {
+        "symptomConditionEffect": "CodeableReference(ObservationDefinition)",
+        "classification": "CodeableConcept",
+        "frequencyOfOccurrence": "CodeableConcept"
+    },
+    "warning": {
+        "description": "<markdown>",
+        "code": "CodeableConcept"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "channelType": "Coding",
+    "addressString": "<string>",
+    "addressContactPoint": "ContactPoint",
+    "addressExtendedContactDetail": "ExtendedContactDetail",
+    "additionalInfo": [
+        "<url>"
+    ],
+    "maxParticipants": "<positiveInt>",
+    "sessionKey": "<string>"
+}

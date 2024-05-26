@@ -1,0 +1,51 @@
+{
+    "resourceType": "BodyStructure",
+    "identifier": [
+        "Identifier"
+    ],
+    "active": "<boolean>",
+    "morphology": "CodeableConcept",
+    "includedStructure": [
+        {
+            "structure": "CodeableConcept",
+            "laterality": "CodeableConcept",
+            "bodyLandmarkOrientation": [
+                {
+                    "landmarkDescription": [
+                        "CodeableConcept"
+                    ],
+                    "clockFacePosition": [
+                        "CodeableConcept"
+                    ],
+                    "distanceFromLandmark": [
+                        {
+                            "device": [
+                                "CodeableReference(Device)"
+                            ],
+                            "value": [
+                                "Quantity"
+                            ]
+                        }
+                    ],
+                    "surfaceOrientation": [
+                        "CodeableConcept"
+                    ]
+                }
+            ],
+            "spatialReference": [
+                "Reference(ImagingSelection)"
+            ],
+            "qualifier": [
+                "CodeableConcept"
+            ]
+        }
+    ],
+    "excludedStructure": [
+        "ContentasforBodyStructure.includedStructure"
+    ],
+    "description": "<markdown>",
+    "image": [
+        "Attachment"
+    ],
+    "patient": "Reference(Patient)"
+}

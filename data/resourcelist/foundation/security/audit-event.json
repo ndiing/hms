@@ -1,0 +1,79 @@
+{
+    "resourceType": "AuditEvent",
+    "category": [
+        "CodeableConcept"
+    ],
+    "code": "CodeableConcept",
+    "action": "<code>",
+    "severity": "<code>",
+    "occurredDateTime": "<dateTime>",
+    "recorded": "<instant>",
+    "outcome": {
+        "code": "Coding",
+        "detail": [
+            "CodeableConcept"
+        ]
+    },
+    "authorization": [
+        "CodeableConcept"
+    ],
+    "basedOn": [
+        "Reference(CarePlan|DeviceRequest|ImmunizationRecommendation|MedicationRequest|NutritionOrder|ServiceRequest|Task)"
+    ],
+    "patient": "Reference(Patient)",
+    "encounter": "Reference(Encounter)",
+    "agent": [
+        {
+            "type": "CodeableConcept",
+            "role": [
+                "CodeableConcept"
+            ],
+            "who": "Reference(CareTeam|Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+            "requestor": "<boolean>",
+            "location": "Reference(Location)",
+            "policy": [
+                "<uri>"
+            ],
+            "networkUri": "<uri>",
+            "networkString": "<string>",
+            "authorization": [
+                "CodeableConcept"
+            ]
+        }
+    ],
+    "source": {
+        "site": "Reference(Location)",
+        "observer": "Reference(CareTeam|Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+        "type": [
+            "CodeableConcept"
+        ]
+    },
+    "entity": [
+        {
+            "what": "Reference(Any)",
+            "role": "CodeableConcept",
+            "securityLabel": [
+                "CodeableConcept"
+            ],
+            "query": "<base64Binary>",
+            "detail": [
+                {
+                    "type": "CodeableConcept",
+                    "valueCodeableConcept": "CodeableConcept",
+                    "valueString": "<string>",
+                    "valueBoolean": "<boolean>",
+                    "valueInteger": "<integer>",
+                    "valueRange": "Range",
+                    "valueRatio": "Ratio",
+                    "valueTime": "<time>",
+                    "valueDateTime": "<dateTime>",
+                    "valuePeriod": "Period",
+                    "valueBase64Binary": "<base64Binary>"
+                }
+            ],
+            "agent": [
+                "ContentasforAuditEvent.agent"
+            ]
+        }
+    ]
+}

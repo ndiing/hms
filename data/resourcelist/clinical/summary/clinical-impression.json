@@ -1,0 +1,41 @@
+{
+    "resourceType": "ClinicalImpression",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "statusReason": "CodeableConcept",
+    "description": "<string>",
+    "subject": "Reference(Group|Patient)",
+    "encounter": "Reference(Encounter)",
+    "effectivePeriod": "Period",
+    "date": "<dateTime>",
+    "performer": "Reference(Practitioner|PractitionerRole)",
+    "previous": "Reference(ClinicalImpression)",
+    "problem": [
+        "Reference(AllergyIntolerance|Condition)"
+    ],
+    "changePattern": "CodeableConcept",
+    "protocol": [
+        "<uri>"
+    ],
+    "summary": "<string>",
+    "finding": [
+        {
+            "item": "CodeableReference(Condition|DocumentReference|Observation)",
+            "basis": "<string>"
+        }
+    ],
+    "prognosisCodeableConcept": [
+        "CodeableConcept"
+    ],
+    "prognosisReference": [
+        "Reference(RiskAssessment)"
+    ],
+    "supportingInfo": [
+        "Reference(Any)"
+    ],
+    "note": [
+        "Annotation"
+    ]
+}

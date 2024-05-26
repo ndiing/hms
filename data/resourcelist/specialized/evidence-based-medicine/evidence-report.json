@@ -1,0 +1,91 @@
+{
+    "resourceType": "EvidenceReport",
+    "url": "<uri>",
+    "status": "<code>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "identifier": [
+        "Identifier"
+    ],
+    "relatedIdentifier": [
+        "Identifier"
+    ],
+    "citeAsMarkdown": "<markdown>",
+    "type": "CodeableConcept",
+    "note": [
+        "Annotation"
+    ],
+    "relatedArtifact": [
+        "RelatedArtifact"
+    ],
+    "subject": {
+        "characteristic": [
+            {
+                "code": "CodeableConcept",
+                "valueCodeableConcept": "CodeableConcept",
+                "valueBoolean": "<boolean>",
+                "valueQuantity": "Quantity",
+                "valueRange": "Range",
+                "exclude": "<boolean>",
+                "period": "Period"
+            }
+        ],
+        "note": [
+            "Annotation"
+        ]
+    },
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "author": [
+        "ContactDetail"
+    ],
+    "editor": [
+        "ContactDetail"
+    ],
+    "reviewer": [
+        "ContactDetail"
+    ],
+    "endorser": [
+        "ContactDetail"
+    ],
+    "relatesTo": [
+        {
+            "code": "<code>",
+            "target": {
+                "url": "<uri>",
+                "identifier": "Identifier",
+                "display": "<markdown>",
+                "resource": "Reference(Any)"
+            }
+        }
+    ],
+    "section": [
+        {
+            "title": "<string>",
+            "focus": "CodeableConcept",
+            "focusReference": "Reference(Any)",
+            "author": [
+                "Reference(Device|Group|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+            ],
+            "text": "Narrative",
+            "mode": "<code>",
+            "orderedBy": "CodeableConcept",
+            "entryClassifier": [
+                "CodeableConcept"
+            ],
+            "entryReference": [
+                "Reference(Any)"
+            ],
+            "entryQuantity": [
+                "Quantity"
+            ],
+            "emptyReason": "CodeableConcept",
+            "section": [
+                "ContentasforEvidenceReport.section"
+            ]
+        }
+    ]
+}

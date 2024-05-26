@@ -1,0 +1,24 @@
+{
+    "resourceType": "Slot",
+    "identifier": [
+        "Identifier"
+    ],
+    "serviceCategory": [
+        "CodeableConcept"
+    ],
+    "serviceType": [
+        "CodeableReference(HealthcareService)"
+    ],
+    "specialty": [
+        "CodeableConcept"
+    ],
+    "appointmentType": [
+        "CodeableConcept"
+    ],
+    "schedule": "Reference(Schedule)",
+    "status": "<code>",
+    "start": "<instant>",
+    "end": "<instant>",
+    "overbooked": "<boolean>",
+    "comment": "<string>"
+}

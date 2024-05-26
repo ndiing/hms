@@ -1,0 +1,58 @@
+{
+    "resourceType": "TestReport",
+    "identifier": "Identifier",
+    "name": "<string>",
+    "status": "<code>",
+    "testScript": "<canonical(TestScript)>",
+    "result": "<code>",
+    "score": "<decimal>",
+    "tester": "<string>",
+    "issued": "<dateTime>",
+    "participant": [
+        {
+            "type": "<code>",
+            "uri": "<uri>",
+            "display": "<string>"
+        }
+    ],
+    "setup": {
+        "action": [
+            {
+                "operation": {
+                    "result": "<code>",
+                    "message": "<markdown>",
+                    "detail": "<uri>"
+                },
+                "assert": {
+                    "result": "<code>",
+                    "message": "<markdown>",
+                    "detail": "<string>",
+                    "requirement": [
+                        {
+                            "linkCanonical": "<canonical(Requirements)>"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "test": [
+        {
+            "name": "<string>",
+            "description": "<string>",
+            "action": [
+                {
+                    "operation": "ContentasforTestReport.setup.action.operation",
+                    "assert": "ContentasforTestReport.setup.action.assert"
+                }
+            ]
+        }
+    ],
+    "teardown": {
+        "action": [
+            {
+                "operation": "ContentasforTestReport.setup.action.operation"
+            }
+        ]
+    }
+}

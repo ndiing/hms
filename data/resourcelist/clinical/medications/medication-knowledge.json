@@ -1,0 +1,160 @@
+{
+    "resourceType": "MedicationKnowledge",
+    "identifier": [
+        "Identifier"
+    ],
+    "code": "CodeableConcept",
+    "status": "<code>",
+    "author": "Reference(Organization)",
+    "intendedJurisdiction": [
+        "CodeableConcept"
+    ],
+    "name": [
+        "<string>"
+    ],
+    "relatedMedicationKnowledge": [
+        {
+            "type": "CodeableConcept",
+            "reference": [
+                "Reference(MedicationKnowledge)"
+            ]
+        }
+    ],
+    "associatedMedication": [
+        "Reference(Medication)"
+    ],
+    "productType": [
+        "CodeableConcept"
+    ],
+    "monograph": [
+        {
+            "type": "CodeableConcept",
+            "source": "Reference(DocumentReference)"
+        }
+    ],
+    "preparationInstruction": "<markdown>",
+    "cost": [
+        {
+            "effectiveDate": [
+                "Period"
+            ],
+            "type": "CodeableConcept",
+            "source": "<string>",
+            "costCodeableConcept": "CodeableConcept"
+        }
+    ],
+    "monitoringProgram": [
+        {
+            "type": "CodeableConcept",
+            "name": "<string>"
+        }
+    ],
+    "indicationGuideline": [
+        {
+            "indication": [
+                "CodeableReference(ClinicalUseDefinition)"
+            ],
+            "dosingGuideline": [
+                {
+                    "treatmentIntent": "CodeableConcept",
+                    "dosage": [
+                        {
+                            "type": "CodeableConcept",
+                            "dosage": [
+                                "Dosage"
+                            ]
+                        }
+                    ],
+                    "administrationTreatment": "CodeableConcept",
+                    "patientCharacteristic": [
+                        {
+                            "type": "CodeableConcept",
+                            "valueQuantity": "Quantity",
+                            "valueRange": "Range"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "medicineClassification": [
+        {
+            "type": "CodeableConcept",
+            "sourceUri": "<uri>",
+            "classification": [
+                "CodeableConcept"
+            ]
+        }
+    ],
+    "packaging": [
+        {
+            "cost": [
+                "ContentasforMedicationKnowledge.cost"
+            ],
+            "packagedProduct": "Reference(PackagedProductDefinition)"
+        }
+    ],
+    "clinicalUseIssue": [
+        "Reference(ClinicalUseDefinition)"
+    ],
+    "storageGuideline": [
+        {
+            "reference": "<uri>",
+            "note": [
+                "Annotation"
+            ],
+            "stabilityDuration": "Duration",
+            "environmentalSetting": [
+                {
+                    "type": "CodeableConcept",
+                    "valueRange": "Range",
+                    "valueCodeableConcept": "CodeableConcept"
+                }
+            ]
+        }
+    ],
+    "regulatory": [
+        {
+            "regulatoryAuthority": "Reference(Organization)",
+            "substitution": [
+                {
+                    "type": "CodeableConcept",
+                    "allowed": "<boolean>"
+                }
+            ],
+            "schedule": [
+                "CodeableConcept"
+            ],
+            "maxDispense": {
+                "quantity": "Quantity(SimpleQuantity)",
+                "period": "Duration"
+            }
+        }
+    ],
+    "definitional": {
+        "definition": [
+            "Reference(MedicinalProductDefinition)"
+        ],
+        "doseForm": "CodeableConcept",
+        "intendedRoute": [
+            "CodeableConcept"
+        ],
+        "ingredient": [
+            {
+                "item": "CodeableReference(Substance)",
+                "type": "CodeableConcept",
+                "strengthCodeableConcept": "CodeableConcept",
+                "strengthQuantity": "Quantity"
+            }
+        ],
+        "drugCharacteristic": [
+            {
+                "type": "CodeableConcept",
+                "valueString": "<string>",
+                "valueQuantity": "Quantity(SimpleQuantity)",
+                "valueBase64Binary": "<base64Binary>",
+                "valueAttachment": "Attachment"
+            }
+        ]
+    }
+}

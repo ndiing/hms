@@ -1,0 +1,215 @@
+{
+    "resourceType": "Citation",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "approvalDate": "<date>",
+    "lastReviewDate": "<date>",
+    "effectivePeriod": "Period",
+    "author": [
+        "ContactDetail"
+    ],
+    "editor": [
+        "ContactDetail"
+    ],
+    "reviewer": [
+        "ContactDetail"
+    ],
+    "endorser": [
+        "ContactDetail"
+    ],
+    "summary": [
+        {
+            "style": "CodeableConcept",
+            "text": "<markdown>"
+        }
+    ],
+    "classification": [
+        {
+            "type": "CodeableConcept",
+            "classifier": [
+                "CodeableConcept"
+            ]
+        }
+    ],
+    "note": [
+        "Annotation"
+    ],
+    "currentState": [
+        "CodeableConcept"
+    ],
+    "statusDate": [
+        {
+            "activity": "CodeableConcept",
+            "actual": "<boolean>",
+            "period": "Period"
+        }
+    ],
+    "relatedArtifact": [
+        "RelatedArtifact"
+    ],
+    "citedArtifact": {
+        "identifier": [
+            "Identifier"
+        ],
+        "relatedIdentifier": [
+            "Identifier"
+        ],
+        "dateAccessed": "<dateTime>",
+        "version": {
+            "value": "<string>",
+            "baseCitation": "Reference(Citation)"
+        },
+        "currentState": [
+            "CodeableConcept"
+        ],
+        "statusDate": [
+            {
+                "activity": "CodeableConcept",
+                "actual": "<boolean>",
+                "period": "Period"
+            }
+        ],
+        "title": [
+            {
+                "type": [
+                    "CodeableConcept"
+                ],
+                "language": "CodeableConcept",
+                "text": "<markdown>"
+            }
+        ],
+        "abstract": [
+            {
+                "type": "CodeableConcept",
+                "language": "CodeableConcept",
+                "text": "<markdown>",
+                "copyright": "<markdown>"
+            }
+        ],
+        "part": {
+            "type": "CodeableConcept",
+            "value": "<string>",
+            "baseCitation": "Reference(Citation)"
+        },
+        "relatesTo": [
+            {
+                "type": "<code>",
+                "classifier": [
+                    "CodeableConcept"
+                ],
+                "label": "<string>",
+                "display": "<string>",
+                "citation": "<markdown>",
+                "document": "Attachment",
+                "resource": "<canonical>",
+                "resourceReference": "Reference"
+            }
+        ],
+        "publicationForm": [
+            {
+                "publishedIn": {
+                    "type": "CodeableConcept",
+                    "identifier": [
+                        "Identifier"
+                    ],
+                    "title": "<string>",
+                    "publisher": "Reference(Organization)",
+                    "publisherLocation": "<string>"
+                },
+                "citedMedium": "CodeableConcept",
+                "volume": "<string>",
+                "issue": "<string>",
+                "articleDate": "<dateTime>",
+                "publicationDateText": "<string>",
+                "publicationDateSeason": "<string>",
+                "lastRevisionDate": "<dateTime>",
+                "language": [
+                    "CodeableConcept"
+                ],
+                "accessionNumber": "<string>",
+                "pageString": "<string>",
+                "firstPage": "<string>",
+                "lastPage": "<string>",
+                "pageCount": "<string>",
+                "copyright": "<markdown>"
+            }
+        ],
+        "webLocation": [
+            {
+                "classifier": [
+                    "CodeableConcept"
+                ],
+                "url": "<uri>"
+            }
+        ],
+        "classification": [
+            {
+                "type": "CodeableConcept",
+                "classifier": [
+                    "CodeableConcept"
+                ],
+                "artifactAssessment": [
+                    "Reference(ArtifactAssessment)"
+                ]
+            }
+        ],
+        "contributorship": {
+            "complete": "<boolean>",
+            "entry": [
+                {
+                    "contributor": "Reference(Organization|Practitioner)",
+                    "forenameInitials": "<string>",
+                    "affiliation": [
+                        "Reference(Organization|PractitionerRole)"
+                    ],
+                    "contributionType": [
+                        "CodeableConcept"
+                    ],
+                    "role": "CodeableConcept",
+                    "contributionInstance": [
+                        {
+                            "type": "CodeableConcept",
+                            "time": "<dateTime>"
+                        }
+                    ],
+                    "correspondingContact": "<boolean>",
+                    "rankingOrder": "<positiveInt>"
+                }
+            ],
+            "summary": [
+                {
+                    "type": "CodeableConcept",
+                    "style": "CodeableConcept",
+                    "source": "CodeableConcept",
+                    "value": "<markdown>"
+                }
+            ]
+        },
+        "note": [
+            "Annotation"
+        ]
+    }
+}

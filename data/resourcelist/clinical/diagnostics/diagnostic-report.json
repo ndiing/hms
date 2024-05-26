@@ -1,0 +1,56 @@
+{
+    "resourceType": "DiagnosticReport",
+    "identifier": [
+        "Identifier"
+    ],
+    "basedOn": [
+        "Reference(CarePlan|ImmunizationRecommendation|MedicationRequest|NutritionOrder|ServiceRequest)"
+    ],
+    "status": "<code>",
+    "category": [
+        "CodeableConcept"
+    ],
+    "code": "CodeableConcept",
+    "subject": "Reference(BiologicallyDerivedProduct|Device|Group|Location|Medication|Organization|Patient|Practitioner|Substance)",
+    "encounter": "Reference(Encounter)",
+    "effectivePeriod": "Period",
+    "issued": "<instant>",
+    "performer": [
+        "Reference(CareTeam|Organization|Practitioner|PractitionerRole)"
+    ],
+    "resultsInterpreter": [
+        "Reference(CareTeam|Organization|Practitioner|PractitionerRole)"
+    ],
+    "specimen": [
+        "Reference(Specimen)"
+    ],
+    "result": [
+        "Reference(Observation)"
+    ],
+    "note": [
+        "Annotation"
+    ],
+    "study": [
+        "Reference(GenomicStudy|ImagingStudy)"
+    ],
+    "supportingInfo": [
+        {
+            "type": "CodeableConcept",
+            "reference": "Reference(Citation|DiagnosticReport|Observation|Procedure)"
+        }
+    ],
+    "media": [
+        {
+            "comment": "<string>",
+            "link": "Reference(DocumentReference)"
+        }
+    ],
+    "composition": "Reference(Composition)",
+    "conclusion": "<markdown>",
+    "conclusionCode": [
+        "CodeableConcept"
+    ],
+    "presentedForm": [
+        "Attachment"
+    ]
+}

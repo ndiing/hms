@@ -1,0 +1,33 @@
+{
+    "resourceType": "CompartmentDefinition",
+    "url": "<uri>",
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "purpose": "<markdown>",
+    "code": "<code>",
+    "search": "<boolean>",
+    "resource": [
+        {
+            "code": "<code>",
+            "param": [
+                "<string>"
+            ],
+            "documentation": "<string>",
+            "startParam": "<uri>",
+            "endParam": "<uri>"
+        }
+    ]
+}

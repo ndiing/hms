@@ -1,0 +1,17 @@
+{
+    "resourceType": "OperationOutcome",
+    "issue": [
+        {
+            "severity": "<code>",
+            "code": "<code>",
+            "details": "CodeableConcept",
+            "diagnostics": "<string>",
+            "location": [
+                "<string>"
+            ],
+            "expression": [
+                "<string>"
+            ]
+        }
+    ]
+}

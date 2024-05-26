@@ -1,0 +1,32 @@
+{
+    "resourceType": "RelatedPerson",
+    "identifier": [
+        "Identifier"
+    ],
+    "active": "<boolean>",
+    "patient": "Reference(Patient)",
+    "relationship": [
+        "CodeableConcept"
+    ],
+    "name": [
+        "HumanName"
+    ],
+    "telecom": [
+        "ContactPoint"
+    ],
+    "gender": "<code>",
+    "birthDate": "<date>",
+    "address": [
+        "Address"
+    ],
+    "photo": [
+        "Attachment"
+    ],
+    "period": "Period",
+    "communication": [
+        {
+            "language": "CodeableConcept",
+            "preferred": "<boolean>"
+        }
+    ]
+}

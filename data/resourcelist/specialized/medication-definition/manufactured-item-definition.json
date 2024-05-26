@@ -1,0 +1,63 @@
+{
+    "resourceType": "ManufacturedItemDefinition",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "name": "<string>",
+    "manufacturedDoseForm": "CodeableConcept",
+    "unitOfPresentation": "CodeableConcept",
+    "manufacturer": [
+        "Reference(Organization)"
+    ],
+    "marketingStatus": [
+        "MarketingStatus"
+    ],
+    "ingredient": [
+        "CodeableConcept"
+    ],
+    "property": [
+        {
+            "type": "CodeableConcept",
+            "valueQuantity": "Quantity",
+            "valueDate": "<date>",
+            "valueBoolean": "<boolean>",
+            "valueMarkdown": "<markdown>",
+            "valueAttachment": "Attachment",
+            "valueReference": "Reference(Binary)"
+        }
+    ],
+    "component": [
+        {
+            "type": "CodeableConcept",
+            "function": [
+                "CodeableConcept"
+            ],
+            "amount": [
+                "Quantity"
+            ],
+            "constituent": [
+                {
+                    "amount": [
+                        "Quantity"
+                    ],
+                    "location": [
+                        "CodeableConcept"
+                    ],
+                    "function": [
+                        "CodeableConcept"
+                    ],
+                    "hasIngredient": [
+                        "CodeableReference(Ingredient)"
+                    ]
+                }
+            ],
+            "property": [
+                "ContentasforManufacturedItemDefinition.property"
+            ],
+            "component": [
+                "ContentasforManufacturedItemDefinition.component"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "resourceType": "FormularyItem",
+    "identifier": [
+        "Identifier"
+    ],
+    "code": "CodeableConcept",
+    "status": "<code>"
+}

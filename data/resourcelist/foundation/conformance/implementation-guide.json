@@ -1,0 +1,121 @@
+{
+    "resourceType": "ImplementationGuide",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "packageId": "<id>",
+    "license": "<code>",
+    "fhirVersion": [
+        "<code>"
+    ],
+    "dependsOn": [
+        {
+            "uri": "<canonical(ImplementationGuide)>",
+            "packageId": "<id>",
+            "version": "<string>",
+            "reason": "<markdown>"
+        }
+    ],
+    "global": [
+        {
+            "type": "<code>",
+            "profile": "<canonical(StructureDefinition)>"
+        }
+    ],
+    "definition": {
+        "grouping": [
+            {
+                "name": "<string>",
+                "description": "<markdown>"
+            }
+        ],
+        "resource": [
+            {
+                "reference": "Reference(Any)",
+                "fhirVersion": [
+                    "<code>"
+                ],
+                "name": "<string>",
+                "description": "<markdown>",
+                "isExample": "<boolean>",
+                "profile": [
+                    "<canonical(StructureDefinition)>"
+                ],
+                "groupingId": "<id>"
+            }
+        ],
+        "page": {
+            "sourceString": "<string>",
+            "sourceMarkdown": "<markdown>",
+            "name": "<url>",
+            "title": "<string>",
+            "generation": "<code>",
+            "page": [
+                "ContentasforImplementationGuide.definition.page"
+            ]
+        },
+        "parameter": [
+            {
+                "code": "Coding",
+                "value": "<string>"
+            }
+        ],
+        "template": [
+            {
+                "code": "<code>",
+                "source": "<string>",
+                "scope": "<string>"
+            }
+        ]
+    },
+    "manifest": {
+        "rendering": "<url>",
+        "resource": [
+            {
+                "reference": "Reference(Any)",
+                "isExample": "<boolean>",
+                "profile": [
+                    "<canonical(StructureDefinition)>"
+                ],
+                "relativePath": "<url>"
+            }
+        ],
+        "page": [
+            {
+                "name": "<string>",
+                "title": "<string>",
+                "anchor": [
+                    "<string>"
+                ]
+            }
+        ],
+        "image": [
+            "<string>"
+        ],
+        "other": [
+            "<string>"
+        ]
+    }
+}

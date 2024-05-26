@@ -1,0 +1,75 @@
+{
+    "resourceType": "Account",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "billingStatus": "CodeableConcept",
+    "type": "CodeableConcept",
+    "name": "<string>",
+    "subject": [
+        "Reference(Device|HealthcareService|Location|Organization|Patient|Practitioner|PractitionerRole)"
+    ],
+    "servicePeriod": "Period",
+    "coverage": [
+        {
+            "coverage": "Reference(Coverage)",
+            "priority": "<positiveInt>"
+        }
+    ],
+    "owner": "Reference(Organization)",
+    "description": "<markdown>",
+    "guarantor": [
+        {
+            "party": "Reference(Organization|Patient|RelatedPerson)",
+            "onHold": "<boolean>",
+            "period": "Period"
+        }
+    ],
+    "diagnosis": [
+        {
+            "sequence": "<positiveInt>",
+            "condition": "CodeableReference(Condition)",
+            "dateOfDiagnosis": "<dateTime>",
+            "type": [
+                "CodeableConcept"
+            ],
+            "onAdmission": "<boolean>",
+            "packageCode": [
+                "CodeableConcept"
+            ]
+        }
+    ],
+    "procedure": [
+        {
+            "sequence": "<positiveInt>",
+            "code": "CodeableReference(Procedure)",
+            "dateOfService": "<dateTime>",
+            "type": [
+                "CodeableConcept"
+            ],
+            "packageCode": [
+                "CodeableConcept"
+            ],
+            "device": [
+                "Reference(Device)"
+            ]
+        }
+    ],
+    "relatedAccount": [
+        {
+            "relationship": "CodeableConcept",
+            "account": "Reference(Account)"
+        }
+    ],
+    "currency": "CodeableConcept",
+    "balance": [
+        {
+            "aggregate": "CodeableConcept",
+            "term": "CodeableConcept",
+            "estimate": "<boolean>",
+            "amount": "Money"
+        }
+    ],
+    "calculatedAt": "<instant>"
+}

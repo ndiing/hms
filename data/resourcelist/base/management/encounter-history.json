@@ -1,0 +1,27 @@
+{
+    "resourceType": "EncounterHistory",
+    "encounter": "Reference(Encounter)",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "class": "CodeableConcept",
+    "type": [
+        "CodeableConcept"
+    ],
+    "serviceType": [
+        "CodeableReference(HealthcareService)"
+    ],
+    "subject": "Reference(Group|Patient)",
+    "subjectStatus": "CodeableConcept",
+    "actualPeriod": "Period",
+    "plannedStartDate": "<dateTime>",
+    "plannedEndDate": "<dateTime>",
+    "length": "Duration",
+    "location": [
+        {
+            "location": "Reference(Location)",
+            "form": "CodeableConcept"
+        }
+    ]
+}

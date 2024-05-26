@@ -1,0 +1,67 @@
+{
+    "resourceType": "Composition",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "status": "<code>",
+    "type": "CodeableConcept",
+    "category": [
+        "CodeableConcept"
+    ],
+    "subject": [
+        "Reference(Any)"
+    ],
+    "encounter": "Reference(Encounter)",
+    "date": "<dateTime>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "author": [
+        "Reference(Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+    ],
+    "name": "<string>",
+    "title": "<string>",
+    "note": [
+        "Annotation"
+    ],
+    "attester": [
+        {
+            "mode": "CodeableConcept",
+            "time": "<dateTime>",
+            "party": "Reference(Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+        }
+    ],
+    "custodian": "Reference(Organization)",
+    "relatesTo": [
+        "RelatedArtifact"
+    ],
+    "event": [
+        {
+            "period": "Period",
+            "detail": [
+                "CodeableReference(Any)"
+            ]
+        }
+    ],
+    "section": [
+        {
+            "title": "<string>",
+            "code": "CodeableConcept",
+            "author": [
+                "Reference(Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+            ],
+            "focus": "Reference(Any)",
+            "text": "Narrative",
+            "orderedBy": "CodeableConcept",
+            "entry": [
+                "Reference(Any)"
+            ],
+            "emptyReason": "CodeableConcept",
+            "section": [
+                "ContentasforComposition.section"
+            ]
+        }
+    ]
+}

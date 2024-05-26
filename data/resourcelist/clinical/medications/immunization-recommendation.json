@@ -1,0 +1,42 @@
+{
+    "resourceType": "ImmunizationRecommendation",
+    "identifier": [
+        "Identifier"
+    ],
+    "patient": "Reference(Patient)",
+    "date": "<dateTime>",
+    "authority": "Reference(Organization)",
+    "recommendation": [
+        {
+            "vaccineCode": [
+                "CodeableConcept"
+            ],
+            "targetDisease": [
+                "CodeableConcept"
+            ],
+            "contraindicatedVaccineCode": [
+                "CodeableConcept"
+            ],
+            "forecastStatus": "CodeableConcept",
+            "forecastReason": [
+                "CodeableConcept"
+            ],
+            "dateCriterion": [
+                {
+                    "code": "CodeableConcept",
+                    "value": "<dateTime>"
+                }
+            ],
+            "description": "<markdown>",
+            "series": "<string>",
+            "doseNumber": "<string>",
+            "seriesDoses": "<string>",
+            "supportingImmunization": [
+                "Reference(Immunization|ImmunizationEvaluation)"
+            ],
+            "supportingPatientInformation": [
+                "Reference(Any)"
+            ]
+        }
+    ]
+}

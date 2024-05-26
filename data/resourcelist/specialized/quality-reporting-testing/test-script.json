@@ -1,0 +1,174 @@
+{
+    "resourceType": "TestScript",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "origin": [
+        {
+            "index": "<integer>",
+            "profile": "Coding",
+            "url": "<url>"
+        }
+    ],
+    "destination": [
+        {
+            "index": "<integer>",
+            "profile": "Coding",
+            "url": "<url>"
+        }
+    ],
+    "metadata": {
+        "link": [
+            {
+                "url": "<uri>",
+                "description": "<string>"
+            }
+        ],
+        "capability": [
+            {
+                "required": "<boolean>",
+                "validated": "<boolean>",
+                "description": "<string>",
+                "origin": [
+                    "<integer>"
+                ],
+                "destination": "<integer>",
+                "link": [
+                    "<uri>"
+                ],
+                "capabilities": "<canonical(CapabilityStatement)>"
+            }
+        ]
+    },
+    "scope": [
+        {
+            "artifact": "<canonical(Any)>",
+            "conformance": "CodeableConcept",
+            "phase": "CodeableConcept"
+        }
+    ],
+    "fixture": [
+        {
+            "autocreate": "<boolean>",
+            "autodelete": "<boolean>",
+            "resource": "Reference(Any)"
+        }
+    ],
+    "profile": [
+        "<canonical(StructureDefinition)>"
+    ],
+    "variable": [
+        {
+            "name": "<string>",
+            "defaultValue": "<string>",
+            "description": "<string>",
+            "expression": "<string>",
+            "headerField": "<string>",
+            "hint": "<string>",
+            "path": "<string>",
+            "sourceId": "<id>"
+        }
+    ],
+    "setup": {
+        "action": [
+            {
+                "operation": {
+                    "type": "Coding",
+                    "resource": "<uri>",
+                    "label": "<string>",
+                    "description": "<string>",
+                    "accept": "<code>",
+                    "contentType": "<code>",
+                    "destination": "<integer>",
+                    "encodeRequestUrl": "<boolean>",
+                    "method": "<code>",
+                    "origin": "<integer>",
+                    "params": "<string>",
+                    "requestHeader": [
+                        {
+                            "field": "<string>",
+                            "value": "<string>"
+                        }
+                    ],
+                    "requestId": "<id>",
+                    "responseId": "<id>",
+                    "sourceId": "<id>",
+                    "targetId": "<id>",
+                    "url": "<string>"
+                },
+                "assert": {
+                    "label": "<string>",
+                    "description": "<string>",
+                    "direction": "<code>",
+                    "compareToSourceId": "<string>",
+                    "compareToSourceExpression": "<string>",
+                    "compareToSourcePath": "<string>",
+                    "contentType": "<code>",
+                    "defaultManualCompletion": "<code>",
+                    "expression": "<string>",
+                    "headerField": "<string>",
+                    "minimumId": "<string>",
+                    "navigationLinks": "<boolean>",
+                    "operator": "<code>",
+                    "path": "<string>",
+                    "requestMethod": "<code>",
+                    "requestURL": "<string>",
+                    "resource": "<uri>",
+                    "response": "<code>",
+                    "responseCode": "<string>",
+                    "sourceId": "<id>",
+                    "stopTestOnFail": "<boolean>",
+                    "validateProfileId": "<id>",
+                    "value": "<string>",
+                    "warningOnly": "<boolean>",
+                    "requirement": [
+                        {
+                            "linkCanonical": "<canonical(Requirements)>"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "test": [
+        {
+            "name": "<string>",
+            "description": "<string>",
+            "action": [
+                {
+                    "operation": "ContentasforTestScript.setup.action.operation",
+                    "assert": "ContentasforTestScript.setup.action.assert"
+                }
+            ]
+        }
+    ],
+    "teardown": {
+        "action": [
+            {
+                "operation": "ContentasforTestScript.setup.action.operation"
+            }
+        ]
+    }
+}

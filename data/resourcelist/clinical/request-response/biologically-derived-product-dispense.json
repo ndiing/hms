@@ -1,0 +1,32 @@
+{
+    "resourceType": "BiologicallyDerivedProductDispense",
+    "identifier": [
+        "Identifier"
+    ],
+    "basedOn": [
+        "Reference(ServiceRequest)"
+    ],
+    "partOf": [
+        "Reference(BiologicallyDerivedProductDispense)"
+    ],
+    "status": "<code>",
+    "originRelationshipType": "CodeableConcept",
+    "product": "Reference(BiologicallyDerivedProduct)",
+    "patient": "Reference(Patient)",
+    "matchStatus": "CodeableConcept",
+    "performer": [
+        {
+            "function": "CodeableConcept",
+            "actor": "Reference(Practitioner)"
+        }
+    ],
+    "location": "Reference(Location)",
+    "quantity": "Quantity(SimpleQuantity)",
+    "preparedDate": "<dateTime>",
+    "whenHandedOver": "<dateTime>",
+    "destination": "Reference(Location)",
+    "note": [
+        "Annotation"
+    ],
+    "usageInstruction": "<string>"
+}

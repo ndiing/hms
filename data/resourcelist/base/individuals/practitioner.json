@@ -1,0 +1,38 @@
+{
+    "resourceType": "Practitioner",
+    "identifier": [
+        "Identifier"
+    ],
+    "active": "<boolean>",
+    "name": [
+        "HumanName"
+    ],
+    "telecom": [
+        "ContactPoint"
+    ],
+    "gender": "<code>",
+    "birthDate": "<date>",
+    "deceasedDateTime": "<dateTime>",
+    "address": [
+        "Address"
+    ],
+    "photo": [
+        "Attachment"
+    ],
+    "qualification": [
+        {
+            "identifier": [
+                "Identifier"
+            ],
+            "code": "CodeableConcept",
+            "period": "Period",
+            "issuer": "Reference(Organization)"
+        }
+    ],
+    "communication": [
+        {
+            "language": "CodeableConcept",
+            "preferred": "<boolean>"
+        }
+    ]
+}

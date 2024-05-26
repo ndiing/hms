@@ -1,0 +1,90 @@
+{
+    "resourceType": "MeasureReport",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "type": "<code>",
+    "dataUpdateType": "<code>",
+    "measure": "<canonical(Measure)>",
+    "subject": "Reference(CareTeam|Device|Group|HealthcareService|Location|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "date": "<dateTime>",
+    "reporter": "Reference(Group|Organization|Practitioner|PractitionerRole)",
+    "reportingVendor": "Reference(Organization)",
+    "location": "Reference(Location)",
+    "period": "Period",
+    "inputParameters": "Reference(Parameters)",
+    "scoring": "CodeableConcept",
+    "improvementNotation": "CodeableConcept",
+    "group": [
+        {
+            "linkId": "<string>",
+            "code": "CodeableConcept",
+            "subject": "Reference(CareTeam|Device|Group|HealthcareService|Location|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+            "population": [
+                {
+                    "linkId": "<string>",
+                    "code": "CodeableConcept",
+                    "count": "<integer>",
+                    "subjectResults": "Reference(List)",
+                    "subjectReport": [
+                        "Reference(MeasureReport)"
+                    ],
+                    "subjects": "Reference(Group)"
+                }
+            ],
+            "measureScoreDateTime": "<dateTime>",
+            "measureScoreCodeableConcept": "CodeableConcept",
+            "measureScorePeriod": "Period",
+            "measureScoreRange": "Range",
+            "measureScoreDuration": "Duration",
+            "stratifier": [
+                {
+                    "linkId": "<string>",
+                    "code": "CodeableConcept",
+                    "stratum": [
+                        {
+                            "valueBoolean": "<boolean>",
+                            "valueQuantity": "Quantity",
+                            "valueRange": "Range",
+                            "valueReference": "Reference",
+                            "component": [
+                                {
+                                    "linkId": "<string>",
+                                    "code": "CodeableConcept",
+                                    "valueBoolean": "<boolean>",
+                                    "valueQuantity": "Quantity",
+                                    "valueRange": "Range",
+                                    "valueReference": "Reference"
+                                }
+                            ],
+                            "population": [
+                                {
+                                    "linkId": "<string>",
+                                    "code": "CodeableConcept",
+                                    "count": "<integer>",
+                                    "subjectResults": "Reference(List)",
+                                    "subjectReport": [
+                                        "Reference(MeasureReport)"
+                                    ],
+                                    "subjects": "Reference(Group)"
+                                }
+                            ],
+                            "measureScoreDateTime": "<dateTime>",
+                            "measureScoreCodeableConcept": "CodeableConcept",
+                            "measureScorePeriod": "Period",
+                            "measureScoreRange": "Range",
+                            "measureScoreDuration": "Duration"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "supplementalData": [
+        "Reference(Any)"
+    ],
+    "evaluatedResource": [
+        "Reference(Any)"
+    ]
+}

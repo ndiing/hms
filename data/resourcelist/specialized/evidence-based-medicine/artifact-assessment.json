@@ -1,0 +1,38 @@
+{
+    "resourceType": "ArtifactAssessment",
+    "identifier": [
+        "Identifier"
+    ],
+    "title": "<string>",
+    "citeAsMarkdown": "<markdown>",
+    "date": "<dateTime>",
+    "copyright": "<markdown>",
+    "approvalDate": "<date>",
+    "lastReviewDate": "<date>",
+    "artifactCanonical": "<canonical>",
+    "artifactUri": "<uri>",
+    "content": [
+        {
+            "informationType": "<code>",
+            "summary": "<markdown>",
+            "type": "CodeableConcept",
+            "classifier": [
+                "CodeableConcept"
+            ],
+            "quantity": "Quantity",
+            "author": "Reference(Device|Organization|Patient|Practitioner|PractitionerRole)",
+            "path": [
+                "<uri>"
+            ],
+            "relatedArtifact": [
+                "RelatedArtifact"
+            ],
+            "freeToShare": "<boolean>",
+            "component": [
+                "ContentasforArtifactAssessment.content"
+            ]
+        }
+    ],
+    "workflowStatus": "<code>",
+    "disposition": "<code>"
+}

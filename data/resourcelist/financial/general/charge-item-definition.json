@@ -1,0 +1,60 @@
+{
+    "resourceType": "ChargeItemDefinition",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "derivedFromUri": [
+        "<uri>"
+    ],
+    "partOf": [
+        "<canonical(ChargeItemDefinition)>"
+    ],
+    "replaces": [
+        "<canonical(ChargeItemDefinition)>"
+    ],
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "approvalDate": "<date>",
+    "lastReviewDate": "<date>",
+    "code": "CodeableConcept",
+    "instance": [
+        "Reference(ActivityDefinition|Device|DeviceDefinition|HealthcareService|Medication|PlanDefinition|Substance)"
+    ],
+    "applicability": [
+        {
+            "condition": "Expression",
+            "effectivePeriod": "Period",
+            "relatedArtifact": "RelatedArtifact"
+        }
+    ],
+    "propertyGroup": [
+        {
+            "applicability": [
+                "ContentasforChargeItemDefinition.applicability"
+            ],
+            "priceComponent": [
+                "MonetaryComponent"
+            ]
+        }
+    ]
+}

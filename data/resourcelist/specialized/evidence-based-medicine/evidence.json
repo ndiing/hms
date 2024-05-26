@@ -1,0 +1,138 @@
+{
+    "resourceType": "Evidence",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "citeAsMarkdown": "<markdown>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "approvalDate": "<date>",
+    "lastReviewDate": "<date>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "author": [
+        "ContactDetail"
+    ],
+    "editor": [
+        "ContactDetail"
+    ],
+    "reviewer": [
+        "ContactDetail"
+    ],
+    "endorser": [
+        "ContactDetail"
+    ],
+    "useContext": [
+        "UsageContext"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "relatedArtifact": [
+        "RelatedArtifact"
+    ],
+    "description": "<markdown>",
+    "assertion": "<markdown>",
+    "note": [
+        "Annotation"
+    ],
+    "variableDefinition": [
+        {
+            "description": "<markdown>",
+            "note": [
+                "Annotation"
+            ],
+            "variableRole": "CodeableConcept",
+            "observed": "Reference(EvidenceVariable|Group)",
+            "intended": "Reference(EvidenceVariable|Group)",
+            "directnessMatch": "CodeableConcept"
+        }
+    ],
+    "synthesisType": "CodeableConcept",
+    "studyDesign": [
+        "CodeableConcept"
+    ],
+    "statistic": [
+        {
+            "description": "<markdown>",
+            "note": [
+                "Annotation"
+            ],
+            "statisticType": "CodeableConcept",
+            "category": "CodeableConcept",
+            "quantity": "Quantity",
+            "numberOfEvents": "<unsignedInt>",
+            "numberAffected": "<unsignedInt>",
+            "sampleSize": {
+                "description": "<markdown>",
+                "note": [
+                    "Annotation"
+                ],
+                "numberOfStudies": "<unsignedInt>",
+                "numberOfParticipants": "<unsignedInt>",
+                "knownDataCount": "<unsignedInt>"
+            },
+            "attributeEstimate": [
+                {
+                    "description": "<markdown>",
+                    "note": [
+                        "Annotation"
+                    ],
+                    "type": "CodeableConcept",
+                    "quantity": "Quantity",
+                    "level": "<decimal>",
+                    "range": "Range",
+                    "attributeEstimate": [
+                        "ContentasforEvidence.statistic.attributeEstimate"
+                    ]
+                }
+            ],
+            "modelCharacteristic": [
+                {
+                    "code": "CodeableConcept",
+                    "value": "Quantity(SimpleQuantity)",
+                    "variable": [
+                        {
+                            "variableDefinition": "Reference(EvidenceVariable|Group)",
+                            "handling": "<code>",
+                            "valueCategory": [
+                                "CodeableConcept"
+                            ],
+                            "valueQuantity": [
+                                "Quantity"
+                            ],
+                            "valueRange": [
+                                "Range"
+                            ]
+                        }
+                    ],
+                    "attributeEstimate": [
+                        "ContentasforEvidence.statistic.attributeEstimate"
+                    ]
+                }
+            ]
+        }
+    ],
+    "certainty": [
+        {
+            "description": "<markdown>",
+            "note": [
+                "Annotation"
+            ],
+            "type": "CodeableConcept",
+            "rating": "CodeableConcept",
+            "rater": "<string>",
+            "subcomponent": [
+                "ContentasforEvidence.certainty"
+            ]
+        }
+    ]
+}

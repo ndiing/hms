@@ -1,0 +1,31 @@
+{
+    "resourceType": "OrganizationAffiliation",
+    "identifier": [
+        "Identifier"
+    ],
+    "active": "<boolean>",
+    "period": "Period",
+    "organization": "Reference(Organization)",
+    "participatingOrganization": "Reference(Organization)",
+    "network": [
+        "Reference(Organization)"
+    ],
+    "code": [
+        "CodeableConcept"
+    ],
+    "specialty": [
+        "CodeableConcept"
+    ],
+    "location": [
+        "Reference(Location)"
+    ],
+    "healthcareService": [
+        "Reference(HealthcareService)"
+    ],
+    "contact": [
+        "ExtendedContactDetail"
+    ],
+    "endpoint": [
+        "Reference(Endpoint)"
+    ]
+}

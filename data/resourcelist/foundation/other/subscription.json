@@ -1,0 +1,37 @@
+{
+    "resourceType": "Subscription",
+    "identifier": [
+        "Identifier"
+    ],
+    "name": "<string>",
+    "status": "<code>",
+    "topic": "<canonical(SubscriptionTopic)>",
+    "contact": [
+        "ContactPoint"
+    ],
+    "end": "<instant>",
+    "managingEntity": "Reference(CareTeam|HealthcareService|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "reason": "<string>",
+    "filterBy": [
+        {
+            "resourceType": "<uri>",
+            "filterParameter": "<string>",
+            "comparator": "<code>",
+            "modifier": "<code>",
+            "value": "<string>"
+        }
+    ],
+    "channelType": "Coding",
+    "endpoint": "<url>",
+    "parameter": [
+        {
+            "name": "<string>",
+            "value": "<string>"
+        }
+    ],
+    "heartbeatPeriod": "<unsignedInt>",
+    "timeout": "<unsignedInt>",
+    "contentType": "<code>",
+    "content": "<code>",
+    "maxCount": "<positiveInt>"
+}

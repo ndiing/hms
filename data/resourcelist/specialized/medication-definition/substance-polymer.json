@@ -1,0 +1,52 @@
+{
+    "resourceType": "SubstancePolymer",
+    "identifier": "Identifier",
+    "class": "CodeableConcept",
+    "geometry": "CodeableConcept",
+    "copolymerConnectivity": [
+        "CodeableConcept"
+    ],
+    "modification": "<string>",
+    "monomerSet": [
+        {
+            "ratioType": "CodeableConcept",
+            "startingMaterial": [
+                {
+                    "code": "CodeableConcept",
+                    "category": "CodeableConcept",
+                    "isDefining": "<boolean>",
+                    "amount": "Quantity"
+                }
+            ]
+        }
+    ],
+    "repeat": [
+        {
+            "averageMolecularFormula": "<string>",
+            "repeatUnitAmountType": "CodeableConcept",
+            "repeatUnit": [
+                {
+                    "unit": "<string>",
+                    "orientation": "CodeableConcept",
+                    "amount": "<integer>",
+                    "degreeOfPolymerisation": [
+                        {
+                            "type": "CodeableConcept",
+                            "average": "<integer>",
+                            "low": "<integer>",
+                            "high": "<integer>"
+                        }
+                    ],
+                    "structuralRepresentation": [
+                        {
+                            "type": "CodeableConcept",
+                            "representation": "<string>",
+                            "format": "CodeableConcept",
+                            "attachment": "Attachment"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

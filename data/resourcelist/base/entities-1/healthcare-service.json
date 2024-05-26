@@ -1,0 +1,61 @@
+{
+    "resourceType": "HealthcareService",
+    "identifier": [
+        "Identifier"
+    ],
+    "active": "<boolean>",
+    "providedBy": "Reference(Organization)",
+    "offeredIn": [
+        "Reference(HealthcareService)"
+    ],
+    "category": [
+        "CodeableConcept"
+    ],
+    "type": [
+        "CodeableConcept"
+    ],
+    "specialty": [
+        "CodeableConcept"
+    ],
+    "location": [
+        "Reference(Location)"
+    ],
+    "name": "<string>",
+    "comment": "<markdown>",
+    "extraDetails": "<markdown>",
+    "photo": "Attachment",
+    "contact": [
+        "ExtendedContactDetail"
+    ],
+    "coverageArea": [
+        "Reference(Location)"
+    ],
+    "serviceProvisionCode": [
+        "CodeableConcept"
+    ],
+    "eligibility": [
+        {
+            "code": "CodeableConcept",
+            "comment": "<markdown>"
+        }
+    ],
+    "program": [
+        "CodeableConcept"
+    ],
+    "characteristic": [
+        "CodeableConcept"
+    ],
+    "communication": [
+        "CodeableConcept"
+    ],
+    "referralMethod": [
+        "CodeableConcept"
+    ],
+    "appointmentRequired": "<boolean>",
+    "availability": [
+        "Availability"
+    ],
+    "endpoint": [
+        "Reference(Endpoint)"
+    ]
+}

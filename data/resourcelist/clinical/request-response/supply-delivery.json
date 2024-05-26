@@ -1,0 +1,28 @@
+{
+    "resourceType": "SupplyDelivery",
+    "identifier": [
+        "Identifier"
+    ],
+    "basedOn": [
+        "Reference(SupplyRequest)"
+    ],
+    "partOf": [
+        "Reference(Contract|SupplyDelivery)"
+    ],
+    "status": "<code>",
+    "patient": "Reference(Patient)",
+    "type": "CodeableConcept",
+    "suppliedItem": [
+        {
+            "quantity": "Quantity(SimpleQuantity)",
+            "itemReference": "Reference(BiologicallyDerivedProduct|Device|InventoryItem|Medication|NutritionProduct|Substance)"
+        }
+    ],
+    "occurrencePeriod": "Period",
+    "occurrenceTiming": "Timing",
+    "supplier": "Reference(Organization|Practitioner|PractitionerRole)",
+    "destination": "Reference(Location)",
+    "receiver": [
+        "Reference(Organization|Practitioner|PractitionerRole)"
+    ]
+}

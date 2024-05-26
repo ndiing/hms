@@ -1,0 +1,159 @@
+{
+    "resourceType": "CapabilityStatement",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "kind": "<code>",
+    "instantiates": [
+        "<canonical(CapabilityStatement)>"
+    ],
+    "imports": [
+        "<canonical(CapabilityStatement)>"
+    ],
+    "software": {
+        "name": "<string>",
+        "version": "<string>",
+        "releaseDate": "<dateTime>"
+    },
+    "implementation": {
+        "description": "<markdown>",
+        "url": "<url>",
+        "custodian": "Reference(Organization)"
+    },
+    "fhirVersion": "<code>",
+    "format": [
+        "<code>"
+    ],
+    "patchFormat": [
+        "<code>"
+    ],
+    "acceptLanguage": [
+        "<code>"
+    ],
+    "implementationGuide": [
+        "<canonical(ImplementationGuide)>"
+    ],
+    "rest": [
+        {
+            "mode": "<code>",
+            "documentation": "<markdown>",
+            "security": {
+                "cors": "<boolean>",
+                "service": [
+                    "CodeableConcept"
+                ],
+                "description": "<markdown>"
+            },
+            "resource": [
+                {
+                    "type": "<code>",
+                    "profile": "<canonical(StructureDefinition)>",
+                    "supportedProfile": [
+                        "<canonical(StructureDefinition)>"
+                    ],
+                    "documentation": "<markdown>",
+                    "interaction": [
+                        {
+                            "code": "<code>",
+                            "documentation": "<markdown>"
+                        }
+                    ],
+                    "versioning": "<code>",
+                    "readHistory": "<boolean>",
+                    "updateCreate": "<boolean>",
+                    "conditionalCreate": "<boolean>",
+                    "conditionalRead": "<code>",
+                    "conditionalUpdate": "<boolean>",
+                    "conditionalPatch": "<boolean>",
+                    "conditionalDelete": "<code>",
+                    "referencePolicy": [
+                        "<code>"
+                    ],
+                    "searchInclude": [
+                        "<string>"
+                    ],
+                    "searchRevInclude": [
+                        "<string>"
+                    ],
+                    "searchParam": [
+                        {
+                            "name": "<string>",
+                            "definition": "<canonical(SearchParameter)>",
+                            "type": "<code>",
+                            "documentation": "<markdown>"
+                        }
+                    ],
+                    "operation": [
+                        {
+                            "name": "<string>",
+                            "definition": "<canonical(OperationDefinition)>",
+                            "documentation": "<markdown>"
+                        }
+                    ]
+                }
+            ],
+            "interaction": [
+                {
+                    "code": "<code>",
+                    "documentation": "<markdown>"
+                }
+            ],
+            "searchParam": [
+                "ContentasforCapabilityStatement.rest.resource.searchParam"
+            ],
+            "operation": [
+                "ContentasforCapabilityStatement.rest.resource.operation"
+            ],
+            "compartment": [
+                "<canonical(CompartmentDefinition)>"
+            ]
+        }
+    ],
+    "messaging": [
+        {
+            "endpoint": [
+                {
+                    "protocol": "Coding",
+                    "address": "<url>"
+                }
+            ],
+            "reliableCache": "<unsignedInt>",
+            "documentation": "<markdown>",
+            "supportedMessage": [
+                {
+                    "mode": "<code>",
+                    "definition": "<canonical(MessageDefinition)>"
+                }
+            ]
+        }
+    ],
+    "document": [
+        {
+            "mode": "<code>",
+            "documentation": "<markdown>",
+            "profile": "<canonical(StructureDefinition)>"
+        }
+    ]
+}

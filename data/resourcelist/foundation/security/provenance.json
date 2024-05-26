@@ -1,0 +1,43 @@
+{
+    "resourceType": "Provenance",
+    "target": [
+        "Reference(Any)"
+    ],
+    "occurredDateTime": "<dateTime>",
+    "recorded": "<instant>",
+    "policy": [
+        "<uri>"
+    ],
+    "location": "Reference(Location)",
+    "authorization": [
+        "CodeableReference"
+    ],
+    "activity": "CodeableConcept",
+    "basedOn": [
+        "Reference(CarePlan|DeviceRequest|ImmunizationRecommendation|MedicationRequest|NutritionOrder|ServiceRequest|Task)"
+    ],
+    "patient": "Reference(Patient)",
+    "encounter": "Reference(Encounter)",
+    "agent": [
+        {
+            "type": "CodeableConcept",
+            "role": [
+                "CodeableConcept"
+            ],
+            "who": "Reference(CareTeam|Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+            "onBehalfOf": "Reference(CareTeam|Organization|Patient|Practitioner|PractitionerRole)"
+        }
+    ],
+    "entity": [
+        {
+            "role": "<code>",
+            "what": "Reference(Any)",
+            "agent": [
+                "ContentasforProvenance.agent"
+            ]
+        }
+    ],
+    "signature": [
+        "Signature"
+    ]
+}

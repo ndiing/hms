@@ -1,0 +1,12 @@
+{
+    "resourceType": "EnrollmentRequest",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "created": "<dateTime>",
+    "insurer": "Reference(Organization)",
+    "provider": "Reference(Organization|Practitioner|PractitionerRole)",
+    "candidate": "Reference(Patient)",
+    "coverage": "Reference(Coverage)"
+}

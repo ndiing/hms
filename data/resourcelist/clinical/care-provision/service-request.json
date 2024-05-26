@@ -1,0 +1,89 @@
+{
+    "resourceType": "ServiceRequest",
+    "identifier": [
+        "Identifier"
+    ],
+    "instantiatesCanonical": [
+        "<canonical(ActivityDefinition|PlanDefinition)>"
+    ],
+    "instantiatesUri": [
+        "<uri>"
+    ],
+    "basedOn": [
+        "Reference(CarePlan|MedicationRequest|ServiceRequest)"
+    ],
+    "replaces": [
+        "Reference(ServiceRequest)"
+    ],
+    "requisition": "Identifier",
+    "status": "<code>",
+    "intent": "<code>",
+    "category": [
+        "CodeableConcept"
+    ],
+    "priority": "<code>",
+    "doNotPerform": "<boolean>",
+    "code": "CodeableReference(ActivityDefinition|PlanDefinition)",
+    "orderDetail": [
+        {
+            "parameterFocus": "CodeableReference(BiologicallyDerivedProduct|Device|DeviceDefinition|DeviceRequest|Medication|MedicationRequest|Substance|SupplyRequest)",
+            "parameter": [
+                {
+                    "code": "CodeableConcept",
+                    "valueRatio": "Ratio",
+                    "valueRange": "Range",
+                    "valueBoolean": "<boolean>",
+                    "valueCodeableConcept": "CodeableConcept",
+                    "valueString": "<string>",
+                    "valuePeriod": "Period"
+                }
+            ]
+        }
+    ],
+    "quantityRatio": "Ratio",
+    "quantityRange": "Range",
+    "subject": "Reference(Device|Group|Location|Patient)",
+    "focus": [
+        "Reference(Any)"
+    ],
+    "encounter": "Reference(Encounter)",
+    "occurrencePeriod": "Period",
+    "occurrenceTiming": "Timing",
+    "asNeededCodeableConcept": "CodeableConcept",
+    "authoredOn": "<dateTime>",
+    "requester": "Reference(Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "performerType": "CodeableConcept",
+    "performer": [
+        "Reference(CareTeam|Device|HealthcareService|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+    ],
+    "location": [
+        "CodeableReference(Location)"
+    ],
+    "reason": [
+        "CodeableReference(Condition|DetectedIssue|DiagnosticReport|DocumentReference|Observation)"
+    ],
+    "insurance": [
+        "Reference(ClaimResponse|Coverage)"
+    ],
+    "supportingInfo": [
+        "CodeableReference(Any)"
+    ],
+    "specimen": [
+        "Reference(Specimen)"
+    ],
+    "bodySite": [
+        "CodeableConcept"
+    ],
+    "bodyStructure": "Reference(BodyStructure)",
+    "note": [
+        "Annotation"
+    ],
+    "patientInstruction": [
+        {
+            "instructionReference": "Reference(DocumentReference)"
+        }
+    ],
+    "relevantHistory": [
+        "Reference(Provenance)"
+    ]
+}

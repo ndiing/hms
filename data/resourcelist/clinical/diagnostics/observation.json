@@ -1,0 +1,104 @@
+{
+    "resourceType": "Observation",
+    "identifier": [
+        "Identifier"
+    ],
+    "instantiatesReference": "Reference(ObservationDefinition)",
+    "basedOn": [
+        "Reference(CarePlan|DeviceRequest|ImmunizationRecommendation|MedicationRequest|NutritionOrder|ServiceRequest)"
+    ],
+    "triggeredBy": [
+        {
+            "observation": "Reference(Observation)",
+            "type": "<code>",
+            "reason": "<string>"
+        }
+    ],
+    "partOf": [
+        "Reference(GenomicStudy|ImagingStudy|Immunization|MedicationAdministration|MedicationDispense|MedicationStatement|Procedure)"
+    ],
+    "status": "<code>",
+    "category": [
+        "CodeableConcept"
+    ],
+    "code": "CodeableConcept",
+    "subject": "Reference(BiologicallyDerivedProduct|Device|Group|Location|Medication|NutritionProduct|Organization|Patient|Practitioner|Procedure|Substance)",
+    "focus": [
+        "Reference(Any)"
+    ],
+    "encounter": "Reference(Encounter)",
+    "effectivePeriod": "Period",
+    "effectiveTiming": "Timing",
+    "effectiveInstant": "<instant>",
+    "issued": "<instant>",
+    "performer": [
+        "Reference(CareTeam|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+    ],
+    "valueCodeableConcept": "CodeableConcept",
+    "valueString": "<string>",
+    "valueBoolean": "<boolean>",
+    "valueInteger": "<integer>",
+    "valueRange": "Range",
+    "valueRatio": "Ratio",
+    "valueSampledData": "SampledData",
+    "valueTime": "<time>",
+    "valueDateTime": "<dateTime>",
+    "valuePeriod": "Period",
+    "valueAttachment": "Attachment",
+    "valueReference": "Reference(MolecularSequence)",
+    "dataAbsentReason": "CodeableConcept",
+    "interpretation": [
+        "CodeableConcept"
+    ],
+    "note": [
+        "Annotation"
+    ],
+    "bodySite": "CodeableConcept",
+    "bodyStructure": "Reference(BodyStructure)",
+    "method": "CodeableConcept",
+    "specimen": "Reference(Group|Specimen)",
+    "device": "Reference(Device|DeviceMetric)",
+    "referenceRange": [
+        {
+            "low": "Quantity(SimpleQuantity)",
+            "high": "Quantity(SimpleQuantity)",
+            "normalValue": "CodeableConcept",
+            "type": "CodeableConcept",
+            "appliesTo": [
+                "CodeableConcept"
+            ],
+            "age": "Range",
+            "text": "<markdown>"
+        }
+    ],
+    "hasMember": [
+        "Reference(MolecularSequence|Observation|QuestionnaireResponse)"
+    ],
+    "derivedFrom": [
+        "Reference(DocumentReference|GenomicStudy|ImagingSelection|ImagingStudy|MolecularSequence|Observation|QuestionnaireResponse)"
+    ],
+    "component": [
+        {
+            "code": "CodeableConcept",
+            "valueCodeableConcept": "CodeableConcept",
+            "valueString": "<string>",
+            "valueBoolean": "<boolean>",
+            "valueInteger": "<integer>",
+            "valueRange": "Range",
+            "valueRatio": "Ratio",
+            "valueSampledData": "SampledData",
+            "valueTime": "<time>",
+            "valueDateTime": "<dateTime>",
+            "valuePeriod": "Period",
+            "valueAttachment": "Attachment",
+            "valueReference": "Reference(MolecularSequence)",
+            "dataAbsentReason": "CodeableConcept",
+            "interpretation": [
+                "CodeableConcept"
+            ],
+            "referenceRange": [
+                "ContentasforObservation.referenceRange"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,224 @@
+{
+    "resourceType": "Claim",
+    "identifier": [
+        "Identifier"
+    ],
+    "traceNumber": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "type": "CodeableConcept",
+    "subType": "CodeableConcept",
+    "use": "<code>",
+    "patient": "Reference(Patient)",
+    "billablePeriod": "Period",
+    "created": "<dateTime>",
+    "enterer": "Reference(Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "insurer": "Reference(Organization)",
+    "provider": "Reference(Organization|Practitioner|PractitionerRole)",
+    "priority": "CodeableConcept",
+    "fundsReserve": "CodeableConcept",
+    "related": [
+        {
+            "claim": "Reference(Claim)",
+            "relationship": "CodeableConcept",
+            "reference": "Identifier"
+        }
+    ],
+    "prescription": "Reference(DeviceRequest|MedicationRequest|VisionPrescription)",
+    "originalPrescription": "Reference(DeviceRequest|MedicationRequest|VisionPrescription)",
+    "payee": {
+        "type": "CodeableConcept",
+        "party": "Reference(Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+    },
+    "referral": "Reference(ServiceRequest)",
+    "encounter": [
+        "Reference(Encounter)"
+    ],
+    "facility": "Reference(Location|Organization)",
+    "diagnosisRelatedGroup": "CodeableConcept",
+    "event": [
+        {
+            "type": "CodeableConcept",
+            "whenPeriod": "Period"
+        }
+    ],
+    "careTeam": [
+        {
+            "sequence": "<positiveInt>",
+            "provider": "Reference(Organization|Practitioner|PractitionerRole)",
+            "responsible": "<boolean>",
+            "role": "CodeableConcept",
+            "specialty": "CodeableConcept"
+        }
+    ],
+    "supportingInfo": [
+        {
+            "sequence": "<positiveInt>",
+            "category": "CodeableConcept",
+            "code": "CodeableConcept",
+            "timingPeriod": "Period",
+            "valueString": "<string>",
+            "valueQuantity": "Quantity",
+            "valueAttachment": "Attachment",
+            "valueReference": "Reference(Any)",
+            "valueIdentifier": "Identifier",
+            "reason": "CodeableConcept"
+        }
+    ],
+    "diagnosis": [
+        {
+            "sequence": "<positiveInt>",
+            "diagnosisReference": "Reference(Condition)",
+            "type": [
+                "CodeableConcept"
+            ],
+            "onAdmission": "CodeableConcept"
+        }
+    ],
+    "procedure": [
+        {
+            "sequence": "<positiveInt>",
+            "type": [
+                "CodeableConcept"
+            ],
+            "date": "<dateTime>",
+            "procedureReference": "Reference(Procedure)",
+            "udi": [
+                "Reference(Device)"
+            ]
+        }
+    ],
+    "insurance": [
+        {
+            "sequence": "<positiveInt>",
+            "focal": "<boolean>",
+            "identifier": "Identifier",
+            "coverage": "Reference(Coverage)",
+            "businessArrangement": "<string>",
+            "preAuthRef": [
+                "<string>"
+            ],
+            "claimResponse": "Reference(ClaimResponse)"
+        }
+    ],
+    "accident": {
+        "date": "<date>",
+        "type": "CodeableConcept",
+        "locationReference": "Reference(Location)"
+    },
+    "patientPaid": "Money",
+    "item": [
+        {
+            "sequence": "<positiveInt>",
+            "traceNumber": [
+                "Identifier"
+            ],
+            "careTeamSequence": [
+                "<positiveInt>"
+            ],
+            "diagnosisSequence": [
+                "<positiveInt>"
+            ],
+            "procedureSequence": [
+                "<positiveInt>"
+            ],
+            "informationSequence": [
+                "<positiveInt>"
+            ],
+            "revenue": "CodeableConcept",
+            "category": "CodeableConcept",
+            "productOrService": "CodeableConcept",
+            "productOrServiceEnd": "CodeableConcept",
+            "request": [
+                "Reference(DeviceRequest|MedicationRequest|NutritionOrder|ServiceRequest|SupplyRequest|VisionPrescription)"
+            ],
+            "modifier": [
+                "CodeableConcept"
+            ],
+            "programCode": [
+                "CodeableConcept"
+            ],
+            "servicedPeriod": "Period",
+            "locationAddress": "Address",
+            "locationReference": "Reference(Location)",
+            "patientPaid": "Money",
+            "quantity": "Quantity(SimpleQuantity)",
+            "unitPrice": "Money",
+            "factor": "<decimal>",
+            "tax": "Money",
+            "net": "Money",
+            "udi": [
+                "Reference(Device)"
+            ],
+            "bodySite": [
+                {
+                    "site": [
+                        "CodeableReference(BodyStructure)"
+                    ],
+                    "subSite": [
+                        "CodeableConcept"
+                    ]
+                }
+            ],
+            "encounter": [
+                "Reference(Encounter)"
+            ],
+            "detail": [
+                {
+                    "sequence": "<positiveInt>",
+                    "traceNumber": [
+                        "Identifier"
+                    ],
+                    "revenue": "CodeableConcept",
+                    "category": "CodeableConcept",
+                    "productOrService": "CodeableConcept",
+                    "productOrServiceEnd": "CodeableConcept",
+                    "modifier": [
+                        "CodeableConcept"
+                    ],
+                    "programCode": [
+                        "CodeableConcept"
+                    ],
+                    "patientPaid": "Money",
+                    "quantity": "Quantity(SimpleQuantity)",
+                    "unitPrice": "Money",
+                    "factor": "<decimal>",
+                    "tax": "Money",
+                    "net": "Money",
+                    "udi": [
+                        "Reference(Device)"
+                    ],
+                    "subDetail": [
+                        {
+                            "sequence": "<positiveInt>",
+                            "traceNumber": [
+                                "Identifier"
+                            ],
+                            "revenue": "CodeableConcept",
+                            "category": "CodeableConcept",
+                            "productOrService": "CodeableConcept",
+                            "productOrServiceEnd": "CodeableConcept",
+                            "modifier": [
+                                "CodeableConcept"
+                            ],
+                            "programCode": [
+                                "CodeableConcept"
+                            ],
+                            "patientPaid": "Money",
+                            "quantity": "Quantity(SimpleQuantity)",
+                            "unitPrice": "Money",
+                            "factor": "<decimal>",
+                            "tax": "Money",
+                            "net": "Money",
+                            "udi": [
+                                "Reference(Device)"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "total": "Money"
+}

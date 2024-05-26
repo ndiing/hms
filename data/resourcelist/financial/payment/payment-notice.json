@@ -1,0 +1,17 @@
+{
+    "resourceType": "PaymentNotice",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "request": "Reference(Any)",
+    "response": "Reference(Any)",
+    "created": "<dateTime>",
+    "reporter": "Reference(Organization|Practitioner|PractitionerRole)",
+    "payment": "Reference(PaymentReconciliation)",
+    "paymentDate": "<date>",
+    "payee": "Reference(Organization|Practitioner|PractitionerRole)",
+    "recipient": "Reference(Organization)",
+    "amount": "Money",
+    "paymentStatus": "CodeableConcept"
+}

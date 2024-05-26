@@ -1,0 +1,12 @@
+{
+    "origin": "Quantity(SimpleQuantity)",
+    "interval": "<decimal>",
+    "intervalUnit": "<code>",
+    "factor": "<decimal>",
+    "lowerLimit": "<decimal>",
+    "upperLimit": "<decimal>",
+    "dimensions": "<positiveInt>",
+    "codeMap": "<canonical(ConceptMap)>",
+    "offsets": "<string>",
+    "data": "<string>"
+}

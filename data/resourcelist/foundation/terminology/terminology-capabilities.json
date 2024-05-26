@@ -1,0 +1,88 @@
+{
+    "resourceType": "TerminologyCapabilities",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "kind": "<code>",
+    "software": {
+        "name": "<string>",
+        "version": "<string>"
+    },
+    "implementation": {
+        "description": "<string>",
+        "url": "<url>"
+    },
+    "lockedDate": "<boolean>",
+    "codeSystem": [
+        {
+            "uri": "<canonical(CodeSystem)>",
+            "version": [
+                {
+                    "code": "<string>",
+                    "isDefault": "<boolean>",
+                    "compositional": "<boolean>",
+                    "language": [
+                        "<code>"
+                    ],
+                    "filter": [
+                        {
+                            "code": "<code>",
+                            "op": [
+                                "<code>"
+                            ]
+                        }
+                    ],
+                    "property": [
+                        "<code>"
+                    ]
+                }
+            ],
+            "content": "<code>",
+            "subsumption": "<boolean>"
+        }
+    ],
+    "expansion": {
+        "hierarchical": "<boolean>",
+        "paging": "<boolean>",
+        "incomplete": "<boolean>",
+        "parameter": [
+            {
+                "name": "<code>",
+                "documentation": "<string>"
+            }
+        ],
+        "textFilter": "<markdown>"
+    },
+    "codeSearch": "<code>",
+    "validateCode": {
+        "translations": "<boolean>"
+    },
+    "translation": {
+        "needsMap": "<boolean>"
+    },
+    "closure": {
+        "translation": "<boolean>"
+    }
+}

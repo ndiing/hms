@@ -1,0 +1,58 @@
+{
+    "resourceType": "GraphDefinition",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "start": "<id>",
+    "node": [
+        {
+            "nodeId": "<id>",
+            "description": "<string>",
+            "type": "<code>",
+            "profile": "<canonical(StructureDefinition)>"
+        }
+    ],
+    "link": [
+        {
+            "description": "<string>",
+            "min": "<integer>",
+            "max": "<string>",
+            "sourceId": "<id>",
+            "path": "<string>",
+            "sliceName": "<string>",
+            "targetId": "<id>",
+            "params": "<string>",
+            "compartment": [
+                {
+                    "use": "<code>",
+                    "rule": "<code>",
+                    "code": "<code>",
+                    "expression": "<string>",
+                    "description": "<string>"
+                }
+            ]
+        }
+    ]
+}

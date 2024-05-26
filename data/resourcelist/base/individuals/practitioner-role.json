@@ -1,0 +1,37 @@
+{
+    "resourceType": "PractitionerRole",
+    "identifier": [
+        "Identifier"
+    ],
+    "active": "<boolean>",
+    "period": "Period",
+    "practitioner": "Reference(Practitioner)",
+    "organization": "Reference(Organization)",
+    "code": [
+        "CodeableConcept"
+    ],
+    "specialty": [
+        "CodeableConcept"
+    ],
+    "location": [
+        "Reference(Location)"
+    ],
+    "healthcareService": [
+        "Reference(HealthcareService)"
+    ],
+    "contact": [
+        "ExtendedContactDetail"
+    ],
+    "characteristic": [
+        "CodeableConcept"
+    ],
+    "communication": [
+        "CodeableConcept"
+    ],
+    "availability": [
+        "Availability"
+    ],
+    "endpoint": [
+        "Reference(Endpoint)"
+    ]
+}

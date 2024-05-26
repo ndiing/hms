@@ -1,0 +1,34 @@
+{
+    "resourceType": "Endpoint",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "connectionType": [
+        "CodeableConcept"
+    ],
+    "name": "<string>",
+    "description": "<string>",
+    "environmentType": [
+        "CodeableConcept"
+    ],
+    "managingOrganization": "Reference(Organization)",
+    "contact": [
+        "ContactPoint"
+    ],
+    "period": "Period",
+    "payload": [
+        {
+            "type": [
+                "CodeableConcept"
+            ],
+            "mimeType": [
+                "<code>"
+            ]
+        }
+    ],
+    "address": "<url>",
+    "header": [
+        "<string>"
+    ]
+}

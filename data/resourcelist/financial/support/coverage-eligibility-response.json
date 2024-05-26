@@ -1,0 +1,71 @@
+{
+    "resourceType": "CoverageEligibilityResponse",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "purpose": [
+        "<code>"
+    ],
+    "patient": "Reference(Patient)",
+    "event": [
+        {
+            "type": "CodeableConcept",
+            "whenPeriod": "Period"
+        }
+    ],
+    "servicedPeriod": "Period",
+    "created": "<dateTime>",
+    "requestor": "Reference(Organization|Practitioner|PractitionerRole)",
+    "request": "Reference(CoverageEligibilityRequest)",
+    "outcome": "<code>",
+    "disposition": "<string>",
+    "insurer": "Reference(Organization)",
+    "insurance": [
+        {
+            "coverage": "Reference(Coverage)",
+            "inforce": "<boolean>",
+            "benefitPeriod": "Period",
+            "item": [
+                {
+                    "category": "CodeableConcept",
+                    "productOrService": "CodeableConcept",
+                    "modifier": [
+                        "CodeableConcept"
+                    ],
+                    "provider": "Reference(Practitioner|PractitionerRole)",
+                    "excluded": "<boolean>",
+                    "name": "<string>",
+                    "description": "<string>",
+                    "network": "CodeableConcept",
+                    "unit": "CodeableConcept",
+                    "term": "CodeableConcept",
+                    "benefit": [
+                        {
+                            "type": "CodeableConcept",
+                            "allowedString": "<string>",
+                            "allowedMoney": "Money",
+                            "usedString": "<string>",
+                            "usedMoney": "Money"
+                        }
+                    ],
+                    "authorizationRequired": "<boolean>",
+                    "authorizationSupporting": [
+                        "CodeableConcept"
+                    ],
+                    "authorizationUrl": "<uri>"
+                }
+            ]
+        }
+    ],
+    "preAuthRef": "<string>",
+    "form": "CodeableConcept",
+    "error": [
+        {
+            "code": "CodeableConcept",
+            "expression": [
+                "<string>"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "resourceType": "NutritionProduct",
+    "code": "CodeableConcept",
+    "status": "<code>",
+    "category": [
+        "CodeableConcept"
+    ],
+    "manufacturer": [
+        "Reference(Organization)"
+    ],
+    "nutrient": [
+        {
+            "item": "CodeableReference(Substance)",
+            "amount": [
+                "Ratio"
+            ]
+        }
+    ],
+    "ingredient": [
+        {
+            "item": "CodeableReference(NutritionProduct)",
+            "amount": [
+                "Ratio"
+            ]
+        }
+    ],
+    "knownAllergen": [
+        "CodeableReference(Substance)"
+    ],
+    "characteristic": [
+        {
+            "type": "CodeableConcept",
+            "valueString": "<string>",
+            "valueQuantity": "Quantity(SimpleQuantity)",
+            "valueBase64Binary": "<base64Binary>",
+            "valueAttachment": "Attachment",
+            "valueBoolean": "<boolean>"
+        }
+    ],
+    "instance": [
+        {
+            "quantity": "Quantity(SimpleQuantity)",
+            "identifier": [
+                "Identifier"
+            ],
+            "name": "<string>",
+            "lotNumber": "<string>",
+            "expiry": "<dateTime>",
+            "useBy": "<dateTime>",
+            "biologicalSourceEvent": "Identifier"
+        }
+    ],
+    "note": [
+        "Annotation"
+    ]
+}

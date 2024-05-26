@@ -1,0 +1,115 @@
+{
+    "resourceType": "ResearchStudy",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "name": "<string>",
+    "title": "<string>",
+    "label": [
+        {
+            "type": "CodeableConcept",
+            "value": "<string>"
+        }
+    ],
+    "protocol": [
+        "Reference(PlanDefinition)"
+    ],
+    "partOf": [
+        "Reference(ResearchStudy)"
+    ],
+    "relatedArtifact": [
+        "RelatedArtifact"
+    ],
+    "date": "<dateTime>",
+    "status": "<code>",
+    "primaryPurposeType": "CodeableConcept",
+    "phase": "CodeableConcept",
+    "studyDesign": [
+        "CodeableConcept"
+    ],
+    "focus": [
+        "CodeableReference(EvidenceVariable|Medication|MedicinalProductDefinition|SubstanceDefinition)"
+    ],
+    "condition": [
+        "CodeableConcept"
+    ],
+    "keyword": [
+        "CodeableConcept"
+    ],
+    "region": [
+        "CodeableConcept"
+    ],
+    "descriptionSummary": "<markdown>",
+    "description": "<markdown>",
+    "period": "Period",
+    "site": [
+        "Reference(Location|Organization|ResearchStudy)"
+    ],
+    "note": [
+        "Annotation"
+    ],
+    "classifier": [
+        "CodeableConcept"
+    ],
+    "associatedParty": [
+        {
+            "name": "<string>",
+            "role": "CodeableConcept",
+            "period": [
+                "Period"
+            ],
+            "classifier": [
+                "CodeableConcept"
+            ],
+            "party": "Reference(Organization|Practitioner|PractitionerRole)"
+        }
+    ],
+    "progressStatus": [
+        {
+            "state": "CodeableConcept",
+            "actual": "<boolean>",
+            "period": "Period"
+        }
+    ],
+    "whyStopped": "CodeableConcept",
+    "recruitment": {
+        "targetNumber": "<unsignedInt>",
+        "actualNumber": "<unsignedInt>",
+        "eligibility": "Reference(EvidenceVariable|Group)",
+        "actualGroup": "Reference(Group)"
+    },
+    "comparisonGroup": [
+        {
+            "linkId": "<id>",
+            "name": "<string>",
+            "type": "CodeableConcept",
+            "description": "<markdown>",
+            "intendedExposure": [
+                "Reference(EvidenceVariable)"
+            ],
+            "observedGroup": "Reference(Group)"
+        }
+    ],
+    "objective": [
+        {
+            "name": "<string>",
+            "type": "CodeableConcept",
+            "description": "<markdown>"
+        }
+    ],
+    "outcomeMeasure": [
+        {
+            "name": "<string>",
+            "type": [
+                "CodeableConcept"
+            ],
+            "description": "<markdown>",
+            "reference": "Reference(EvidenceVariable)"
+        }
+    ],
+    "result": [
+        "Reference(Citation|DiagnosticReport|EvidenceReport)"
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "resourceType": "QuestionnaireResponse",
+    "identifier": [
+        "Identifier"
+    ],
+    "basedOn": [
+        "Reference(CarePlan|ServiceRequest)"
+    ],
+    "partOf": [
+        "Reference(Observation|Procedure)"
+    ],
+    "questionnaire": "<canonical(Questionnaire)>",
+    "status": "<code>",
+    "subject": "Reference(Any)",
+    "encounter": "Reference(Encounter)",
+    "authored": "<dateTime>",
+    "author": "Reference(Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "source": "Reference(Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "item": [
+        {
+            "linkId": "<string>",
+            "definition": "<uri>",
+            "text": "<string>",
+            "answer": [
+                {
+                    "valueDecimal": "<decimal>",
+                    "valueInteger": "<integer>",
+                    "valueDate": "<date>",
+                    "valueDateTime": "<dateTime>",
+                    "valueTime": "<time>",
+                    "valueString": "<string>",
+                    "valueUri": "<uri>",
+                    "valueAttachment": "Attachment",
+                    "valueCoding": "Coding",
+                    "valueQuantity": "Quantity(SimpleQuantity)",
+                    "valueReference": "Reference(Any)",
+                    "item": [
+                        "ContentasforQuestionnaireResponse.item"
+                    ]
+                }
+            ],
+            "item": [
+                "ContentasforQuestionnaireResponse.item"
+            ]
+        }
+    ]
+}

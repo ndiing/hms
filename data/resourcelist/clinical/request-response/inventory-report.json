@@ -1,0 +1,30 @@
+{
+    "resourceType": "InventoryReport",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "countType": "<code>",
+    "operationType": "CodeableConcept",
+    "operationTypeReason": "CodeableConcept",
+    "reportedDateTime": "<dateTime>",
+    "reporter": "Reference(Device|Patient|Practitioner|RelatedPerson)",
+    "reportingPeriod": "Period",
+    "inventoryListing": [
+        {
+            "location": "Reference(Location)",
+            "itemStatus": "CodeableConcept",
+            "countingDateTime": "<dateTime>",
+            "item": [
+                {
+                    "category": "CodeableConcept",
+                    "quantity": "Quantity",
+                    "item": "CodeableReference(BiologicallyDerivedProduct|Device|InventoryItem|InventoryItem|Medication|Medication|NutritionProduct)"
+                }
+            ]
+        }
+    ],
+    "note": [
+        "Annotation"
+    ]
+}

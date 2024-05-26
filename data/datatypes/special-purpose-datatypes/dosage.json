@@ -1,0 +1,29 @@
+{
+    "sequence": "<integer>",
+    "text": "<string>",
+    "additionalInstruction": [
+        "CodeableConcept"
+    ],
+    "patientInstruction": "<string>",
+    "timing": "Timing",
+    "asNeeded": "<boolean>",
+    "asNeededFor": [
+        "CodeableConcept"
+    ],
+    "site": "CodeableConcept",
+    "route": "CodeableConcept",
+    "method": "CodeableConcept",
+    "doseAndRate": [
+        {
+            "type": "CodeableConcept",
+            "doseQuantity": "Quantity(SimpleQuantity)",
+            "rateRange": "Range",
+            "rateQuantity": "Quantity(SimpleQuantity)"
+        }
+    ],
+    "maxDosePerPeriod": [
+        "Ratio"
+    ],
+    "maxDosePerAdministration": "Quantity(SimpleQuantity)",
+    "maxDosePerLifetime": "Quantity(SimpleQuantity)"
+}

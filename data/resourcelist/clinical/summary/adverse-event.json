@@ -1,0 +1,71 @@
+{
+    "resourceType": "AdverseEvent",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "actuality": "<code>",
+    "category": [
+        "CodeableConcept"
+    ],
+    "code": "CodeableConcept",
+    "subject": "Reference(Group|Patient|Practitioner|RelatedPerson|ResearchSubject)",
+    "encounter": "Reference(Encounter)",
+    "occurrencePeriod": "Period",
+    "occurrenceTiming": "Timing",
+    "detected": "<dateTime>",
+    "recordedDate": "<dateTime>",
+    "resultingEffect": [
+        "Reference(Condition|Observation)"
+    ],
+    "location": "Reference(Location)",
+    "seriousness": "CodeableConcept",
+    "outcome": [
+        "CodeableConcept"
+    ],
+    "recorder": "Reference(Patient|Practitioner|PractitionerRole|RelatedPerson|ResearchSubject)",
+    "participant": [
+        {
+            "function": "CodeableConcept",
+            "actor": "Reference(CareTeam|Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson|ResearchSubject)"
+        }
+    ],
+    "study": [
+        "Reference(ResearchStudy)"
+    ],
+    "expectedInResearchStudy": "<boolean>",
+    "suspectEntity": [
+        {
+            "instanceReference": "Reference(BiologicallyDerivedProduct|Device|Immunization|Medication|MedicationAdministration|MedicationStatement|Procedure|ResearchStudy|Substance)",
+            "causality": {
+                "assessmentMethod": "CodeableConcept",
+                "entityRelatedness": "CodeableConcept",
+                "author": "Reference(Patient|Practitioner|PractitionerRole|RelatedPerson|ResearchSubject)"
+            }
+        }
+    ],
+    "contributingFactor": [
+        {
+            "itemCodeableConcept": "CodeableConcept"
+        }
+    ],
+    "preventiveAction": [
+        {
+            "itemCodeableConcept": "CodeableConcept"
+        }
+    ],
+    "mitigatingAction": [
+        {
+            "itemReference": "Reference(DocumentReference|MedicationAdministration|MedicationRequest|Procedure)",
+            "itemCodeableConcept": "CodeableConcept"
+        }
+    ],
+    "supportingInfo": [
+        {
+            "itemCodeableConcept": "CodeableConcept"
+        }
+    ],
+    "note": [
+        "Annotation"
+    ]
+}

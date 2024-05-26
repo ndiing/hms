@@ -1,0 +1,159 @@
+{
+    "resourceType": "ValueSet",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "immutable": "<boolean>",
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "approvalDate": "<date>",
+    "lastReviewDate": "<date>",
+    "effectivePeriod": "Period",
+    "topic": [
+        "CodeableConcept"
+    ],
+    "author": [
+        "ContactDetail"
+    ],
+    "editor": [
+        "ContactDetail"
+    ],
+    "reviewer": [
+        "ContactDetail"
+    ],
+    "endorser": [
+        "ContactDetail"
+    ],
+    "relatedArtifact": [
+        "RelatedArtifact"
+    ],
+    "compose": {
+        "lockedDate": "<date>",
+        "inactive": "<boolean>",
+        "include": [
+            {
+                "system": "<uri>",
+                "version": "<string>",
+                "concept": [
+                    {
+                        "code": "<code>",
+                        "display": "<string>",
+                        "designation": [
+                            {
+                                "language": "<code>",
+                                "use": "Coding",
+                                "additionalUse": [
+                                    "Coding"
+                                ],
+                                "value": "<string>"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "property": "<code>",
+                        "op": "<code>",
+                        "value": "<string>"
+                    }
+                ],
+                "valueSet": [
+                    "<canonical(ValueSet)>"
+                ],
+                "copyright": "<string>"
+            }
+        ],
+        "exclude": [
+            "ContentasforValueSet.compose.include"
+        ],
+        "property": [
+            "<string>"
+        ]
+    },
+    "expansion": {
+        "identifier": "<uri>",
+        "next": "<uri>",
+        "timestamp": "<dateTime>",
+        "total": "<integer>",
+        "offset": "<integer>",
+        "parameter": [
+            {
+                "name": "<string>",
+                "valueBoolean": "<boolean>",
+                "valueInteger": "<integer>",
+                "valueDecimal": "<decimal>",
+                "valueUri": "<uri>",
+                "valueCode": "<code>",
+                "valueDateTime": "<dateTime>"
+            }
+        ],
+        "property": [
+            {
+                "code": "<code>",
+                "uri": "<uri>"
+            }
+        ],
+        "contains": [
+            {
+                "system": "<uri>",
+                "abstract": "<boolean>",
+                "inactive": "<boolean>",
+                "version": "<string>",
+                "code": "<code>",
+                "display": "<string>",
+                "designation": [
+                    "ContentasforValueSet.compose.include.concept.designation"
+                ],
+                "property": [
+                    {
+                        "code": "<code>",
+                        "valueCoding": "Coding",
+                        "valueString": "<string>",
+                        "valueInteger": "<integer>",
+                        "valueBoolean": "<boolean>",
+                        "valueDateTime": "<dateTime>",
+                        "valueDecimal": "<decimal>",
+                        "subProperty": [
+                            {
+                                "code": "<code>",
+                                "valueCoding": "Coding",
+                                "valueString": "<string>",
+                                "valueInteger": "<integer>",
+                                "valueBoolean": "<boolean>",
+                                "valueDateTime": "<dateTime>",
+                                "valueDecimal": "<decimal>"
+                            }
+                        ]
+                    }
+                ],
+                "contains": [
+                    "ContentasforValueSet.expansion.contains"
+                ]
+            }
+        ]
+    },
+    "scope": {
+        "inclusionCriteria": "<string>",
+        "exclusionCriteria": "<string>"
+    }
+}

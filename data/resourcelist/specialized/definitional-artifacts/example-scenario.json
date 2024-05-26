@@ -1,0 +1,97 @@
+{
+    "resourceType": "ExampleScenario",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "actor": [
+        {
+            "key": "<string>",
+            "type": "<code>",
+            "title": "<string>",
+            "description": "<markdown>"
+        }
+    ],
+    "instance": [
+        {
+            "key": "<string>",
+            "structureType": "Coding",
+            "structureVersion": "<string>",
+            "structureProfileUri": "<uri>",
+            "title": "<string>",
+            "description": "<markdown>",
+            "content": "Reference",
+            "version": [
+                {
+                    "key": "<string>",
+                    "title": "<string>",
+                    "description": "<markdown>",
+                    "content": "Reference"
+                }
+            ],
+            "containedInstance": [
+                {
+                    "instanceReference": "<string>",
+                    "versionReference": "<string>"
+                }
+            ]
+        }
+    ],
+    "process": [
+        {
+            "title": "<string>",
+            "description": "<markdown>",
+            "preConditions": "<markdown>",
+            "postConditions": "<markdown>",
+            "step": [
+                {
+                    "number": "<string>",
+                    "process": "ContentasforExampleScenario.process",
+                    "workflow": "<canonical(ExampleScenario)>",
+                    "operation": {
+                        "type": "Coding",
+                        "title": "<string>",
+                        "initiator": "<string>",
+                        "receiver": "<string>",
+                        "description": "<markdown>",
+                        "initiatorActive": "<boolean>",
+                        "receiverActive": "<boolean>",
+                        "request": "ContentasforExampleScenario.instance.containedInstance",
+                        "response": "ContentasforExampleScenario.instance.containedInstance"
+                    },
+                    "alternative": [
+                        {
+                            "title": "<string>",
+                            "description": "<markdown>",
+                            "step": [
+                                "ContentasforExampleScenario.process.step"
+                            ]
+                        }
+                    ],
+                    "pause": "<boolean>"
+                }
+            ]
+        }
+    ]
+}

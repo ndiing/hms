@@ -1,0 +1,65 @@
+{
+    "resourceType": "DocumentReference",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "basedOn": [
+        "Reference(Appointment|AppointmentResponse|CarePlan|Claim|CommunicationRequest|Contract|CoverageEligibilityRequest|DeviceRequest|EnrollmentRequest|ImmunizationRecommendation|MedicationRequest|NutritionOrder|RequestOrchestration|ServiceRequest|SupplyRequest|VisionPrescription)"
+    ],
+    "status": "<code>",
+    "docStatus": "<code>",
+    "modality": [
+        "CodeableConcept"
+    ],
+    "type": "CodeableConcept",
+    "category": [
+        "CodeableConcept"
+    ],
+    "subject": "Reference(Any)",
+    "context": [
+        "Reference(Appointment|Encounter|EpisodeOfCare)"
+    ],
+    "event": [
+        "CodeableReference"
+    ],
+    "bodySite": [
+        "CodeableReference(BodyStructure)"
+    ],
+    "facilityType": "CodeableConcept",
+    "practiceSetting": "CodeableConcept",
+    "period": "Period",
+    "date": "<instant>",
+    "author": [
+        "Reference(CareTeam|Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+    ],
+    "attester": [
+        {
+            "mode": "CodeableConcept",
+            "time": "<dateTime>",
+            "party": "Reference(Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+        }
+    ],
+    "custodian": "Reference(Organization)",
+    "relatesTo": [
+        {
+            "code": "CodeableConcept",
+            "target": "Reference(DocumentReference)"
+        }
+    ],
+    "description": "<markdown>",
+    "securityLabel": [
+        "CodeableConcept"
+    ],
+    "content": [
+        {
+            "attachment": "Attachment",
+            "profile": [
+                {
+                    "valueUri": "<uri>",
+                    "valueCanonical": "<canonical>"
+                }
+            ]
+        }
+    ]
+}

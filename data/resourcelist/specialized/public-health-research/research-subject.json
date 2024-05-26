@@ -1,0 +1,25 @@
+{
+    "resourceType": "ResearchSubject",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "progress": [
+        {
+            "type": "CodeableConcept",
+            "subjectState": "CodeableConcept",
+            "milestone": "CodeableConcept",
+            "reason": "CodeableConcept",
+            "startDate": "<dateTime>",
+            "endDate": "<dateTime>"
+        }
+    ],
+    "period": "Period",
+    "study": "Reference(ResearchStudy)",
+    "subject": "Reference(BiologicallyDerivedProduct|Device|Group|Medication|Patient|Specimen|Substance)",
+    "assignedComparisonGroup": "<id>",
+    "actualComparisonGroup": "<id>",
+    "consent": [
+        "Reference(Consent)"
+    ]
+}

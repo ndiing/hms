@@ -1,0 +1,106 @@
+{
+    "resourceType": "EvidenceVariable",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "shortTitle": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "note": [
+        "Annotation"
+    ],
+    "useContext": [
+        "UsageContext"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "approvalDate": "<date>",
+    "lastReviewDate": "<date>",
+    "effectivePeriod": "Period",
+    "author": [
+        "ContactDetail"
+    ],
+    "editor": [
+        "ContactDetail"
+    ],
+    "reviewer": [
+        "ContactDetail"
+    ],
+    "endorser": [
+        "ContactDetail"
+    ],
+    "relatedArtifact": [
+        "RelatedArtifact"
+    ],
+    "actual": "<boolean>",
+    "characteristic": [
+        {
+            "linkId": "<id>",
+            "description": "<markdown>",
+            "note": [
+                "Annotation"
+            ],
+            "exclude": "<boolean>",
+            "definitionReference": "Reference(Evidence|EvidenceVariable|Group)",
+            "definitionCanonical": "<canonical(EvidenceVariable|Evidence)>",
+            "definitionCodeableConcept": "CodeableConcept",
+            "definitionExpression": "Expression",
+            "definitionId": "<id>",
+            "definitionByTypeAndValue": {
+                "type": "CodeableConcept",
+                "method": [
+                    "CodeableConcept"
+                ],
+                "device": "Reference(Device|DeviceMetric)",
+                "valueBoolean": "<boolean>",
+                "valueQuantity": "Quantity",
+                "valueRange": "Range",
+                "valueReference": "Reference",
+                "valueId": "<id>",
+                "offset": "CodeableConcept"
+            },
+            "definitionByCombination": {
+                "code": "<code>",
+                "threshold": "<positiveInt>",
+                "characteristic": [
+                    "ContentasforEvidenceVariable.characteristic"
+                ]
+            },
+            "instancesRange": "Range",
+            "durationRange": "Range",
+            "timeFromEvent": [
+                {
+                    "description": "<markdown>",
+                    "note": [
+                        "Annotation"
+                    ],
+                    "eventReference": "Reference",
+                    "eventDateTime": "<dateTime>",
+                    "eventId": "<id>",
+                    "quantity": "Quantity",
+                    "range": "Range"
+                }
+            ]
+        }
+    ],
+    "handling": "<code>",
+    "category": [
+        {
+            "name": "<string>",
+            "valueQuantity": "Quantity",
+            "valueRange": "Range"
+        }
+    ]
+}

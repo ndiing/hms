@@ -1,0 +1,32 @@
+{
+    "resourceType": "Group",
+    "identifier": [
+        "Identifier"
+    ],
+    "active": "<boolean>",
+    "type": "<code>",
+    "membership": "<code>",
+    "code": "CodeableConcept",
+    "name": "<string>",
+    "description": "<markdown>",
+    "quantity": "<unsignedInt>",
+    "managingEntity": "Reference(Organization|Practitioner|PractitionerRole|RelatedPerson)",
+    "characteristic": [
+        {
+            "code": "CodeableConcept",
+            "valueBoolean": "<boolean>",
+            "valueQuantity": "Quantity",
+            "valueRange": "Range",
+            "valueReference": "Reference",
+            "exclude": "<boolean>",
+            "period": "Period"
+        }
+    ],
+    "member": [
+        {
+            "entity": "Reference(CareTeam|Device|Group|HealthcareService|Location|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson|Specimen)",
+            "period": "Period",
+            "inactive": "<boolean>"
+        }
+    ]
+}

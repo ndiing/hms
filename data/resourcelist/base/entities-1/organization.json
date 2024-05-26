@@ -1,0 +1,32 @@
+{
+    "resourceType": "Organization",
+    "identifier": [
+        "Identifier"
+    ],
+    "active": "<boolean>",
+    "type": [
+        "CodeableConcept"
+    ],
+    "name": "<string>",
+    "alias": [
+        "<string>"
+    ],
+    "description": "<markdown>",
+    "contact": [
+        "ExtendedContactDetail"
+    ],
+    "partOf": "Reference(Organization)",
+    "endpoint": [
+        "Reference(Endpoint)"
+    ],
+    "qualification": [
+        {
+            "identifier": [
+                "Identifier"
+            ],
+            "code": "CodeableConcept",
+            "period": "Period",
+            "issuer": "Reference(Organization)"
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "resourceType": "AllergyIntolerance",
+    "identifier": [
+        "Identifier"
+    ],
+    "clinicalStatus": "CodeableConcept",
+    "verificationStatus": "CodeableConcept",
+    "type": "CodeableConcept",
+    "category": [
+        "<code>"
+    ],
+    "criticality": "<code>",
+    "code": "CodeableConcept",
+    "patient": "Reference(Patient)",
+    "encounter": "Reference(Encounter)",
+    "onsetAge": "Age",
+    "onsetPeriod": "Period",
+    "onsetRange": "Range",
+    "onsetString": "<string>",
+    "recordedDate": "<dateTime>",
+    "participant": [
+        {
+            "function": "CodeableConcept",
+            "actor": "Reference(CareTeam|Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+        }
+    ],
+    "lastOccurrence": "<dateTime>",
+    "note": [
+        "Annotation"
+    ],
+    "reaction": [
+        {
+            "substance": "CodeableConcept",
+            "manifestation": [
+                "CodeableReference(Observation)"
+            ],
+            "description": "<string>",
+            "onset": "<dateTime>",
+            "severity": "<code>",
+            "exposureRoute": "CodeableConcept",
+            "note": [
+                "Annotation"
+            ]
+        }
+    ]
+}

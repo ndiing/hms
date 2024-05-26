@@ -1,0 +1,7 @@
+{
+    "description": "<string>",
+    "name": "<code>",
+    "language": "<code>",
+    "expression": "<string>",
+    "reference": "<uri>"
+}

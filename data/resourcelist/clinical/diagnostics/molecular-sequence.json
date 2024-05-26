@@ -1,0 +1,43 @@
+{
+    "resourceType": "MolecularSequence",
+    "identifier": [
+        "Identifier"
+    ],
+    "type": "<code>",
+    "subject": "Reference(BiologicallyDerivedProduct|Group|NutritionProduct|Patient|Substance)",
+    "focus": [
+        "Reference(Any)"
+    ],
+    "specimen": "Reference(Specimen)",
+    "device": "Reference(Device)",
+    "performer": "Reference(Organization)",
+    "literal": "<string>",
+    "formatted": [
+        "Attachment"
+    ],
+    "relative": [
+        {
+            "coordinateSystem": "CodeableConcept",
+            "ordinalPosition": "<integer>",
+            "sequenceRange": "Range",
+            "startingSequence": {
+                "genomeAssembly": "CodeableConcept",
+                "chromosome": "CodeableConcept",
+                "sequenceString": "<string>",
+                "sequenceReference": "Reference(MolecularSequence)",
+                "windowStart": "<integer>",
+                "windowEnd": "<integer>",
+                "orientation": "<code>",
+                "strand": "<code>"
+            },
+            "edit": [
+                {
+                    "start": "<integer>",
+                    "end": "<integer>",
+                    "replacementSequence": "<string>",
+                    "replacedSequence": "<string>"
+                }
+            ]
+        }
+    ]
+}

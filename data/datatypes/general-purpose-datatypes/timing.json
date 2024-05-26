@@ -1,0 +1,30 @@
+{
+    "event": [
+        "<dateTime>"
+    ],
+    "repeat": {
+        "boundsRange": "Range",
+        "boundsPeriod": "Period",
+        "count": "<positiveInt>",
+        "countMax": "<positiveInt>",
+        "duration": "<decimal>",
+        "durationMax": "<decimal>",
+        "durationUnit": "<code>",
+        "frequency": "<positiveInt>",
+        "frequencyMax": "<positiveInt>",
+        "period": "<decimal>",
+        "periodMax": "<decimal>",
+        "periodUnit": "<code>",
+        "dayOfWeek": [
+            "<code>"
+        ],
+        "timeOfDay": [
+            "<time>"
+        ],
+        "when": [
+            "<code>"
+        ],
+        "offset": "<unsignedInt>"
+    },
+    "code": "CodeableConcept"
+}

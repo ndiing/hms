@@ -1,0 +1,91 @@
+{
+    "resourceType": "InsurancePlan",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "type": [
+        "CodeableConcept"
+    ],
+    "name": "<string>",
+    "alias": [
+        "<string>"
+    ],
+    "period": "Period",
+    "ownedBy": "Reference(Organization)",
+    "administeredBy": "Reference(Organization)",
+    "coverageArea": [
+        "Reference(Location)"
+    ],
+    "contact": [
+        "ExtendedContactDetail"
+    ],
+    "endpoint": [
+        "Reference(Endpoint)"
+    ],
+    "network": [
+        "Reference(Organization)"
+    ],
+    "coverage": [
+        {
+            "type": "CodeableConcept",
+            "network": [
+                "Reference(Organization)"
+            ],
+            "benefit": [
+                {
+                    "type": "CodeableConcept",
+                    "requirement": "<string>",
+                    "limit": [
+                        {
+                            "value": "Quantity",
+                            "code": "CodeableConcept"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "plan": [
+        {
+            "identifier": [
+                "Identifier"
+            ],
+            "type": "CodeableConcept",
+            "coverageArea": [
+                "Reference(Location)"
+            ],
+            "network": [
+                "Reference(Organization)"
+            ],
+            "generalCost": [
+                {
+                    "type": "CodeableConcept",
+                    "groupSize": "<positiveInt>",
+                    "cost": "Money",
+                    "comment": "<string>"
+                }
+            ],
+            "specificCost": [
+                {
+                    "category": "CodeableConcept",
+                    "benefit": [
+                        {
+                            "type": "CodeableConcept",
+                            "cost": [
+                                {
+                                    "type": "CodeableConcept",
+                                    "applicability": "CodeableConcept",
+                                    "qualifiers": [
+                                        "CodeableConcept"
+                                    ],
+                                    "value": "Quantity"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

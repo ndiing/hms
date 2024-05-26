@@ -1,0 +1,54 @@
+{
+    "resourceType": "AdministrableProductDefinition",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "formOf": [
+        "Reference(MedicinalProductDefinition)"
+    ],
+    "administrableDoseForm": "CodeableConcept",
+    "unitOfPresentation": "CodeableConcept",
+    "producedFrom": [
+        "Reference(ManufacturedItemDefinition)"
+    ],
+    "ingredient": [
+        "CodeableConcept"
+    ],
+    "device": "Reference(DeviceDefinition)",
+    "description": "<markdown>",
+    "property": [
+        {
+            "type": "CodeableConcept",
+            "valueQuantity": "Quantity",
+            "valueDate": "<date>",
+            "valueBoolean": "<boolean>",
+            "valueMarkdown": "<markdown>",
+            "valueAttachment": "Attachment",
+            "valueReference": "Reference(Binary)",
+            "status": "CodeableConcept"
+        }
+    ],
+    "routeOfAdministration": [
+        {
+            "code": "CodeableConcept",
+            "firstDose": "Quantity",
+            "maxSingleDose": "Quantity",
+            "maxDosePerDay": "Quantity",
+            "maxDosePerTreatmentPeriod": "Ratio",
+            "maxTreatmentPeriod": "Duration",
+            "targetSpecies": [
+                {
+                    "code": "CodeableConcept",
+                    "withdrawalPeriod": [
+                        {
+                            "tissue": "CodeableConcept",
+                            "value": "Quantity",
+                            "supportingInformation": "<string>"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,103 @@
+{
+    "resourceType": "Questionnaire",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "derivedFrom": [
+        "<canonical(Questionnaire)>"
+    ],
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "subjectType": [
+        "<code>"
+    ],
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "approvalDate": "<date>",
+    "lastReviewDate": "<date>",
+    "effectivePeriod": "Period",
+    "code": [
+        "Coding"
+    ],
+    "item": [
+        {
+            "linkId": "<string>",
+            "definition": "<uri>",
+            "code": [
+                "Coding"
+            ],
+            "prefix": "<string>",
+            "text": "<string>",
+            "type": "<code>",
+            "enableWhen": [
+                {
+                    "question": "<string>",
+                    "operator": "<code>",
+                    "answerDecimal": "<decimal>",
+                    "answerInteger": "<integer>",
+                    "answerDate": "<date>",
+                    "answerDateTime": "<dateTime>",
+                    "answerTime": "<time>",
+                    "answerString": "<string>",
+                    "answerCoding": "Coding",
+                    "answerQuantity": "Quantity",
+                    "answerReference": "Reference(Any)"
+                }
+            ],
+            "enableBehavior": "<code>",
+            "disabledDisplay": "<code>",
+            "required": "<boolean>",
+            "repeats": "<boolean>",
+            "readOnly": "<boolean>",
+            "maxLength": "<integer>",
+            "answerConstraint": "<code>",
+            "answerValueSet": "<canonical(ValueSet)>",
+            "answerOption": [
+                {
+                    "valueDate": "<date>",
+                    "valueTime": "<time>",
+                    "valueString": "<string>",
+                    "valueCoding": "Coding",
+                    "valueReference": "Reference(Any)",
+                    "initialSelected": "<boolean>"
+                }
+            ],
+            "initial": [
+                {
+                    "valueDecimal": "<decimal>",
+                    "valueInteger": "<integer>",
+                    "valueDate": "<date>",
+                    "valueDateTime": "<dateTime>",
+                    "valueTime": "<time>",
+                    "valueString": "<string>",
+                    "valueUri": "<uri>",
+                    "valueAttachment": "Attachment",
+                    "valueCoding": "Coding",
+                    "valueQuantity": "Quantity",
+                    "valueReference": "Reference(Any)"
+                }
+            ],
+            "item": [
+                "ContentasforQuestionnaire.item"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "resourceType": "Medication",
+    "identifier": [
+        "Identifier"
+    ],
+    "code": "CodeableConcept",
+    "status": "<code>",
+    "marketingAuthorizationHolder": "Reference(Organization)",
+    "doseForm": "CodeableConcept",
+    "totalVolume": "Quantity",
+    "ingredient": [
+        {
+            "item": "CodeableReference(Medication|Substance)",
+            "isActive": "<boolean>",
+            "strengthCodeableConcept": "CodeableConcept",
+            "strengthQuantity": "Quantity"
+        }
+    ],
+    "batch": {
+        "lotNumber": "<string>",
+        "expirationDate": "<dateTime>"
+    },
+    "definition": "Reference(MedicationKnowledge)"
+}

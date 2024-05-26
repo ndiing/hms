@@ -1,0 +1,48 @@
+{
+    "resourceType": "Condition",
+    "identifier": [
+        "Identifier"
+    ],
+    "clinicalStatus": "CodeableConcept",
+    "verificationStatus": "CodeableConcept",
+    "category": [
+        "CodeableConcept"
+    ],
+    "severity": "CodeableConcept",
+    "code": "CodeableConcept",
+    "bodySite": [
+        "CodeableConcept"
+    ],
+    "subject": "Reference(Group|Patient)",
+    "encounter": "Reference(Encounter)",
+    "onsetAge": "Age",
+    "onsetPeriod": "Period",
+    "onsetRange": "Range",
+    "onsetString": "<string>",
+    "abatementAge": "Age",
+    "abatementPeriod": "Period",
+    "abatementRange": "Range",
+    "abatementString": "<string>",
+    "recordedDate": "<dateTime>",
+    "participant": [
+        {
+            "function": "CodeableConcept",
+            "actor": "Reference(CareTeam|Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+        }
+    ],
+    "stage": [
+        {
+            "summary": "CodeableConcept",
+            "assessment": [
+                "Reference(ClinicalImpression|DiagnosticReport|Observation)"
+            ],
+            "type": "CodeableConcept"
+        }
+    ],
+    "evidence": [
+        "CodeableReference(Any)"
+    ],
+    "note": [
+        "Annotation"
+    ]
+}

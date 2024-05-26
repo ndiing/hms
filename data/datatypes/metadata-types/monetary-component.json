@@ -1,0 +1,6 @@
+{
+    "type": "<code>",
+    "code": "CodeableConcept",
+    "factor": "<decimal>",
+    "amount": "Money"
+}

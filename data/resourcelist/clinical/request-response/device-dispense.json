@@ -1,0 +1,43 @@
+{
+    "resourceType": "DeviceDispense",
+    "identifier": [
+        "Identifier"
+    ],
+    "basedOn": [
+        "Reference(CarePlan|DeviceRequest)"
+    ],
+    "partOf": [
+        "Reference(Procedure)"
+    ],
+    "status": "<code>",
+    "statusReason": "CodeableReference(DetectedIssue)",
+    "category": [
+        "CodeableConcept"
+    ],
+    "device": "CodeableReference(Device|DeviceDefinition)",
+    "subject": "Reference(Patient|Practitioner)",
+    "receiver": "Reference(Location|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "encounter": "Reference(Encounter)",
+    "supportingInformation": [
+        "Reference(Any)"
+    ],
+    "performer": [
+        {
+            "function": "CodeableConcept",
+            "actor": "Reference(CareTeam|Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+        }
+    ],
+    "location": "Reference(Location)",
+    "type": "CodeableConcept",
+    "quantity": "Quantity(SimpleQuantity)",
+    "preparedDate": "<dateTime>",
+    "whenHandedOver": "<dateTime>",
+    "destination": "Reference(Location)",
+    "note": [
+        "Annotation"
+    ],
+    "usageInstruction": "<markdown>",
+    "eventHistory": [
+        "Reference(Provenance)"
+    ]
+}

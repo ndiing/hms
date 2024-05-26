@@ -1,0 +1,89 @@
+{
+    "resourceType": "Device",
+    "identifier": [
+        "Identifier"
+    ],
+    "displayName": "<string>",
+    "definition": "CodeableReference(DeviceDefinition)",
+    "udiCarrier": [
+        {
+            "deviceIdentifier": "<string>",
+            "issuer": "<uri>",
+            "jurisdiction": "<uri>",
+            "carrierAIDC": "<base64Binary>",
+            "carrierHRF": "<string>",
+            "entryType": "<code>"
+        }
+    ],
+    "status": "<code>",
+    "availabilityStatus": "CodeableConcept",
+    "biologicalSourceEvent": "Identifier",
+    "manufacturer": "<string>",
+    "manufactureDate": "<dateTime>",
+    "expirationDate": "<dateTime>",
+    "lotNumber": "<string>",
+    "serialNumber": "<string>",
+    "name": [
+        {
+            "value": "<string>",
+            "type": "<code>",
+            "display": "<boolean>"
+        }
+    ],
+    "modelNumber": "<string>",
+    "partNumber": "<string>",
+    "category": [
+        "CodeableConcept"
+    ],
+    "type": [
+        "CodeableConcept"
+    ],
+    "version": [
+        {
+            "type": "CodeableConcept",
+            "component": "Identifier",
+            "installDate": "<dateTime>",
+            "value": "<string>"
+        }
+    ],
+    "conformsTo": [
+        {
+            "category": "CodeableConcept",
+            "specification": "CodeableConcept",
+            "version": "<string>"
+        }
+    ],
+    "property": [
+        {
+            "type": "CodeableConcept",
+            "valueCodeableConcept": "CodeableConcept",
+            "valueString": "<string>",
+            "valueBoolean": "<boolean>",
+            "valueInteger": "<integer>",
+            "valueRange": "Range",
+            "valueAttachment": "Attachment"
+        }
+    ],
+    "mode": "CodeableConcept",
+    "cycle": "Count",
+    "duration": "Duration",
+    "owner": "Reference(Organization)",
+    "contact": [
+        "ContactPoint"
+    ],
+    "location": "Reference(Location)",
+    "url": "<uri>",
+    "endpoint": [
+        "Reference(Endpoint)"
+    ],
+    "gateway": [
+        "CodeableReference(Device)"
+    ],
+    "note": [
+        "Annotation"
+    ],
+    "safety": [
+        "CodeableConcept"
+    ],
+    "parent": "Reference(Device)"
+}

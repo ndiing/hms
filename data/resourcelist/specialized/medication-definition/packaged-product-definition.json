@@ -1,0 +1,74 @@
+{
+    "resourceType": "PackagedProductDefinition",
+    "identifier": [
+        "Identifier"
+    ],
+    "name": "<string>",
+    "type": "CodeableConcept",
+    "packageFor": [
+        "Reference(MedicinalProductDefinition)"
+    ],
+    "status": "CodeableConcept",
+    "statusDate": "<dateTime>",
+    "containedItemQuantity": [
+        "Quantity"
+    ],
+    "description": "<markdown>",
+    "legalStatusOfSupply": [
+        {
+            "code": "CodeableConcept",
+            "jurisdiction": "CodeableConcept"
+        }
+    ],
+    "marketingStatus": [
+        "MarketingStatus"
+    ],
+    "copackagedIndicator": "<boolean>",
+    "manufacturer": [
+        "Reference(Organization)"
+    ],
+    "attachedDocument": [
+        "Reference(DocumentReference)"
+    ],
+    "packaging": {
+        "identifier": [
+            "Identifier"
+        ],
+        "type": "CodeableConcept",
+        "componentPart": "<boolean>",
+        "quantity": "<integer>",
+        "material": [
+            "CodeableConcept"
+        ],
+        "alternateMaterial": [
+            "CodeableConcept"
+        ],
+        "shelfLifeStorage": [
+            "ProductShelfLife"
+        ],
+        "manufacturer": [
+            "Reference(Organization)"
+        ],
+        "property": [
+            {
+                "type": "CodeableConcept",
+                "valueQuantity": "Quantity",
+                "valueDate": "<date>",
+                "valueBoolean": "<boolean>",
+                "valueAttachment": "Attachment"
+            }
+        ],
+        "containedItem": [
+            {
+                "item": "CodeableReference(BiologicallyDerivedProduct|DeviceDefinition|ManufacturedItemDefinition|NutritionProduct|PackagedProductDefinition)",
+                "amount": "Quantity"
+            }
+        ],
+        "packaging": [
+            "ContentasforPackagedProductDefinition.packaging"
+        ]
+    },
+    "characteristic": [
+        "ContentasforPackagedProductDefinition.packaging.property"
+    ]
+}

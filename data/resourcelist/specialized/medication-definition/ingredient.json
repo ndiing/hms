@@ -1,0 +1,52 @@
+{
+    "resourceType": "Ingredient",
+    "identifier": "Identifier",
+    "status": "<code>",
+    "for": [
+        "Reference(AdministrableProductDefinition|ManufacturedItemDefinition|MedicinalProductDefinition)"
+    ],
+    "role": "CodeableConcept",
+    "function": [
+        "CodeableConcept"
+    ],
+    "group": "CodeableConcept",
+    "allergenicIndicator": "<boolean>",
+    "comment": "<markdown>",
+    "manufacturer": [
+        {
+            "role": "<code>",
+            "manufacturer": "Reference(Organization)"
+        }
+    ],
+    "substance": {
+        "code": "CodeableReference(SubstanceDefinition)",
+        "strength": [
+            {
+                "presentationRatioRange": "RatioRange",
+                "presentationCodeableConcept": "CodeableConcept",
+                "presentationQuantity": "Quantity",
+                "textPresentation": "<string>",
+                "concentrationRatioRange": "RatioRange",
+                "concentrationCodeableConcept": "CodeableConcept",
+                "concentrationQuantity": "Quantity",
+                "textConcentration": "<string>",
+                "basis": "CodeableConcept",
+                "measurementPoint": "<string>",
+                "country": [
+                    "CodeableConcept"
+                ],
+                "referenceStrength": [
+                    {
+                        "substance": "CodeableReference(SubstanceDefinition)",
+                        "strengthRatioRange": "RatioRange",
+                        "strengthQuantity": "Quantity",
+                        "measurementPoint": "<string>",
+                        "country": [
+                            "CodeableConcept"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

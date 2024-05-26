@@ -1,0 +1,20 @@
+{
+    "resourceType": "ImmunizationEvaluation",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "patient": "Reference(Patient)",
+    "date": "<dateTime>",
+    "authority": "Reference(Organization)",
+    "targetDisease": "CodeableConcept",
+    "immunizationEvent": "Reference(Immunization)",
+    "doseStatus": "CodeableConcept",
+    "doseStatusReason": [
+        "CodeableConcept"
+    ],
+    "description": "<markdown>",
+    "series": "<string>",
+    "doseNumber": "<string>",
+    "seriesDoses": "<string>"
+}

@@ -1,0 +1,15 @@
+{
+    "resourceType": "Flag",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "category": [
+        "CodeableConcept"
+    ],
+    "code": "CodeableConcept",
+    "subject": "Reference(Group|Location|Medication|Organization|Patient|PlanDefinition|Practitioner|PractitionerRole|Procedure|RelatedPerson)",
+    "period": "Period",
+    "encounter": "Reference(Encounter)",
+    "author": "Reference(Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+}

@@ -1,0 +1,19 @@
+{
+    "resourceType": "AppointmentResponse",
+    "identifier": [
+        "Identifier"
+    ],
+    "appointment": "Reference(Appointment)",
+    "proposedNewTime": "<boolean>",
+    "start": "<instant>",
+    "end": "<instant>",
+    "participantType": [
+        "CodeableConcept"
+    ],
+    "actor": "Reference(Device|Group|HealthcareService|Location|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "participantStatus": "<code>",
+    "comment": "<markdown>",
+    "recurring": "<boolean>",
+    "occurrenceDate": "<date>",
+    "recurrenceId": "<positiveInt>"
+}

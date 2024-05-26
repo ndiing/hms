@@ -1,0 +1,11 @@
+{
+    "resourceType": "Linkage",
+    "active": "<boolean>",
+    "author": "Reference(Organization|Practitioner|PractitionerRole)",
+    "item": [
+        {
+            "type": "<code>",
+            "resource": "Reference(Any)"
+        }
+    ]
+}

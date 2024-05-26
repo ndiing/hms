@@ -1,0 +1,13 @@
+{
+    "resourceType": "EnrollmentResponse",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "request": "Reference(EnrollmentRequest)",
+    "outcome": "<code>",
+    "disposition": "<string>",
+    "created": "<dateTime>",
+    "organization": "Reference(Organization)",
+    "requestProvider": "Reference(Organization|Practitioner|PractitionerRole)"
+}

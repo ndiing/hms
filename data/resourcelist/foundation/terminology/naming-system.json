@@ -1,0 +1,63 @@
+{
+    "resourceType": "NamingSystem",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "status": "<code>",
+    "kind": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "responsible": "<string>",
+    "type": "CodeableConcept",
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "approvalDate": "<date>",
+    "lastReviewDate": "<date>",
+    "effectivePeriod": "Period",
+    "topic": [
+        "CodeableConcept"
+    ],
+    "author": [
+        "ContactDetail"
+    ],
+    "editor": [
+        "ContactDetail"
+    ],
+    "reviewer": [
+        "ContactDetail"
+    ],
+    "endorser": [
+        "ContactDetail"
+    ],
+    "relatedArtifact": [
+        "RelatedArtifact"
+    ],
+    "usage": "<string>",
+    "uniqueId": [
+        {
+            "type": "<code>",
+            "value": "<string>",
+            "preferred": "<boolean>",
+            "comment": "<string>",
+            "period": "Period",
+            "authoritative": "<boolean>"
+        }
+    ]
+}

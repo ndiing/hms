@@ -1,0 +1,69 @@
+{
+    "resourceType": "InventoryItem",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "category": [
+        "CodeableConcept"
+    ],
+    "code": [
+        "CodeableConcept"
+    ],
+    "name": [
+        {
+            "nameType": "Coding",
+            "language": "<code>",
+            "name": "<string>"
+        }
+    ],
+    "responsibleOrganization": [
+        {
+            "role": "CodeableConcept",
+            "organization": "Reference(Organization)"
+        }
+    ],
+    "description": {
+        "language": "<code>",
+        "description": "<string>"
+    },
+    "inventoryStatus": [
+        "CodeableConcept"
+    ],
+    "baseUnit": "CodeableConcept",
+    "netContent": "Quantity(SimpleQuantity)",
+    "association": [
+        {
+            "associationType": "CodeableConcept",
+            "relatedItem": "Reference(BiologicallyDerivedProduct|Device|DeviceDefinition|InventoryItem|Medication|MedicationKnowledge|NutritionProduct)",
+            "quantity": "Ratio"
+        }
+    ],
+    "characteristic": [
+        {
+            "characteristicType": "CodeableConcept",
+            "valueInteger": "<integer>",
+            "valueDecimal": "<decimal>",
+            "valueBoolean": "<boolean>",
+            "valueUrl": "<url>",
+            "valueDateTime": "<dateTime>",
+            "valueQuantity": "Quantity",
+            "valueRange": "Range",
+            "valueRatio": "Ratio",
+            "valueAnnotation": "Annotation",
+            "valueAddress": "Address",
+            "valueDuration": "Duration",
+            "valueCodeableConcept": "CodeableConcept"
+        }
+    ],
+    "instance": {
+        "identifier": [
+            "Identifier"
+        ],
+        "lotNumber": "<string>",
+        "expiry": "<dateTime>",
+        "subject": "Reference(Organization|Patient)",
+        "location": "Reference(Location)"
+    },
+    "productReference": "Reference(BiologicallyDerivedProduct|Device|Medication|NutritionProduct)"
+}

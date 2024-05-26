@@ -1,0 +1,56 @@
+{
+    "resourceType": "PaymentReconciliation",
+    "identifier": [
+        "Identifier"
+    ],
+    "type": "CodeableConcept",
+    "status": "<code>",
+    "kind": "CodeableConcept",
+    "period": "Period",
+    "created": "<dateTime>",
+    "enterer": "Reference(Organization|Practitioner|PractitionerRole)",
+    "issuerType": "CodeableConcept",
+    "paymentIssuer": "Reference(Organization|Patient|RelatedPerson)",
+    "request": "Reference(Task)",
+    "requestor": "Reference(Organization|Practitioner|PractitionerRole)",
+    "outcome": "<code>",
+    "disposition": "<string>",
+    "date": "<date>",
+    "location": "Reference(Location)",
+    "method": "CodeableConcept",
+    "cardBrand": "<string>",
+    "accountNumber": "<string>",
+    "expirationDate": "<date>",
+    "processor": "<string>",
+    "referenceNumber": "<string>",
+    "authorization": "<string>",
+    "tenderedAmount": "Money",
+    "returnedAmount": "Money",
+    "amount": "Money",
+    "paymentIdentifier": "Identifier",
+    "allocation": [
+        {
+            "identifier": "Identifier",
+            "predecessor": "Identifier",
+            "target": "Reference(Account|ChargeItem|Claim|Contract|Encounter|Invoice)",
+            "targetItemIdentifier": "Identifier",
+            "targetItemPositiveInt": "<positiveInt>",
+            "encounter": "Reference(Encounter)",
+            "account": "Reference(Account)",
+            "type": "CodeableConcept",
+            "submitter": "Reference(Organization|Practitioner|PractitionerRole)",
+            "response": "Reference(ClaimResponse)",
+            "date": "<date>",
+            "responsible": "Reference(PractitionerRole)",
+            "payee": "Reference(Organization|Practitioner|PractitionerRole)",
+            "amount": "Money"
+        }
+    ],
+    "formCode": "CodeableConcept",
+    "processNote": [
+        {
+            "type": "<code>",
+            "text": "<string>"
+        }
+    ]
+}

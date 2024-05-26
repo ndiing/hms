@@ -1,0 +1,37 @@
+{
+    "resourceType": "VisionPrescription",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "created": "<dateTime>",
+    "patient": "Reference(Patient)",
+    "encounter": "Reference(Encounter)",
+    "dateWritten": "<dateTime>",
+    "prescriber": "Reference(Practitioner|PractitionerRole)",
+    "lensSpecification": [
+        {
+            "product": "CodeableConcept",
+            "eye": "<code>",
+            "sphere": "<decimal>",
+            "cylinder": "<decimal>",
+            "axis": "<integer>",
+            "prism": [
+                {
+                    "amount": "<decimal>",
+                    "base": "<code>"
+                }
+            ],
+            "add": "<decimal>",
+            "power": "<decimal>",
+            "backCurve": "<decimal>",
+            "diameter": "<decimal>",
+            "duration": "Quantity(SimpleQuantity)",
+            "color": "<string>",
+            "brand": "<string>",
+            "note": [
+                "Annotation"
+            ]
+        }
+    ]
+}

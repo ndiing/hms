@@ -1,0 +1,61 @@
+{
+    "resourceType": "Specimen",
+    "identifier": [
+        "Identifier"
+    ],
+    "accessionIdentifier": "Identifier",
+    "status": "<code>",
+    "type": "CodeableConcept",
+    "subject": "Reference(BiologicallyDerivedProduct|Device|Group|Location|Patient|Substance)",
+    "receivedTime": "<dateTime>",
+    "parent": [
+        "Reference(Specimen)"
+    ],
+    "request": [
+        "Reference(ServiceRequest)"
+    ],
+    "combined": "<code>",
+    "role": [
+        "CodeableConcept"
+    ],
+    "feature": [
+        {
+            "type": "CodeableConcept",
+            "description": "<string>"
+        }
+    ],
+    "collection": {
+        "collector": "Reference(Patient|Practitioner|PractitionerRole|RelatedPerson)",
+        "collectedPeriod": "Period",
+        "duration": "Duration",
+        "quantity": "Quantity(SimpleQuantity)",
+        "method": "CodeableConcept",
+        "device": "CodeableReference(Device)",
+        "procedure": "Reference(Procedure)",
+        "bodySite": "CodeableReference(BodyStructure)",
+        "fastingStatusDuration": "Duration"
+    },
+    "processing": [
+        {
+            "description": "<string>",
+            "method": "CodeableConcept",
+            "additive": [
+                "Reference(Substance)"
+            ],
+            "timePeriod": "Period"
+        }
+    ],
+    "container": [
+        {
+            "device": "Reference(Device)",
+            "location": "Reference(Location)",
+            "specimenQuantity": "Quantity(SimpleQuantity)"
+        }
+    ],
+    "condition": [
+        "CodeableConcept"
+    ],
+    "note": [
+        "Annotation"
+    ]
+}

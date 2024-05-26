@@ -1,0 +1,26 @@
+{
+    "resourceType": "DeviceAssociation",
+    "identifier": [
+        "Identifier"
+    ],
+    "device": "Reference(Device)",
+    "category": [
+        "CodeableConcept"
+    ],
+    "status": "CodeableConcept",
+    "statusReason": [
+        "CodeableConcept"
+    ],
+    "subject": "Reference(Device|Group|Patient|Practitioner|RelatedPerson)",
+    "bodyStructure": "Reference(BodyStructure)",
+    "period": "Period",
+    "operation": [
+        {
+            "status": "CodeableConcept",
+            "operator": [
+                "Reference(Patient|Practitioner|RelatedPerson)"
+            ],
+            "period": "Period"
+        }
+    ]
+}

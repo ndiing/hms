@@ -1,0 +1,68 @@
+{
+    "resourceType": "ImagingStudy",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "modality": [
+        "CodeableConcept"
+    ],
+    "subject": "Reference(Device|Group|Patient)",
+    "encounter": "Reference(Encounter)",
+    "started": "<dateTime>",
+    "basedOn": [
+        "Reference(Appointment|AppointmentResponse|CarePlan|ServiceRequest|Task)"
+    ],
+    "partOf": [
+        "Reference(Procedure)"
+    ],
+    "referrer": "Reference(Practitioner|PractitionerRole)",
+    "endpoint": [
+        "Reference(Endpoint)"
+    ],
+    "numberOfSeries": "<unsignedInt>",
+    "numberOfInstances": "<unsignedInt>",
+    "procedure": [
+        "CodeableReference(ActivityDefinition|PlanDefinition)"
+    ],
+    "location": "Reference(Location)",
+    "reason": [
+        "CodeableReference(Condition|DiagnosticReport|DocumentReference|Observation)"
+    ],
+    "note": [
+        "Annotation"
+    ],
+    "description": "<string>",
+    "series": [
+        {
+            "uid": "<id>",
+            "number": "<unsignedInt>",
+            "modality": "CodeableConcept",
+            "description": "<string>",
+            "numberOfInstances": "<unsignedInt>",
+            "endpoint": [
+                "Reference(Endpoint)"
+            ],
+            "bodySite": "CodeableReference(BodyStructure)",
+            "laterality": "CodeableConcept",
+            "specimen": [
+                "Reference(Specimen)"
+            ],
+            "started": "<dateTime>",
+            "performer": [
+                {
+                    "function": "CodeableConcept",
+                    "actor": "Reference(CareTeam|Device|HealthcareService|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+                }
+            ],
+            "instance": [
+                {
+                    "uid": "<id>",
+                    "sopClass": "Coding",
+                    "number": "<unsignedInt>",
+                    "title": "<string>"
+                }
+            ]
+        }
+    ]
+}

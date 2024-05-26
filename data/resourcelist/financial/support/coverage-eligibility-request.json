@@ -1,0 +1,62 @@
+{
+    "resourceType": "CoverageEligibilityRequest",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "priority": "CodeableConcept",
+    "purpose": [
+        "<code>"
+    ],
+    "patient": "Reference(Patient)",
+    "event": [
+        {
+            "type": "CodeableConcept",
+            "whenPeriod": "Period"
+        }
+    ],
+    "servicedPeriod": "Period",
+    "created": "<dateTime>",
+    "enterer": "Reference(Practitioner|PractitionerRole)",
+    "provider": "Reference(Organization|Practitioner|PractitionerRole)",
+    "insurer": "Reference(Organization)",
+    "facility": "Reference(Location)",
+    "supportingInfo": [
+        {
+            "sequence": "<positiveInt>",
+            "information": "Reference(Any)",
+            "appliesToAll": "<boolean>"
+        }
+    ],
+    "insurance": [
+        {
+            "focal": "<boolean>",
+            "coverage": "Reference(Coverage)",
+            "businessArrangement": "<string>"
+        }
+    ],
+    "item": [
+        {
+            "supportingInfoSequence": [
+                "<positiveInt>"
+            ],
+            "category": "CodeableConcept",
+            "productOrService": "CodeableConcept",
+            "modifier": [
+                "CodeableConcept"
+            ],
+            "provider": "Reference(Practitioner|PractitionerRole)",
+            "quantity": "Quantity(SimpleQuantity)",
+            "unitPrice": "Money",
+            "facility": "Reference(Location|Organization)",
+            "diagnosis": [
+                {
+                    "diagnosisReference": "Reference(Condition)"
+                }
+            ],
+            "detail": [
+                "Reference(Any)"
+            ]
+        }
+    ]
+}

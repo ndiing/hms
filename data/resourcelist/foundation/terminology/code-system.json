@@ -1,0 +1,106 @@
+{
+    "resourceType": "CodeSystem",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "approvalDate": "<date>",
+    "lastReviewDate": "<date>",
+    "effectivePeriod": "Period",
+    "topic": [
+        "CodeableConcept"
+    ],
+    "author": [
+        "ContactDetail"
+    ],
+    "editor": [
+        "ContactDetail"
+    ],
+    "reviewer": [
+        "ContactDetail"
+    ],
+    "endorser": [
+        "ContactDetail"
+    ],
+    "relatedArtifact": [
+        "RelatedArtifact"
+    ],
+    "caseSensitive": "<boolean>",
+    "valueSet": "<canonical(ValueSet)>",
+    "hierarchyMeaning": "<code>",
+    "compositional": "<boolean>",
+    "versionNeeded": "<boolean>",
+    "content": "<code>",
+    "supplements": "<canonical(CodeSystem)>",
+    "count": "<unsignedInt>",
+    "filter": [
+        {
+            "code": "<code>",
+            "description": "<string>",
+            "operator": [
+                "<code>"
+            ],
+            "value": "<string>"
+        }
+    ],
+    "property": [
+        {
+            "code": "<code>",
+            "uri": "<uri>",
+            "description": "<string>",
+            "type": "<code>"
+        }
+    ],
+    "concept": [
+        {
+            "code": "<code>",
+            "display": "<string>",
+            "definition": "<string>",
+            "designation": [
+                {
+                    "language": "<code>",
+                    "use": "Coding",
+                    "additionalUse": [
+                        "Coding"
+                    ],
+                    "value": "<string>"
+                }
+            ],
+            "property": [
+                {
+                    "code": "<code>",
+                    "valueCoding": "Coding",
+                    "valueString": "<string>",
+                    "valueInteger": "<integer>",
+                    "valueBoolean": "<boolean>",
+                    "valueDateTime": "<dateTime>",
+                    "valueDecimal": "<decimal>"
+                }
+            ],
+            "concept": [
+                "ContentasforCodeSystem.concept"
+            ]
+        }
+    ]
+}

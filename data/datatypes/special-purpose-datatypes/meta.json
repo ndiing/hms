@@ -1,0 +1,14 @@
+{
+    "versionId": "<id>",
+    "lastUpdated": "<instant>",
+    "source": "<uri>",
+    "profile": [
+        "<canonical(StructureDefinition)>"
+    ],
+    "security": [
+        "Coding"
+    ],
+    "tag": [
+        "Coding"
+    ]
+}

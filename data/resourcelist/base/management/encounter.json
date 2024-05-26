@@ -1,0 +1,97 @@
+{
+    "resourceType": "Encounter",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "class": [
+        "CodeableConcept"
+    ],
+    "priority": "CodeableConcept",
+    "type": [
+        "CodeableConcept"
+    ],
+    "serviceType": [
+        "CodeableReference(HealthcareService)"
+    ],
+    "subject": "Reference(Group|Patient)",
+    "subjectStatus": "CodeableConcept",
+    "episodeOfCare": [
+        "Reference(EpisodeOfCare)"
+    ],
+    "basedOn": [
+        "Reference(CarePlan|DeviceRequest|MedicationRequest|ServiceRequest)"
+    ],
+    "careTeam": [
+        "Reference(CareTeam)"
+    ],
+    "partOf": "Reference(Encounter)",
+    "serviceProvider": "Reference(Organization)",
+    "participant": [
+        {
+            "type": [
+                "CodeableConcept"
+            ],
+            "period": "Period",
+            "actor": "Reference(Device|Group|HealthcareService|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+        }
+    ],
+    "appointment": [
+        "Reference(Appointment)"
+    ],
+    "virtualService": [
+        "VirtualServiceDetail"
+    ],
+    "actualPeriod": "Period",
+    "plannedStartDate": "<dateTime>",
+    "plannedEndDate": "<dateTime>",
+    "length": "Duration",
+    "reason": [
+        {
+            "use": [
+                "CodeableConcept"
+            ],
+            "value": [
+                "CodeableReference(Condition|DiagnosticReport|ImmunizationRecommendation|Observation|Procedure)"
+            ]
+        }
+    ],
+    "diagnosis": [
+        {
+            "condition": [
+                "CodeableReference(Condition)"
+            ],
+            "use": [
+                "CodeableConcept"
+            ]
+        }
+    ],
+    "account": [
+        "Reference(Account)"
+    ],
+    "dietPreference": [
+        "CodeableConcept"
+    ],
+    "specialArrangement": [
+        "CodeableConcept"
+    ],
+    "specialCourtesy": [
+        "CodeableConcept"
+    ],
+    "admission": {
+        "preAdmissionIdentifier": "Identifier",
+        "origin": "Reference(Location|Organization)",
+        "admitSource": "CodeableConcept",
+        "reAdmission": "CodeableConcept",
+        "destination": "Reference(Location|Organization)",
+        "dischargeDisposition": "CodeableConcept"
+    },
+    "location": [
+        {
+            "location": "Reference(Location)",
+            "status": "<code>",
+            "form": "CodeableConcept",
+            "period": "Period"
+        }
+    ]
+}

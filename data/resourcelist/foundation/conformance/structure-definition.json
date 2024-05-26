@@ -1,0 +1,64 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "keyword": [
+        "Coding"
+    ],
+    "fhirVersion": "<code>",
+    "mapping": [
+        {
+            "identity": "<id>",
+            "uri": "<uri>",
+            "name": "<string>",
+            "comment": "<string>"
+        }
+    ],
+    "kind": "<code>",
+    "abstract": "<boolean>",
+    "context": [
+        {
+            "type": "<code>",
+            "expression": "<string>"
+        }
+    ],
+    "contextInvariant": [
+        "<string>"
+    ],
+    "type": "<uri>",
+    "baseDefinition": "<canonical(StructureDefinition)>",
+    "derivation": "<code>",
+    "snapshot": {
+        "element": [
+            "ElementDefinition"
+        ]
+    },
+    "differential": {
+        "element": [
+            "ElementDefinition"
+        ]
+    }
+}

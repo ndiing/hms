@@ -1,0 +1,60 @@
+{
+    "resourceType": "MedicationAdministration",
+    "identifier": [
+        "Identifier"
+    ],
+    "basedOn": [
+        "Reference(CarePlan)"
+    ],
+    "partOf": [
+        "Reference(MedicationAdministration|MedicationDispense|Procedure)"
+    ],
+    "status": "<code>",
+    "statusReason": [
+        "CodeableConcept"
+    ],
+    "category": [
+        "CodeableConcept"
+    ],
+    "medication": "CodeableReference(Medication)",
+    "subject": "Reference(Group|Patient)",
+    "encounter": "Reference(Encounter)",
+    "supportingInformation": [
+        "Reference(Any)"
+    ],
+    "occurenceDateTime": "<dateTime>",
+    "occurencePeriod": "Period",
+    "occurenceTiming": "Timing",
+    "recorded": "<dateTime>",
+    "isSubPotent": "<boolean>",
+    "subPotentReason": [
+        "CodeableConcept"
+    ],
+    "performer": [
+        {
+            "function": "CodeableConcept",
+            "actor": "CodeableReference(Device|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+        }
+    ],
+    "reason": [
+        "CodeableReference(Condition|DiagnosticReport|Observation)"
+    ],
+    "request": "Reference(MedicationRequest)",
+    "device": [
+        "CodeableReference(Device)"
+    ],
+    "note": [
+        "Annotation"
+    ],
+    "dosage": {
+        "text": "<string>",
+        "site": "CodeableConcept",
+        "route": "CodeableConcept",
+        "method": "CodeableConcept",
+        "dose": "Quantity(SimpleQuantity)",
+        "rateQuantity": "Quantity(SimpleQuantity)"
+    },
+    "eventHistory": [
+        "Reference(Provenance)"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "type": [
+        "Coding"
+    ],
+    "when": "<instant>",
+    "who": "Reference(Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "onBehalfOf": "Reference(Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "targetFormat": "<code>",
+    "sigFormat": "<code>",
+    "data": "<base64Binary>"
+}

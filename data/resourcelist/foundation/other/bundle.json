@@ -1,0 +1,43 @@
+{
+    "resourceType": "Bundle",
+    "identifier": "Identifier",
+    "type": "<code>",
+    "timestamp": "<instant>",
+    "total": "<unsignedInt>",
+    "link": [
+        {
+            "relation": "<code>",
+            "url": "<uri>"
+        }
+    ],
+    "entry": [
+        {
+            "link": [
+                "ContentasforBundle.link"
+            ],
+            "fullUrl": "<uri>",
+            "resource": "Resource",
+            "search": {
+                "mode": "<code>",
+                "score": "<decimal>"
+            },
+            "request": {
+                "method": "<code>",
+                "url": "<uri>",
+                "ifNoneMatch": "<string>",
+                "ifModifiedSince": "<instant>",
+                "ifMatch": "<string>",
+                "ifNoneExist": "<string>"
+            },
+            "response": {
+                "status": "<string>",
+                "location": "<uri>",
+                "etag": "<string>",
+                "lastModified": "<instant>",
+                "outcome": "Resource"
+            }
+        }
+    ],
+    "signature": "Signature",
+    "issues": "Resource"
+}

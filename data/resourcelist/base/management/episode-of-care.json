@@ -1,0 +1,45 @@
+{
+    "resourceType": "EpisodeOfCare",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "statusHistory": [
+        {
+            "status": "<code>",
+            "period": "Period"
+        }
+    ],
+    "type": [
+        "CodeableConcept"
+    ],
+    "reason": [
+        {
+            "use": "CodeableConcept",
+            "value": [
+                "CodeableReference(Condition|HealthcareService|Observation|Procedure)"
+            ]
+        }
+    ],
+    "diagnosis": [
+        {
+            "condition": [
+                "CodeableReference(Condition)"
+            ],
+            "use": "CodeableConcept"
+        }
+    ],
+    "patient": "Reference(Patient)",
+    "managingOrganization": "Reference(Organization)",
+    "period": "Period",
+    "referralRequest": [
+        "Reference(ServiceRequest)"
+    ],
+    "careManager": "Reference(Practitioner|PractitionerRole)",
+    "careTeam": [
+        "Reference(CareTeam)"
+    ],
+    "account": [
+        "Reference(Account)"
+    ]
+}

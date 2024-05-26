@@ -1,0 +1,82 @@
+{
+    "resourceType": "SpecimenDefinition",
+    "url": "<uri>",
+    "identifier": "Identifier",
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "derivedFromCanonical": [
+        "<canonical(SpecimenDefinition)>"
+    ],
+    "derivedFromUri": [
+        "<uri>"
+    ],
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "subjectReference": "Reference(Group)",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "approvalDate": "<date>",
+    "lastReviewDate": "<date>",
+    "effectivePeriod": "Period",
+    "typeCollected": "CodeableConcept",
+    "patientPreparation": [
+        "CodeableConcept"
+    ],
+    "timeAspect": "<string>",
+    "collection": [
+        "CodeableConcept"
+    ],
+    "typeTested": [
+        {
+            "isDerived": "<boolean>",
+            "type": "CodeableConcept",
+            "preference": "<code>",
+            "container": {
+                "material": "CodeableConcept",
+                "type": "CodeableConcept",
+                "cap": "CodeableConcept",
+                "description": "<markdown>",
+                "capacity": "Quantity(SimpleQuantity)",
+                "minimumVolumeString": "<string>",
+                "additive": [
+                    {
+                        "additiveReference": "Reference(SubstanceDefinition)"
+                    }
+                ],
+                "preparation": "<markdown>"
+            },
+            "requirement": "<markdown>",
+            "retentionTime": "Duration",
+            "singleUse": "<boolean>",
+            "rejectionCriterion": [
+                "CodeableConcept"
+            ],
+            "handling": [
+                {
+                    "temperatureQualifier": "CodeableConcept",
+                    "temperatureRange": "Range",
+                    "maxDuration": "Duration",
+                    "instruction": "<markdown>"
+                }
+            ],
+            "testingDestination": [
+                "CodeableConcept"
+            ]
+        }
+    ]
+}

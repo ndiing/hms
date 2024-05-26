@@ -1,0 +1,87 @@
+{
+    "resourceType": "TestPlan",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "category": [
+        "CodeableConcept"
+    ],
+    "scope": [
+        "Reference"
+    ],
+    "testTools": "<markdown>",
+    "dependency": [
+        {
+            "description": "<markdown>",
+            "predecessor": "Reference"
+        }
+    ],
+    "exitCriteria": "<markdown>",
+    "testCase": [
+        {
+            "sequence": "<integer>",
+            "scope": [
+                "Reference"
+            ],
+            "dependency": [
+                {
+                    "description": "<markdown>",
+                    "predecessor": "Reference"
+                }
+            ],
+            "testRun": [
+                {
+                    "narrative": "<markdown>",
+                    "script": {
+                        "language": "CodeableConcept",
+                        "sourceString": "<string>",
+                        "sourceReference": "Reference"
+                    }
+                }
+            ],
+            "testData": [
+                {
+                    "type": "Coding",
+                    "content": "Reference",
+                    "sourceString": "<string>",
+                    "sourceReference": "Reference"
+                }
+            ],
+            "assertion": [
+                {
+                    "type": [
+                        "CodeableConcept"
+                    ],
+                    "object": [
+                        "CodeableReference"
+                    ],
+                    "result": [
+                        "CodeableReference"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "code": "Coding",
+    "valueQuantity": "Quantity",
+    "valueRange": "Range",
+    "valueReference": "Reference(Group|HealthcareService|InsurancePlan|Location|Organization|PlanDefinition|ResearchStudy)"
+}

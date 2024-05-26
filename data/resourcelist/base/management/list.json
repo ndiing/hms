@@ -1,0 +1,29 @@
+{
+    "resourceType": "List",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "mode": "<code>",
+    "title": "<string>",
+    "code": "CodeableConcept",
+    "subject": [
+        "Reference(Any)"
+    ],
+    "encounter": "Reference(Encounter)",
+    "date": "<dateTime>",
+    "source": "Reference(CareTeam|Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "orderedBy": "CodeableConcept",
+    "note": [
+        "Annotation"
+    ],
+    "entry": [
+        {
+            "flag": "CodeableConcept",
+            "deleted": "<boolean>",
+            "date": "<dateTime>",
+            "item": "Reference(Any)"
+        }
+    ],
+    "emptyReason": "CodeableConcept"
+}

@@ -1,0 +1,57 @@
+{
+    "resourceType": "DeviceRequest",
+    "identifier": [
+        "Identifier"
+    ],
+    "instantiatesCanonical": [
+        "<canonical(ActivityDefinition|PlanDefinition)>"
+    ],
+    "instantiatesUri": [
+        "<uri>"
+    ],
+    "basedOn": [
+        "Reference(Any)"
+    ],
+    "replaces": [
+        "Reference(DeviceRequest)"
+    ],
+    "groupIdentifier": "Identifier",
+    "status": "<code>",
+    "intent": "<code>",
+    "priority": "<code>",
+    "doNotPerform": "<boolean>",
+    "code": "CodeableReference(Device|DeviceDefinition)",
+    "quantity": "<integer>",
+    "parameter": [
+        {
+            "code": "CodeableConcept",
+            "valueQuantity": "Quantity",
+            "valueRange": "Range",
+            "valueBoolean": "<boolean>"
+        }
+    ],
+    "subject": "Reference(Device|Group|Location|Patient)",
+    "encounter": "Reference(Encounter)",
+    "occurrencePeriod": "Period",
+    "occurrenceTiming": "Timing",
+    "authoredOn": "<dateTime>",
+    "requester": "Reference(Device|Organization|Practitioner|PractitionerRole)",
+    "performer": "CodeableReference(CareTeam|Device|HealthcareService|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "reason": [
+        "CodeableReference(Condition|DiagnosticReport|DocumentReference|Observation)"
+    ],
+    "asNeeded": "<boolean>",
+    "asNeededFor": "CodeableConcept",
+    "insurance": [
+        "Reference(ClaimResponse|Coverage)"
+    ],
+    "supportingInfo": [
+        "Reference(Any)"
+    ],
+    "note": [
+        "Annotation"
+    ],
+    "relevantHistory": [
+        "Reference(Provenance)"
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "resourceType": "DeviceUsage",
+    "identifier": [
+        "Identifier"
+    ],
+    "basedOn": [
+        "Reference(ServiceRequest)"
+    ],
+    "status": "<code>",
+    "category": [
+        "CodeableConcept"
+    ],
+    "patient": "Reference(Patient)",
+    "derivedFrom": [
+        "Reference(Claim|DocumentReference|Observation|Procedure|QuestionnaireResponse|ServiceRequest)"
+    ],
+    "context": "Reference(Encounter|EpisodeOfCare)",
+    "timingPeriod": "Period",
+    "timingDateTime": "<dateTime>",
+    "dateAsserted": "<dateTime>",
+    "usageStatus": "CodeableConcept",
+    "usageReason": [
+        "CodeableConcept"
+    ],
+    "adherence": {
+        "code": "CodeableConcept",
+        "reason": [
+            "CodeableConcept"
+        ]
+    },
+    "informationSource": "Reference(Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "device": "CodeableReference(Device|DeviceDefinition)",
+    "reason": [
+        "CodeableReference(Condition|DiagnosticReport|DocumentReference|Observation|Procedure)"
+    ],
+    "bodySite": "CodeableReference(BodyStructure)",
+    "note": [
+        "Annotation"
+    ]
+}

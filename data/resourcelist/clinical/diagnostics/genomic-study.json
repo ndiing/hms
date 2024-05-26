@@ -1,0 +1,88 @@
+{
+    "resourceType": "GenomicStudy",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "type": [
+        "CodeableConcept"
+    ],
+    "subject": "Reference(BiologicallyDerivedProduct|Group|NutritionProduct|Patient|Substance)",
+    "encounter": "Reference(Encounter)",
+    "startDate": "<dateTime>",
+    "basedOn": [
+        "Reference(ServiceRequest|Task)"
+    ],
+    "referrer": "Reference(Practitioner|PractitionerRole)",
+    "interpreter": [
+        "Reference(Practitioner|PractitionerRole)"
+    ],
+    "reason": [
+        "CodeableReference(Condition|Observation)"
+    ],
+    "instantiatesCanonical": "<canonical(PlanDefinition)>",
+    "instantiatesUri": "<uri>",
+    "note": [
+        "Annotation"
+    ],
+    "description": "<markdown>",
+    "analysis": [
+        {
+            "identifier": [
+                "Identifier"
+            ],
+            "methodType": [
+                "CodeableConcept"
+            ],
+            "changeType": [
+                "CodeableConcept"
+            ],
+            "genomeBuild": "CodeableConcept",
+            "instantiatesCanonical": "<canonical(PlanDefinition|ActivityDefinition)>",
+            "instantiatesUri": "<uri>",
+            "title": "<string>",
+            "focus": [
+                "Reference(Any)"
+            ],
+            "specimen": [
+                "Reference(Specimen)"
+            ],
+            "date": "<dateTime>",
+            "note": [
+                "Annotation"
+            ],
+            "protocolPerformed": "Reference(Procedure|Task)",
+            "regionsStudied": [
+                "Reference(DocumentReference|Observation)"
+            ],
+            "regionsCalled": [
+                "Reference(DocumentReference|Observation)"
+            ],
+            "input": [
+                {
+                    "file": "Reference(DocumentReference)",
+                    "type": "CodeableConcept",
+                    "generatedByReference": "Reference(GenomicStudy)"
+                }
+            ],
+            "output": [
+                {
+                    "file": "Reference(DocumentReference)",
+                    "type": "CodeableConcept"
+                }
+            ],
+            "performer": [
+                {
+                    "actor": "Reference(Device|Organization|Practitioner|PractitionerRole)",
+                    "role": "CodeableConcept"
+                }
+            ],
+            "device": [
+                {
+                    "device": "Reference(Device)",
+                    "function": "CodeableConcept"
+                }
+            ]
+        }
+    ]
+}

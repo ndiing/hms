@@ -1,0 +1,421 @@
+{
+    "resourceType": "ExplanationOfBenefit",
+    "identifier": [
+        "Identifier"
+    ],
+    "traceNumber": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "type": "CodeableConcept",
+    "subType": "CodeableConcept",
+    "use": "<code>",
+    "patient": "Reference(Patient)",
+    "billablePeriod": "Period",
+    "created": "<dateTime>",
+    "enterer": "Reference(Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "insurer": "Reference(Organization)",
+    "provider": "Reference(Organization|Practitioner|PractitionerRole)",
+    "priority": "CodeableConcept",
+    "fundsReserveRequested": "CodeableConcept",
+    "fundsReserve": "CodeableConcept",
+    "related": [
+        {
+            "claim": "Reference(Claim)",
+            "relationship": "CodeableConcept",
+            "reference": "Identifier"
+        }
+    ],
+    "prescription": "Reference(MedicationRequest|VisionPrescription)",
+    "originalPrescription": "Reference(MedicationRequest)",
+    "event": [
+        {
+            "type": "CodeableConcept",
+            "whenPeriod": "Period"
+        }
+    ],
+    "payee": {
+        "type": "CodeableConcept",
+        "party": "Reference(Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+    },
+    "referral": "Reference(ServiceRequest)",
+    "encounter": [
+        "Reference(Encounter)"
+    ],
+    "facility": "Reference(Location|Organization)",
+    "claim": "Reference(Claim)",
+    "claimResponse": "Reference(ClaimResponse)",
+    "outcome": "<code>",
+    "decision": "CodeableConcept",
+    "disposition": "<string>",
+    "preAuthRef": [
+        "<string>"
+    ],
+    "preAuthRefPeriod": [
+        "Period"
+    ],
+    "diagnosisRelatedGroup": "CodeableConcept",
+    "careTeam": [
+        {
+            "sequence": "<positiveInt>",
+            "provider": "Reference(Organization|Practitioner|PractitionerRole)",
+            "responsible": "<boolean>",
+            "role": "CodeableConcept",
+            "specialty": "CodeableConcept"
+        }
+    ],
+    "supportingInfo": [
+        {
+            "sequence": "<positiveInt>",
+            "category": "CodeableConcept",
+            "code": "CodeableConcept",
+            "timingPeriod": "Period",
+            "valueString": "<string>",
+            "valueQuantity": "Quantity",
+            "valueAttachment": "Attachment",
+            "valueReference": "Reference(Any)",
+            "valueIdentifier": "Identifier",
+            "reason": "Coding"
+        }
+    ],
+    "diagnosis": [
+        {
+            "sequence": "<positiveInt>",
+            "diagnosisReference": "Reference(Condition)",
+            "type": [
+                "CodeableConcept"
+            ],
+            "onAdmission": "CodeableConcept"
+        }
+    ],
+    "procedure": [
+        {
+            "sequence": "<positiveInt>",
+            "type": [
+                "CodeableConcept"
+            ],
+            "date": "<dateTime>",
+            "procedureReference": "Reference(Procedure)",
+            "udi": [
+                "Reference(Device)"
+            ]
+        }
+    ],
+    "precedence": "<positiveInt>",
+    "insurance": [
+        {
+            "focal": "<boolean>",
+            "coverage": "Reference(Coverage)",
+            "preAuthRef": [
+                "<string>"
+            ]
+        }
+    ],
+    "accident": {
+        "date": "<date>",
+        "type": "CodeableConcept",
+        "locationReference": "Reference(Location)"
+    },
+    "patientPaid": "Money",
+    "item": [
+        {
+            "sequence": "<positiveInt>",
+            "careTeamSequence": [
+                "<positiveInt>"
+            ],
+            "diagnosisSequence": [
+                "<positiveInt>"
+            ],
+            "procedureSequence": [
+                "<positiveInt>"
+            ],
+            "informationSequence": [
+                "<positiveInt>"
+            ],
+            "traceNumber": [
+                "Identifier"
+            ],
+            "revenue": "CodeableConcept",
+            "category": "CodeableConcept",
+            "productOrService": "CodeableConcept",
+            "productOrServiceEnd": "CodeableConcept",
+            "request": [
+                "Reference(DeviceRequest|MedicationRequest|NutritionOrder|ServiceRequest|SupplyRequest|VisionPrescription)"
+            ],
+            "modifier": [
+                "CodeableConcept"
+            ],
+            "programCode": [
+                "CodeableConcept"
+            ],
+            "servicedPeriod": "Period",
+            "locationAddress": "Address",
+            "locationReference": "Reference(Location)",
+            "patientPaid": "Money",
+            "quantity": "Quantity(SimpleQuantity)",
+            "unitPrice": "Money",
+            "factor": "<decimal>",
+            "tax": "Money",
+            "net": "Money",
+            "udi": [
+                "Reference(Device)"
+            ],
+            "bodySite": [
+                {
+                    "site": [
+                        "CodeableReference(BodyStructure)"
+                    ],
+                    "subSite": [
+                        "CodeableConcept"
+                    ]
+                }
+            ],
+            "encounter": [
+                "Reference(Encounter)"
+            ],
+            "noteNumber": [
+                "<positiveInt>"
+            ],
+            "reviewOutcome": {
+                "decision": "CodeableConcept",
+                "reason": [
+                    "CodeableConcept"
+                ],
+                "preAuthRef": "<string>",
+                "preAuthPeriod": "Period"
+            },
+            "adjudication": [
+                {
+                    "category": "CodeableConcept",
+                    "reason": "CodeableConcept",
+                    "amount": "Money",
+                    "quantity": "Quantity"
+                }
+            ],
+            "detail": [
+                {
+                    "sequence": "<positiveInt>",
+                    "traceNumber": [
+                        "Identifier"
+                    ],
+                    "revenue": "CodeableConcept",
+                    "category": "CodeableConcept",
+                    "productOrService": "CodeableConcept",
+                    "productOrServiceEnd": "CodeableConcept",
+                    "modifier": [
+                        "CodeableConcept"
+                    ],
+                    "programCode": [
+                        "CodeableConcept"
+                    ],
+                    "patientPaid": "Money",
+                    "quantity": "Quantity(SimpleQuantity)",
+                    "unitPrice": "Money",
+                    "factor": "<decimal>",
+                    "tax": "Money",
+                    "net": "Money",
+                    "udi": [
+                        "Reference(Device)"
+                    ],
+                    "noteNumber": [
+                        "<positiveInt>"
+                    ],
+                    "reviewOutcome": "ContentasforExplanationOfBenefit.item.reviewOutcome",
+                    "adjudication": [
+                        "ContentasforExplanationOfBenefit.item.adjudication"
+                    ],
+                    "subDetail": [
+                        {
+                            "sequence": "<positiveInt>",
+                            "traceNumber": [
+                                "Identifier"
+                            ],
+                            "revenue": "CodeableConcept",
+                            "category": "CodeableConcept",
+                            "productOrService": "CodeableConcept",
+                            "productOrServiceEnd": "CodeableConcept",
+                            "modifier": [
+                                "CodeableConcept"
+                            ],
+                            "programCode": [
+                                "CodeableConcept"
+                            ],
+                            "patientPaid": "Money",
+                            "quantity": "Quantity(SimpleQuantity)",
+                            "unitPrice": "Money",
+                            "factor": "<decimal>",
+                            "tax": "Money",
+                            "net": "Money",
+                            "udi": [
+                                "Reference(Device)"
+                            ],
+                            "noteNumber": [
+                                "<positiveInt>"
+                            ],
+                            "reviewOutcome": "ContentasforExplanationOfBenefit.item.reviewOutcome",
+                            "adjudication": [
+                                "ContentasforExplanationOfBenefit.item.adjudication"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "addItem": [
+        {
+            "itemSequence": [
+                "<positiveInt>"
+            ],
+            "detailSequence": [
+                "<positiveInt>"
+            ],
+            "subDetailSequence": [
+                "<positiveInt>"
+            ],
+            "traceNumber": [
+                "Identifier"
+            ],
+            "provider": [
+                "Reference(Organization|Practitioner|PractitionerRole)"
+            ],
+            "revenue": "CodeableConcept",
+            "productOrService": "CodeableConcept",
+            "productOrServiceEnd": "CodeableConcept",
+            "request": [
+                "Reference(DeviceRequest|MedicationRequest|NutritionOrder|ServiceRequest|SupplyRequest|VisionPrescription)"
+            ],
+            "modifier": [
+                "CodeableConcept"
+            ],
+            "programCode": [
+                "CodeableConcept"
+            ],
+            "servicedPeriod": "Period",
+            "locationAddress": "Address",
+            "locationReference": "Reference(Location)",
+            "patientPaid": "Money",
+            "quantity": "Quantity(SimpleQuantity)",
+            "unitPrice": "Money",
+            "factor": "<decimal>",
+            "tax": "Money",
+            "net": "Money",
+            "bodySite": [
+                {
+                    "site": [
+                        "CodeableReference(BodyStructure)"
+                    ],
+                    "subSite": [
+                        "CodeableConcept"
+                    ]
+                }
+            ],
+            "noteNumber": [
+                "<positiveInt>"
+            ],
+            "reviewOutcome": "ContentasforExplanationOfBenefit.item.reviewOutcome",
+            "adjudication": [
+                "ContentasforExplanationOfBenefit.item.adjudication"
+            ],
+            "detail": [
+                {
+                    "traceNumber": [
+                        "Identifier"
+                    ],
+                    "revenue": "CodeableConcept",
+                    "productOrService": "CodeableConcept",
+                    "productOrServiceEnd": "CodeableConcept",
+                    "modifier": [
+                        "CodeableConcept"
+                    ],
+                    "patientPaid": "Money",
+                    "quantity": "Quantity(SimpleQuantity)",
+                    "unitPrice": "Money",
+                    "factor": "<decimal>",
+                    "tax": "Money",
+                    "net": "Money",
+                    "noteNumber": [
+                        "<positiveInt>"
+                    ],
+                    "reviewOutcome": "ContentasforExplanationOfBenefit.item.reviewOutcome",
+                    "adjudication": [
+                        "ContentasforExplanationOfBenefit.item.adjudication"
+                    ],
+                    "subDetail": [
+                        {
+                            "traceNumber": [
+                                "Identifier"
+                            ],
+                            "revenue": "CodeableConcept",
+                            "productOrService": "CodeableConcept",
+                            "productOrServiceEnd": "CodeableConcept",
+                            "modifier": [
+                                "CodeableConcept"
+                            ],
+                            "patientPaid": "Money",
+                            "quantity": "Quantity(SimpleQuantity)",
+                            "unitPrice": "Money",
+                            "factor": "<decimal>",
+                            "tax": "Money",
+                            "net": "Money",
+                            "noteNumber": [
+                                "<positiveInt>"
+                            ],
+                            "reviewOutcome": "ContentasforExplanationOfBenefit.item.reviewOutcome",
+                            "adjudication": [
+                                "ContentasforExplanationOfBenefit.item.adjudication"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "adjudication": [
+        "ContentasforExplanationOfBenefit.item.adjudication"
+    ],
+    "total": [
+        {
+            "category": "CodeableConcept",
+            "amount": "Money"
+        }
+    ],
+    "payment": {
+        "type": "CodeableConcept",
+        "adjustment": "Money",
+        "adjustmentReason": "CodeableConcept",
+        "date": "<date>",
+        "amount": "Money",
+        "identifier": "Identifier"
+    },
+    "formCode": "CodeableConcept",
+    "form": "Attachment",
+    "processNote": [
+        {
+            "number": "<positiveInt>",
+            "type": "CodeableConcept",
+            "text": "<string>",
+            "language": "CodeableConcept"
+        }
+    ],
+    "benefitPeriod": "Period",
+    "benefitBalance": [
+        {
+            "category": "CodeableConcept",
+            "excluded": "<boolean>",
+            "name": "<string>",
+            "description": "<string>",
+            "network": "CodeableConcept",
+            "unit": "CodeableConcept",
+            "term": "CodeableConcept",
+            "financial": [
+                {
+                    "type": "CodeableConcept",
+                    "allowedString": "<string>",
+                    "allowedMoney": "Money",
+                    "usedMoney": "Money"
+                }
+            ]
+        }
+    ]
+}

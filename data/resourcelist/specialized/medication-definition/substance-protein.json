@@ -1,0 +1,20 @@
+{
+    "resourceType": "SubstanceProtein",
+    "sequenceType": "CodeableConcept",
+    "numberOfSubunits": "<integer>",
+    "disulfideLinkage": [
+        "<string>"
+    ],
+    "subunit": [
+        {
+            "subunit": "<integer>",
+            "sequence": "<string>",
+            "length": "<integer>",
+            "sequenceAttachment": "Attachment",
+            "nTerminalModificationId": "Identifier",
+            "nTerminalModification": "<string>",
+            "cTerminalModificationId": "Identifier",
+            "cTerminalModification": "<string>"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "resourceType": "Communication",
+    "identifier": [
+        "Identifier"
+    ],
+    "instantiatesCanonical": [
+        "<canonical(PlanDefinition|ActivityDefinition|Measure|OperationDefinition|Questionnaire)>"
+    ],
+    "instantiatesUri": [
+        "<uri>"
+    ],
+    "basedOn": [
+        "Reference(Any)"
+    ],
+    "partOf": [
+        "Reference(Any)"
+    ],
+    "inResponseTo": [
+        "Reference(Communication)"
+    ],
+    "status": "<code>",
+    "statusReason": "CodeableConcept",
+    "category": [
+        "CodeableConcept"
+    ],
+    "priority": "<code>",
+    "medium": [
+        "CodeableConcept"
+    ],
+    "subject": "Reference(Group|Patient)",
+    "topic": "CodeableConcept",
+    "about": [
+        "Reference(Any)"
+    ],
+    "encounter": "Reference(Encounter)",
+    "sent": "<dateTime>",
+    "received": "<dateTime>",
+    "recipient": [
+        "Reference(CareTeam|Device|Endpoint|Group|HealthcareService|Location|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+    ],
+    "sender": "Reference(CareTeam|Device|Endpoint|HealthcareService|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "reason": [
+        "CodeableReference(Any)"
+    ],
+    "payload": [
+        {
+            "contentReference": "Reference(Any)",
+            "contentCodeableConcept": "CodeableConcept"
+        }
+    ],
+    "note": [
+        "Annotation"
+    ]
+}

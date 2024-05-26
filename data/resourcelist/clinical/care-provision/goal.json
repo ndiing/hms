@@ -1,0 +1,40 @@
+{
+    "resourceType": "Goal",
+    "identifier": [
+        "Identifier"
+    ],
+    "lifecycleStatus": "<code>",
+    "achievementStatus": "CodeableConcept",
+    "category": [
+        "CodeableConcept"
+    ],
+    "continuous": "<boolean>",
+    "priority": "CodeableConcept",
+    "description": "CodeableConcept",
+    "subject": "Reference(Group|Organization|Patient)",
+    "startCodeableConcept": "CodeableConcept",
+    "target": [
+        {
+            "measure": "CodeableConcept",
+            "detailRange": "Range",
+            "detailCodeableConcept": "CodeableConcept",
+            "detailString": "<string>",
+            "detailBoolean": "<boolean>",
+            "detailInteger": "<integer>",
+            "detailRatio": "Ratio",
+            "dueDuration": "Duration"
+        }
+    ],
+    "statusDate": "<date>",
+    "statusReason": "<string>",
+    "source": "Reference(CareTeam|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "addresses": [
+        "Reference(Condition|MedicationRequest|MedicationStatement|NutritionOrder|Observation|Procedure|RiskAssessment|ServiceRequest)"
+    ],
+    "note": [
+        "Annotation"
+    ],
+    "outcome": [
+        "CodeableReference(Observation)"
+    ]
+}

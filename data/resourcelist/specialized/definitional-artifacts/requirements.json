@@ -1,0 +1,59 @@
+{
+    "resourceType": "Requirements",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "derivedFrom": [
+        "<canonical(Requirements)>"
+    ],
+    "reference": [
+        "<url>"
+    ],
+    "actor": [
+        "<canonical(ActorDefinition)>"
+    ],
+    "statement": [
+        {
+            "key": "<id>",
+            "label": "<string>",
+            "conformance": [
+                "<code>"
+            ],
+            "conditionality": "<boolean>",
+            "requirement": "<markdown>",
+            "derivedFrom": "<string>",
+            "parent": "<string>",
+            "satisfiedBy": [
+                "<url>"
+            ],
+            "reference": [
+                "<url>"
+            ],
+            "source": [
+                "Reference(CareTeam|Device|Group|HealthcareService|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+            ]
+        }
+    ]
+}

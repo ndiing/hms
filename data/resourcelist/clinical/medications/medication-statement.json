@@ -1,0 +1,42 @@
+{
+    "resourceType": "MedicationStatement",
+    "identifier": [
+        "Identifier"
+    ],
+    "partOf": [
+        "Reference(MedicationStatement|Procedure)"
+    ],
+    "status": "<code>",
+    "category": [
+        "CodeableConcept"
+    ],
+    "medication": "CodeableReference(Medication)",
+    "subject": "Reference(Group|Patient)",
+    "encounter": "Reference(Encounter)",
+    "effectivePeriod": "Period",
+    "effectiveTiming": "Timing",
+    "dateAsserted": "<dateTime>",
+    "informationSource": [
+        "Reference(Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+    ],
+    "derivedFrom": [
+        "Reference(Any)"
+    ],
+    "reason": [
+        "CodeableReference(Condition|DiagnosticReport|Observation)"
+    ],
+    "note": [
+        "Annotation"
+    ],
+    "relatedClinicalInformation": [
+        "Reference(Condition|Observation)"
+    ],
+    "renderedDosageInstruction": "<markdown>",
+    "dosage": [
+        "Dosage"
+    ],
+    "adherence": {
+        "code": "CodeableConcept",
+        "reason": "CodeableConcept"
+    }
+}

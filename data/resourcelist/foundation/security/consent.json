@@ -1,0 +1,93 @@
+{
+    "resourceType": "Consent",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "category": [
+        "CodeableConcept"
+    ],
+    "subject": "Reference(Group|Patient|Practitioner)",
+    "date": "<date>",
+    "period": "Period",
+    "grantor": [
+        "Reference(CareTeam|HealthcareService|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+    ],
+    "grantee": [
+        "Reference(CareTeam|HealthcareService|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+    ],
+    "manager": [
+        "Reference(HealthcareService|Organization|Patient|Practitioner)"
+    ],
+    "controller": [
+        "Reference(HealthcareService|Organization|Patient|Practitioner)"
+    ],
+    "sourceAttachment": [
+        "Attachment"
+    ],
+    "sourceReference": [
+        "Reference(Consent|Contract|DocumentReference|QuestionnaireResponse)"
+    ],
+    "regulatoryBasis": [
+        "CodeableConcept"
+    ],
+    "policyBasis": {
+        "reference": "Reference(Any)",
+        "url": "<url>"
+    },
+    "policyText": [
+        "Reference(DocumentReference)"
+    ],
+    "verification": [
+        {
+            "verified": "<boolean>",
+            "verificationType": "CodeableConcept",
+            "verifiedBy": "Reference(Organization|Practitioner|PractitionerRole)",
+            "verifiedWith": "Reference(Patient|RelatedPerson)",
+            "verificationDate": [
+                "<dateTime>"
+            ]
+        }
+    ],
+    "decision": "<code>",
+    "provision": [
+        {
+            "period": "Period",
+            "actor": [
+                {
+                    "role": "CodeableConcept",
+                    "reference": "Reference(CareTeam|Device|Group|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+                }
+            ],
+            "action": [
+                "CodeableConcept"
+            ],
+            "securityLabel": [
+                "Coding"
+            ],
+            "purpose": [
+                "Coding"
+            ],
+            "documentType": [
+                "Coding"
+            ],
+            "resourceType": [
+                "Coding"
+            ],
+            "code": [
+                "CodeableConcept"
+            ],
+            "dataPeriod": "Period",
+            "data": [
+                {
+                    "meaning": "<code>",
+                    "reference": "Reference(Any)"
+                }
+            ],
+            "expression": "Expression",
+            "provision": [
+                "ContentasforConsent.provision"
+            ]
+        }
+    ]
+}

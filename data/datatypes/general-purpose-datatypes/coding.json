@@ -1,0 +1,7 @@
+{
+    "system": "<uri>",
+    "version": "<string>",
+    "code": "<code>",
+    "display": "<string>",
+    "userSelected": "<boolean>"
+}

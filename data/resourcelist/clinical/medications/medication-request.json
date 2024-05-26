@@ -1,0 +1,78 @@
+{
+    "resourceType": "MedicationRequest",
+    "identifier": [
+        "Identifier"
+    ],
+    "basedOn": [
+        "Reference(CarePlan|ImmunizationRecommendation|MedicationRequest|ServiceRequest)"
+    ],
+    "priorPrescription": "Reference(MedicationRequest)",
+    "groupIdentifier": "Identifier",
+    "status": "<code>",
+    "statusReason": "CodeableConcept",
+    "statusChanged": "<dateTime>",
+    "intent": "<code>",
+    "category": [
+        "CodeableConcept"
+    ],
+    "priority": "<code>",
+    "doNotPerform": "<boolean>",
+    "medication": "CodeableReference(Medication)",
+    "subject": "Reference(Group|Patient)",
+    "informationSource": [
+        "Reference(Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+    ],
+    "encounter": "Reference(Encounter)",
+    "supportingInformation": [
+        "Reference(Any)"
+    ],
+    "authoredOn": "<dateTime>",
+    "requester": "Reference(Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "reported": "<boolean>",
+    "performerType": "CodeableConcept",
+    "performer": [
+        "Reference(CareTeam|DeviceDefinition|HealthcareService|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+    ],
+    "device": [
+        "CodeableReference(DeviceDefinition)"
+    ],
+    "recorder": "Reference(Practitioner|PractitionerRole)",
+    "reason": [
+        "CodeableReference(Condition|Observation)"
+    ],
+    "courseOfTherapyType": "CodeableConcept",
+    "insurance": [
+        "Reference(ClaimResponse|Coverage)"
+    ],
+    "note": [
+        "Annotation"
+    ],
+    "renderedDosageInstruction": "<markdown>",
+    "effectiveDosePeriod": "Period",
+    "dosageInstruction": [
+        "Dosage"
+    ],
+    "dispenseRequest": {
+        "initialFill": {
+            "quantity": "Quantity(SimpleQuantity)",
+            "duration": "Duration"
+        },
+        "dispenseInterval": "Duration",
+        "validityPeriod": "Period",
+        "numberOfRepeatsAllowed": "<unsignedInt>",
+        "quantity": "Quantity(SimpleQuantity)",
+        "expectedSupplyDuration": "Duration",
+        "dispenser": "Reference(Organization)",
+        "dispenserInstruction": [
+            "Annotation"
+        ],
+        "doseAdministrationAid": "CodeableConcept"
+    },
+    "substitution": {
+        "allowedCodeableConcept": "CodeableConcept",
+        "reason": "CodeableConcept"
+    },
+    "eventHistory": [
+        "Reference(Provenance)"
+    ]
+}

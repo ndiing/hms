@@ -1,0 +1,32 @@
+{
+    "resourceType": "SubstanceNucleicAcid",
+    "sequenceType": "CodeableConcept",
+    "numberOfSubunits": "<integer>",
+    "areaOfHybridisation": "<string>",
+    "oligoNucleotideType": "CodeableConcept",
+    "subunit": [
+        {
+            "subunit": "<integer>",
+            "sequence": "<string>",
+            "length": "<integer>",
+            "sequenceAttachment": "Attachment",
+            "fivePrime": "CodeableConcept",
+            "threePrime": "CodeableConcept",
+            "linkage": [
+                {
+                    "connectivity": "<string>",
+                    "identifier": "Identifier",
+                    "name": "<string>",
+                    "residueSite": "<string>"
+                }
+            ],
+            "sugar": [
+                {
+                    "identifier": "Identifier",
+                    "name": "<string>",
+                    "residueSite": "<string>"
+                }
+            ]
+        }
+    ]
+}

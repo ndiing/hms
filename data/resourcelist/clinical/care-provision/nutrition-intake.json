@@ -1,0 +1,62 @@
+{
+    "resourceType": "NutritionIntake",
+    "identifier": [
+        "Identifier"
+    ],
+    "instantiatesCanonical": [
+        "<canonical(Definition)>"
+    ],
+    "instantiatesUri": [
+        "<uri>"
+    ],
+    "basedOn": [
+        "Reference(CarePlan|NutritionOrder|ServiceRequest)"
+    ],
+    "partOf": [
+        "Reference(NutritionIntake|Observation|Procedure)"
+    ],
+    "status": "<code>",
+    "statusReason": [
+        "CodeableConcept"
+    ],
+    "code": "CodeableConcept",
+    "subject": "Reference(Group|Patient)",
+    "encounter": "Reference(Encounter)",
+    "occurrencePeriod": "Period",
+    "recorded": "<dateTime>",
+    "reportedBoolean": "<boolean>",
+    "reportedReference": "Reference(Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "consumedItem": [
+        {
+            "type": "CodeableConcept",
+            "nutritionProduct": "CodeableReference(NutritionProduct)",
+            "schedule": "Timing",
+            "amount": "Quantity(SimpleQuantity)",
+            "rate": "Quantity(SimpleQuantity)",
+            "notConsumed": "<boolean>",
+            "notConsumedReason": "CodeableConcept"
+        }
+    ],
+    "ingredientLabel": [
+        {
+            "nutrient": "CodeableReference(Substance)",
+            "amount": "Quantity(SimpleQuantity)"
+        }
+    ],
+    "performer": [
+        {
+            "function": "CodeableConcept",
+            "actor": "Reference(CareTeam|Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+        }
+    ],
+    "location": "Reference(Location)",
+    "derivedFrom": [
+        "Reference(Any)"
+    ],
+    "reason": [
+        "CodeableReference(Condition|DiagnosticReport|DocumentReference|Observation)"
+    ],
+    "note": [
+        "Annotation"
+    ]
+}

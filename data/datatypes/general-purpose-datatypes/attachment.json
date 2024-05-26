@@ -1,0 +1,15 @@
+{
+    "contentType": "<code>",
+    "language": "<code>",
+    "data": "<base64Binary>",
+    "url": "<url>",
+    "size": "<integer64>",
+    "hash": "<base64Binary>",
+    "title": "<string>",
+    "creation": "<dateTime>",
+    "height": "<positiveInt>",
+    "width": "<positiveInt>",
+    "frames": "<positiveInt>",
+    "duration": "<decimal>",
+    "pages": "<positiveInt>"
+}

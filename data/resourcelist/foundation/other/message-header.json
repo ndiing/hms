@@ -1,0 +1,32 @@
+{
+    "resourceType": "MessageHeader",
+    "eventCanonical": "<canonical(EventDefinition)>",
+    "destination": [
+        {
+            "endpointReference": "Reference(Endpoint)",
+            "name": "<string>",
+            "target": "Reference(Device)",
+            "receiver": "Reference(Organization|Practitioner|PractitionerRole)"
+        }
+    ],
+    "sender": "Reference(Device|Organization|Practitioner|PractitionerRole)",
+    "author": "Reference(Device|Organization|Practitioner|PractitionerRole)",
+    "source": {
+        "endpointReference": "Reference(Endpoint)",
+        "name": "<string>",
+        "software": "<string>",
+        "version": "<string>",
+        "contact": "ContactPoint"
+    },
+    "responsible": "Reference(Organization|Practitioner|PractitionerRole)",
+    "reason": "CodeableConcept",
+    "response": {
+        "identifier": "Identifier",
+        "code": "<code>",
+        "details": "Reference(OperationOutcome)"
+    },
+    "focus": [
+        "Reference(Any)"
+    ],
+    "definition": "<canonical(MessageDefinition)>"
+}

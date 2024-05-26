@@ -1,0 +1,40 @@
+{
+    "resourceType": "BiologicallyDerivedProduct",
+    "productCategory": "Coding",
+    "productCode": "CodeableConcept",
+    "parent": [
+        "Reference(BiologicallyDerivedProduct)"
+    ],
+    "request": [
+        "Reference(ServiceRequest)"
+    ],
+    "identifier": [
+        "Identifier"
+    ],
+    "biologicalSourceEvent": "Identifier",
+    "processingFacility": [
+        "Reference(Organization)"
+    ],
+    "division": "<string>",
+    "productStatus": "Coding",
+    "expirationDate": "<dateTime>",
+    "collection": {
+        "collector": "Reference(Practitioner|PractitionerRole)",
+        "source": "Reference(Organization|Patient)",
+        "collectedPeriod": "Period"
+    },
+    "storageTempRequirements": "Range",
+    "property": [
+        {
+            "type": "CodeableConcept",
+            "valueInteger": "<integer>",
+            "valueCodeableConcept": "CodeableConcept",
+            "valuePeriod": "Period",
+            "valueQuantity": "Quantity",
+            "valueRange": "Range",
+            "valueRatio": "Ratio",
+            "valueString": "<string>",
+            "valueAttachment": "Attachment"
+        }
+    ]
+}

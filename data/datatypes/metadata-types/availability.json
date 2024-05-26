@@ -1,0 +1,18 @@
+{
+    "availableTime": [
+        {
+            "daysOfWeek": [
+                "<code>"
+            ],
+            "allDay": "<boolean>",
+            "availableStartTime": "<time>",
+            "availableEndTime": "<time>"
+        }
+    ],
+    "notAvailableTime": [
+        {
+            "description": "<string>",
+            "during": "Period"
+        }
+    ]
+}

@@ -1,0 +1,182 @@
+{
+    "resourceType": "PlanDefinition",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "subtitle": "<string>",
+    "type": "CodeableConcept",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "subjectReference": "Reference(AdministrableProductDefinition|Group|ManufacturedItemDefinition|MedicinalProductDefinition|PackagedProductDefinition|SubstanceDefinition)",
+    "subjectCanonical": "<canonical(EvidenceVariable)>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "usage": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "approvalDate": "<date>",
+    "lastReviewDate": "<date>",
+    "effectivePeriod": "Period",
+    "topic": [
+        "CodeableConcept"
+    ],
+    "author": [
+        "ContactDetail"
+    ],
+    "editor": [
+        "ContactDetail"
+    ],
+    "reviewer": [
+        "ContactDetail"
+    ],
+    "endorser": [
+        "ContactDetail"
+    ],
+    "relatedArtifact": [
+        "RelatedArtifact"
+    ],
+    "library": [
+        "<canonical(Library)>"
+    ],
+    "goal": [
+        {
+            "category": "CodeableConcept",
+            "description": "CodeableConcept",
+            "priority": "CodeableConcept",
+            "start": "CodeableConcept",
+            "addresses": [
+                "CodeableConcept"
+            ],
+            "documentation": [
+                "RelatedArtifact"
+            ],
+            "target": [
+                {
+                    "measure": "CodeableConcept",
+                    "detailRange": "Range",
+                    "detailCodeableConcept": "CodeableConcept",
+                    "detailString": "<string>",
+                    "detailBoolean": "<boolean>",
+                    "detailInteger": "<integer>",
+                    "detailRatio": "Ratio",
+                    "due": "Duration"
+                }
+            ]
+        }
+    ],
+    "actor": [
+        {
+            "title": "<string>",
+            "description": "<markdown>",
+            "option": [
+                {
+                    "type": "<code>",
+                    "typeCanonical": "<canonical(CapabilityStatement)>",
+                    "typeReference": "Reference(CareTeam|Device|DeviceDefinition|Endpoint|Group|HealthcareService|Location|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+                    "role": "CodeableConcept"
+                }
+            ]
+        }
+    ],
+    "action": [
+        {
+            "linkId": "<string>",
+            "prefix": "<string>",
+            "title": "<string>",
+            "description": "<markdown>",
+            "textEquivalent": "<markdown>",
+            "priority": "<code>",
+            "code": "CodeableConcept",
+            "reason": [
+                "CodeableConcept"
+            ],
+            "documentation": [
+                "RelatedArtifact"
+            ],
+            "goalId": [
+                "<id>"
+            ],
+            "subjectReference": "Reference(Group)",
+            "subjectCanonical": "<canonical>",
+            "trigger": [
+                "TriggerDefinition"
+            ],
+            "condition": [
+                {
+                    "kind": "<code>",
+                    "expression": "Expression"
+                }
+            ],
+            "input": [
+                {
+                    "title": "<string>",
+                    "requirement": "DataRequirement",
+                    "relatedData": "<id>"
+                }
+            ],
+            "output": [
+                {
+                    "title": "<string>",
+                    "requirement": "DataRequirement",
+                    "relatedData": "<string>"
+                }
+            ],
+            "relatedAction": [
+                {
+                    "targetId": "<id>",
+                    "relationship": "<code>",
+                    "endRelationship": "<code>",
+                    "offsetRange": "Range"
+                }
+            ],
+            "timingDuration": "Duration",
+            "timingRange": "Range",
+            "timingTiming": "Timing",
+            "location": "CodeableReference(Location)",
+            "participant": [
+                {
+                    "actorId": "<string>",
+                    "type": "<code>",
+                    "typeCanonical": "<canonical(CapabilityStatement)>",
+                    "typeReference": "Reference(CareTeam|Device|DeviceDefinition|Endpoint|Group|HealthcareService|Location|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+                    "role": "CodeableConcept",
+                    "function": "CodeableConcept"
+                }
+            ],
+            "type": "CodeableConcept",
+            "groupingBehavior": "<code>",
+            "selectionBehavior": "<code>",
+            "requiredBehavior": "<code>",
+            "precheckBehavior": "<code>",
+            "cardinalityBehavior": "<code>",
+            "definitionUri": "<uri>",
+            "transform": "<canonical(StructureMap)>",
+            "dynamicValue": [
+                {
+                    "path": "<string>",
+                    "expression": "Expression"
+                }
+            ],
+            "action": [
+                "ContentasforPlanDefinition.action"
+            ]
+        }
+    ],
+    "asNeededCodeableConcept": "CodeableConcept"
+}

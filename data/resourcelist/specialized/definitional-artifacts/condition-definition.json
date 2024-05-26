@@ -1,0 +1,70 @@
+{
+    "resourceType": "ConditionDefinition",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "subtitle": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "code": "CodeableConcept",
+    "severity": "CodeableConcept",
+    "bodySite": "CodeableConcept",
+    "stage": "CodeableConcept",
+    "hasSeverity": "<boolean>",
+    "hasBodySite": "<boolean>",
+    "hasStage": "<boolean>",
+    "definition": [
+        "<uri>"
+    ],
+    "observation": [
+        {
+            "category": "CodeableConcept",
+            "code": "CodeableConcept"
+        }
+    ],
+    "medication": [
+        {
+            "category": "CodeableConcept",
+            "code": "CodeableConcept"
+        }
+    ],
+    "precondition": [
+        {
+            "type": "<code>",
+            "code": "CodeableConcept",
+            "valueQuantity": "Quantity"
+        }
+    ],
+    "team": [
+        "Reference(CareTeam)"
+    ],
+    "questionnaire": [
+        {
+            "purpose": "<code>",
+            "reference": "Reference(Questionnaire)"
+        }
+    ],
+    "plan": [
+        {
+            "role": "CodeableConcept",
+            "reference": "Reference(PlanDefinition)"
+        }
+    ]
+}

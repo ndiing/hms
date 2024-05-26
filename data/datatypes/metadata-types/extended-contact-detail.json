@@ -1,0 +1,12 @@
+{
+    "purpose": "CodeableConcept",
+    "name": [
+        "HumanName"
+    ],
+    "telecom": [
+        "ContactPoint"
+    ],
+    "address": "Address",
+    "organization": "Reference(Organization)",
+    "period": "Period"
+}

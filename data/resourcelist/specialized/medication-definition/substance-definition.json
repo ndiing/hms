@@ -1,0 +1,161 @@
+{
+    "resourceType": "SubstanceDefinition",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "status": "CodeableConcept",
+    "classification": [
+        "CodeableConcept"
+    ],
+    "domain": "CodeableConcept",
+    "grade": [
+        "CodeableConcept"
+    ],
+    "description": "<markdown>",
+    "informationSource": [
+        "Reference(Citation)"
+    ],
+    "note": [
+        "Annotation"
+    ],
+    "manufacturer": [
+        "Reference(Organization)"
+    ],
+    "supplier": [
+        "Reference(Organization)"
+    ],
+    "moiety": [
+        {
+            "role": "CodeableConcept",
+            "identifier": "Identifier",
+            "name": "<string>",
+            "stereochemistry": "CodeableConcept",
+            "opticalActivity": "CodeableConcept",
+            "molecularFormula": "<string>",
+            "amountString": "<string>",
+            "measurementType": "CodeableConcept"
+        }
+    ],
+    "characterization": [
+        {
+            "technique": "CodeableConcept",
+            "form": "CodeableConcept",
+            "description": "<markdown>",
+            "file": [
+                "Attachment"
+            ]
+        }
+    ],
+    "property": [
+        {
+            "type": "CodeableConcept",
+            "valueQuantity": "Quantity",
+            "valueDate": "<date>",
+            "valueBoolean": "<boolean>",
+            "valueAttachment": "Attachment"
+        }
+    ],
+    "referenceInformation": "Reference(SubstanceReferenceInformation)",
+    "molecularWeight": [
+        {
+            "method": "CodeableConcept",
+            "type": "CodeableConcept",
+            "amount": "Quantity"
+        }
+    ],
+    "structure": {
+        "stereochemistry": "CodeableConcept",
+        "opticalActivity": "CodeableConcept",
+        "molecularFormula": "<string>",
+        "molecularFormulaByMoiety": "<string>",
+        "molecularWeight": "ContentasforSubstanceDefinition.molecularWeight",
+        "technique": [
+            "CodeableConcept"
+        ],
+        "sourceDocument": [
+            "Reference(DocumentReference)"
+        ],
+        "representation": [
+            {
+                "type": "CodeableConcept",
+                "representation": "<string>",
+                "format": "CodeableConcept",
+                "document": "Reference(DocumentReference)"
+            }
+        ]
+    },
+    "code": [
+        {
+            "code": "CodeableConcept",
+            "status": "CodeableConcept",
+            "statusDate": "<dateTime>",
+            "note": [
+                "Annotation"
+            ],
+            "source": [
+                "Reference(DocumentReference)"
+            ]
+        }
+    ],
+    "name": [
+        {
+            "name": "<string>",
+            "type": "CodeableConcept",
+            "status": "CodeableConcept",
+            "preferred": "<boolean>",
+            "language": [
+                "CodeableConcept"
+            ],
+            "domain": [
+                "CodeableConcept"
+            ],
+            "jurisdiction": [
+                "CodeableConcept"
+            ],
+            "synonym": [
+                "ContentasforSubstanceDefinition.name"
+            ],
+            "translation": [
+                "ContentasforSubstanceDefinition.name"
+            ],
+            "official": [
+                {
+                    "authority": "CodeableConcept",
+                    "status": "CodeableConcept",
+                    "date": "<dateTime>"
+                }
+            ],
+            "source": [
+                "Reference(DocumentReference)"
+            ]
+        }
+    ],
+    "relationship": [
+        {
+            "substanceDefinitionCodeableConcept": "CodeableConcept",
+            "type": "CodeableConcept",
+            "isDefining": "<boolean>",
+            "amountQuantity": "Quantity",
+            "amountRatio": "Ratio",
+            "amountString": "<string>",
+            "ratioHighLimitAmount": "Ratio",
+            "comparator": "CodeableConcept",
+            "source": [
+                "Reference(DocumentReference)"
+            ]
+        }
+    ],
+    "nucleicAcid": "Reference(SubstanceNucleicAcid)",
+    "polymer": "Reference(SubstancePolymer)",
+    "protein": "Reference(SubstanceProtein)",
+    "sourceMaterial": {
+        "type": "CodeableConcept",
+        "genus": "CodeableConcept",
+        "species": "CodeableConcept",
+        "part": "CodeableConcept",
+        "countryOfOrigin": [
+            "CodeableConcept"
+        ]
+    }
+}

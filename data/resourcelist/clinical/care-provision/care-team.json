@@ -1,0 +1,33 @@
+{
+    "resourceType": "CareTeam",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "category": [
+        "CodeableConcept"
+    ],
+    "name": "<string>",
+    "subject": "Reference(Group|Patient)",
+    "period": "Period",
+    "participant": [
+        {
+            "role": "CodeableConcept",
+            "member": "Reference(CareTeam|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+            "onBehalfOf": "Reference(Organization)",
+            "coverageTiming": "Timing"
+        }
+    ],
+    "reason": [
+        "CodeableReference(Condition)"
+    ],
+    "managingOrganization": [
+        "Reference(Organization)"
+    ],
+    "telecom": [
+        "ContactPoint"
+    ],
+    "note": [
+        "Annotation"
+    ]
+}

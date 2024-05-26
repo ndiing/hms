@@ -1,0 +1,177 @@
+{
+    "resourceType": "Task",
+    "identifier": [
+        "Identifier"
+    ],
+    "instantiatesCanonical": "<canonical(ActivityDefinition)>",
+    "instantiatesUri": "<uri>",
+    "basedOn": [
+        "Reference(Any)"
+    ],
+    "groupIdentifier": "Identifier",
+    "partOf": [
+        "Reference(Task)"
+    ],
+    "status": "<code>",
+    "statusReason": "CodeableReference",
+    "businessStatus": "CodeableConcept",
+    "intent": "<code>",
+    "priority": "<code>",
+    "doNotPerform": "<boolean>",
+    "code": "CodeableConcept",
+    "description": "<string>",
+    "focus": "Reference(Any)",
+    "for": "Reference(Any)",
+    "encounter": "Reference(Encounter)",
+    "requestedPeriod": "Period",
+    "executionPeriod": "Period",
+    "authoredOn": "<dateTime>",
+    "lastModified": "<dateTime>",
+    "requester": "Reference(Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "requestedPerformer": [
+        "CodeableReference(CareTeam|Device|HealthcareService|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+    ],
+    "owner": "Reference(CareTeam|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "performer": [
+        {
+            "function": "CodeableConcept",
+            "actor": "Reference(CareTeam|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+        }
+    ],
+    "location": "Reference(Location)",
+    "reason": [
+        "CodeableReference"
+    ],
+    "insurance": [
+        "Reference(ClaimResponse|Coverage)"
+    ],
+    "note": [
+        "Annotation"
+    ],
+    "relevantHistory": [
+        "Reference(Provenance)"
+    ],
+    "restriction": {
+        "repetitions": "<positiveInt>",
+        "period": "Period",
+        "recipient": [
+            "Reference(Group|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+        ]
+    },
+    "input": [
+        {
+            "type": "CodeableConcept",
+            "valueBoolean": "<boolean>",
+            "valueCanonical": "<canonical>",
+            "valueCode": "<code>",
+            "valueDate": "<date>",
+            "valueDateTime": "<dateTime>",
+            "valueDecimal": "<decimal>",
+            "valueId": "<id>",
+            "valueInstant": "<instant>",
+            "valueInteger": "<integer>",
+            "valueInteger64": "<integer64>",
+            "valueMarkdown": "<markdown>",
+            "valueOid": "<oid>",
+            "valuePositiveInt": "<positiveInt>",
+            "valueString": "<string>",
+            "valueTime": "<time>",
+            "valueUnsignedInt": "<unsignedInt>",
+            "valueUri": "<uri>",
+            "valueUrl": "<url>",
+            "valueUuid": "<uuid>",
+            "valueAddress": "Address",
+            "valueAge": "Age",
+            "valueAnnotation": "Annotation",
+            "valueAttachment": "Attachment",
+            "valueCodeableConcept": "CodeableConcept",
+            "valueCodeableReference": "CodeableReference",
+            "valueCoding": "Coding",
+            "valueContactPoint": "ContactPoint",
+            "valueCount": "Count",
+            "valueDistance": "Distance",
+            "valueDuration": "Duration",
+            "valueHumanName": "HumanName",
+            "valueIdentifier": "Identifier",
+            "valueMoney": "Money",
+            "valuePeriod": "Period",
+            "valueQuantity": "Quantity",
+            "valueRange": "Range",
+            "valueRatio": "Ratio",
+            "valueRatioRange": "RatioRange",
+            "valueReference": "Reference",
+            "valueSampledData": "SampledData",
+            "valueSignature": "Signature",
+            "valueTiming": "Timing",
+            "valueContactDetail": "ContactDetail",
+            "valueDataRequirement": "DataRequirement",
+            "valueExpression": "Expression",
+            "valueParameterDefinition": "ParameterDefinition",
+            "valueRelatedArtifact": "RelatedArtifact",
+            "valueTriggerDefinition": "TriggerDefinition",
+            "valueUsageContext": "UsageContext",
+            "valueAvailability": "Availability",
+            "valueExtendedContactDetail": "ExtendedContactDetail",
+            "valueDosage": "Dosage",
+            "valueMeta": "Meta"
+        }
+    ],
+    "output": [
+        {
+            "type": "CodeableConcept",
+            "valueBoolean": "<boolean>",
+            "valueCanonical": "<canonical>",
+            "valueCode": "<code>",
+            "valueDate": "<date>",
+            "valueDateTime": "<dateTime>",
+            "valueDecimal": "<decimal>",
+            "valueId": "<id>",
+            "valueInstant": "<instant>",
+            "valueInteger": "<integer>",
+            "valueInteger64": "<integer64>",
+            "valueMarkdown": "<markdown>",
+            "valueOid": "<oid>",
+            "valuePositiveInt": "<positiveInt>",
+            "valueString": "<string>",
+            "valueTime": "<time>",
+            "valueUnsignedInt": "<unsignedInt>",
+            "valueUri": "<uri>",
+            "valueUrl": "<url>",
+            "valueUuid": "<uuid>",
+            "valueAddress": "Address",
+            "valueAge": "Age",
+            "valueAnnotation": "Annotation",
+            "valueAttachment": "Attachment",
+            "valueCodeableConcept": "CodeableConcept",
+            "valueCodeableReference": "CodeableReference",
+            "valueCoding": "Coding",
+            "valueContactPoint": "ContactPoint",
+            "valueCount": "Count",
+            "valueDistance": "Distance",
+            "valueDuration": "Duration",
+            "valueHumanName": "HumanName",
+            "valueIdentifier": "Identifier",
+            "valueMoney": "Money",
+            "valuePeriod": "Period",
+            "valueQuantity": "Quantity",
+            "valueRange": "Range",
+            "valueRatio": "Ratio",
+            "valueRatioRange": "RatioRange",
+            "valueReference": "Reference",
+            "valueSampledData": "SampledData",
+            "valueSignature": "Signature",
+            "valueTiming": "Timing",
+            "valueContactDetail": "ContactDetail",
+            "valueDataRequirement": "DataRequirement",
+            "valueExpression": "Expression",
+            "valueParameterDefinition": "ParameterDefinition",
+            "valueRelatedArtifact": "RelatedArtifact",
+            "valueTriggerDefinition": "TriggerDefinition",
+            "valueUsageContext": "UsageContext",
+            "valueAvailability": "Availability",
+            "valueExtendedContactDetail": "ExtendedContactDetail",
+            "valueDosage": "Dosage",
+            "valueMeta": "Meta"
+        }
+    ]
+}

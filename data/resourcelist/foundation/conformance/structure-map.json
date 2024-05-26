@@ -1,0 +1,116 @@
+{
+    "resourceType": "StructureMap",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "structure": [
+        {
+            "url": "<canonical(StructureDefinition)>",
+            "mode": "<code>",
+            "alias": "<string>",
+            "documentation": "<string>"
+        }
+    ],
+    "import": [
+        "<canonical(StructureMap)>"
+    ],
+    "const": [
+        {
+            "name": "<id>",
+            "value": "<string>"
+        }
+    ],
+    "group": [
+        {
+            "name": "<id>",
+            "extends": "<id>",
+            "typeMode": "<code>",
+            "documentation": "<string>",
+            "input": [
+                {
+                    "name": "<id>",
+                    "type": "<string>",
+                    "mode": "<code>",
+                    "documentation": "<string>"
+                }
+            ],
+            "rule": [
+                {
+                    "name": "<id>",
+                    "source": [
+                        {
+                            "context": "<id>",
+                            "min": "<integer>",
+                            "max": "<string>",
+                            "type": "<string>",
+                            "defaultValue": "<string>",
+                            "element": "<string>",
+                            "listMode": "<code>",
+                            "variable": "<id>",
+                            "condition": "<string>",
+                            "check": "<string>",
+                            "logMessage": "<string>"
+                        }
+                    ],
+                    "target": [
+                        {
+                            "context": "<string>",
+                            "element": "<string>",
+                            "variable": "<id>",
+                            "listMode": [
+                                "<code>"
+                            ],
+                            "listRuleId": "<id>",
+                            "transform": "<code>",
+                            "parameter": [
+                                {
+                                    "valueString": "<string>",
+                                    "valueBoolean": "<boolean>",
+                                    "valueInteger": "<integer>",
+                                    "valueDecimal": "<decimal>",
+                                    "valueDate": "<date>",
+                                    "valueTime": "<time>",
+                                    "valueDateTime": "<dateTime>"
+                                }
+                            ]
+                        }
+                    ],
+                    "rule": [
+                        "ContentasforStructureMap.group.rule"
+                    ],
+                    "dependent": [
+                        {
+                            "name": "<id>",
+                            "parameter": [
+                                "ContentasforStructureMap.group.rule.target.parameter"
+                            ]
+                        }
+                    ],
+                    "documentation": "<string>"
+                }
+            ]
+        }
+    ]
+}

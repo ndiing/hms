@@ -1,0 +1,59 @@
+{
+    "resourceType": "SubstanceSourceMaterial",
+    "sourceMaterialClass": "CodeableConcept",
+    "sourceMaterialType": "CodeableConcept",
+    "sourceMaterialState": "CodeableConcept",
+    "organismId": "Identifier",
+    "organismName": "<string>",
+    "parentSubstanceId": [
+        "Identifier"
+    ],
+    "parentSubstanceName": [
+        "<string>"
+    ],
+    "countryOfOrigin": [
+        "CodeableConcept"
+    ],
+    "geographicalLocation": [
+        "<string>"
+    ],
+    "developmentStage": "CodeableConcept",
+    "fractionDescription": [
+        {
+            "fraction": "<string>",
+            "materialType": "CodeableConcept"
+        }
+    ],
+    "organism": {
+        "family": "CodeableConcept",
+        "genus": "CodeableConcept",
+        "species": "CodeableConcept",
+        "intraspecificType": "CodeableConcept",
+        "intraspecificDescription": "<string>",
+        "author": [
+            {
+                "authorType": "CodeableConcept",
+                "authorDescription": "<string>"
+            }
+        ],
+        "hybrid": {
+            "maternalOrganismId": "<string>",
+            "maternalOrganismName": "<string>",
+            "paternalOrganismId": "<string>",
+            "paternalOrganismName": "<string>",
+            "hybridType": "CodeableConcept"
+        },
+        "organismGeneral": {
+            "kingdom": "CodeableConcept",
+            "phylum": "CodeableConcept",
+            "class": "CodeableConcept",
+            "order": "CodeableConcept"
+        }
+    },
+    "partDescription": [
+        {
+            "part": "CodeableConcept",
+            "partLocation": "CodeableConcept"
+        }
+    ]
+}

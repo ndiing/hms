@@ -1,0 +1,69 @@
+{
+    "resourceType": "Immunization",
+    "identifier": [
+        "Identifier"
+    ],
+    "basedOn": [
+        "Reference(CarePlan|ImmunizationRecommendation|MedicationRequest|ServiceRequest)"
+    ],
+    "status": "<code>",
+    "statusReason": "CodeableConcept",
+    "vaccineCode": "CodeableConcept",
+    "administeredProduct": "CodeableReference(Medication)",
+    "manufacturer": "CodeableReference(Organization)",
+    "lotNumber": "<string>",
+    "expirationDate": "<date>",
+    "patient": "Reference(Patient)",
+    "encounter": "Reference(Encounter)",
+    "supportingInformation": [
+        "Reference(Any)"
+    ],
+    "occurrenceString": "<string>",
+    "primarySource": "<boolean>",
+    "informationSource": "CodeableReference(Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "location": "Reference(Location)",
+    "site": "CodeableConcept",
+    "route": "CodeableConcept",
+    "doseQuantity": "Quantity(SimpleQuantity)",
+    "performer": [
+        {
+            "function": "CodeableConcept",
+            "actor": "Reference(Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+        }
+    ],
+    "note": [
+        "Annotation"
+    ],
+    "reason": [
+        "CodeableReference(Condition|DiagnosticReport|Observation)"
+    ],
+    "isSubpotent": "<boolean>",
+    "subpotentReason": [
+        "CodeableConcept"
+    ],
+    "programEligibility": [
+        {
+            "program": "CodeableConcept",
+            "programStatus": "CodeableConcept"
+        }
+    ],
+    "fundingSource": "CodeableConcept",
+    "reaction": [
+        {
+            "date": "<dateTime>",
+            "manifestation": "CodeableReference(Observation)",
+            "reported": "<boolean>"
+        }
+    ],
+    "protocolApplied": [
+        {
+            "series": "<string>",
+            "authority": "Reference(Organization)",
+            "targetDisease": [
+                "CodeableConcept"
+            ],
+            "doseNumber": "<string>",
+            "seriesDoses": "<string>"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "resourceType": "SubstanceReferenceInformation",
+    "comment": "<string>",
+    "gene": [
+        {
+            "geneSequenceOrigin": "CodeableConcept",
+            "gene": "CodeableConcept",
+            "source": [
+                "Reference(DocumentReference)"
+            ]
+        }
+    ],
+    "geneElement": [
+        {
+            "type": "CodeableConcept",
+            "element": "Identifier",
+            "source": [
+                "Reference(DocumentReference)"
+            ]
+        }
+    ],
+    "target": [
+        {
+            "target": "Identifier",
+            "type": "CodeableConcept",
+            "interaction": "CodeableConcept",
+            "organism": "CodeableConcept",
+            "organismType": "CodeableConcept",
+            "amountRange": "Range",
+            "amountString": "<string>",
+            "amountType": "CodeableConcept",
+            "source": [
+                "Reference(DocumentReference)"
+            ]
+        }
+    ]
+}

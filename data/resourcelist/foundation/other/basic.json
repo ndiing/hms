@@ -1,0 +1,10 @@
+{
+    "resourceType": "Basic",
+    "identifier": [
+        "Identifier"
+    ],
+    "code": "CodeableConcept",
+    "subject": "Reference(Any)",
+    "created": "<dateTime>",
+    "author": "Reference(CareTeam|Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+}

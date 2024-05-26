@@ -1,0 +1,44 @@
+{
+    "type": "<code>",
+    "profile": [
+        "<canonical(StructureDefinition)>"
+    ],
+    "subjectReference": "Reference(Group)",
+    "mustSupport": [
+        "<string>"
+    ],
+    "codeFilter": [
+        {
+            "path": "<string>",
+            "searchParam": "<string>",
+            "valueSet": "<canonical(ValueSet)>",
+            "code": [
+                "Coding"
+            ]
+        }
+    ],
+    "dateFilter": [
+        {
+            "path": "<string>",
+            "searchParam": "<string>",
+            "valuePeriod": "Period",
+            "valueDuration": "Duration"
+        }
+    ],
+    "valueFilter": [
+        {
+            "path": "<string>",
+            "searchParam": "<string>",
+            "comparator": "<code>",
+            "valuePeriod": "Period",
+            "valueDuration": "Duration"
+        }
+    ],
+    "limit": "<positiveInt>",
+    "sort": [
+        {
+            "path": "<string>",
+            "direction": "<code>"
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "resourceType": "Substance",
+    "identifier": [
+        "Identifier"
+    ],
+    "instance": "<boolean>",
+    "status": "<code>",
+    "category": [
+        "CodeableConcept"
+    ],
+    "code": "CodeableReference(SubstanceDefinition)",
+    "description": "<markdown>",
+    "expiry": "<dateTime>",
+    "quantity": "Quantity(SimpleQuantity)",
+    "ingredient": [
+        {
+            "quantity": "Ratio",
+            "substanceReference": "Reference(Substance)"
+        }
+    ]
+}

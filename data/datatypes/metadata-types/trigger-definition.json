@@ -1,0 +1,13 @@
+{
+    "type": "<code>",
+    "name": "<string>",
+    "code": "CodeableConcept",
+    "subscriptionTopic": "<canonical(SubscriptionTopic)>",
+    "timingReference": "Reference(Schedule)",
+    "timingDate": "<date>",
+    "timingDateTime": "<dateTime>",
+    "data": [
+        "DataRequirement"
+    ],
+    "condition": "Expression"
+}

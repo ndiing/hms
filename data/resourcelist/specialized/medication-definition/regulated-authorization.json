@@ -1,0 +1,38 @@
+{
+    "resourceType": "RegulatedAuthorization",
+    "identifier": [
+        "Identifier"
+    ],
+    "subject": [
+        "Reference(ActivityDefinition|BiologicallyDerivedProduct|DeviceDefinition|Ingredient|Location|ManufacturedItemDefinition|MedicinalProductDefinition|NutritionProduct|ObservationDefinition|Organization|PackagedProductDefinition|PlanDefinition|Practitioner|ResearchStudy|SubstanceDefinition)"
+    ],
+    "type": "CodeableConcept",
+    "description": "<markdown>",
+    "region": [
+        "CodeableConcept"
+    ],
+    "status": "CodeableConcept",
+    "statusDate": "<dateTime>",
+    "validityPeriod": "Period",
+    "indication": [
+        "CodeableReference(ClinicalUseDefinition)"
+    ],
+    "intendedUse": "CodeableConcept",
+    "basis": [
+        "CodeableConcept"
+    ],
+    "holder": "Reference(Organization)",
+    "regulator": "Reference(Organization)",
+    "attachedDocument": [
+        "Reference(DocumentReference)"
+    ],
+    "case": {
+        "identifier": "Identifier",
+        "type": "CodeableConcept",
+        "status": "CodeableConcept",
+        "dateDateTime": "<dateTime>",
+        "application": [
+            "ContentasforRegulatedAuthorization.case"
+        ]
+    }
+}

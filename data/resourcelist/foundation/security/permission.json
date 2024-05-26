@@ -1,0 +1,56 @@
+{
+    "resourceType": "Permission",
+    "status": "<code>",
+    "asserter": "Reference(CareTeam|HealthcareService|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "date": [
+        "<dateTime>"
+    ],
+    "validity": "Period",
+    "justification": {
+        "basis": [
+            "CodeableConcept"
+        ],
+        "evidence": [
+            "Reference(Any)"
+        ]
+    },
+    "combining": "<code>",
+    "rule": [
+        {
+            "type": "<code>",
+            "data": [
+                {
+                    "resource": [
+                        {
+                            "meaning": "<code>",
+                            "reference": "Reference(Any)"
+                        }
+                    ],
+                    "security": [
+                        "Coding"
+                    ],
+                    "period": [
+                        "Period"
+                    ],
+                    "expression": "Expression"
+                }
+            ],
+            "activity": [
+                {
+                    "actor": [
+                        "Reference(CareTeam|Device|Group|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+                    ],
+                    "action": [
+                        "CodeableConcept"
+                    ],
+                    "purpose": [
+                        "CodeableConcept"
+                    ]
+                }
+            ],
+            "limit": [
+                "CodeableConcept"
+            ]
+        }
+    ]
+}

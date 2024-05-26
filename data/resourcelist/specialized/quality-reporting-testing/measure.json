@@ -1,0 +1,134 @@
+{
+    "resourceType": "Measure",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "subtitle": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "subjectReference": "Reference(Group)",
+    "basis": "<code>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "usage": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "approvalDate": "<date>",
+    "lastReviewDate": "<date>",
+    "effectivePeriod": "Period",
+    "topic": [
+        "CodeableConcept"
+    ],
+    "author": [
+        "ContactDetail"
+    ],
+    "editor": [
+        "ContactDetail"
+    ],
+    "reviewer": [
+        "ContactDetail"
+    ],
+    "endorser": [
+        "ContactDetail"
+    ],
+    "relatedArtifact": [
+        "RelatedArtifact"
+    ],
+    "library": [
+        "<canonical(Library)>"
+    ],
+    "disclaimer": "<markdown>",
+    "scoring": "CodeableConcept",
+    "scoringUnit": "CodeableConcept",
+    "compositeScoring": "CodeableConcept",
+    "type": [
+        "CodeableConcept"
+    ],
+    "riskAdjustment": "<markdown>",
+    "rateAggregation": "<markdown>",
+    "rationale": "<markdown>",
+    "clinicalRecommendationStatement": "<markdown>",
+    "improvementNotation": "CodeableConcept",
+    "term": [
+        {
+            "code": "CodeableConcept",
+            "definition": "<markdown>"
+        }
+    ],
+    "guidance": "<markdown>",
+    "group": [
+        {
+            "linkId": "<string>",
+            "code": "CodeableConcept",
+            "description": "<markdown>",
+            "type": [
+                "CodeableConcept"
+            ],
+            "subjectReference": "Reference(Group)",
+            "basis": "<code>",
+            "scoring": "CodeableConcept",
+            "scoringUnit": "CodeableConcept",
+            "rateAggregation": "<markdown>",
+            "improvementNotation": "CodeableConcept",
+            "library": [
+                "<canonical(Library)>"
+            ],
+            "population": [
+                {
+                    "linkId": "<string>",
+                    "code": "CodeableConcept",
+                    "description": "<markdown>",
+                    "criteria": "Expression",
+                    "groupDefinition": "Reference(Group)",
+                    "inputPopulationId": "<string>",
+                    "aggregateMethod": "CodeableConcept"
+                }
+            ],
+            "stratifier": [
+                {
+                    "linkId": "<string>",
+                    "code": "CodeableConcept",
+                    "description": "<markdown>",
+                    "criteria": "Expression",
+                    "groupDefinition": "Reference(Group)",
+                    "component": [
+                        {
+                            "linkId": "<string>",
+                            "code": "CodeableConcept",
+                            "description": "<markdown>",
+                            "criteria": "Expression",
+                            "groupDefinition": "Reference(Group)"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "supplementalData": [
+        {
+            "linkId": "<string>",
+            "code": "CodeableConcept",
+            "usage": [
+                "CodeableConcept"
+            ],
+            "description": "<markdown>",
+            "criteria": "Expression"
+        }
+    ]
+}

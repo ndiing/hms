@@ -1,0 +1,54 @@
+{
+    "resourceType": "VerificationResult",
+    "target": [
+        "Reference(Any)"
+    ],
+    "targetLocation": [
+        "<string>"
+    ],
+    "need": "CodeableConcept",
+    "status": "<code>",
+    "statusDate": "<dateTime>",
+    "validationType": "CodeableConcept",
+    "validationProcess": [
+        "CodeableConcept"
+    ],
+    "frequency": "Timing",
+    "lastPerformed": "<dateTime>",
+    "nextScheduled": "<date>",
+    "failureAction": "CodeableConcept",
+    "primarySource": [
+        {
+            "who": "Reference(Organization|Practitioner|PractitionerRole)",
+            "type": [
+                "CodeableConcept"
+            ],
+            "communicationMethod": [
+                "CodeableConcept"
+            ],
+            "validationStatus": "CodeableConcept",
+            "validationDate": "<dateTime>",
+            "canPushUpdates": "CodeableConcept",
+            "pushTypeAvailable": [
+                "CodeableConcept"
+            ]
+        }
+    ],
+    "attestation": {
+        "who": "Reference(Organization|Practitioner|PractitionerRole)",
+        "onBehalfOf": "Reference(Organization|Practitioner|PractitionerRole)",
+        "communicationMethod": "CodeableConcept",
+        "date": "<date>",
+        "sourceIdentityCertificate": "<string>",
+        "proxyIdentityCertificate": "<string>",
+        "proxySignature": "Signature",
+        "sourceSignature": "Signature"
+    },
+    "validator": [
+        {
+            "organization": "Reference(Organization)",
+            "identityCertificate": "<string>",
+            "attestationSignature": "Signature"
+        }
+    ]
+}

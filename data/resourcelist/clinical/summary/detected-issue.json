@@ -1,0 +1,41 @@
+{
+    "resourceType": "DetectedIssue",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "category": [
+        "CodeableConcept"
+    ],
+    "code": "CodeableConcept",
+    "severity": "<code>",
+    "subject": "Reference(BiologicallyDerivedProduct|Device|Group|Location|Medication|NutritionProduct|Organization|Patient|Practitioner|Procedure|Substance)",
+    "encounter": "Reference(Encounter)",
+    "identifiedPeriod": "Period",
+    "author": "Reference(Device|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "implicated": [
+        "Reference(Any)"
+    ],
+    "evidence": [
+        {
+            "code": [
+                "CodeableConcept"
+            ],
+            "detail": [
+                "Reference(Any)"
+            ]
+        }
+    ],
+    "detail": "<markdown>",
+    "reference": "<uri>",
+    "mitigation": [
+        {
+            "action": "CodeableConcept",
+            "date": "<dateTime>",
+            "author": "Reference(Practitioner|PractitionerRole)",
+            "note": [
+                "Annotation"
+            ]
+        }
+    ]
+}

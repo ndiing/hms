@@ -1,0 +1,36 @@
+{
+    "resourceType": "Person",
+    "identifier": [
+        "Identifier"
+    ],
+    "active": "<boolean>",
+    "name": [
+        "HumanName"
+    ],
+    "telecom": [
+        "ContactPoint"
+    ],
+    "gender": "<code>",
+    "birthDate": "<date>",
+    "deceasedDateTime": "<dateTime>",
+    "address": [
+        "Address"
+    ],
+    "maritalStatus": "CodeableConcept",
+    "photo": [
+        "Attachment"
+    ],
+    "communication": [
+        {
+            "language": "CodeableConcept",
+            "preferred": "<boolean>"
+        }
+    ],
+    "managingOrganization": "Reference(Organization)",
+    "link": [
+        {
+            "target": "Reference(Patient|Person|Practitioner|RelatedPerson)",
+            "assurance": "<code>"
+        }
+    ]
+}

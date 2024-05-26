@@ -1,0 +1,62 @@
+{
+    "resourceType": "CarePlan",
+    "identifier": [
+        "Identifier"
+    ],
+    "instantiatesCanonical": [
+        "<canonical(PlanDefinition|Questionnaire|Measure|ActivityDefinition|OperationDefinition)>"
+    ],
+    "instantiatesUri": [
+        "<uri>"
+    ],
+    "basedOn": [
+        "Reference(CarePlan|NutritionOrder|RequestOrchestration|ServiceRequest)"
+    ],
+    "replaces": [
+        "Reference(CarePlan)"
+    ],
+    "partOf": [
+        "Reference(CarePlan)"
+    ],
+    "status": "<code>",
+    "intent": "<code>",
+    "category": [
+        "CodeableConcept"
+    ],
+    "title": "<string>",
+    "description": "<string>",
+    "subject": "Reference(Group|Patient)",
+    "encounter": "Reference(Encounter)",
+    "period": "Period",
+    "created": "<dateTime>",
+    "custodian": "Reference(CareTeam|Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)",
+    "contributor": [
+        "Reference(CareTeam|Device|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+    ],
+    "careTeam": [
+        "Reference(CareTeam)"
+    ],
+    "addresses": [
+        "CodeableReference(Condition)"
+    ],
+    "supportingInfo": [
+        "Reference(Any)"
+    ],
+    "goal": [
+        "Reference(Goal)"
+    ],
+    "activity": [
+        {
+            "performedActivity": [
+                "CodeableReference(Any)"
+            ],
+            "progress": [
+                "Annotation"
+            ],
+            "plannedActivityReference": "Reference(Appointment|CommunicationRequest|DeviceRequest|ImmunizationRecommendation|MedicationRequest|NutritionOrder|RequestOrchestration|ServiceRequest|SupplyRequest|Task|VisionPrescription)"
+        }
+    ],
+    "note": [
+        "Annotation"
+    ]
+}

@@ -1,0 +1,82 @@
+{
+    "resourceType": "OperationDefinition",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "status": "<code>",
+    "kind": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "affectsState": "<boolean>",
+    "code": "<code>",
+    "comment": "<markdown>",
+    "base": "<canonical(OperationDefinition)>",
+    "resource": [
+        "<code>"
+    ],
+    "system": "<boolean>",
+    "type": "<boolean>",
+    "instance": "<boolean>",
+    "inputProfile": "<canonical(StructureDefinition)>",
+    "outputProfile": "<canonical(StructureDefinition)>",
+    "parameter": [
+        {
+            "name": "<code>",
+            "use": "<code>",
+            "scope": [
+                "<code>"
+            ],
+            "min": "<integer>",
+            "max": "<string>",
+            "documentation": "<markdown>",
+            "type": "<code>",
+            "allowedType": [
+                "<code>"
+            ],
+            "targetProfile": [
+                "<canonical(StructureDefinition)>"
+            ],
+            "searchType": "<code>",
+            "binding": {
+                "strength": "<code>",
+                "valueSet": "<canonical(ValueSet)>"
+            },
+            "referencedFrom": [
+                {
+                    "source": "<string>",
+                    "sourceId": "<string>"
+                }
+            ],
+            "part": [
+                "ContentasforOperationDefinition.parameter"
+            ]
+        }
+    ],
+    "overload": [
+        {
+            "parameterName": [
+                "<string>"
+            ],
+            "comment": "<string>"
+        }
+    ]
+}

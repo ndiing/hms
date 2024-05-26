@@ -1,0 +1,123 @@
+{
+    "resourceType": "ConceptMap",
+    "url": "<uri>",
+    "identifier": [
+        "Identifier"
+    ],
+    "version": "<string>",
+    "versionAlgorithmCoding": "Coding",
+    "name": "<string>",
+    "title": "<string>",
+    "status": "<code>",
+    "experimental": "<boolean>",
+    "date": "<dateTime>",
+    "publisher": "<string>",
+    "contact": [
+        "ContactDetail"
+    ],
+    "description": "<markdown>",
+    "useContext": [
+        "UsageContext"
+    ],
+    "jurisdiction": [
+        "CodeableConcept"
+    ],
+    "purpose": "<markdown>",
+    "copyright": "<markdown>",
+    "copyrightLabel": "<string>",
+    "approvalDate": "<date>",
+    "lastReviewDate": "<date>",
+    "effectivePeriod": "Period",
+    "topic": [
+        "CodeableConcept"
+    ],
+    "author": [
+        "ContactDetail"
+    ],
+    "editor": [
+        "ContactDetail"
+    ],
+    "reviewer": [
+        "ContactDetail"
+    ],
+    "endorser": [
+        "ContactDetail"
+    ],
+    "relatedArtifact": [
+        "RelatedArtifact"
+    ],
+    "property": [
+        {
+            "code": "<code>",
+            "uri": "<uri>",
+            "description": "<string>",
+            "type": "<code>",
+            "system": "<canonical(CodeSystem)>"
+        }
+    ],
+    "additionalAttribute": [
+        {
+            "code": "<code>",
+            "uri": "<uri>",
+            "description": "<string>",
+            "type": "<code>"
+        }
+    ],
+    "sourceScopeCanonical": "<canonical(ValueSet)>",
+    "targetScopeCanonical": "<canonical(ValueSet)>",
+    "group": [
+        {
+            "source": "<canonical(CodeSystem)>",
+            "target": "<canonical(CodeSystem)>",
+            "element": [
+                {
+                    "code": "<code>",
+                    "display": "<string>",
+                    "valueSet": "<canonical(ValueSet)>",
+                    "noMap": "<boolean>",
+                    "target": [
+                        {
+                            "code": "<code>",
+                            "display": "<string>",
+                            "valueSet": "<canonical(ValueSet)>",
+                            "relationship": "<code>",
+                            "comment": "<string>",
+                            "property": [
+                                {
+                                    "code": "<code>",
+                                    "valueString": "<string>",
+                                    "valueInteger": "<integer>",
+                                    "valueBoolean": "<boolean>",
+                                    "valueDateTime": "<dateTime>",
+                                    "valueDecimal": "<decimal>",
+                                    "valueCode": "<code>"
+                                }
+                            ],
+                            "dependsOn": [
+                                {
+                                    "attribute": "<code>",
+                                    "valueCoding": "Coding",
+                                    "valueString": "<string>",
+                                    "valueBoolean": "<boolean>",
+                                    "valueQuantity": "Quantity",
+                                    "valueSet": "<canonical(ValueSet)>"
+                                }
+                            ],
+                            "product": [
+                                "ContentasforConceptMap.group.element.target.dependsOn"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "unmapped": {
+                "mode": "<code>",
+                "code": "<code>",
+                "display": "<string>",
+                "valueSet": "<canonical(ValueSet)>",
+                "relationship": "<code>",
+                "otherMap": "<canonical(ConceptMap)>"
+            }
+        }
+    ]
+}

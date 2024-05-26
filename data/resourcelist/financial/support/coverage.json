@@ -1,0 +1,55 @@
+{
+    "resourceType": "Coverage",
+    "identifier": [
+        "Identifier"
+    ],
+    "status": "<code>",
+    "kind": "<code>",
+    "paymentBy": [
+        {
+            "party": "Reference(Organization|Patient|RelatedPerson)",
+            "responsibility": "<string>"
+        }
+    ],
+    "type": "CodeableConcept",
+    "policyHolder": "Reference(Organization|Patient|RelatedPerson)",
+    "subscriber": "Reference(Patient|RelatedPerson)",
+    "subscriberId": [
+        "Identifier"
+    ],
+    "beneficiary": "Reference(Patient)",
+    "dependent": "<string>",
+    "relationship": "CodeableConcept",
+    "period": "Period",
+    "insurer": "Reference(Organization)",
+    "class": [
+        {
+            "type": "CodeableConcept",
+            "value": "Identifier",
+            "name": "<string>"
+        }
+    ],
+    "order": "<positiveInt>",
+    "network": "<string>",
+    "costToBeneficiary": [
+        {
+            "type": "CodeableConcept",
+            "category": "CodeableConcept",
+            "network": "CodeableConcept",
+            "unit": "CodeableConcept",
+            "term": "CodeableConcept",
+            "valueMoney": "Money",
+            "exception": [
+                {
+                    "type": "CodeableConcept",
+                    "period": "Period"
+                }
+            ]
+        }
+    ],
+    "subrogation": "<boolean>",
+    "contract": [
+        "Reference(Contract)"
+    ],
+    "insurancePlan": "Reference(InsurancePlan)"
+}

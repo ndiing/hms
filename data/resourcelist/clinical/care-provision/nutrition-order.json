@@ -1,0 +1,119 @@
+{
+    "resourceType": "NutritionOrder",
+    "identifier": [
+        "Identifier"
+    ],
+    "instantiatesCanonical": [
+        "<canonical(ActivityDefinition|PlanDefinition)>"
+    ],
+    "instantiatesUri": [
+        "<uri>"
+    ],
+    "instantiates": [
+        "<uri>"
+    ],
+    "basedOn": [
+        "Reference(CarePlan|NutritionOrder|ServiceRequest)"
+    ],
+    "groupIdentifier": "Identifier",
+    "status": "<code>",
+    "intent": "<code>",
+    "priority": "<code>",
+    "subject": "Reference(Group|Patient)",
+    "encounter": "Reference(Encounter)",
+    "supportingInformation": [
+        "Reference(Any)"
+    ],
+    "dateTime": "<dateTime>",
+    "orderer": "Reference(Practitioner|PractitionerRole)",
+    "performer": [
+        "CodeableReference(CareTeam|Organization|Patient|Practitioner|PractitionerRole|RelatedPerson)"
+    ],
+    "allergyIntolerance": [
+        "Reference(AllergyIntolerance)"
+    ],
+    "foodPreferenceModifier": [
+        "CodeableConcept"
+    ],
+    "excludeFoodModifier": [
+        "CodeableConcept"
+    ],
+    "outsideFoodAllowed": "<boolean>",
+    "oralDiet": {
+        "type": [
+            "CodeableConcept"
+        ],
+        "schedule": {
+            "timing": [
+                "Timing"
+            ],
+            "asNeeded": "<boolean>",
+            "asNeededFor": "CodeableConcept"
+        },
+        "nutrient": [
+            {
+                "modifier": "CodeableConcept",
+                "amount": "Quantity(SimpleQuantity)"
+            }
+        ],
+        "texture": [
+            {
+                "modifier": "CodeableConcept",
+                "foodType": "CodeableConcept"
+            }
+        ],
+        "fluidConsistencyType": [
+            "CodeableConcept"
+        ],
+        "instruction": "<string>"
+    },
+    "supplement": [
+        {
+            "type": "CodeableReference(NutritionProduct)",
+            "productName": "<string>",
+            "schedule": {
+                "timing": [
+                    "Timing"
+                ],
+                "asNeeded": "<boolean>",
+                "asNeededFor": "CodeableConcept"
+            },
+            "quantity": "Quantity(SimpleQuantity)",
+            "instruction": "<string>"
+        }
+    ],
+    "enteralFormula": {
+        "baseFormulaType": "CodeableReference(NutritionProduct)",
+        "baseFormulaProductName": "<string>",
+        "deliveryDevice": [
+            "CodeableReference(DeviceDefinition)"
+        ],
+        "additive": [
+            {
+                "type": "CodeableReference(NutritionProduct)",
+                "productName": "<string>",
+                "quantity": "Quantity(SimpleQuantity)"
+            }
+        ],
+        "caloricDensity": "Quantity(SimpleQuantity)",
+        "routeOfAdministration": "CodeableConcept",
+        "administration": [
+            {
+                "schedule": {
+                    "timing": [
+                        "Timing"
+                    ],
+                    "asNeeded": "<boolean>",
+                    "asNeededFor": "CodeableConcept"
+                },
+                "quantity": "Quantity(SimpleQuantity)",
+                "rateRatio": "Ratio"
+            }
+        ],
+        "maxVolumeToDeliver": "Quantity(SimpleQuantity)",
+        "administrationInstruction": "<markdown>"
+    },
+    "note": [
+        "Annotation"
+    ]
+}
