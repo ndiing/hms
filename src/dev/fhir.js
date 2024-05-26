@@ -14263,19 +14263,19 @@ function resourcelist_schema_run() {
     fs.writeFileSync("./debug", JSON.stringify(resourcelist, null, 4));
 }
 
-loop(datatypes_schema)
-function loop(docs,parent=[]){
-    for(const doc of docs){
-        if(doc.children){
-            doc.parent=parent.concat(toKebabCase(doc.label))
-            loop(doc.children,doc.parent)
-        }else{
-            doc.parent=parent.concat(toKebabCase(doc.label.split(' ')[0]))
-            if(doc.schema){
-                write('./data/datatypes/'+doc.parent.join('/')+'.json',JSON.stringify(doc.schema,null,4))
-            }else{
-                console.log(toKebabCase(doc.label))
-            }
-        }
-    }
-}
+// loop(resourcelist_schema)
+// function loop(docs,parent=[]){
+//     for(const doc of docs){
+//         if(doc.children){
+//             doc.parent=parent.concat((doc.label))
+//             loop(doc.children,doc.parent)
+//         }else{
+//             doc.parent=parent.concat((doc.label.split(' ')[0]))
+//             if(doc.schema){
+//                 write('./data/resourcelist/'+doc.parent.join('/')+'.json',JSON.stringify(doc.schema,null,4))
+//             }else{
+//                 console.log((doc.label))
+//             }
+//         }
+//     }
+// }
