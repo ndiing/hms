@@ -45,13 +45,13 @@ To install and deploy the HMS-FHIR integration, follow these steps:
 1. **Clone Repository**: Clone this repository to your local machine.
 
    <pre>
-   git clone https://github.com/yourusername/hms-fhir-integration.git
+   git clone https://github.com/ndiing/hms.git
    </pre>
 
 2. **Install Dependencies**: Navigate to the project directory and install the required dependencies.
 
    <pre>
-   cd hms-fhir-integration
+   cd hms
    npm install
    </pre>
 
@@ -92,4 +92,4 @@ This project is licensed under the [MIT License](LICENSE), which permits unrestr
 
 ---
 
-Feel free to explore the repository and provide feedback or contributions to further enhance the HMS-FHIR integration. For any inquiries or assistance, please contact [maintainer_email@example.com](mailto:maintainer_email@example.com).
+Feel free to explore the repository and provide feedback or contributions to further enhance the HMS-FHIR integration. For any inquiries or assistance, please contact [ndiing.inc@gmail.com](mailto:ndiing.inc@gmail.com).
